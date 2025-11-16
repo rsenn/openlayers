@@ -1,7 +1,7 @@
 /**
  * @module ol/layer/BaseVector
  */
-import RBush from 'rbush';
+import RBush from '../../../../rbush.js';
 import {
   flatStylesToStyleFunction,
   rulesToStyleFunction,
