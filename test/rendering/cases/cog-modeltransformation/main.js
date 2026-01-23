@@ -1,13 +1,12 @@
-import proj4 from 'proj4';
-import Map from '../../../../src/ol/Map.js';
 import GeoJSON from '../../../../src/ol/format/GeoJSON.js';
 import VectorLayer from '../../../../src/ol/layer/Vector.js';
 import TileLayer from '../../../../src/ol/layer/WebGLTile.js';
-import {register} from '../../../../src/ol/proj/proj4.js';
+import Map from '../../../../src/ol/Map.js';
+import { register } from '../../../../src/ol/proj/proj4.js';
 import GeoTIFF from '../../../../src/ol/source/GeoTIFF.js';
 import TileDebug from '../../../../src/ol/source/TileDebug.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
-
+import proj4 from 'proj4';
 proj4.defs(
   'SR-ORG:97019',
   '+proj=stere +lat_0=90 +lat_ts=60 +lon_0=10 +k=1 +x_0=0 +y_0=0 +a=6370040 +b=6370040 +to_meter=1000 +no_defs',

@@ -1,15 +1,13 @@
+import { createCanvasContext2D } from '../dom.js';
+import EventType from '../events/EventType.js';
+import { get as getProjection } from '../proj.js';
+import { toSize } from '../size.js';
+import { renderXYZTemplate } from '../uri.js';
+import DataTile from './DataTile.js';
+import ImageTile from './ImageTile.js';
 /**
  * @module ol/source/TileDebug
  */
-
-import {createCanvasContext2D} from '../dom.js';
-import EventType from '../events/EventType.js';
-import {get as getProjection} from '../proj.js';
-import {toSize} from '../size.js';
-import {renderXYZTemplate} from '../uri.js';
-import DataTile from './DataTile.js';
-import ImageTile from './ImageTile.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("../proj.js").ProjectionLike} [projection='EPSG:3857'] Optional projection.

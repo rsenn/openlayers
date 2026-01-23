@@ -4,7 +4,6 @@ import MultiPolygon from '../../../../../src/ol/geom/MultiPolygon.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
 import RenderFeature from '../../../../../src/ol/render/Feature.js';
-
 where('ArrayBuffer.isView').describe('ol.format.MVT', function () {
   let data;
   beforeEach(function (done) {

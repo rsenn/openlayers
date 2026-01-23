@@ -1,6 +1,7 @@
 import Feature from '../../../../../src/ol/Feature.js';
 import IGC from '../../../../../src/ol/format/IGC.js';
-import {get as getProjection, transform} from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { transform } from '../../../../../src/ol/proj.js';
 
 describe('ol/format/IGC', function () {
   describe('2012', function () {

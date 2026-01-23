@@ -1,7 +1,7 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ImageLayer from '../src/ol/layer/Image.js';
+import Map from '../src/ol/Map.js';
 import ImageMapGuide from '../src/ol/source/ImageMapGuide.js';
+import View from '../src/ol/View.js';
 
 const mdf = 'Library://Samples/Sheboygan/Maps/Sheboygan.MapDefinition';
 const agentUrl = 'https://mikenunn.net/mapguide/mapagent/mapagent.fcgi?';

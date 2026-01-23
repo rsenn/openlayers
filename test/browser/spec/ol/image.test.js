@@ -1,11 +1,10 @@
-import {spy as sinonSpy} from 'sinon';
-import ImageWrapper, {
-  decode,
-  decodeFallback,
-  listenImage,
-  load,
-} from '../../../../src/ol/Image.js';
+import { decode } from '../../../../src/ol/Image.js';
+import { decodeFallback } from '../../../../src/ol/Image.js';
+import { listenImage } from '../../../../src/ol/Image.js';
+import { load } from '../../../../src/ol/Image.js';
+import ImageWrapper from '../../../../src/ol/Image.js';
 import ImageState from '../../../../src/ol/ImageState.js';
+import { spy as sinonSpy } from 'sinon';
 
 const dataUri =
   'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';

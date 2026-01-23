@@ -1,11 +1,12 @@
-import proj4 from 'proj4';
-import Map from '../src/ol/Map.js';
-import {createEmpty, extend, getCenter} from '../src/ol/extent.js';
+import { createEmpty } from '../src/ol/extent.js';
+import { extend } from '../src/ol/extent.js';
+import { getCenter } from '../src/ol/extent.js';
 import TileLayer from '../src/ol/layer/WebGLTile.js';
-import {register} from '../src/ol/proj/proj4.js';
-import {transformExtent} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { transformExtent } from '../src/ol/proj.js';
+import { register } from '../src/ol/proj/proj4.js';
 import GeoTIFF from '../src/ol/source/GeoTIFF.js';
-
+import proj4 from 'proj4';
 proj4.defs('EPSG:32631', '+proj=utm +zone=31 +datum=WGS84 +units=m +no_defs');
 proj4.defs('EPSG:32632', '+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs');
 register(proj4);
@@ -26,6 +27,7 @@ function getVariables() {
 }
 
 const sourceNames = ['B04', 'B03', 'B02', 'B08'];
+
 const sources = [
   new GeoTIFF({
     sources: sourceNames.map(function (name) {

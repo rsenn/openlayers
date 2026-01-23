@@ -1,9 +1,7 @@
-import {
-  buffer as bufferSize,
-  hasArea,
-  scale as scaleSize,
-  toSize,
-} from '../../../../src/ol/size.js';
+import { buffer as bufferSize } from '../../../../src/ol/size.js';
+import { hasArea } from '../../../../src/ol/size.js';
+import { scale as scaleSize } from '../../../../src/ol/size.js';
+import { toSize } from '../../../../src/ol/size.js';
 
 describe('ol.size', function () {
   describe('buffer()', function () {

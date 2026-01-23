@@ -1,9 +1,10 @@
+import { expandUrl } from '../uri.js';
+import { pickUrl } from '../uri.js';
+import { renderXYZTemplate } from '../uri.js';
+import DataTileSource from './DataTile.js';
 /**
  * @module ol/source/ImageTile
  */
-import {expandUrl, pickUrl, renderXYZTemplate} from '../uri.js';
-import DataTileSource from './DataTile.js';
-
 /**
  * Image tile loading function.  The function is called with z, x, and y tile coordinates and
  * returns an {@link import("../DataTile.js").ImageLike image} or a promise for the same.

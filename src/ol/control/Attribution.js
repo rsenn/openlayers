@@ -1,13 +1,15 @@
+import { equals } from '../array.js';
+import { CLASS_COLLAPSED } from '../css.js';
+import { CLASS_CONTROL } from '../css.js';
+import { CLASS_UNSELECTABLE } from '../css.js';
+import { removeChildren } from '../dom.js';
+import { replaceNode } from '../dom.js';
+import EventType from '../events/EventType.js';
+import { toPromise } from '../functions.js';
+import Control from './Control.js';
 /**
  * @module ol/control/Attribution
  */
-import {equals} from '../array.js';
-import {CLASS_COLLAPSED, CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
-import {removeChildren, replaceNode} from '../dom.js';
-import EventType from '../events/EventType.js';
-import {toPromise} from '../functions.js';
-import Control from './Control.js';
-
 /**
  * @typedef {Object} Options
  * @property {string} [className='ol-attribution'] CSS class name.

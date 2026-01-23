@@ -1,12 +1,11 @@
-import Tile from '../../../../../src/ol/Tile.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
 import Projection from '../../../../../src/ol/proj/Projection.js';
-import {get as getProjection} from '../../../../../src/ol/proj.js';
 import Source from '../../../../../src/ol/source/Source.js';
 import TileSource from '../../../../../src/ol/source/Tile.js';
-import {getKeyZXY} from '../../../../../src/ol/tilecoord.js';
+import Tile from '../../../../../src/ol/Tile.js';
+import { getKeyZXY } from '../../../../../src/ol/tilecoord.js';
 import TileGrid from '../../../../../src/ol/tilegrid/TileGrid.js';
-import {getUid} from '../../../../../src/ol/util.js';
-
+import { getUid } from '../../../../../src/ol/util.js';
 /**
  * Tile source for tests that uses a EPSG:4326 based grid with 4 resolutions and
  * 256x256 tiles.

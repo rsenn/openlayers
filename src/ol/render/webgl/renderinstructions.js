@@ -1,10 +1,9 @@
+import { UNDEFINED_PROP_VALUE } from '../../expr/gpu.js';
+import { transform2D } from '../../geom/flat/transform.js';
+import { apply as applyTransform } from '../../transform.js';
 /**
  * @module ol/render/webgl/renderinstructions
  */
-import {UNDEFINED_PROP_VALUE} from '../../expr/gpu.js';
-import {transform2D} from '../../geom/flat/transform.js';
-import {apply as applyTransform} from '../../transform.js';
-
 /**
  * @param {Float32Array} renderInstructions Render instructions
  * @param {import('./VectorStyleRenderer.js').AttributeDefinitions} customAttributes Custom attributes

@@ -1,4 +1,4 @@
-import {interpolatePoint} from '../../../../../src/ol/geom/flat/interpolate.js';
+import { interpolatePoint } from '../../../../../src/ol/geom/flat/interpolate.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/interpolate.js', function () {

@@ -1,10 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import WebGLVectorLayer from '../src/ol/layer/WebGLVector.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
 import Vector from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
 
 const vectorSource = new Vector({
   url: 'data/geojson/world-cities.geojson',

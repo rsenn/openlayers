@@ -1,9 +1,8 @@
+import { binarySearch } from '../../array.js';
+import { lerp } from '../../math.js';
 /**
  * @module ol/geom/flat/interpolate
  */
-import {binarySearch} from '../../array.js';
-import {lerp} from '../../math.js';
-
 /**
  * @param {Array<number>} flatCoordinates Flat coordinates.
  * @param {number} offset Offset.

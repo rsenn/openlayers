@@ -1,6 +1,6 @@
-import {spy as sinonSpy} from 'sinon';
-import {get as getProjection} from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
 import Source from '../../../../../src/ol/source/Source.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/source/Source', function () {
   describe('constructor', function () {

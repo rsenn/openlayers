@@ -1,8 +1,7 @@
+import { coordinates as reverseCoordinates } from './reverse.js';
 /**
  * @module ol/geom/flat/orient
  */
-import {coordinates as reverseCoordinates} from './reverse.js';
-
 /**
  * Is the linear ring oriented clockwise in a coordinate system with a bottom-left
  * coordinate origin? For a coordinate system with a top-left coordinate origin,

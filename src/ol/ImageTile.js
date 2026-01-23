@@ -1,11 +1,10 @@
+import { createCanvasContext2D } from './dom.js';
+import { listenImage } from './Image.js';
+import Tile from './Tile.js';
+import TileState from './TileState.js';
 /**
  * @module ol/ImageTile
  */
-import {listenImage} from './Image.js';
-import Tile from './Tile.js';
-import TileState from './TileState.js';
-import {createCanvasContext2D} from './dom.js';
-
 class ImageTile extends Tile {
   /**
    * @param {import("./tilecoord.js").TileCoord} tileCoord Tile coordinate.

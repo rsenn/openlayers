@@ -1,18 +1,13 @@
+import { writeLineSegmentToBuffers } from '../render/webgl/bufferUtil.js';
+import { writePointFeatureToBuffers } from '../render/webgl/bufferUtil.js';
+import { writePolygonTrianglesToBuffers } from '../render/webgl/bufferUtil.js';
+import { WebGLWorkerMessageType } from '../render/webgl/constants.js';
+import { create as createTransform } from '../transform.js';
+import { makeInverse as makeInverseTransform } from '../transform.js';
 /**
  * A worker that does cpu-heavy tasks related to webgl rendering.
  * @module ol/worker/webgl
  */
-import {
-  writeLineSegmentToBuffers,
-  writePointFeatureToBuffers,
-  writePolygonTrianglesToBuffers,
-} from '../render/webgl/bufferUtil.js';
-import {WebGLWorkerMessageType} from '../render/webgl/constants.js';
-import {
-  create as createTransform,
-  makeInverse as makeInverseTransform,
-} from '../transform.js';
-
 /** @type {any} */
 const worker = self;
 

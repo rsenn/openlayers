@@ -1,8 +1,7 @@
+import EventType from './events/EventType.js';
 /**
  * @module ol/MapBrowserEventType
  */
-import EventType from './events/EventType.js';
-
 /**
  * Constants for event names.
  * @enum {string}

@@ -1,15 +1,18 @@
-import {json} from 'd3-fetch';
-import {geoBounds, geoMercator, geoPath} from 'd3-geo';
-import {select} from 'd3-selection';
-import {feature} from 'topojson-client';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getCenter, getWidth} from '../src/ol/extent.js';
+import { getCenter } from '../src/ol/extent.js';
+import { getWidth } from '../src/ol/extent.js';
 import Layer from '../src/ol/layer/Layer.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {fromLonLat, toLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
+import { toLonLat } from '../src/ol/proj.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
-
+import View from '../src/ol/View.js';
+import { json } from 'd3-fetch';
+import { geoBounds } from 'd3-geo';
+import { geoMercator } from 'd3-geo';
+import { geoPath } from 'd3-geo';
+import { select } from 'd3-selection';
+import { feature } from 'topojson-client';
 class CanvasLayer extends Layer {
   constructor(options) {
     super(options);

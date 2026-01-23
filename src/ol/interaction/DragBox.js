@@ -1,12 +1,11 @@
+import { mouseActionButton } from '../events/condition.js';
+import Event from '../events/Event.js';
+import RenderBox from '../render/Box.js';
+import PointerInteraction from './Pointer.js';
 /**
  * @module ol/interaction/DragBox
  */
 // FIXME draw drag box
-import Event from '../events/Event.js';
-import {mouseActionButton} from '../events/condition.js';
-import RenderBox from '../render/Box.js';
-import PointerInteraction from './Pointer.js';
-
 /**
  * A function that takes a {@link module:ol/MapBrowserEvent~MapBrowserEvent} and two
  * {@link module:ol/pixel~Pixel}s and returns a `{boolean}`. If the condition is met,

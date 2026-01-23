@@ -1,11 +1,12 @@
-import proj4 from 'proj4';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import Graticule from '../../../../src/ol/layer/Graticule.js';
-import {register} from '../../../../src/ol/proj/proj4.js';
-import {fromLonLat, get, transformExtent} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../src/ol/proj.js';
+import { get } from '../../../../src/ol/proj.js';
+import { transformExtent } from '../../../../src/ol/proj.js';
+import { register } from '../../../../src/ol/proj/proj4.js';
 import Stroke from '../../../../src/ol/style/Stroke.js';
-
+import View from '../../../../src/ol/View.js';
+import proj4 from 'proj4';
 proj4.defs(
   'EPSG:9311',
   '+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +ellps=clrk66 ' +
@@ -15,8 +16,10 @@ proj4.defs(
 register(proj4);
 
 const proj9311 = get('EPSG:9311');
+
 const worldExtent = [167.65, 15.56, -65.69, 74.71];
 proj9311.setWorldExtent(worldExtent);
+
 const extent = worldExtent.slice();
 extent[2] += 360;
 proj9311.setExtent(transformExtent(extent, 'EPSG:4326', 'EPSG:9311', 8));

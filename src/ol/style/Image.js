@@ -1,9 +1,8 @@
+import { toSize } from '../size.js';
+import { abstract } from '../util.js';
 /**
  * @module ol/style/Image
  */
-import {toSize} from '../size.js';
-import {abstract} from '../util.js';
-
 /**
  * @typedef {Object} Options
  * @property {number} opacity Opacity.

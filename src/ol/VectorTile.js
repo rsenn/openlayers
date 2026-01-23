@@ -1,9 +1,8 @@
+import Tile from './Tile.js';
+import TileState from './TileState.js';
 /**
  * @module ol/VectorTile
  */
-import Tile from './Tile.js';
-import TileState from './TileState.js';
-
 /**
  * @template {import('./Feature.js').FeatureLike} FeatureType
  */

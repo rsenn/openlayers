@@ -1,11 +1,10 @@
+import { decode } from '../Image.js';
+import { defaultImageLoadFunction } from './Image.js';
+import ImageSource from './Image.js';
+import { createLoader } from './mapguide.js';
 /**
  * @module ol/source/ImageMapGuide
  */
-
-import {decode} from '../Image.js';
-import ImageSource, {defaultImageLoadFunction} from './Image.js';
-import {createLoader} from './mapguide.js';
-
 /**
  * @typedef {Object} Options
  * @property {string} [url] The mapagent url.

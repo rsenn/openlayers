@@ -1,11 +1,12 @@
+import { CLASS_CONTROL } from '../css.js';
+import { CLASS_HIDDEN } from '../css.js';
+import { CLASS_UNSELECTABLE } from '../css.js';
+import { easeOut } from '../easing.js';
+import EventType from '../events/EventType.js';
+import Control from './Control.js';
 /**
  * @module ol/control/Rotate
  */
-import {CLASS_CONTROL, CLASS_HIDDEN, CLASS_UNSELECTABLE} from '../css.js';
-import {easeOut} from '../easing.js';
-import EventType from '../events/EventType.js';
-import Control from './Control.js';
-
 /**
  * @typedef {Object} Options
  * @property {string} [className='ol-rotate'] CSS class name.

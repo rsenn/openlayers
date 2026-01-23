@@ -1,9 +1,9 @@
+import { fromUserExtent } from './proj.js';
+import { fromUserResolution } from './proj.js';
+import { toUserExtent } from './proj.js';
 /**
  * @module ol/loadingstrategy
  */
-
-import {fromUserExtent, fromUserResolution, toUserExtent} from './proj.js';
-
 /**
  * Strategy function for loading all features with a single request.
  * @param {import("./extent.js").Extent} extent Extent.

@@ -1,31 +1,24 @@
+import Feature from '../Feature.js';
+import { GeometryCollection } from '../geom.js';
+import { LineString } from '../geom.js';
+import { MultiLineString } from '../geom.js';
+import { MultiPoint } from '../geom.js';
+import { MultiPolygon } from '../geom.js';
+import { Point } from '../geom.js';
+import { Polygon } from '../geom.js';
+import { linearRingsAreOriented } from '../geom/flat/orient.js';
+import { linearRingssAreOriented } from '../geom/flat/orient.js';
+import { orientLinearRings } from '../geom/flat/orient.js';
+import { orientLinearRingsArray } from '../geom/flat/orient.js';
+import { equivalent as equivalentProjection } from '../proj.js';
+import { get as getProjection } from '../proj.js';
+import { getTransform } from '../proj.js';
+import { transformExtent } from '../proj.js';
+import RenderFeature from '../render/Feature.js';
+import { abstract } from '../util.js';
 /**
  * @module ol/format/Feature
  */
-import Feature from '../Feature.js';
-import {
-  linearRingsAreOriented,
-  linearRingssAreOriented,
-  orientLinearRings,
-  orientLinearRingsArray,
-} from '../geom/flat/orient.js';
-import {
-  GeometryCollection,
-  LineString,
-  MultiLineString,
-  MultiPoint,
-  MultiPolygon,
-  Point,
-  Polygon,
-} from '../geom.js';
-import {
-  equivalent as equivalentProjection,
-  get as getProjection,
-  getTransform,
-  transformExtent,
-} from '../proj.js';
-import RenderFeature from '../render/Feature.js';
-import {abstract} from '../util.js';
-
 /**
  * @typedef {Object} ReadOptions
  * @property {import("../proj.js").ProjectionLike} [dataProjection] Projection of the data we are reading.

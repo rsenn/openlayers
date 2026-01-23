@@ -1,33 +1,27 @@
+import { equals } from '../../array.js';
+import { reverseSubArray } from '../../array.js';
+import { asColorLike } from '../../colorlike.js';
+import { buffer } from '../../extent.js';
+import { clone } from '../../extent.js';
+import { containsCoordinate } from '../../extent.js';
+import { coordinateRelationship } from '../../extent.js';
+import Relationship from '../../extent/Relationship.js';
+import { inflateCoordinates } from '../../geom/flat/inflate.js';
+import { inflateCoordinatesArray } from '../../geom/flat/inflate.js';
+import { inflateMultiCoordinatesArray } from '../../geom/flat/inflate.js';
+import { defaultFillStyle } from '../canvas.js';
+import { defaultLineCap } from '../canvas.js';
+import { defaultLineDash } from '../canvas.js';
+import { defaultLineDashOffset } from '../canvas.js';
+import { defaultLineJoin } from '../canvas.js';
+import { defaultLineWidth } from '../canvas.js';
+import { defaultMiterLimit } from '../canvas.js';
+import { defaultStrokeStyle } from '../canvas.js';
+import VectorContext from '../VectorContext.js';
+import CanvasInstruction from './Instruction.js';
 /**
  * @module ol/render/canvas/Builder
  */
-import {equals, reverseSubArray} from '../../array.js';
-import {asColorLike} from '../../colorlike.js';
-import Relationship from '../../extent/Relationship.js';
-import {
-  buffer,
-  clone,
-  containsCoordinate,
-  coordinateRelationship,
-} from '../../extent.js';
-import {
-  inflateCoordinates,
-  inflateCoordinatesArray,
-  inflateMultiCoordinatesArray,
-} from '../../geom/flat/inflate.js';
-import VectorContext from '../VectorContext.js';
-import {
-  defaultFillStyle,
-  defaultLineCap,
-  defaultLineDash,
-  defaultLineDashOffset,
-  defaultLineJoin,
-  defaultLineWidth,
-  defaultMiterLimit,
-  defaultStrokeStyle,
-} from '../canvas.js';
-import CanvasInstruction from './Instruction.js';
-
 class CanvasBuilder extends VectorContext {
   /**
    * @param {number} tolerance Tolerance.

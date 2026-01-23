@@ -1,9 +1,8 @@
+import ImageState from '../ImageState.js';
+import { getUid } from '../util.js';
 /**
  * @module ol/renderer/vector
  */
-import ImageState from '../ImageState.js';
-import {getUid} from '../util.js';
-
 /**
  * Feature callback. The callback will be called with three arguments. The first
  * argument is one {@link module:ol/Feature~Feature feature} or {@link module:ol/render/Feature~RenderFeature render feature}

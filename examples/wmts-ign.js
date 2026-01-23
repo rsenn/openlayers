@@ -1,10 +1,11 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getWidth} from '../src/ol/extent.js';
+import { getWidth } from '../src/ol/extent.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {fromLonLat, get as getProjection} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
+import { get as getProjection } from '../src/ol/proj.js';
 import WMTS from '../src/ol/source/WMTS.js';
 import WMTSTileGrid from '../src/ol/tilegrid/WMTS.js';
+import View from '../src/ol/View.js';
 
 const map = new Map({
   target: 'map',

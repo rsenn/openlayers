@@ -1,7 +1,17 @@
-/**
- * @module ol/control/OverviewMap
- */
 import Collection from '../Collection.js';
+import { CLASS_COLLAPSED } from '../css.js';
+import { CLASS_CONTROL } from '../css.js';
+import { CLASS_UNSELECTABLE } from '../css.js';
+import { replaceNode } from '../dom.js';
+import { listen } from '../events.js';
+import { listenOnce } from '../events.js';
+import EventType from '../events/EventType.js';
+import { containsExtent } from '../extent.js';
+import { equals as equalsExtent } from '../extent.js';
+import { getBottomRight } from '../extent.js';
+import { getTopLeft } from '../extent.js';
+import { scaleFromCenter } from '../extent.js';
+import { fromExtent as polygonFromExtent } from '../geom/Polygon.js';
 import Map from '../Map.js';
 import MapEventType from '../MapEventType.js';
 import MapProperty from '../MapProperty.js';
@@ -9,20 +19,10 @@ import ObjectEventType from '../ObjectEventType.js';
 import Overlay from '../Overlay.js';
 import View from '../View.js';
 import ViewProperty from '../ViewProperty.js';
-import {CLASS_COLLAPSED, CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
-import {replaceNode} from '../dom.js';
-import EventType from '../events/EventType.js';
-import {listen, listenOnce} from '../events.js';
-import {
-  containsExtent,
-  equals as equalsExtent,
-  getBottomRight,
-  getTopLeft,
-  scaleFromCenter,
-} from '../extent.js';
-import {fromExtent as polygonFromExtent} from '../geom/Polygon.js';
 import Control from './Control.js';
-
+/**
+ * @module ol/control/OverviewMap
+ */
 /**
  * Maximum width and/or height extent ratio that determines when the overview
  * map should be zoomed out.

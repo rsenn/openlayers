@@ -1,10 +1,10 @@
+import { getWidth } from './extent.js';
+import { modulo } from './math.js';
+import { toFixed } from './math.js';
+import { padNumber } from './string.js';
 /**
  * @module ol/coordinate
  */
-import {getWidth} from './extent.js';
-import {modulo, toFixed} from './math.js';
-import {padNumber} from './string.js';
-
 /**
  * An array of numbers representing an `xy`, `xyz` or `xyzm` coordinate.
  * Example: `[16, 48]`.

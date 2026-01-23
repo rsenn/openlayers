@@ -1,8 +1,7 @@
+import LogicalNary from './LogicalNary.js';
 /**
  * @module ol/format/filter/And
  */
-import LogicalNary from './LogicalNary.js';
-
 /**
  * @classdesc
  * Represents a logical `<And>` operator between two or more filter conditions.

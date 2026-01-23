@@ -4,7 +4,9 @@ import LineString from '../../../../src/ol/geom/LineString.js';
 import MultiLineString from '../../../../src/ol/geom/MultiLineString.js';
 import MultiPoint from '../../../../src/ol/geom/MultiPoint.js';
 import Point from '../../../../src/ol/geom/Point.js';
-import {getArea, getDistance, getLength} from '../../../../src/ol/sphere.js';
+import { getArea } from '../../../../src/ol/sphere.js';
+import { getDistance } from '../../../../src/ol/sphere.js';
+import { getLength } from '../../../../src/ol/sphere.js';
 
 describe('ol/sphere', function () {
   describe('getDistance()', function () {

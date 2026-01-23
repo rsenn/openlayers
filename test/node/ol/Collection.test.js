@@ -1,8 +1,8 @@
-import {spy as sinonSpy} from 'sinon';
 import Collection from '../../../src/ol/Collection.js';
 import CollectionEventType from '../../../src/ol/CollectionEventType.js';
-import {listen} from '../../../src/ol/events.js';
+import { listen } from '../../../src/ol/events.js';
 import expect from '../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/Collection.js', function () {
   /** @type {Collection} */

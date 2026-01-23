@@ -1,52 +1,44 @@
+import { linearFindNearest } from './array.js';
+import { assert } from './asserts.js';
+import { createExtent } from './centerconstraint.js';
+import { none as centerNone } from './centerconstraint.js';
+import { add as addCoordinate } from './coordinate.js';
+import { equals } from './coordinate.js';
+import { equals as coordinatesEqual } from './coordinate.js';
+import { rotate as rotateCoordinate } from './coordinate.js';
+import { easeOut } from './easing.js';
+import { inAndOut } from './easing.js';
+import { getCenter } from './extent.js';
+import { getForViewAndSize } from './extent.js';
+import { getHeight } from './extent.js';
+import { getWidth } from './extent.js';
+import { isEmpty } from './extent.js';
+import { VOID } from './functions.js';
+import { fromExtent as polygonFromExtent } from './geom/Polygon.js';
+import { clamp } from './math.js';
+import { modulo } from './math.js';
+import BaseObject from './Object.js';
+import { createProjection } from './proj.js';
+import { disableCoordinateWarning } from './proj.js';
+import { fromUserCoordinate } from './proj.js';
+import { fromUserExtent } from './proj.js';
+import { getUserProjection } from './proj.js';
+import { METERS_PER_UNIT } from './proj.js';
+import { toUserCoordinate } from './proj.js';
+import { toUserExtent } from './proj.js';
+import { createMinMaxResolution } from './resolutionconstraint.js';
+import { createSnapToPower } from './resolutionconstraint.js';
+import { createSnapToResolutions } from './resolutionconstraint.js';
+import { createSnapToN } from './rotationconstraint.js';
+import { createSnapToZero } from './rotationconstraint.js';
+import { disable } from './rotationconstraint.js';
+import { none as rotationNone } from './rotationconstraint.js';
+import { DEFAULT_TILE_SIZE } from './tilegrid/common.js';
+import ViewHint from './ViewHint.js';
+import ViewProperty from './ViewProperty.js';
 /**
  * @module ol/View
  */
-import BaseObject from './Object.js';
-import ViewHint from './ViewHint.js';
-import ViewProperty from './ViewProperty.js';
-import {linearFindNearest} from './array.js';
-import {assert} from './asserts.js';
-import {createExtent, none as centerNone} from './centerconstraint.js';
-import {
-  add as addCoordinate,
-  equals,
-  equals as coordinatesEqual,
-  rotate as rotateCoordinate,
-} from './coordinate.js';
-import {easeOut, inAndOut} from './easing.js';
-import {
-  getCenter,
-  getForViewAndSize,
-  getHeight,
-  getWidth,
-  isEmpty,
-} from './extent.js';
-import {VOID} from './functions.js';
-import {fromExtent as polygonFromExtent} from './geom/Polygon.js';
-import {clamp, modulo} from './math.js';
-import {
-  METERS_PER_UNIT,
-  createProjection,
-  disableCoordinateWarning,
-  fromUserCoordinate,
-  fromUserExtent,
-  getUserProjection,
-  toUserCoordinate,
-  toUserExtent,
-} from './proj.js';
-import {
-  createMinMaxResolution,
-  createSnapToPower,
-  createSnapToResolutions,
-} from './resolutionconstraint.js';
-import {
-  createSnapToN,
-  createSnapToZero,
-  disable,
-  none as rotationNone,
-} from './rotationconstraint.js';
-import {DEFAULT_TILE_SIZE} from './tilegrid/common.js';
-
 /**
  * An animation configuration
  *

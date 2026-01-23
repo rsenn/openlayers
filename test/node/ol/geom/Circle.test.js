@@ -1,6 +1,6 @@
-import {spy as sinonSpy} from 'sinon';
 import Circle from '../../../../src/ol/geom/Circle.js';
 import expect from '../../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/geom/Circle.js', function () {
   describe('with a unit circle', function () {

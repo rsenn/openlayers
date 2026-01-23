@@ -1,8 +1,7 @@
+import { getUid } from './util.js';
 /**
  * @module ol/net
  */
-import {getUid} from './util.js';
-
 /**
  * Simple JSONP helper. Supports error callbacks and a custom callback param.
  * The error callback will be called when no JSONP is executed after 10 seconds.
@@ -138,6 +137,7 @@ export function resolveUrl(base, url) {
 }
 
 let originalXHR;
+
 export function overrideXHR(xhr) {
   if (typeof XMLHttpRequest !== 'undefined') {
     originalXHR = XMLHttpRequest;

@@ -1,14 +1,15 @@
+import { containsExtent } from '../extent.js';
+import { equivalent } from '../proj.js';
+import { get as getProjection } from '../proj.js';
+import { transformExtent } from '../proj.js';
+import { createFromCapabilitiesMatrixSet } from '../tilegrid/WMTS.js';
+import { createFromTileUrlFunctions } from '../tileurlfunction.js';
+import { appendParams } from '../uri.js';
+import { expandUrl } from '../uri.js';
+import TileImage from './TileImage.js';
 /**
  * @module ol/source/WMTS
  */
-
-import {containsExtent} from '../extent.js';
-import {equivalent, get as getProjection, transformExtent} from '../proj.js';
-import {createFromCapabilitiesMatrixSet} from '../tilegrid/WMTS.js';
-import {createFromTileUrlFunctions} from '../tileurlfunction.js';
-import {appendParams, expandUrl} from '../uri.js';
-import TileImage from './TileImage.js';
-
 /**
  * Request encoding. One of 'KVP', 'REST'.
  * @typedef {'KVP' | 'REST'} RequestEncoding

@@ -1,8 +1,24 @@
-/**
- * @module ol/Map
- */
+import { equals } from './array.js';
+import { assert } from './asserts.js';
 import Collection from './Collection.js';
 import CollectionEventType from './CollectionEventType.js';
+import { warn } from './console.js';
+import { defaults as defaultControls } from './control/defaults.js';
+import { listen } from './events.js';
+import { unlistenByKey } from './events.js';
+import EventType from './events/EventType.js';
+import { clone } from './extent.js';
+import { createOrUpdateEmpty } from './extent.js';
+import { equals as equalsExtent } from './extent.js';
+import { getForViewAndSize } from './extent.js';
+import { isEmpty } from './extent.js';
+import { TRUE } from './functions.js';
+import { DEVICE_PIXEL_RATIO } from './has.js';
+import { PASSIVE_EVENT_LISTENERS } from './has.js';
+import { defaults as defaultInteractions } from './interaction/defaults.js';
+import { GroupEvent } from './layer/Group.js';
+import LayerGroup from './layer/Group.js';
+import Layer from './layer/Layer.js';
 import MapBrowserEvent from './MapBrowserEvent.js';
 import MapBrowserEventHandler from './MapBrowserEventHandler.js';
 import MapBrowserEventType from './MapBrowserEventType.js';
@@ -11,38 +27,22 @@ import MapEventType from './MapEventType.js';
 import MapProperty from './MapProperty.js';
 import BaseObject from './Object.js';
 import ObjectEventType from './ObjectEventType.js';
-import TileQueue, {getTilePriority} from './TileQueue.js';
-import View from './View.js';
-import ViewHint from './ViewHint.js';
-import {equals} from './array.js';
-import {assert} from './asserts.js';
-import {warn} from './console.js';
-import {defaults as defaultControls} from './control/defaults.js';
-import EventType from './events/EventType.js';
-import {listen, unlistenByKey} from './events.js';
-import {
-  clone,
-  createOrUpdateEmpty,
-  equals as equalsExtent,
-  getForViewAndSize,
-  isEmpty,
-} from './extent.js';
-import {TRUE} from './functions.js';
-import {DEVICE_PIXEL_RATIO, PASSIVE_EVENT_LISTENERS} from './has.js';
-import {defaults as defaultInteractions} from './interaction/defaults.js';
-import LayerGroup, {GroupEvent} from './layer/Group.js';
-import Layer from './layer/Layer.js';
 import PointerEventType from './pointer/EventType.js';
-import {fromUserCoordinate, toUserCoordinate} from './proj.js';
+import { fromUserCoordinate } from './proj.js';
+import { toUserCoordinate } from './proj.js';
 import RenderEventType from './render/EventType.js';
 import CompositeMapRenderer from './renderer/Composite.js';
-import {hasArea} from './size.js';
-import {
-  apply as applyTransform,
-  create as createTransform,
-} from './transform.js';
-import {getUid} from './util.js';
-
+import { hasArea } from './size.js';
+import { getTilePriority } from './TileQueue.js';
+import TileQueue from './TileQueue.js';
+import { apply as applyTransform } from './transform.js';
+import { create as createTransform } from './transform.js';
+import { getUid } from './util.js';
+import View from './View.js';
+import ViewHint from './ViewHint.js';
+/**
+ * @module ol/Map
+ */
 /**
  * State of the current frame. Only `pixelRatio`, `time` and `viewState` should
  * be used in applications.

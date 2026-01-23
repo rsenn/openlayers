@@ -1,11 +1,14 @@
+import { createOrUpdateFromFlatCoordinates } from '../extent.js';
+import { getCenter } from '../extent.js';
+import { abstract } from '../util.js';
+import { rotate } from './flat/transform.js';
+import { scale } from './flat/transform.js';
+import { transform2D } from './flat/transform.js';
+import { translate } from './flat/transform.js';
+import Geometry from './Geometry.js';
 /**
  * @module ol/geom/SimpleGeometry
  */
-import {createOrUpdateFromFlatCoordinates, getCenter} from '../extent.js';
-import {abstract} from '../util.js';
-import Geometry from './Geometry.js';
-import {rotate, scale, transform2D, translate} from './flat/transform.js';
-
 /**
  * @classdesc
  * Abstract base class; only used for creating subclasses; do not instantiate

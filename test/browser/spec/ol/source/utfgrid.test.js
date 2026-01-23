@@ -1,10 +1,9 @@
-import {
-  fromLonLat,
-  get as getProjection,
-  transformExtent,
-} from '../../../../../src/ol/proj.js';
+import { fromLonLat } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { transformExtent } from '../../../../../src/ol/proj.js';
 import TileSource from '../../../../../src/ol/source/Tile.js';
-import UTFGrid, {CustomTile} from '../../../../../src/ol/source/UTFGrid.js';
+import { CustomTile } from '../../../../../src/ol/source/UTFGrid.js';
+import UTFGrid from '../../../../../src/ol/source/UTFGrid.js';
 import TileGrid from '../../../../../src/ol/tilegrid/TileGrid.js';
 
 describe('ol.source.UTFGrid', function () {

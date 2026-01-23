@@ -1,19 +1,19 @@
+import { containsCoordinate } from './extent.js';
+import { createOrUpdate } from './extent.js';
+import { getCorner } from './extent.js';
+import { getHeight } from './extent.js';
+import { getWidth } from './extent.js';
+import { get as getProjection } from './proj.js';
+import { METERS_PER_UNIT } from './proj.js';
+import { toSize } from './size.js';
+import { DEFAULT_MAX_ZOOM } from './tilegrid/common.js';
+import { DEFAULT_TILE_SIZE } from './tilegrid/common.js';
+import TileGrid from './tilegrid/TileGrid.js';
 /**
  * @module ol/tilegrid
  */
-import {
-  containsCoordinate,
-  createOrUpdate,
-  getCorner,
-  getHeight,
-  getWidth,
-} from './extent.js';
-import {METERS_PER_UNIT, get as getProjection} from './proj.js';
-import {toSize} from './size.js';
-import TileGrid from './tilegrid/TileGrid.js';
-import {DEFAULT_MAX_ZOOM, DEFAULT_TILE_SIZE} from './tilegrid/common.js';
-
 export {TileGrid};
+
 export {default as WMTS} from './tilegrid/WMTS.js';
 
 /**

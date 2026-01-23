@@ -1,9 +1,8 @@
+import BaseObject from '../Object.js';
+import { get as getProjection } from '../proj.js';
 /**
  * @module ol/source/Source
  */
-import BaseObject from '../Object.js';
-import {get as getProjection} from '../proj.js';
-
 /**
  * @typedef {'undefined' | 'loading' | 'ready' | 'error'} State
  * State of the source, one of 'undefined', 'loading', 'ready' or 'error'.

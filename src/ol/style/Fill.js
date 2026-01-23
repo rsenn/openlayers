@@ -1,12 +1,10 @@
+import { asArray } from '../color.js';
+import ImageState from '../ImageState.js';
+import { getUid } from '../util.js';
+import { get as getIconImage } from './IconImage.js';
 /**
  * @module ol/style/Fill
  */
-
-import ImageState from '../ImageState.js';
-import {asArray} from '../color.js';
-import {getUid} from '../util.js';
-import {get as getIconImage} from './IconImage.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("../color.js").Color|import("../colorlike.js").ColorLike|import('../colorlike.js').PatternDescriptor|null} [color=null] A color,

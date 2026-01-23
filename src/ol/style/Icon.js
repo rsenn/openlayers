@@ -1,14 +1,13 @@
+import { assert } from '../asserts.js';
+import { asArray } from '../color.js';
+import EventType from '../events/EventType.js';
+import ImageState from '../ImageState.js';
+import { getUid } from '../util.js';
+import { get as getIconImage } from './IconImage.js';
+import ImageStyle from './Image.js';
 /**
  * @module ol/style/Icon
  */
-import ImageState from '../ImageState.js';
-import {assert} from '../asserts.js';
-import {asArray} from '../color.js';
-import EventType from '../events/EventType.js';
-import {getUid} from '../util.js';
-import {get as getIconImage} from './IconImage.js';
-import ImageStyle from './Image.js';
-
 /**
  * @typedef {'fraction' | 'pixels'} IconAnchorUnits
  * Anchor unit can be either a fraction of the icon size or in pixels.

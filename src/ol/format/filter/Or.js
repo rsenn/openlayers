@@ -1,8 +1,7 @@
+import LogicalNary from './LogicalNary.js';
 /**
  * @module ol/format/filter/Or
  */
-import LogicalNary from './LogicalNary.js';
-
 /**
  * @classdesc
  * Represents a logical `<Or>` operator between two or more filter conditions.

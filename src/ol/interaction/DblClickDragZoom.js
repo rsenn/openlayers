@@ -1,9 +1,8 @@
+import MapBrowserEventType from '../MapBrowserEventType.js';
+import Interaction from './Interaction.js';
 /**
  * @module ol/interaction/DblClickDragZoom
  */
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import Interaction from './Interaction.js';
-
 /**
  * @typedef {Object} Options
  * @property {number} [duration=400] Animation duration in milliseconds. *

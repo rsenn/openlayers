@@ -1,9 +1,11 @@
+import { squaredSegmentDistance } from '../../math.js';
+import { toDegrees } from '../../math.js';
+import { toRadians } from '../../math.js';
+import { get as getProjection } from '../../proj.js';
+import { getTransform } from '../../proj.js';
 /**
  * @module ol/geom/flat/geodesic
  */
-import {squaredSegmentDistance, toDegrees, toRadians} from '../../math.js';
-import {get as getProjection, getTransform} from '../../proj.js';
-
 /**
  * @param {function(number): import("../../coordinate.js").Coordinate} interpolate Interpolate function.
  * @param {import("../../proj.js").TransformFunction} transform Transform from longitude/latitude to

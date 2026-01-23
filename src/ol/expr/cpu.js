@@ -1,16 +1,15 @@
+import { fromString } from '../color.js';
+import { lchaToRgba } from '../color.js';
+import { rgbaToLcha } from '../color.js';
+import { toString } from '../color.js';
+import { withAlpha } from '../color.js';
+import { ColorType } from './expression.js';
+import { LiteralExpression } from './expression.js';
+import { Ops } from './expression.js';
+import { parse } from './expression.js';
 /**
  * @module ol/expr/cpu
  */
-
-import {
-  fromString,
-  lchaToRgba,
-  rgbaToLcha,
-  toString,
-  withAlpha,
-} from '../color.js';
-import {ColorType, LiteralExpression, Ops, parse} from './expression.js';
-
 /**
  * @fileoverview This module includes functions to build expressions for evaluation on the CPU.
  * Building is composed of two steps: parsing and compiling.  The parsing step takes an encoded

@@ -1,15 +1,13 @@
+import { asString } from '../color.js';
+import { createCanvasContext2D } from '../dom.js';
+import EventType from '../events/EventType.js';
+import EventTarget from '../events/Target.js';
+import { decodeFallback } from '../Image.js';
+import ImageState from '../ImageState.js';
+import { shared as iconImageCache } from './IconImageCache.js';
 /**
  * @module ol/style/IconImage
  */
-
-import {decodeFallback} from '../Image.js';
-import ImageState from '../ImageState.js';
-import {asString} from '../color.js';
-import {createCanvasContext2D} from '../dom.js';
-import EventType from '../events/EventType.js';
-import EventTarget from '../events/Target.js';
-import {shared as iconImageCache} from './IconImageCache.js';
-
 /**
  * @type {CanvasRenderingContext2D}
  */

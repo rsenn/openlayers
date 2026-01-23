@@ -1,9 +1,7 @@
+import { equals as arrayEquals } from './array.js';
 /**
  * @module ol/functions
  */
-
-import {equals as arrayEquals} from './array.js';
-
 /**
  * Always returns true.
  * @return {boolean} true.

@@ -1,10 +1,10 @@
-import {getBottomLeft, getTopRight} from '../../../../../src/ol/extent.js';
+import { getBottomLeft } from '../../../../../src/ol/extent.js';
+import { getTopRight } from '../../../../../src/ol/extent.js';
 import WMTSCapabilities from '../../../../../src/ol/format/WMTSCapabilities.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
 import Projection from '../../../../../src/ol/proj/Projection.js';
-import {get as getProjection} from '../../../../../src/ol/proj.js';
-import WMTS, {
-  optionsFromCapabilities,
-} from '../../../../../src/ol/source/WMTS.js';
+import { optionsFromCapabilities } from '../../../../../src/ol/source/WMTS.js';
+import WMTS from '../../../../../src/ol/source/WMTS.js';
 import WMTSTileGrid from '../../../../../src/ol/tilegrid/WMTS.js';
 
 describe('ol/source/WMTS', function () {

@@ -1,8 +1,7 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
-
+import View from '../src/ol/View.js';
 // default zoom, center and rotation
 let zoom = 2;
 let center = [0, 0];
@@ -34,7 +33,9 @@ const map = new Map({
 });
 
 let shouldUpdate = true;
+
 const view = map.getView();
+
 const updatePermalink = function () {
   if (!shouldUpdate) {
     // do not update the URL when the view was changed in the 'popstate' handler

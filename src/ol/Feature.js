@@ -1,11 +1,11 @@
+import { assert } from './asserts.js';
+import { listen } from './events.js';
+import { unlistenByKey } from './events.js';
+import EventType from './events/EventType.js';
+import BaseObject from './Object.js';
 /**
  * @module ol/Feature
  */
-import BaseObject from './Object.js';
-import {assert} from './asserts.js';
-import EventType from './events/EventType.js';
-import {listen, unlistenByKey} from './events.js';
-
 /**
  * @typedef {typeof Feature|typeof import("./render/Feature.js").default} FeatureClass
  */

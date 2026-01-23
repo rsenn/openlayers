@@ -1,15 +1,15 @@
 import Feature from '../../../../src/ol/Feature.js';
-import Polyline, {
-  decodeDeltas,
-  decodeSignedIntegers,
-  decodeUnsignedIntegers,
-  encodeDeltas,
-  encodeSignedIntegers,
-  encodeUnsignedInteger,
-  encodeUnsignedIntegers,
-} from '../../../../src/ol/format/Polyline.js';
+import { decodeDeltas } from '../../../../src/ol/format/Polyline.js';
+import { decodeSignedIntegers } from '../../../../src/ol/format/Polyline.js';
+import { decodeUnsignedIntegers } from '../../../../src/ol/format/Polyline.js';
+import { encodeDeltas } from '../../../../src/ol/format/Polyline.js';
+import { encodeSignedIntegers } from '../../../../src/ol/format/Polyline.js';
+import { encodeUnsignedInteger } from '../../../../src/ol/format/Polyline.js';
+import { encodeUnsignedIntegers } from '../../../../src/ol/format/Polyline.js';
+import Polyline from '../../../../src/ol/format/Polyline.js';
 import LineString from '../../../../src/ol/geom/LineString.js';
-import {get as getProjection, transform} from '../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../src/ol/proj.js';
+import { transform } from '../../../../src/ol/proj.js';
 import expect from '../../expect.js';
 
 describe('ol/format/Polyline.js', function () {

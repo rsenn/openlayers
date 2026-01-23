@@ -1,18 +1,14 @@
+import { wrapX } from '../coordinate.js';
+import { listen } from '../events.js';
+import EventType from '../pointer/EventType.js';
+import { get as getProjection } from '../proj.js';
+import { getTransformFromProjections } from '../proj.js';
+import { getUserProjection } from '../proj.js';
+import { identityTransform } from '../proj.js';
+import Control from './Control.js';
 /**
  * @module ol/control/MousePosition
  */
-
-import {wrapX} from '../coordinate.js';
-import {listen} from '../events.js';
-import EventType from '../pointer/EventType.js';
-import {
-  get as getProjection,
-  getTransformFromProjections,
-  getUserProjection,
-  identityTransform,
-} from '../proj.js';
-import Control from './Control.js';
-
 /**
  * @type {string}
  */

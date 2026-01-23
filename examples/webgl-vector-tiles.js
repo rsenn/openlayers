@@ -1,8 +1,8 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import MVT from '../src/ol/format/MVT.js';
 import WebGLVectorTileLayer from '../src/ol/layer/WebGLVectorTile.js';
+import Map from '../src/ol/Map.js';
 import VectorTileSource from '../src/ol/source/VectorTile.js';
+import View from '../src/ol/View.js';
 
 const key =
   'pk.eyJ1IjoiYWhvY2V2YXIiLCJhIjoiY2t0cGdwMHVnMGdlbzMxbDhwazBic2xrNSJ9.WbcTL9uj8JPAsnT9mgb7oQ';

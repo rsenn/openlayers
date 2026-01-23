@@ -1,20 +1,22 @@
+import { listenOnce } from '../events.js';
+import EventType from '../events/EventType.js';
+import { applyTransform } from '../extent.js';
+import { intersects } from '../extent.js';
+import { jsonp as requestJSONP } from '../net.js';
+import { get as getProjection } from '../proj.js';
+import { getTransformFromProjections } from '../proj.js';
+import LRUCache from '../structs/LRUCache.js';
+import Tile from '../Tile.js';
+import { getKeyZXY } from '../tilecoord.js';
+import { createXYZ } from '../tilegrid.js';
+import { extentFromProjection } from '../tilegrid.js';
+import TileState from '../TileState.js';
+import { createFromTemplates } from '../tileurlfunction.js';
+import { nullTileUrlFunction } from '../tileurlfunction.js';
+import TileSource from './Tile.js';
 /**
  * @module ol/source/UTFGrid
  */
-
-import Tile from '../Tile.js';
-import TileState from '../TileState.js';
-import EventType from '../events/EventType.js';
-import {listenOnce} from '../events.js';
-import {applyTransform, intersects} from '../extent.js';
-import {jsonp as requestJSONP} from '../net.js';
-import {get as getProjection, getTransformFromProjections} from '../proj.js';
-import LRUCache from '../structs/LRUCache.js';
-import {getKeyZXY} from '../tilecoord.js';
-import {createXYZ, extentFromProjection} from '../tilegrid.js';
-import {createFromTemplates, nullTileUrlFunction} from '../tileurlfunction.js';
-import TileSource from './Tile.js';
-
 /**
  * @typedef {Object} UTFGridJSON
  * @property {Array<string>} grid The grid.

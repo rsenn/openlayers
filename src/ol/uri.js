@@ -1,10 +1,8 @@
+import { modulo } from './math.js';
+import { hashZXY } from './tilecoord.js';
 /**
  * @module ol/uri
  */
-
-import {modulo} from './math.js';
-import {hashZXY} from './tilecoord.js';
-
 /**
  * Appends query parameters to a URI.
  *
@@ -31,8 +29,11 @@ export function appendParams(uri, params) {
 }
 
 const zRegEx = /\{z\}/g;
+
 const xRegEx = /\{x\}/g;
+
 const yRegEx = /\{y\}/g;
+
 const dashYRegEx = /\{-y\}/g;
 
 /**

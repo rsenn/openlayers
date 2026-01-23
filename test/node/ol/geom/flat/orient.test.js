@@ -1,12 +1,10 @@
 import GeoJSON from '../../../../../src/ol/format/GeoJSON.js';
-import {
-  inflateEnds,
-  linearRingIsClockwise,
-  linearRingsAreOriented,
-  linearRingssAreOriented,
-  orientLinearRings,
-  orientLinearRingsArray,
-} from '../../../../../src/ol/geom/flat/orient.js';
+import { inflateEnds } from '../../../../../src/ol/geom/flat/orient.js';
+import { linearRingIsClockwise } from '../../../../../src/ol/geom/flat/orient.js';
+import { linearRingsAreOriented } from '../../../../../src/ol/geom/flat/orient.js';
+import { linearRingssAreOriented } from '../../../../../src/ol/geom/flat/orient.js';
+import { orientLinearRings } from '../../../../../src/ol/geom/flat/orient.js';
+import { orientLinearRingsArray } from '../../../../../src/ol/geom/flat/orient.js';
 import RenderFeature from '../../../../../src/ol/render/Feature.js';
 import expect from '../../../expect.js';
 

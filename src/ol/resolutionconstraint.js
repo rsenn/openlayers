@@ -1,10 +1,10 @@
+import { linearFindNearest } from './array.js';
+import { getHeight } from './extent.js';
+import { getWidth } from './extent.js';
+import { clamp } from './math.js';
 /**
  * @module ol/resolutionconstraint
  */
-import {linearFindNearest} from './array.js';
-import {getHeight, getWidth} from './extent.js';
-import {clamp} from './math.js';
-
 /**
  * @typedef {function((number|undefined), number, import("./size.js").Size, boolean=): (number|undefined)} Type
  */

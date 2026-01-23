@@ -1,7 +1,5 @@
-import {
-  deflateCoordinates,
-  deflateCoordinatesArray,
-} from '../../../../../src/ol/geom/flat/deflate.js';
+import { deflateCoordinates } from '../../../../../src/ol/geom/flat/deflate.js';
+import { deflateCoordinatesArray } from '../../../../../src/ol/geom/flat/deflate.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/deflate.js', function () {

@@ -1,11 +1,11 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
 import HeatmapLayer from '../src/ol/layer/Heatmap.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {fromLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
 import VectorSource from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
 
 const blur = document.getElementById('blur');
 const radius = document.getElementById('radius');

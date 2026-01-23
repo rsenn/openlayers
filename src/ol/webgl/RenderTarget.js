@@ -1,9 +1,8 @@
+import { equals } from '../array.js';
 /**
  * A wrapper class to simplify rendering to a texture instead of the final canvas
  * @module ol/webgl/RenderTarget
  */
-import {equals} from '../array.js';
-
 // for pixel color reading
 const tmpArray4 = new Uint8Array(4);
 

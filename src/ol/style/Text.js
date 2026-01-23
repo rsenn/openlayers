@@ -1,9 +1,8 @@
+import { toSize } from '../size.js';
+import Fill from './Fill.js';
 /**
  * @module ol/style/Text
  */
-import {toSize} from '../size.js';
-import Fill from './Fill.js';
-
 /**
  * @typedef {'point' | 'line'} TextPlacement
  * Default text placement is `'point'`. Note that

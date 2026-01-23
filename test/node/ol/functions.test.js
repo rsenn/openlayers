@@ -1,4 +1,5 @@
-import {memoizeOne, toPromise} from '../../../src/ol/functions.js';
+import { memoizeOne } from '../../../src/ol/functions.js';
+import { toPromise } from '../../../src/ol/functions.js';
 import expect from '../expect.js';
 
 describe('ol/functions.js', function () {

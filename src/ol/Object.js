@@ -1,12 +1,11 @@
+import Event from './events/Event.js';
+import { isEmpty } from './obj.js';
+import ObjectEventType from './ObjectEventType.js';
+import Observable from './Observable.js';
+import { getUid } from './util.js';
 /**
  * @module ol/Object
  */
-import ObjectEventType from './ObjectEventType.js';
-import Observable from './Observable.js';
-import Event from './events/Event.js';
-import {isEmpty} from './obj.js';
-import {getUid} from './util.js';
-
 /**
  * @classdesc
  * Events emitted by {@link module:ol/Object~BaseObject} instances are instances of this type.

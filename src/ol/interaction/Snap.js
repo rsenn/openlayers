@@ -1,35 +1,31 @@
+import CollectionEventType from '../CollectionEventType.js';
+import { closestOnCircle } from '../coordinate.js';
+import { closestOnSegment } from '../coordinate.js';
+import { squaredDistance } from '../coordinate.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import EventType from '../events/EventType.js';
+import { SnapEvent } from '../events/SnapEvent.js';
+import { SnapEventType } from '../events/SnapEvent.js';
+import { boundingExtent } from '../extent.js';
+import { buffer } from '../extent.js';
+import { createEmpty } from '../extent.js';
+import { intersects as intersectsExtent } from '../extent.js';
+import { FALSE } from '../functions.js';
+import { TRUE } from '../functions.js';
+import { getIntersectionPoint } from '../geom/flat/segments.js';
+import { fromCircle } from '../geom/Polygon.js';
+import { fromUserCoordinate } from '../proj.js';
+import { getUserProjection } from '../proj.js';
+import { toUserCoordinate } from '../proj.js';
+import { toUserExtent } from '../proj.js';
+import VectorEventType from '../source/VectorEventType.js';
+import RBush from '../structs/RBush.js';
+import { getUid } from '../util.js';
+import PointerInteraction from './Pointer.js';
 /**
  * @module ol/interaction/Snap
  */
-import CollectionEventType from '../CollectionEventType.js';
-import {
-  closestOnCircle,
-  closestOnSegment,
-  squaredDistance,
-} from '../coordinate.js';
-import EventType from '../events/EventType.js';
-import {SnapEvent, SnapEventType} from '../events/SnapEvent.js';
-import {listen, unlistenByKey} from '../events.js';
-import {
-  boundingExtent,
-  buffer,
-  createEmpty,
-  intersects as intersectsExtent,
-} from '../extent.js';
-import {FALSE, TRUE} from '../functions.js';
-import {fromCircle} from '../geom/Polygon.js';
-import {getIntersectionPoint} from '../geom/flat/segments.js';
-import {
-  fromUserCoordinate,
-  getUserProjection,
-  toUserCoordinate,
-  toUserExtent,
-} from '../proj.js';
-import VectorEventType from '../source/VectorEventType.js';
-import RBush from '../structs/RBush.js';
-import {getUid} from '../util.js';
-import PointerInteraction from './Pointer.js';
-
 /**
  * @typedef {Array<import("../coordinate.js").Coordinate>} Segment
  * An array of two coordinates representing a line segment, or an array of one

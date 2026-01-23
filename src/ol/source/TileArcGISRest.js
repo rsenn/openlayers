@@ -1,14 +1,13 @@
+import { createEmpty } from '../extent.js';
+import { modulo } from '../math.js';
+import { scale as scaleSize } from '../size.js';
+import { toSize } from '../size.js';
+import { hash as tileCoordHash } from '../tilecoord.js';
+import { getRequestUrl } from './arcgisRest.js';
+import TileImage from './TileImage.js';
 /**
  * @module ol/source/TileArcGISRest
  */
-
-import {createEmpty} from '../extent.js';
-import {modulo} from '../math.js';
-import {scale as scaleSize, toSize} from '../size.js';
-import {hash as tileCoordHash} from '../tilecoord.js';
-import TileImage from './TileImage.js';
-import {getRequestUrl} from './arcgisRest.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("./Source.js").AttributionLike} [attributions] Attributions.

@@ -1,8 +1,7 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import MVT from '../src/ol/format/MVT.js';
 import VectorTileLayer from '../src/ol/layer/VectorTile.js';
-import {get as getProjection} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { get as getProjection } from '../src/ol/proj.js';
 import VectorTileSource from '../src/ol/source/VectorTile.js';
 import Fill from '../src/ol/style/Fill.js';
 import Icon from '../src/ol/style/Icon.js';
@@ -10,6 +9,7 @@ import Stroke from '../src/ol/style/Stroke.js';
 import Style from '../src/ol/style/Style.js';
 import Text from '../src/ol/style/Text.js';
 import TileGrid from '../src/ol/tilegrid/TileGrid.js';
+import View from '../src/ol/View.js';
 
 const key =
   'pk.eyJ1IjoiYWhvY2V2YXIiLCJhIjoiY2t0cGdwMHVnMGdlbzMxbDhwazBic2xrNSJ9.WbcTL9uj8JPAsnT9mgb7oQ';

@@ -1,10 +1,6 @@
-import OL3Parser from 'jsts/org/locationtech/jts/io/OL3Parser.js';
-import BufferOp from 'jsts/org/locationtech/jts/operation/buffer/BufferOp.js';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
-import LineString from '../src/ol/geom/LineString.js';
 import LinearRing from '../src/ol/geom/LinearRing.js';
+import LineString from '../src/ol/geom/LineString.js';
 import MultiLineString from '../src/ol/geom/MultiLineString.js';
 import MultiPoint from '../src/ol/geom/MultiPoint.js';
 import MultiPolygon from '../src/ol/geom/MultiPolygon.js';
@@ -12,9 +8,13 @@ import Point from '../src/ol/geom/Point.js';
 import Polygon from '../src/ol/geom/Polygon.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
-import {fromLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
 import OSM from '../src/ol/source/OSM.js';
 import VectorSource from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
+import OL3Parser from 'jsts/org/locationtech/jts/io/OL3Parser.js';
+import BufferOp from 'jsts/org/locationtech/jts/operation/buffer/BufferOp.js';
 
 const source = new VectorSource();
 fetch('data/geojson/roads-seoul.geojson')

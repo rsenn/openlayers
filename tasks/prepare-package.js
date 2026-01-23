@@ -1,7 +1,8 @@
-import path, {dirname} from 'path';
-import {fileURLToPath} from 'url';
-import esMain from 'es-main';
 import fse from 'fs-extra';
+import { dirname } from 'path';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import esMain from 'es-main';
 
 const baseDir = dirname(fileURLToPath(import.meta.url));
 const buildDir = path.resolve(baseDir, '../build/ol');

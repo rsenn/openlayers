@@ -1,18 +1,18 @@
+import { assert } from '../asserts.js';
+import Collection from '../Collection.js';
+import CollectionEventType from '../CollectionEventType.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import Event from '../events/Event.js';
+import EventType from '../events/EventType.js';
+import { getIntersection } from '../extent.js';
+import { clear } from '../obj.js';
+import ObjectEventType from '../ObjectEventType.js';
+import { getUid } from '../util.js';
+import BaseLayer from './Base.js';
 /**
  * @module ol/layer/Group
  */
-import Collection from '../Collection.js';
-import CollectionEventType from '../CollectionEventType.js';
-import ObjectEventType from '../ObjectEventType.js';
-import {assert} from '../asserts.js';
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {getIntersection} from '../extent.js';
-import {clear} from '../obj.js';
-import {getUid} from '../util.js';
-import BaseLayer from './Base.js';
-
 /**
  * @enum {string}
  */

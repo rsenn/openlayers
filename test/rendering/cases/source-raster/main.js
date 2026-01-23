@@ -1,8 +1,8 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import ImageLayer from '../../../../src/ol/layer/Image.js';
+import Map from '../../../../src/ol/Map.js';
 import RasterSource from '../../../../src/ol/source/Raster.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
+import View from '../../../../src/ol/View.js';
 
 const raster = new RasterSource({
   sources: [

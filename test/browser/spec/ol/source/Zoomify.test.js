@@ -1,7 +1,8 @@
 import Projection from '../../../../../src/ol/proj/Projection.js';
-import Zoomify, {CustomTile} from '../../../../../src/ol/source/Zoomify.js';
+import { CustomTile } from '../../../../../src/ol/source/Zoomify.js';
+import Zoomify from '../../../../../src/ol/source/Zoomify.js';
+import { DEFAULT_TILE_SIZE } from '../../../../../src/ol/tilegrid/common.js';
 import TileGrid from '../../../../../src/ol/tilegrid/TileGrid.js';
-import {DEFAULT_TILE_SIZE} from '../../../../../src/ol/tilegrid/common.js';
 
 describe('ol/source/Zoomify', function () {
   const w = 1024;

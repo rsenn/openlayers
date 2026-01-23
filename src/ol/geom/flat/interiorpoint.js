@@ -1,9 +1,8 @@
+import { ascending } from '../../array.js';
+import { linearRingsContainsXY } from './contains.js';
 /**
  * @module ol/geom/flat/interiorpoint
  */
-import {ascending} from '../../array.js';
-import {linearRingsContainsXY} from './contains.js';
-
 /**
  * Calculates a point that is likely to lie in the interior of the linear rings.
  * Inspired by JTS's com.vividsolutions.jts.geom.Geometry#getInteriorPoint.

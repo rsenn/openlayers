@@ -1,14 +1,12 @@
-import {spy as sinonSpy} from 'sinon';
 import Feature from '../../../../../src/ol/Feature.js';
-import Map from '../../../../../src/ol/Map.js';
-import TileState from '../../../../../src/ol/TileState.js';
-import View from '../../../../../src/ol/View.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import ImageLayer from '../../../../../src/ol/layer/Image.js';
 import VectorImageLayer from '../../../../../src/ol/layer/VectorImage.js';
+import Map from '../../../../../src/ol/Map.js';
 import Projection from '../../../../../src/ol/proj/Projection.js';
 import Static from '../../../../../src/ol/source/ImageStatic.js';
-import RasterSource, {Processor} from '../../../../../src/ol/source/Raster.js';
+import { Processor } from '../../../../../src/ol/source/Raster.js';
+import RasterSource from '../../../../../src/ol/source/Raster.js';
 import Source from '../../../../../src/ol/source/Source.js';
 import TileSource from '../../../../../src/ol/source/Tile.js';
 import VectorSource from '../../../../../src/ol/source/Vector.js';
@@ -16,6 +14,9 @@ import XYZ from '../../../../../src/ol/source/XYZ.js';
 import Circle from '../../../../../src/ol/style/Circle.js';
 import Fill from '../../../../../src/ol/style/Fill.js';
 import Style from '../../../../../src/ol/style/Style.js';
+import TileState from '../../../../../src/ol/TileState.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 const red =
   'data:image/gif;base64,R0lGODlhAQABAPAAAP8AAP///yH5BAAAAAAALAAAAAA' +

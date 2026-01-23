@@ -1,4 +1,4 @@
-import {matchingChunk} from '../../../../../src/ol/geom/flat/straightchunk.js';
+import { matchingChunk } from '../../../../../src/ol/geom/flat/straightchunk.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/straightchunk.js', function () {

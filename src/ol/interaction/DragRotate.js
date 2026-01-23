@@ -1,15 +1,12 @@
+import { altShiftKeysOnly } from '../events/condition.js';
+import { mouseActionButton } from '../events/condition.js';
+import { mouseOnly } from '../events/condition.js';
+import { FALSE } from '../functions.js';
+import { disable } from '../rotationconstraint.js';
+import PointerInteraction from './Pointer.js';
 /**
  * @module ol/interaction/DragRotate
  */
-import {
-  altShiftKeysOnly,
-  mouseActionButton,
-  mouseOnly,
-} from '../events/condition.js';
-import {FALSE} from '../functions.js';
-import {disable} from '../rotationconstraint.js';
-import PointerInteraction from './Pointer.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("../events/condition.js").Condition} [condition] A function that takes a

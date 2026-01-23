@@ -1,16 +1,13 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import FullScreen from '../src/ol/control/FullScreen.js';
 import Layer from '../src/ol/layer/Layer.js';
+import Map from '../src/ol/Map.js';
 import Source from '../src/ol/source/Source.js';
+import { createXYZ } from '../src/ol/tilegrid.js';
+import { compose } from '../src/ol/transform.js';
+import { create } from '../src/ol/transform.js';
+import { toString as toTransformString } from '../src/ol/transform.js';
+import View from '../src/ol/View.js';
 import Worker from 'worker-loader!./offscreen-canvas.worker.js'; //eslint-disable-line
-import {createXYZ} from '../src/ol/tilegrid.js';
-import {
-  compose,
-  create,
-  toString as toTransformString,
-} from '../src/ol/transform.js';
-
 const worker = new Worker();
 
 let container,
@@ -129,6 +126,7 @@ const map = new Map({
 map.addControl(new FullScreen());
 
 let pointerOutside = true;
+
 const mapTarget = map.getTargetElement();
 mapTarget.addEventListener('pointerleave', () => {
   pointerOutside = true;

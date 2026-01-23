@@ -1,9 +1,8 @@
+import { lerp } from '../../math.js';
+import { rotate } from './transform.js';
 /**
  * @module ol/geom/flat/textpath
  */
-import {lerp} from '../../math.js';
-import {rotate} from './transform.js';
-
 /**
  * @param {Array<number>} flatCoordinates Path to put text on.
  * @param {number} offset Start offset of the `flatCoordinates`.

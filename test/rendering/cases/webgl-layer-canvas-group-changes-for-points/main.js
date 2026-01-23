@@ -1,13 +1,13 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import KML from '../../../../src/ol/format/KML.js';
 import LayerGroup from '../../../../src/ol/layer/Group.js';
 import VectorLayer from '../../../../src/ol/layer/Vector.js';
 import TileLayer from '../../../../src/ol/layer/WebGLTile.js';
 import WebGLVectorLayer from '../../../../src/ol/layer/WebGLVector.js';
+import Map from '../../../../src/ol/Map.js';
 import ImageTile from '../../../../src/ol/source/ImageTile.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
-import {createDefaultStyle} from '../../../../src/ol/style/flat.js';
+import { createDefaultStyle } from '../../../../src/ol/style/flat.js';
+import View from '../../../../src/ol/View.js';
 
 const lg = new LayerGroup();
 const vl = new VectorLayer();

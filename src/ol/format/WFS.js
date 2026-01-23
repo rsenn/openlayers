@@ -1,33 +1,30 @@
-/**
- * @module ol/format/WFS
- */
-import {assert} from '../asserts.js';
-import {get as getProjection} from '../proj.js';
-import {
-  XML_SCHEMA_INSTANCE_URI,
-  createElementNS,
-  isDocument,
-  makeArrayPusher,
-  makeChildAppender,
-  makeObjectPropertySetter,
-  makeSimpleNodeFactory,
-  parse,
-  parseNode,
-  pushParseAndPop,
-  pushSerializeAndPop,
-} from '../xml.js';
+import { assert } from '../asserts.js';
+import { get as getProjection } from '../proj.js';
+import { createElementNS } from '../xml.js';
+import { isDocument } from '../xml.js';
+import { makeArrayPusher } from '../xml.js';
+import { makeChildAppender } from '../xml.js';
+import { makeObjectPropertySetter } from '../xml.js';
+import { makeSimpleNodeFactory } from '../xml.js';
+import { parse } from '../xml.js';
+import { parseNode } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import { pushSerializeAndPop } from '../xml.js';
+import { XML_SCHEMA_INSTANCE_URI } from '../xml.js';
+import { and as andFilterFn } from './filter.js';
+import { bbox as bboxFilterFn } from './filter.js';
 import GML2 from './GML2.js';
 import GML3 from './GML3.js';
 import GML32 from './GML32.js';
-import GMLBase, {GMLNS} from './GMLBase.js';
+import { GMLNS } from './GMLBase.js';
+import GMLBase from './GMLBase.js';
 import XMLFeature from './XMLFeature.js';
-import {and as andFilterFn, bbox as bboxFilterFn} from './filter.js';
-import {
-  readNonNegativeIntegerString,
-  readPositiveInteger,
-  writeStringTextNode,
-} from './xsd.js';
-
+import { readNonNegativeIntegerString } from './xsd.js';
+import { readPositiveInteger } from './xsd.js';
+import { writeStringTextNode } from './xsd.js';
+/**
+ * @module ol/format/WFS
+ */
 /**
  * @const
  * @type {Object<string, Object<string, import("../xml.js").Parser>>}

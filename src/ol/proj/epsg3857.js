@@ -1,8 +1,7 @@
+import Projection from './Projection.js';
 /**
  * @module ol/proj/epsg3857
  */
-import Projection from './Projection.js';
-
 /**
  * Radius of WGS84 sphere
  *

@@ -1,12 +1,11 @@
-import proj4 from 'proj4';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import TileLayer from '../../../../src/ol/layer/WebGLTile.js';
-import {register} from '../../../../src/ol/proj/proj4.js';
-import {fromLonLat} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../src/ol/proj.js';
+import { register } from '../../../../src/ol/proj/proj4.js';
 import DataTile from '../../../../src/ol/source/DataTile.js';
 import TileGrid from '../../../../src/ol/tilegrid/TileGrid.js';
-
+import View from '../../../../src/ol/View.js';
+import proj4 from 'proj4';
 proj4.defs(
   'stereo-sib',
   '+proj=stere +lat_0=49 +lat_ts=-73 +lon_0=90 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs',
@@ -14,8 +13,11 @@ proj4.defs(
 register(proj4);
 
 const tileSize = 512;
+
 const size = 256;
+
 const scale = tileSize / size;
+
 const lineHeight = 30;
 
 const canvas = document.createElement('canvas');

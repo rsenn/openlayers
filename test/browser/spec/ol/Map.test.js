@@ -1,25 +1,19 @@
-import {spy as sinonSpy, stub as sinonStub} from 'sinon';
 import Collection from '../../../../src/ol/Collection.js';
-import Feature from '../../../../src/ol/Feature.js';
-import ImageState from '../../../../src/ol/ImageState.js';
-import Map from '../../../../src/ol/Map.js';
-import MapBrowserEvent from '../../../../src/ol/MapBrowserEvent.js';
-import MapEvent from '../../../../src/ol/MapEvent.js';
-import Overlay from '../../../../src/ol/Overlay.js';
-import View from '../../../../src/ol/View.js';
 import Control from '../../../../src/ol/control/Control.js';
+import Feature from '../../../../src/ol/Feature.js';
 import GeoJSON from '../../../../src/ol/format/GeoJSON.js';
-import {TRUE} from '../../../../src/ol/functions.js';
+import { TRUE } from '../../../../src/ol/functions.js';
 import LineString from '../../../../src/ol/geom/LineString.js';
 import Point from '../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../src/ol/geom/Polygon.js';
+import ImageState from '../../../../src/ol/ImageState.js';
+import { defaults as defaultInteractions } from '../../../../src/ol/interaction/defaults.js';
 import DoubleClickZoom from '../../../../src/ol/interaction/DoubleClickZoom.js';
 import DragPan from '../../../../src/ol/interaction/DragPan.js';
 import Interaction from '../../../../src/ol/interaction/Interaction.js';
 import MouseWheelZoom from '../../../../src/ol/interaction/MouseWheelZoom.js';
 import PinchZoom from '../../../../src/ol/interaction/PinchZoom.js';
 import Select from '../../../../src/ol/interaction/Select.js';
-import {defaults as defaultInteractions} from '../../../../src/ol/interaction/defaults.js';
 import LayerGroup from '../../../../src/ol/layer/Group.js';
 import ImageLayer from '../../../../src/ol/layer/Image.js';
 import Layer from '../../../../src/ol/layer/Layer.js';
@@ -28,22 +22,27 @@ import TileLayer from '../../../../src/ol/layer/Tile.js';
 import VectorLayer from '../../../../src/ol/layer/Vector.js';
 import VectorTileLayer from '../../../../src/ol/layer/VectorTile.js';
 import WebGLVectorLayer from '../../../../src/ol/layer/WebGLVector.js';
-import {tile as tileStrategy} from '../../../../src/ol/loadingstrategy.js';
-import {
-  clearUserProjection,
-  fromLonLat,
-  get as getProjection,
-  transform,
-  useGeographic,
-} from '../../../../src/ol/proj.js';
+import { tile as tileStrategy } from '../../../../src/ol/loadingstrategy.js';
+import Map from '../../../../src/ol/Map.js';
+import MapBrowserEvent from '../../../../src/ol/MapBrowserEvent.js';
+import MapEvent from '../../../../src/ol/MapEvent.js';
+import Overlay from '../../../../src/ol/Overlay.js';
+import { clearUserProjection } from '../../../../src/ol/proj.js';
+import { fromLonLat } from '../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../src/ol/proj.js';
+import { transform } from '../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../src/ol/proj.js';
 import ImageStatic from '../../../../src/ol/source/ImageStatic.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
 import VectorTileSource from '../../../../src/ol/source/VectorTile.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
 import Icon from '../../../../src/ol/style/Icon.js';
-import {shared as iconImageCache} from '../../../../src/ol/style/IconImageCache.js';
+import { shared as iconImageCache } from '../../../../src/ol/style/IconImageCache.js';
 import Style from '../../../../src/ol/style/Style.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
+import View from '../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
+import { stub as sinonStub } from 'sinon';
 
 describe('ol/Map', function () {
   describe('constructor', function () {

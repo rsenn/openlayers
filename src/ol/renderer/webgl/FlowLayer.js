@@ -1,11 +1,11 @@
+import { ARRAY_BUFFER } from '../../webgl.js';
+import { STATIC_DRAW } from '../../webgl.js';
+import WebGLArrayBuffer from '../../webgl/Buffer.js';
+import { DefaultUniform } from '../../webgl/Helper.js';
+import WebGLTileLayerRenderer from './TileLayer.js';
 /**
  * @module ol/renderer/webgl/FlowLayer
  */
-import WebGLArrayBuffer from '../../webgl/Buffer.js';
-import {DefaultUniform} from '../../webgl/Helper.js';
-import {ARRAY_BUFFER, STATIC_DRAW} from '../../webgl.js';
-import WebGLTileLayerRenderer from './TileLayer.js';
-
 /**
  * @typedef {import("../../layer/Flow.js").default} LayerType
  */

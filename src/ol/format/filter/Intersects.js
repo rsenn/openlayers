@@ -1,8 +1,7 @@
+import Spatial from './Spatial.js';
 /**
  * @module ol/format/filter/Intersects
  */
-import Spatial from './Spatial.js';
-
 /**
  * @classdesc
  * Represents a `<Intersects>` operator to test whether a geometry-valued property

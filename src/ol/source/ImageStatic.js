@@ -1,14 +1,14 @@
+import EventType from '../events/EventType.js';
+import { intersects } from '../extent.js';
+import { decode } from '../Image.js';
+import ImageWrapper from '../Image.js';
+import { get as getProjection } from '../proj.js';
+import { defaultImageLoadFunction } from './Image.js';
+import ImageSource from './Image.js';
+import { createLoader } from './static.js';
 /**
  * @module ol/source/ImageStatic
  */
-
-import ImageWrapper, {decode} from '../Image.js';
-import EventType from '../events/EventType.js';
-import {intersects} from '../extent.js';
-import {get as getProjection} from '../proj.js';
-import ImageSource, {defaultImageLoadFunction} from './Image.js';
-import {createLoader} from './static.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("./Source.js").AttributionLike} [attributions] Attributions.

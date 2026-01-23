@@ -1,10 +1,8 @@
+import { ATTRIBUTION as OSM_ATTRIBUTION } from './OSM.js';
+import XYZ from './XYZ.js';
 /**
  * @module ol/source/StadiaMaps
  */
-
-import {ATTRIBUTION as OSM_ATTRIBUTION} from './OSM.js';
-import XYZ from './XYZ.js';
-
 /**
  * @type {string}
  */

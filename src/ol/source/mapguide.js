@@ -1,12 +1,12 @@
+import { getCenter } from '../extent.js';
+import { getHeight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { decode } from '../Image.js';
+import { appendParams } from '../uri.js';
+import { getRequestExtent } from './Image.js';
 /**
  * @module ol/source/mapguide
  */
-
-import {decode} from '../Image.js';
-import {getCenter, getHeight, getWidth} from '../extent.js';
-import {appendParams} from '../uri.js';
-import {getRequestExtent} from './Image.js';
-
 /**
  * @typedef {Object} LoaderOptions
  * @property {string} url The mapagent url.

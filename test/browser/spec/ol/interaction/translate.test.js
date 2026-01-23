@@ -1,27 +1,24 @@
-import proj4 from 'proj4';
 import Collection from '../../../../../src/ol/Collection.js';
+import { shiftKeyOnly } from '../../../../../src/ol/events/condition.js';
 import Feature from '../../../../../src/ol/Feature.js';
-import Map from '../../../../../src/ol/Map.js';
-import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
-import View from '../../../../../src/ol/View.js';
-import {shiftKeyOnly} from '../../../../../src/ol/events/condition.js';
 import Circle from '../../../../../src/ol/geom/Circle.js';
 import GeometryCollection from '../../../../../src/ol/geom/GeometryCollection.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
 import Interaction from '../../../../../src/ol/interaction/Interaction.js';
-import Translate, {
-  TranslateEvent,
-} from '../../../../../src/ol/interaction/Translate.js';
+import { TranslateEvent } from '../../../../../src/ol/interaction/Translate.js';
+import Translate from '../../../../../src/ol/interaction/Translate.js';
 import VectorLayer from '../../../../../src/ol/layer/Vector.js';
-import {register} from '../../../../../src/ol/proj/proj4.js';
-import {
-  addCommon,
-  clearAllProjections,
-  clearUserProjection,
-  setUserProjection,
-} from '../../../../../src/ol/proj.js';
+import Map from '../../../../../src/ol/Map.js';
+import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
+import { addCommon } from '../../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../../src/ol/proj.js';
+import { clearUserProjection } from '../../../../../src/ol/proj.js';
+import { setUserProjection } from '../../../../../src/ol/proj.js';
+import { register } from '../../../../../src/ol/proj/proj4.js';
 import VectorSource from '../../../../../src/ol/source/Vector.js';
+import View from '../../../../../src/ol/View.js';
+import proj4 from 'proj4';
 
 describe('ol.interaction.Translate', function () {
   let target, map, source, features;

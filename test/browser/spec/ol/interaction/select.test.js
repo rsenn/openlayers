@@ -1,16 +1,16 @@
-import {spy as sinonSpy} from 'sinon';
 import Collection from '../../../../../src/ol/Collection.js';
 import Feature from '../../../../../src/ol/Feature.js';
-import Map from '../../../../../src/ol/Map.js';
-import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
-import MapBrowserEventType from '../../../../../src/ol/MapBrowserEventType.js';
-import View from '../../../../../src/ol/View.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
 import Interaction from '../../../../../src/ol/interaction/Interaction.js';
 import Select from '../../../../../src/ol/interaction/Select.js';
 import VectorLayer from '../../../../../src/ol/layer/Vector.js';
+import Map from '../../../../../src/ol/Map.js';
+import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
+import MapBrowserEventType from '../../../../../src/ol/MapBrowserEventType.js';
 import VectorSource from '../../../../../src/ol/source/Vector.js';
 import Style from '../../../../../src/ol/style/Style.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.interaction.Select', function () {
   let target, map, layer, source;

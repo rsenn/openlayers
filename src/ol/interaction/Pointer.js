@@ -1,9 +1,8 @@
+import MapBrowserEventType from '../MapBrowserEventType.js';
+import Interaction from './Interaction.js';
 /**
  * @module ol/interaction/Pointer
  */
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import Interaction from './Interaction.js';
-
 /**
  * @typedef {Object} Options
  * @property {function(import("../MapBrowserEvent.js").default):boolean} [handleDownEvent]

@@ -1,12 +1,11 @@
+import Feature from '../Feature.js';
+import LineString from '../geom/LineString.js';
+import { get as getProjection } from '../proj.js';
+import { transformGeometryWithOptions } from './Feature.js';
+import TextFeature from './TextFeature.js';
 /**
  * @module ol/format/IGC
  */
-import Feature from '../Feature.js';
-import LineString from '../geom/LineString.js';
-import {get as getProjection} from '../proj.js';
-import {transformGeometryWithOptions} from './Feature.js';
-import TextFeature from './TextFeature.js';
-
 /**
  * @typedef {'barometric' | 'gps' | 'none'} IGCZ
  * IGC altitude/z. One of 'barometric', 'gps', 'none'.

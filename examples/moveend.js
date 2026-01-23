@@ -1,9 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getBottomLeft, getTopRight} from '../src/ol/extent.js';
+import { getBottomLeft } from '../src/ol/extent.js';
+import { getTopRight } from '../src/ol/extent.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {toLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { toLonLat } from '../src/ol/proj.js';
 import OSM from '../src/ol/source/OSM.js';
+import View from '../src/ol/View.js';
 
 const map = new Map({
   layers: [

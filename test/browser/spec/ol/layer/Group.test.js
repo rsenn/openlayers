@@ -1,10 +1,10 @@
-import {spy as sinonSpy} from 'sinon';
 import Collection from '../../../../../src/ol/Collection.js';
-import {getIntersection} from '../../../../../src/ol/extent.js';
+import { getIntersection } from '../../../../../src/ol/extent.js';
 import LayerGroup from '../../../../../src/ol/layer/Group.js';
 import Layer from '../../../../../src/ol/layer/Layer.js';
 import Source from '../../../../../src/ol/source/Source.js';
-import {getUid} from '../../../../../src/ol/util.js';
+import { getUid } from '../../../../../src/ol/util.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/layer/Group', function () {
   function disposeHierarchy(layer) {

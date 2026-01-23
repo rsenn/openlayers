@@ -1,13 +1,11 @@
+import EventType from '../events/EventType.js';
+import EventTarget from '../events/Target.js';
+import ImageTile from '../ImageTile.js';
+import TileState from '../TileState.js';
+import { abstract } from '../util.js';
 /**
  * @module ol/webgl/BaseTileRepresentation
  */
-
-import ImageTile from '../ImageTile.js';
-import TileState from '../TileState.js';
-import EventType from '../events/EventType.js';
-import EventTarget from '../events/Target.js';
-import {abstract} from '../util.js';
-
 /**
  * @typedef {import("../Tile.js").default} BaseTileType
  */

@@ -1,11 +1,12 @@
+import { createOrUpdate } from '../extent.js';
+import { forEachCorner } from '../extent.js';
+import { intersects } from '../extent.js';
+import { deflateCoordinate } from './flat/deflate.js';
+import { rotate } from './flat/transform.js';
+import SimpleGeometry from './SimpleGeometry.js';
 /**
  * @module ol/geom/Circle
  */
-import {createOrUpdate, forEachCorner, intersects} from '../extent.js';
-import SimpleGeometry from './SimpleGeometry.js';
-import {deflateCoordinate} from './flat/deflate.js';
-import {rotate} from './flat/transform.js';
-
 /**
  * @classdesc
  * Circle geometry.
@@ -275,4 +276,5 @@ class Circle extends SimpleGeometry {
  * @api
  */
 Circle.prototype.transform;
+
 export default Circle;

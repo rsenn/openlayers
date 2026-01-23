@@ -1,8 +1,6 @@
-import {
-  intersectsLineString,
-  intersectsLinearRing,
-  intersectsLinearRingArray,
-} from '../../../../../src/ol/geom/flat/intersectsextent.js';
+import { intersectsLinearRing } from '../../../../../src/ol/geom/flat/intersectsextent.js';
+import { intersectsLinearRingArray } from '../../../../../src/ol/geom/flat/intersectsextent.js';
+import { intersectsLineString } from '../../../../../src/ol/geom/flat/intersectsextent.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/intersectsextent.js', function () {

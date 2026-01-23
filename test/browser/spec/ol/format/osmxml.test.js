@@ -2,7 +2,8 @@ import Feature from '../../../../../src/ol/Feature.js';
 import OSMXML from '../../../../../src/ol/format/OSMXML.js';
 import LineString from '../../../../../src/ol/geom/LineString.js';
 import Point from '../../../../../src/ol/geom/Point.js';
-import {get as getProjection, transform} from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { transform } from '../../../../../src/ol/proj.js';
 
 describe('ol.format.OSMXML', function () {
   let format;

@@ -1,9 +1,7 @@
-import {
-  createCanvasContext2D,
-  outerHeight,
-  outerWidth,
-  replaceChildren,
-} from '../../../../../src/ol/dom.js';
+import { createCanvasContext2D } from '../../../../../src/ol/dom.js';
+import { outerHeight } from '../../../../../src/ol/dom.js';
+import { outerWidth } from '../../../../../src/ol/dom.js';
+import { replaceChildren } from '../../../../../src/ol/dom.js';
 
 describe('ol.dom', function () {
   describe('ol.dom.createCanvasContext2D', function () {

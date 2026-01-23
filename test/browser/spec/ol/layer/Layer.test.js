@@ -1,14 +1,15 @@
-import {spy as sinonSpy} from 'sinon';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import Group from '../../../../../src/ol/layer/Group.js';
-import Layer, {inView} from '../../../../../src/ol/layer/Layer.js';
+import { inView } from '../../../../../src/ol/layer/Layer.js';
+import Layer from '../../../../../src/ol/layer/Layer.js';
 import Property from '../../../../../src/ol/layer/Property.js';
 import TileLayer from '../../../../../src/ol/layer/Tile.js';
-import {get as getProjection} from '../../../../../src/ol/proj.js';
+import Map from '../../../../../src/ol/Map.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
 import RenderEvent from '../../../../../src/ol/render/Event.js';
 import Source from '../../../../../src/ol/source/Source.js';
 import XYZ from '../../../../../src/ol/source/XYZ.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/layer/Layer', function () {
   describe('constructor (defaults)', function () {

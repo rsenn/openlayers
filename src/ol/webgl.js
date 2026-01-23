@@ -1,9 +1,7 @@
+import { SAFARI_BUG_237906 } from './has.js';
 /**
  * @module ol/webgl
  */
-
-import {SAFARI_BUG_237906} from './has.js';
-
 /**
  * Constants taken from goog.webgl
  */

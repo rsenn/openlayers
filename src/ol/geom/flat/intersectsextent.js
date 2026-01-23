@@ -1,15 +1,13 @@
+import { createEmpty } from '../../extent.js';
+import { extendFlatCoordinates } from '../../extent.js';
+import { intersects } from '../../extent.js';
+import { intersectsSegment } from '../../extent.js';
+import { linearRingContainsExtent } from './contains.js';
+import { linearRingContainsXY } from './contains.js';
+import { forEach as forEachSegment } from './segments.js';
 /**
  * @module ol/geom/flat/intersectsextent
  */
-import {
-  createEmpty,
-  extendFlatCoordinates,
-  intersects,
-  intersectsSegment,
-} from '../../extent.js';
-import {linearRingContainsExtent, linearRingContainsXY} from './contains.js';
-import {forEach as forEachSegment} from './segments.js';
-
 /**
  * @param {Array<number>} flatCoordinates Flat coordinates.
  * @param {number} offset Offset.

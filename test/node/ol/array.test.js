@@ -1,14 +1,12 @@
-import {
-  ascending,
-  binarySearch,
-  equals,
-  extend,
-  isSorted,
-  linearFindNearest,
-  remove,
-  reverseSubArray,
-  stableSort,
-} from '../../../src/ol/array.js';
+import { ascending } from '../../../src/ol/array.js';
+import { binarySearch } from '../../../src/ol/array.js';
+import { equals } from '../../../src/ol/array.js';
+import { extend } from '../../../src/ol/array.js';
+import { isSorted } from '../../../src/ol/array.js';
+import { linearFindNearest } from '../../../src/ol/array.js';
+import { remove } from '../../../src/ol/array.js';
+import { reverseSubArray } from '../../../src/ol/array.js';
+import { stableSort } from '../../../src/ol/array.js';
 import expect from '../expect.js';
 
 describe('ol/array.js', function () {

@@ -1,17 +1,21 @@
+import RBush from '../../../../../rbush.js';
+import EventType from '../../events/EventType.js';
+import { getHeight } from '../../extent.js';
+import { getWidth } from '../../extent.js';
+import { isEmpty } from '../../extent.js';
+import { scaleFromCenter } from '../../extent.js';
+import ImageCanvas from '../../ImageCanvas.js';
+import ImageState from '../../ImageState.js';
+import { fromResolutionLike } from '../../resolution.js';
+import { apply } from '../../transform.js';
+import { compose } from '../../transform.js';
+import { create } from '../../transform.js';
+import ViewHint from '../../ViewHint.js';
+import CanvasImageLayerRenderer from './ImageLayer.js';
+import CanvasVectorLayerRenderer from './VectorLayer.js';
 /**
  * @module ol/renderer/canvas/VectorImageLayer
  */
-import RBush from '../../../../../rbush.js';
-import ImageCanvas from '../../ImageCanvas.js';
-import ImageState from '../../ImageState.js';
-import ViewHint from '../../ViewHint.js';
-import EventType from '../../events/EventType.js';
-import {getHeight, getWidth, isEmpty, scaleFromCenter} from '../../extent.js';
-import {fromResolutionLike} from '../../resolution.js';
-import {apply, compose, create} from '../../transform.js';
-import CanvasImageLayerRenderer from './ImageLayer.js';
-import CanvasVectorLayerRenderer from './VectorLayer.js';
-
 /**
  * @classdesc
  * Canvas renderer for image layers.

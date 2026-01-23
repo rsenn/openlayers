@@ -1,21 +1,19 @@
-import {
-  add as addCoordinate,
-  closestOnCircle,
-  closestOnSegment,
-  createStringXY,
-  degreesToStringHDMS,
-  equals as coordinatesEqual,
-  format as formatCoordinate,
-  rotate as rotateCoordinate,
-  scale as scaleCoordinate,
-  squaredDistanceToSegment,
-  toStringHDMS,
-  toStringXY,
-  wrapX,
-} from '../../../src/ol/coordinate.js';
+import { add as addCoordinate } from '../../../src/ol/coordinate.js';
+import { closestOnCircle } from '../../../src/ol/coordinate.js';
+import { closestOnSegment } from '../../../src/ol/coordinate.js';
+import { createStringXY } from '../../../src/ol/coordinate.js';
+import { degreesToStringHDMS } from '../../../src/ol/coordinate.js';
+import { equals as coordinatesEqual } from '../../../src/ol/coordinate.js';
+import { format as formatCoordinate } from '../../../src/ol/coordinate.js';
+import { rotate as rotateCoordinate } from '../../../src/ol/coordinate.js';
+import { scale as scaleCoordinate } from '../../../src/ol/coordinate.js';
+import { squaredDistanceToSegment } from '../../../src/ol/coordinate.js';
+import { toStringHDMS } from '../../../src/ol/coordinate.js';
+import { toStringXY } from '../../../src/ol/coordinate.js';
+import { wrapX } from '../../../src/ol/coordinate.js';
 import Circle from '../../../src/ol/geom/Circle.js';
+import { get } from '../../../src/ol/proj.js';
 import Projection from '../../../src/ol/proj/Projection.js';
-import {get} from '../../../src/ol/proj.js';
 import expect from '../expect.js';
 
 describe('ol/coordinate.js', function () {

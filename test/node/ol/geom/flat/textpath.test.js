@@ -1,5 +1,5 @@
-import {lineStringLength} from '../../../../../src/ol/geom/flat/length.js';
-import {drawTextOnPath} from '../../../../../src/ol/geom/flat/textpath.js';
+import { lineStringLength } from '../../../../../src/ol/geom/flat/length.js';
+import { drawTextOnPath } from '../../../../../src/ol/geom/flat/textpath.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/drawTextOnPath.js', function () {

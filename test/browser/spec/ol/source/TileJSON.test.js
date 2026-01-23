@@ -1,5 +1,5 @@
-import {unByKey} from '../../../../../src/ol/Observable.js';
-import {transformExtent} from '../../../../../src/ol/proj.js';
+import { unByKey } from '../../../../../src/ol/Observable.js';
+import { transformExtent } from '../../../../../src/ol/proj.js';
 import Source from '../../../../../src/ol/source/Source.js';
 import TileJSON from '../../../../../src/ol/source/TileJSON.js';
 

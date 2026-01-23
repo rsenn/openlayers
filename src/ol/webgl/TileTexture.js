@@ -1,16 +1,17 @@
+import { asArrayLike } from '../DataTile.js';
+import { asImageLike } from '../DataTile.js';
+import DataTile from '../DataTile.js';
+import { createCanvasContext2D } from '../dom.js';
+import ImageTile from '../ImageTile.js';
+import ReprojTile from '../reproj/Tile.js';
+import { toSize } from '../size.js';
+import { ARRAY_BUFFER } from '../webgl.js';
+import { STATIC_DRAW } from '../webgl.js';
+import BaseTileRepresentation from './BaseTileRepresentation.js';
+import WebGLArrayBuffer from './Buffer.js';
 /**
  * @module ol/webgl/TileTexture
  */
-
-import DataTile, {asArrayLike, asImageLike} from '../DataTile.js';
-import ImageTile from '../ImageTile.js';
-import {createCanvasContext2D} from '../dom.js';
-import ReprojTile from '../reproj/Tile.js';
-import {toSize} from '../size.js';
-import {ARRAY_BUFFER, STATIC_DRAW} from '../webgl.js';
-import BaseTileRepresentation from './BaseTileRepresentation.js';
-import WebGLArrayBuffer from './Buffer.js';
-
 /**
  * @param {WebGLRenderingContext} gl The WebGL context.
  * @param {WebGLTexture} texture The texture.

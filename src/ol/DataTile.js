@@ -1,10 +1,9 @@
+import { createCanvasContext2D } from './dom.js';
+import Tile from './Tile.js';
+import TileState from './TileState.js';
 /**
  * @module ol/DataTile
  */
-import Tile from './Tile.js';
-import TileState from './TileState.js';
-import {createCanvasContext2D} from './dom.js';
-
 /**
  * @typedef {HTMLImageElement|HTMLCanvasElement|HTMLVideoElement|ImageBitmap} ImageLike
  */

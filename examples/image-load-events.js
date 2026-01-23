@@ -1,8 +1,7 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ImageLayer from '../src/ol/layer/Image.js';
+import Map from '../src/ol/Map.js';
 import ImageWMS from '../src/ol/source/ImageWMS.js';
-
+import View from '../src/ol/View.js';
 /**
  * Renders a progress bar.
  * @param {HTMLElement} el The target element.

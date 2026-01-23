@@ -1,8 +1,7 @@
+import { assert } from './asserts.js';
 /**
  * @module ol/transform
  */
-import {assert} from './asserts.js';
-
 /**
  * An array representing an affine 2d transformation for use with
  * {@link module:ol/transform} functions. The array has 6 elements.

@@ -1,9 +1,9 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ImageLayer from '../src/ol/layer/Image.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import ImageArcGISRest from '../src/ol/source/ImageArcGISRest.js';
 import OSM from '../src/ol/source/OSM.js';
+import View from '../src/ol/View.js';
 
 const url =
   'https://sampleserver6.arcgisonline.com/ArcGIS/rest/services/' +

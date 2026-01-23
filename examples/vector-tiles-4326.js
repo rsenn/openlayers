@@ -1,9 +1,10 @@
-import {applyBackground, applyStyle} from 'ol-mapbox-style';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import VectorTileLayer from '../src/ol/layer/VectorTile.js';
+import Map from '../src/ol/Map.js';
 import VectorTileSource from '../src/ol/source/VectorTile.js';
-import {createXYZ} from '../src/ol/tilegrid.js';
+import { createXYZ } from '../src/ol/tilegrid.js';
+import View from '../src/ol/View.js';
+import { applyBackground } from 'ol-mapbox-style';
+import { applyStyle } from 'ol-mapbox-style';
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
 const url = 'https://api.maptiler.com/maps/basic-4326/style.json?key=' + key;

@@ -1,34 +1,27 @@
+import { assert } from '../../asserts.js';
+import { BooleanType } from '../../expr/expression.js';
+import { ColorType } from '../../expr/expression.js';
+import { computeGeometryType } from '../../expr/expression.js';
+import { NumberArrayType } from '../../expr/expression.js';
+import { NumberType } from '../../expr/expression.js';
+import { SizeType } from '../../expr/expression.js';
+import { StringType } from '../../expr/expression.js';
+import { FEATURE_ID_PROPERTY_NAME } from '../../expr/gpu.js';
+import { GEOMETRY_TYPE_PROPERTY_NAME } from '../../expr/gpu.js';
+import { getStringNumberEquivalent } from '../../expr/gpu.js';
+import { newCompilationContext } from '../../expr/gpu.js';
+import { stringToGlsl } from '../../expr/gpu.js';
+import { applyContextToBuilder } from './compileUtil.js';
+import { expressionToGlsl } from './compileUtil.js';
+import { generateAttributesFromContext } from './compileUtil.js';
+import { generateUniformsFromContext } from './compileUtil.js';
+import { getGlslSizeFromType } from './compileUtil.js';
+import { getGlslTypeFromType } from './compileUtil.js';
+import { ShaderBuilder } from './ShaderBuilder.js';
 /**
  * Utilities for parsing flat styles for WebGL renderers
  * @module ol/render/webgl/style
  */
-import {assert} from '../../asserts.js';
-import {
-  BooleanType,
-  ColorType,
-  NumberArrayType,
-  NumberType,
-  SizeType,
-  StringType,
-  computeGeometryType,
-} from '../../expr/expression.js';
-import {
-  FEATURE_ID_PROPERTY_NAME,
-  GEOMETRY_TYPE_PROPERTY_NAME,
-  getStringNumberEquivalent,
-  newCompilationContext,
-  stringToGlsl,
-} from '../../expr/gpu.js';
-import {ShaderBuilder} from './ShaderBuilder.js';
-import {
-  applyContextToBuilder,
-  expressionToGlsl,
-  generateAttributesFromContext,
-  generateUniformsFromContext,
-  getGlslSizeFromType,
-  getGlslTypeFromType,
-} from './compileUtil.js';
-
 /**
  * see https://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript
  * @param {Object|string} input The hash input, either an object or string

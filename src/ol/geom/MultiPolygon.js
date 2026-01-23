@@ -1,28 +1,23 @@
-/**
- * @module ol/geom/MultiPolygon
- */
-import {extend} from '../array.js';
-import {closestSquaredDistanceXY} from '../extent.js';
+import { extend } from '../array.js';
+import { closestSquaredDistanceXY } from '../extent.js';
+import { linearRingss as linearRingssArea } from './flat/area.js';
+import { linearRingss as linearRingssCenter } from './flat/center.js';
+import { assignClosestMultiArrayPoint } from './flat/closest.js';
+import { multiArrayMaxSquaredDelta } from './flat/closest.js';
+import { linearRingssContainsXY } from './flat/contains.js';
+import { deflateMultiCoordinatesArray } from './flat/deflate.js';
+import { inflateMultiCoordinatesArray } from './flat/inflate.js';
+import { getInteriorPointsOfMultiArray } from './flat/interiorpoint.js';
+import { intersectsLinearRingMultiArray } from './flat/intersectsextent.js';
+import { linearRingssAreOriented } from './flat/orient.js';
+import { orientLinearRingsArray } from './flat/orient.js';
+import { quantizeMultiArray } from './flat/simplify.js';
 import MultiPoint from './MultiPoint.js';
 import Polygon from './Polygon.js';
 import SimpleGeometry from './SimpleGeometry.js';
-import {linearRingss as linearRingssArea} from './flat/area.js';
-import {linearRingss as linearRingssCenter} from './flat/center.js';
-import {
-  assignClosestMultiArrayPoint,
-  multiArrayMaxSquaredDelta,
-} from './flat/closest.js';
-import {linearRingssContainsXY} from './flat/contains.js';
-import {deflateMultiCoordinatesArray} from './flat/deflate.js';
-import {inflateMultiCoordinatesArray} from './flat/inflate.js';
-import {getInteriorPointsOfMultiArray} from './flat/interiorpoint.js';
-import {intersectsLinearRingMultiArray} from './flat/intersectsextent.js';
-import {
-  linearRingssAreOriented,
-  orientLinearRingsArray,
-} from './flat/orient.js';
-import {quantizeMultiArray} from './flat/simplify.js';
-
+/**
+ * @module ol/geom/MultiPolygon
+ */
 /**
  * @classdesc
  * Multi-polygon geometry.

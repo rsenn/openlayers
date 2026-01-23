@@ -1,9 +1,9 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
+import { defaults as defaultInteractions } from '../src/ol/interaction/defaults.js';
 import DragRotateAndZoom from '../src/ol/interaction/DragRotateAndZoom.js';
-import {defaults as defaultInteractions} from '../src/ol/interaction/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
+import View from '../src/ol/View.js';
 
 const map = new Map({
   interactions: defaultInteractions().extend([new DragRotateAndZoom()]),

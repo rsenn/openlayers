@@ -1,21 +1,18 @@
+import { assert } from '../asserts.js';
+import { add as addCoordinate } from '../coordinate.js';
+import { scale as scaleCoordinate } from '../coordinate.js';
+import EventType from '../events/EventType.js';
+import { buffer } from '../extent.js';
+import { createEmpty } from '../extent.js';
+import { createOrUpdateFromCoordinate } from '../extent.js';
+import { getCenter } from '../extent.js';
+import Feature from '../Feature.js';
+import Point from '../geom/Point.js';
+import { getUid } from '../util.js';
+import VectorSource from './Vector.js';
 /**
  * @module ol/source/Cluster
  */
-
-import Feature from '../Feature.js';
-import {assert} from '../asserts.js';
-import {add as addCoordinate, scale as scaleCoordinate} from '../coordinate.js';
-import EventType from '../events/EventType.js';
-import {
-  buffer,
-  createEmpty,
-  createOrUpdateFromCoordinate,
-  getCenter,
-} from '../extent.js';
-import Point from '../geom/Point.js';
-import {getUid} from '../util.js';
-import VectorSource from './Vector.js';
-
 /**
  * @template {import("../Feature.js").FeatureLike} [FeatureType=import("../Feature.js").FeatureLike]
  * @typedef {(feature: FeatureType) => (Point|null)} GeometryFunction

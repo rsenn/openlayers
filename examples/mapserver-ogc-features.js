@@ -1,11 +1,11 @@
+import Map from '../src/ol/Map.js';
+import View from '../src/ol/View.js';
 import GeoJSON from 'ol/format/GeoJSON.js';
 import TileLayer from 'ol/layer/Tile.js';
 import VectorLayer from 'ol/layer/Vector.js';
-import {bbox as bboxStrategy} from 'ol/loadingstrategy.js';
+import { bbox as bboxStrategy } from 'ol/loadingstrategy.js';
 import OSM from 'ol/source/OSM.js';
 import VectorSource from 'ol/source/Vector.js';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 
 const mapServerUrl = `https://demo.mapserver.org/cgi-bin/mapserv/localdemo/ogcapi/collections/lakes/items`;
 const params = `f=json&limit=1000`;

@@ -1,8 +1,7 @@
+import Relationship from './extent/Relationship.js';
 /**
  * @module ol/extent
  */
-import Relationship from './extent/Relationship.js';
-
 /**
  * An array of numbers representing an extent: `[minx, miny, maxx, maxy]`.
  * @typedef {Array<number>} Extent

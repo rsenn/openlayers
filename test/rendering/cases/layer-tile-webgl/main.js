@@ -1,8 +1,8 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import TileLayer from '../../../../src/ol/layer/WebGLTile.js';
-import {fromLonLat} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../src/ol/proj.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
+import View from '../../../../src/ol/View.js';
 
 const center = fromLonLat([8.6, 50.1]);
 

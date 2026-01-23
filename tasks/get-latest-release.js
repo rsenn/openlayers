@@ -1,4 +1,4 @@
-import {Octokit} from '@octokit/rest';
+import { Octokit } from '@octokit/rest';
 import esMain from 'es-main';
 import semver from 'semver';
 

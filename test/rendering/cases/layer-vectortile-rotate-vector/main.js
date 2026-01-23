@@ -1,16 +1,16 @@
 import Feature from '../../../../src/ol/Feature.js';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import MVT from '../../../../src/ol/format/MVT.js';
 import Point from '../../../../src/ol/geom/Point.js';
 import VectorLayer from '../../../../src/ol/layer/Vector.js';
 import VectorTileLayer from '../../../../src/ol/layer/VectorTile.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
 import VectorTileSource from '../../../../src/ol/source/VectorTile.js';
 import CircleStyle from '../../../../src/ol/style/Circle.js';
 import Fill from '../../../../src/ol/style/Fill.js';
 import Style from '../../../../src/ol/style/Style.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
+import View from '../../../../src/ol/View.js';
 
 const vectorSource = new VectorSource({
   features: [new Feature(new Point([1825727.7316762917, 6143091.089223046]))],

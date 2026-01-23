@@ -1,10 +1,9 @@
-import proj4 from 'proj4';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import ImageLayer from '../../../../src/ol/layer/Image.js';
-import {register} from '../../../../src/ol/proj/proj4.js';
+import Map from '../../../../src/ol/Map.js';
+import { register } from '../../../../src/ol/proj/proj4.js';
 import ImageWMS from '../../../../src/ol/source/ImageWMS.js';
-
+import View from '../../../../src/ol/View.js';
+import proj4 from 'proj4';
 proj4.defs(
   'EPSG:2056',
   '+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333' +

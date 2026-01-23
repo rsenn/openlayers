@@ -1,8 +1,7 @@
+import Comparison from './Comparison.js';
 /**
  * @module ol/format/filter/ComparisonBinary
  */
-import Comparison from './Comparison.js';
-
 /**
  * @classdesc
  * Abstract class; normally only used for creating subclasses and not instantiated in apps.

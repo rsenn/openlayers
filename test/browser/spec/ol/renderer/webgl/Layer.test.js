@@ -1,12 +1,12 @@
-import Map from '../../../../../../src/ol/Map.js';
-import View from '../../../../../../src/ol/View.js';
 import Layer from '../../../../../../src/ol/layer/Layer.js';
 import VectorLayer from '../../../../../../src/ol/layer/Vector.js';
 import TileLayer from '../../../../../../src/ol/layer/WebGLTile.js';
+import Map from '../../../../../../src/ol/Map.js';
 import WebGLLayerRenderer from '../../../../../../src/ol/renderer/webgl/Layer.js';
 import DataTileSource from '../../../../../../src/ol/source/DataTile.js';
 import VectorSource from '../../../../../../src/ol/source/Vector.js';
-import {getUid} from '../../../../../../src/ol/util.js';
+import { getUid } from '../../../../../../src/ol/util.js';
+import View from '../../../../../../src/ol/View.js';
 
 describe('ol/renderer/webgl/Layer', function () {
   describe('constructor', function () {

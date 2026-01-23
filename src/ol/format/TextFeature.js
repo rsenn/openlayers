@@ -1,9 +1,8 @@
+import FeatureFormat from '../format/Feature.js';
+import { abstract } from '../util.js';
 /**
  * @module ol/format/TextFeature
  */
-import FeatureFormat from '../format/Feature.js';
-import {abstract} from '../util.js';
-
 /**
  * @classdesc
  * Abstract base class; normally only used for creating subclasses and not

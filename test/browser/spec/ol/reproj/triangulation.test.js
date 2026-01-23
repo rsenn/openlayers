@@ -1,11 +1,9 @@
-import proj4 from 'proj4';
-import {register} from '../../../../../src/ol/proj/proj4.js';
-import {
-  addCommon,
-  clearAllProjections,
-  get as getProjection,
-} from '../../../../../src/ol/proj.js';
+import { addCommon } from '../../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { register } from '../../../../../src/ol/proj/proj4.js';
 import Triangulation from '../../../../../src/ol/reproj/Triangulation.js';
+import proj4 from 'proj4';
 
 describe('ol.reproj.Triangulation', function () {
   beforeEach(function () {

@@ -1,14 +1,13 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import KML from '../src/ol/format/KML.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
 import VectorSource from '../src/ol/source/Vector.js';
 import Fill from '../src/ol/style/Fill.js';
 import Stroke from '../src/ol/style/Stroke.js';
 import Style from '../src/ol/style/Style.js';
-
+import View from '../src/ol/View.js';
 /*
  * Compute the style of the feature.  Here we want the opacity of polygons to
  * be based on the offset from local noon.  For example, a timezone where it is
@@ -87,6 +86,7 @@ const map = new Map({
 
 const info = document.getElementById('info');
 info.style.pointerEvents = 'none';
+
 const tooltip = new bootstrap.Tooltip(info, {
   animation: false,
   customClass: 'pe-none',
@@ -96,6 +96,7 @@ const tooltip = new bootstrap.Tooltip(info, {
 });
 
 let currentFeature;
+
 const displayFeatureInfo = function (pixel, target) {
   const feature = target.closest('.ol-control')
     ? undefined

@@ -1,11 +1,11 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
 import Link from '../src/ol/interaction/Link.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import VectorSource from '../src/ol/source/Vector.js';
 import XYZ from '../src/ol/source/XYZ.js';
+import View from '../src/ol/View.js';
 
 const populatedPlaces = new VectorLayer({
   source: new VectorSource({

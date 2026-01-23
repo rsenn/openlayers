@@ -1,9 +1,9 @@
+import { createCanvasContext2D } from './dom.js';
+import { clamp } from './math.js';
+import { toFixed } from './math.js';
 /**
  * @module ol/color
  */
-import {createCanvasContext2D} from './dom.js';
-import {clamp, toFixed} from './math.js';
-
 /**
  * A color represented as a short array [red, green, blue, alpha].
  * red, green, and blue should be integers in the range 0..255 inclusive.
@@ -36,10 +36,13 @@ function getColorParseContext() {
 
 const rgbModernRegEx =
   /^rgba?\(\s*(\d+%?)\s+(\d+%?)\s+(\d+%?)(?:\s*\/\s*(\d+%|\d*\.\d+|[01]))?\s*\)$/i;
+
 const rgbLegacyAbsoluteRegEx =
   /^rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)(?:\s*,\s*(\d+%|\d*\.\d+|[01]))?\s*\)$/i;
+
 const rgbLegacyPercentageRegEx =
   /^rgba?\(\s*(\d+%)\s*,\s*(\d+%)\s*,\s*(\d+%)(?:\s*,\s*(\d+%|\d*\.\d+|[01]))?\s*\)$/i;
+
 const hexRegEx = /^#([\da-f]{3,4}|[\da-f]{6}|[\da-f]{8})$/i;
 
 /**

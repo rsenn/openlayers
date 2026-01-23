@@ -1,10 +1,9 @@
+import { containsCoordinate } from '../../extent.js';
+import CanvasBuilder from './Builder.js';
+import CanvasInstruction from './Instruction.js';
 /**
  * @module ol/render/canvas/ImageBuilder
  */
-import {containsCoordinate} from '../../extent.js';
-import CanvasBuilder from './Builder.js';
-import CanvasInstruction from './Instruction.js';
-
 class CanvasImageBuilder extends CanvasBuilder {
   /**
    * @param {number} tolerance Tolerance.

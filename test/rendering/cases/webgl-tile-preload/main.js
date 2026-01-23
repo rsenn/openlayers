@@ -1,8 +1,7 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import TileLayer from '../../../../src/ol/layer/WebGLTile.js';
+import Map from '../../../../src/ol/Map.js';
 import TileDebug from '../../../../src/ol/source/TileDebug.js';
-
+import View from '../../../../src/ol/View.js';
 new Map({
   target: 'map',
   layers: [

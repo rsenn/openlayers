@@ -1,13 +1,13 @@
-import {spy as sinonSpy} from 'sinon';
+import { scaleFromCenter } from '../../../../../../src/ol/extent.js';
 import Feature from '../../../../../../src/ol/Feature.js';
-import ImageCanvas from '../../../../../../src/ol/ImageCanvas.js';
-import {scaleFromCenter} from '../../../../../../src/ol/extent.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
+import ImageCanvas from '../../../../../../src/ol/ImageCanvas.js';
 import VectorImageLayer from '../../../../../../src/ol/layer/VectorImage.js';
-import {get as getProjection} from '../../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../../src/ol/proj.js';
 import CanvasVectorImageLayerRenderer from '../../../../../../src/ol/renderer/canvas/VectorImageLayer.js';
 import VectorSource from '../../../../../../src/ol/source/Vector.js';
-import {create} from '../../../../../../src/ol/transform.js';
+import { create } from '../../../../../../src/ol/transform.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/renderer/canvas/VectorImageLayer', function () {
   describe('#dispose()', function () {

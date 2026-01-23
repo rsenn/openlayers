@@ -1,14 +1,15 @@
-import proj4 from 'proj4';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {applyTransform} from '../src/ol/extent.js';
+import { applyTransform } from '../src/ol/extent.js';
 import Graticule from '../src/ol/layer/Graticule.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {register} from '../src/ol/proj/proj4.js';
-import {get as getProjection, getTransform} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { get as getProjection } from '../src/ol/proj.js';
+import { getTransform } from '../src/ol/proj.js';
+import { register } from '../src/ol/proj/proj4.js';
 import OSM from '../src/ol/source/OSM.js';
 import TileDebug from '../src/ol/source/TileDebug.js';
 import Stroke from '../src/ol/style/Stroke.js';
+import View from '../src/ol/View.js';
+import proj4 from 'proj4';
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
 

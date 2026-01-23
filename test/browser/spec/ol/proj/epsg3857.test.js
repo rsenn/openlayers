@@ -1,15 +1,11 @@
-import {
-  HALF_SIZE,
-  MAX_SAFE_Y,
-  fromEPSG4326,
-} from '../../../../../src/ol/proj/epsg3857.js';
-import {
-  addCommon,
-  clearAllProjections,
-  get as getProjection,
-  getPointResolution,
-  transform,
-} from '../../../../../src/ol/proj.js';
+import { addCommon } from '../../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { getPointResolution } from '../../../../../src/ol/proj.js';
+import { transform } from '../../../../../src/ol/proj.js';
+import { fromEPSG4326 } from '../../../../../src/ol/proj/epsg3857.js';
+import { HALF_SIZE } from '../../../../../src/ol/proj/epsg3857.js';
+import { MAX_SAFE_Y } from '../../../../../src/ol/proj/epsg3857.js';
 
 describe('ol/proj/epsg3857', function () {
   afterEach(function () {

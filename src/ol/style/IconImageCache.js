@@ -1,10 +1,9 @@
+import { asArray } from '../color.js';
+import { getSharedCanvasContext2D } from '../dom.js';
+import ImageState from '../ImageState.js';
 /**
  * @module ol/style/IconImageCache
  */
-import ImageState from '../ImageState.js';
-import {asArray} from '../color.js';
-import {getSharedCanvasContext2D} from '../dom.js';
-
 /**
  * @classdesc
  * Singleton class. Available through {@link module:ol/style/IconImageCache.shared}.

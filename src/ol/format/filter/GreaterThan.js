@@ -1,8 +1,7 @@
+import ComparisonBinary from './ComparisonBinary.js';
 /**
  * @module ol/format/filter/GreaterThan
  */
-import ComparisonBinary from './ComparisonBinary.js';
-
 /**
  * @classdesc
  * Represents a `<PropertyIsGreaterThan>` comparison operator.

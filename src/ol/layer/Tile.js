@@ -1,9 +1,8 @@
+import CanvasTileLayerRenderer from '../renderer/canvas/TileLayer.js';
+import BaseTileLayer from './BaseTile.js';
 /**
  * @module ol/layer/Tile
  */
-import CanvasTileLayerRenderer from '../renderer/canvas/TileLayer.js';
-import BaseTileLayer from './BaseTile.js';
-
 /**
  * @classdesc
  * For layer sources that provide pre-rendered, tiled images in grids that are

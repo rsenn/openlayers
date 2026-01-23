@@ -1,11 +1,11 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {platformModifierKeyOnly} from '../src/ol/events/condition.js';
+import { platformModifierKeyOnly } from '../src/ol/events/condition.js';
+import { defaults } from '../src/ol/interaction/defaults.js';
 import DragPan from '../src/ol/interaction/DragPan.js';
 import MouseWheelZoom from '../src/ol/interaction/MouseWheelZoom.js';
-import {defaults} from '../src/ol/interaction/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
+import View from '../src/ol/View.js';
 
 const map = new Map({
   interactions: defaults({dragPan: false, mouseWheelZoom: false}).extend([

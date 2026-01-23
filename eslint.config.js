@@ -1,6 +1,5 @@
-import tsParser from '@typescript-eslint/parser';
 import openlayers from 'eslint-config-openlayers';
-
+import tsParser from '@typescript-eslint/parser';
 /**
  * @type {Array<import("eslint").Linter.Config>}
  */

@@ -1,26 +1,22 @@
+import { createOrUpdate } from '../extent.js';
+import { get as getProjection } from '../proj.js';
+import { createElementNS } from '../xml.js';
+import { getAllTextContent } from '../xml.js';
+import { makeArrayPusher } from '../xml.js';
+import { makeChildAppender } from '../xml.js';
+import { makeReplacer } from '../xml.js';
+import { makeSimpleNodeFactory } from '../xml.js';
+import { OBJECT_PROPERTY_NODE_FACTORY } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import { pushSerializeAndPop } from '../xml.js';
+import { transformExtentWithOptions } from './Feature.js';
+import { transformGeometryWithOptions } from './Feature.js';
+import { GMLNS } from './GMLBase.js';
+import GMLBase from './GMLBase.js';
+import { writeStringTextNode } from './xsd.js';
 /**
  * @module ol/format/GML2
  */
-import {createOrUpdate} from '../extent.js';
-import {get as getProjection} from '../proj.js';
-import {
-  OBJECT_PROPERTY_NODE_FACTORY,
-  createElementNS,
-  getAllTextContent,
-  makeArrayPusher,
-  makeChildAppender,
-  makeReplacer,
-  makeSimpleNodeFactory,
-  pushParseAndPop,
-  pushSerializeAndPop,
-} from '../xml.js';
-import {
-  transformExtentWithOptions,
-  transformGeometryWithOptions,
-} from './Feature.js';
-import GMLBase, {GMLNS} from './GMLBase.js';
-import {writeStringTextNode} from './xsd.js';
-
 /**
  * @const
  * @type {string}

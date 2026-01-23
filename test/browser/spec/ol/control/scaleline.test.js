@@ -1,15 +1,13 @@
-import proj4 from 'proj4';
-import {spy as sinonSpy} from 'sinon';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import ScaleLine from '../../../../../src/ol/control/ScaleLine.js';
+import Map from '../../../../../src/ol/Map.js';
+import { addCommon } from '../../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../../src/ol/proj.js';
+import { fromLonLat } from '../../../../../src/ol/proj.js';
+import { register } from '../../../../../src/ol/proj/proj4.js';
 import Projection from '../../../../../src/ol/proj/Projection.js';
-import {register} from '../../../../../src/ol/proj/proj4.js';
-import {
-  addCommon,
-  clearAllProjections,
-  fromLonLat,
-} from '../../../../../src/ol/proj.js';
+import View from '../../../../../src/ol/View.js';
+import proj4 from 'proj4';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.control.ScaleLine', function () {
   let map;

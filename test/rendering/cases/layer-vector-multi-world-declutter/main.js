@@ -1,14 +1,15 @@
 import Feature from '../../../../src/ol/Feature.js';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import Polygon from '../../../../src/ol/geom/Polygon.js';
 import VectorLayer from '../../../../src/ol/layer/Vector.js';
+import Map from '../../../../src/ol/Map.js';
+import { addCoordinateTransforms } from '../../../../src/ol/proj.js';
+import { fromEPSG4326 } from '../../../../src/ol/proj/epsg3857.js';
+import { toEPSG4326 } from '../../../../src/ol/proj/epsg3857.js';
 import Projection from '../../../../src/ol/proj/Projection.js';
-import {fromEPSG4326, toEPSG4326} from '../../../../src/ol/proj/epsg3857.js';
-import {addCoordinateTransforms} from '../../../../src/ol/proj.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
 import Fill from '../../../../src/ol/style/Fill.js';
 import Style from '../../../../src/ol/style/Style.js';
+import View from '../../../../src/ol/View.js';
 
 const projection = new Projection({
   code: 'custom',

@@ -1,11 +1,11 @@
 import Feature from '../src/ol/Feature.js';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import Point from '../src/ol/geom/Point.js';
 import Layer from '../src/ol/layer/Layer.js';
 import Vector from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import VectorSource from '../src/ol/source/Vector.js';
-import {composeCssTransform} from '../src/ol/transform.js';
+import { composeCssTransform } from '../src/ol/transform.js';
+import View from '../src/ol/View.js';
 
 const map = new Map({
   target: 'map',

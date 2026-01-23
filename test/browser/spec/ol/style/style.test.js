@@ -3,7 +3,8 @@ import Point from '../../../../../src/ol/geom/Point.js';
 import CircleStyle from '../../../../../src/ol/style/Circle.js';
 import Fill from '../../../../../src/ol/style/Fill.js';
 import Stroke from '../../../../../src/ol/style/Stroke.js';
-import Style, {toFunction} from '../../../../../src/ol/style/Style.js';
+import { toFunction } from '../../../../../src/ol/style/Style.js';
+import Style from '../../../../../src/ol/style/Style.js';
 import Text from '../../../../../src/ol/style/Text.js';
 
 describe('ol.style.Style', function () {

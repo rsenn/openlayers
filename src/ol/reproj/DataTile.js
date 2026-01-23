@@ -1,24 +1,27 @@
+import { asArrayLike } from '../DataTile.js';
+import { asImageLike } from '../DataTile.js';
+import { toArray } from '../DataTile.js';
+import DataTile from '../DataTile.js';
+import { createCanvasContext2D } from '../dom.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import EventType from '../events/EventType.js';
+import { getArea } from '../extent.js';
+import { getIntersection } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { wrapAndSliceX } from '../extent.js';
+import { clamp } from '../math.js';
+import { calculateSourceExtentResolution } from '../reproj.js';
+import TileState from '../TileState.js';
+import { ERROR_THRESHOLD } from './common.js';
+import { canvasGLPool } from './glreproj.js';
+import { createCanvasContextWebGL } from './glreproj.js';
+import { releaseGLCanvas } from './glreproj.js';
+import { render as renderReprojected } from './glreproj.js';
+import Triangulation from './Triangulation.js';
 /**
  * @module ol/reproj/DataTile
  */
-
-import DataTile, {asArrayLike, asImageLike, toArray} from '../DataTile.js';
-import TileState from '../TileState.js';
-import {createCanvasContext2D} from '../dom.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {getArea, getIntersection, getWidth, wrapAndSliceX} from '../extent.js';
-import {clamp} from '../math.js';
-import {calculateSourceExtentResolution} from '../reproj.js';
-import Triangulation from './Triangulation.js';
-import {ERROR_THRESHOLD} from './common.js';
-import {
-  canvasGLPool,
-  createCanvasContextWebGL,
-  releaseGLCanvas,
-  render as renderReprojected,
-} from './glreproj.js';
-
 /**
  * @typedef {function(number, number, number, number) : import("../DataTile.js").default} TileGetter
  */

@@ -1,10 +1,9 @@
+import { ascending } from '../array.js';
+import { fromString as colorFromString } from '../color.js';
+import { toSize } from '../size.js';
 /**
  * @module ol/expr/expression
  */
-import {ascending} from '../array.js';
-import {fromString as colorFromString} from '../color.js';
-import {toSize} from '../size.js';
-
 /**
  * @fileoverview This module includes types and functions for parsing array encoded expressions.
  * The result of parsing an encoded expression is one of the specific expression classes.
@@ -135,9 +134,13 @@ import {toSize} from '../size.js';
  */
 
 let numTypes = 0;
+
 export const NoneType = 0;
+
 export const BooleanType = 1 << numTypes++;
+
 export const NumberType = 1 << numTypes++;
+
 export const StringType = 1 << numTypes++;
 export const ColorType = 1 << numTypes++;
 export const NumberArrayType = 1 << numTypes++;

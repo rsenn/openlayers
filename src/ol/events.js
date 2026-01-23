@@ -1,8 +1,7 @@
+import { clear } from './obj.js';
 /**
  * @module ol/events
  */
-import {clear} from './obj.js';
-
 /**
  * Key to use with {@link module:ol/Observable.unByKey}.
  * @typedef {Object} EventsKey

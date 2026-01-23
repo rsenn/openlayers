@@ -1,8 +1,7 @@
+import { isEmpty } from '../obj.js';
 /**
  * @module ol/proj/transforms
  */
-import {isEmpty} from '../obj.js';
-
 /**
  * @private
  * @type {!Object<string, Object<string, import("../proj.js").TransformFunction>>}

@@ -1,4 +1,5 @@
-import {linearRing, linearRings} from '../../../../../src/ol/geom/flat/area.js';
+import { linearRing } from '../../../../../src/ol/geom/flat/area.js';
+import { linearRings } from '../../../../../src/ol/geom/flat/area.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/area.js', function () {

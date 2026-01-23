@@ -1,13 +1,14 @@
+import { listenOnce } from './events.js';
+import { unlistenByKey } from './events.js';
+import EventType from './events/EventType.js';
+import EventTarget from './events/Target.js';
+import { toPromise } from './functions.js';
+import { CREATE_IMAGE_BITMAP } from './has.js';
+import { IMAGE_DECODE } from './has.js';
+import ImageState from './ImageState.js';
 /**
  * @module ol/Image
  */
-import ImageState from './ImageState.js';
-import EventType from './events/EventType.js';
-import EventTarget from './events/Target.js';
-import {listenOnce, unlistenByKey} from './events.js';
-import {toPromise} from './functions.js';
-import {CREATE_IMAGE_BITMAP, IMAGE_DECODE} from './has.js';
-
 /**
  * A function that takes an {@link module:ol/Image~ImageWrapper} for the image and a
  * `{string}` for the src as arguments. It is supposed to make it so the

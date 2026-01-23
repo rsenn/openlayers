@@ -1,28 +1,26 @@
+import { asColorLike } from '../../colorlike.js';
+import { intersects } from '../../extent.js';
+import { lineChunk } from '../../geom/flat/linechunk.js';
+import { matchingChunk } from '../../geom/flat/straightchunk.js';
+import { getUid } from '../../util.js';
+import { defaultFillStyle } from '../canvas.js';
+import { defaultFont } from '../canvas.js';
+import { defaultLineCap } from '../canvas.js';
+import { defaultLineDash } from '../canvas.js';
+import { defaultLineDashOffset } from '../canvas.js';
+import { defaultLineJoin } from '../canvas.js';
+import { defaultLineWidth } from '../canvas.js';
+import { defaultMiterLimit } from '../canvas.js';
+import { defaultPadding } from '../canvas.js';
+import { defaultStrokeStyle } from '../canvas.js';
+import { defaultTextAlign } from '../canvas.js';
+import { defaultTextBaseline } from '../canvas.js';
+import { registerFont } from '../canvas.js';
+import CanvasBuilder from './Builder.js';
+import CanvasInstruction from './Instruction.js';
 /**
  * @module ol/render/canvas/TextBuilder
  */
-import {asColorLike} from '../../colorlike.js';
-import {intersects} from '../../extent.js';
-import {lineChunk} from '../../geom/flat/linechunk.js';
-import {matchingChunk} from '../../geom/flat/straightchunk.js';
-import {getUid} from '../../util.js';
-import {
-  defaultFillStyle,
-  defaultFont,
-  defaultLineCap,
-  defaultLineDash,
-  defaultLineDashOffset,
-  defaultLineJoin,
-  defaultLineWidth,
-  defaultMiterLimit,
-  defaultPadding,
-  defaultStrokeStyle,
-  defaultTextAlign,
-  defaultTextBaseline,
-  registerFont,
-} from '../canvas.js';
-import CanvasBuilder from './Builder.js';
-import CanvasInstruction from './Instruction.js';
 /**
  * @const
  * @type {{left: 0, center: 0.5, right: 1, top: 0, middle: 0.5, hanging: 0.2, alphabetic: 0.8, ideographic: 0.8, bottom: 1}}

@@ -1,10 +1,8 @@
+import { get as getProjection } from '../proj.js';
+import TileGrid from './TileGrid.js';
 /**
  * @module ol/tilegrid/WMTS
  */
-
-import {get as getProjection} from '../proj.js';
-import TileGrid from './TileGrid.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("../extent.js").Extent} [extent] Extent for the tile grid. No tiles

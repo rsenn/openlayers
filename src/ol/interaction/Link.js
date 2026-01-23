@@ -1,12 +1,12 @@
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import EventType from '../events/EventType.js';
+import MapEventType from '../MapEventType.js';
+import { toFixed } from '../math.js';
+import Interaction from './Interaction.js';
 /**
  * @module ol/interaction/Link
  */
-import MapEventType from '../MapEventType.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {toFixed} from '../math.js';
-import Interaction from './Interaction.js';
-
 /**
  * @param {number} number A number.
  * @return {number} A number with at most 5 decimal places.

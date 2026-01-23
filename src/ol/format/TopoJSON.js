@@ -1,6 +1,3 @@
-/**
- * @module ol/format/TopoJSON
- */
 import Feature from '../Feature.js';
 import LineString from '../geom/LineString.js';
 import MultiLineString from '../geom/MultiLineString.js';
@@ -8,10 +5,12 @@ import MultiPoint from '../geom/MultiPoint.js';
 import MultiPolygon from '../geom/MultiPolygon.js';
 import Point from '../geom/Point.js';
 import Polygon from '../geom/Polygon.js';
-import {get as getProjection} from '../proj.js';
-import {transformGeometryWithOptions} from './Feature.js';
+import { get as getProjection } from '../proj.js';
+import { transformGeometryWithOptions } from './Feature.js';
 import JSONFeature from './JSONFeature.js';
-
+/**
+ * @module ol/format/TopoJSON
+ */
 /**
  * @typedef {import("topojson-specification").Topology} TopoJSONTopology
  * @typedef {import("topojson-specification").GeometryCollection} TopoJSONGeometryCollection

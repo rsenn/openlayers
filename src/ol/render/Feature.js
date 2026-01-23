@@ -1,42 +1,31 @@
+import { extend } from '../array.js';
+import { createOrUpdateFromCoordinate } from '../extent.js';
+import { createOrUpdateFromFlatCoordinates } from '../extent.js';
+import { getCenter } from '../extent.js';
+import { getHeight } from '../extent.js';
+import Feature from '../Feature.js';
+import { memoizeOne } from '../functions.js';
+import { LineString } from '../geom.js';
+import { MultiLineString } from '../geom.js';
+import { MultiPoint } from '../geom.js';
+import { MultiPolygon } from '../geom.js';
+import { Point } from '../geom.js';
+import { Polygon } from '../geom.js';
+import { linearRingss as linearRingssCenter } from '../geom/flat/center.js';
+import { getInteriorPointOfArray } from '../geom/flat/interiorpoint.js';
+import { getInteriorPointsOfMultiArray } from '../geom/flat/interiorpoint.js';
+import { interpolatePoint } from '../geom/flat/interpolate.js';
+import { inflateEnds } from '../geom/flat/orient.js';
+import { douglasPeucker } from '../geom/flat/simplify.js';
+import { douglasPeuckerArray } from '../geom/flat/simplify.js';
+import { quantizeArray } from '../geom/flat/simplify.js';
+import { transform2D } from '../geom/flat/transform.js';
+import { get as getProjection } from '../proj.js';
+import { compose as composeTransform } from '../transform.js';
+import { create as createTransform } from '../transform.js';
 /**
  * @module ol/render/Feature
  */
-import Feature from '../Feature.js';
-import {extend} from '../array.js';
-import {
-  createOrUpdateFromCoordinate,
-  createOrUpdateFromFlatCoordinates,
-  getCenter,
-  getHeight,
-} from '../extent.js';
-import {memoizeOne} from '../functions.js';
-import {linearRingss as linearRingssCenter} from '../geom/flat/center.js';
-import {
-  getInteriorPointOfArray,
-  getInteriorPointsOfMultiArray,
-} from '../geom/flat/interiorpoint.js';
-import {interpolatePoint} from '../geom/flat/interpolate.js';
-import {inflateEnds} from '../geom/flat/orient.js';
-import {
-  douglasPeucker,
-  douglasPeuckerArray,
-  quantizeArray,
-} from '../geom/flat/simplify.js';
-import {transform2D} from '../geom/flat/transform.js';
-import {
-  LineString,
-  MultiLineString,
-  MultiPoint,
-  MultiPolygon,
-  Point,
-  Polygon,
-} from '../geom.js';
-import {get as getProjection} from '../proj.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../transform.js';
-
 /**
  * @typedef {'Point' | 'LineString' | 'LinearRing' | 'Polygon' | 'MultiPoint' | 'MultiLineString'} Type
  * The geometry type.  One of `'Point'`, `'LineString'`, `'LinearRing'`,

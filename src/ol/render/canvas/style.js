@@ -1,20 +1,15 @@
-/**
- * @module ol/render/canvas/style
- */
-
-import {NO_COLOR} from '../../color.js';
-import {buildExpression, newEvaluationContext} from '../../expr/cpu.js';
-import {
-  BooleanType,
-  ColorType,
-  NumberArrayType,
-  NumberType,
-  StringType,
-  computeGeometryType,
-  newParsingContext,
-} from '../../expr/expression.js';
-import {isEmpty} from '../../obj.js';
-import {toSize} from '../../size.js';
+import { NO_COLOR } from '../../color.js';
+import { buildExpression } from '../../expr/cpu.js';
+import { newEvaluationContext } from '../../expr/cpu.js';
+import { BooleanType } from '../../expr/expression.js';
+import { ColorType } from '../../expr/expression.js';
+import { computeGeometryType } from '../../expr/expression.js';
+import { newParsingContext } from '../../expr/expression.js';
+import { NumberArrayType } from '../../expr/expression.js';
+import { NumberType } from '../../expr/expression.js';
+import { StringType } from '../../expr/expression.js';
+import { isEmpty } from '../../obj.js';
+import { toSize } from '../../size.js';
 import Circle from '../../style/Circle.js';
 import Fill from '../../style/Fill.js';
 import Icon from '../../style/Icon.js';
@@ -22,7 +17,9 @@ import RegularShape from '../../style/RegularShape.js';
 import Stroke from '../../style/Stroke.js';
 import Style from '../../style/Style.js';
 import Text from '../../style/Text.js';
-
+/**
+ * @module ol/render/canvas/style
+ */
 /**
  * @fileoverview This module includes functions to build styles for the canvas renderer.  Building
  * is composed of two steps: parsing and compiling.  The parsing step takes an encoded expression

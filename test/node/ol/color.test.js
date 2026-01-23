@@ -1,12 +1,10 @@
-import {
-  asArray,
-  asString,
-  fromString,
-  isStringColor,
-  lchaToRgba,
-  rgbaToLcha,
-  toString,
-} from '../../../src/ol/color.js';
+import { asArray } from '../../../src/ol/color.js';
+import { asString } from '../../../src/ol/color.js';
+import { fromString } from '../../../src/ol/color.js';
+import { isStringColor } from '../../../src/ol/color.js';
+import { lchaToRgba } from '../../../src/ol/color.js';
+import { rgbaToLcha } from '../../../src/ol/color.js';
+import { toString } from '../../../src/ol/color.js';
 import expect from '../expect.js';
 
 describe('ol/color', () => {

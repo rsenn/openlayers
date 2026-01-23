@@ -1,9 +1,9 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
+import { defaults as defaultControls } from '../src/ol/control/defaults.js';
 import FullScreen from '../src/ol/control/FullScreen.js';
-import {defaults as defaultControls} from '../src/ol/control/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
+import View from '../src/ol/View.js';
 
 const view = new View({
   center: [-9101767, 2822912],

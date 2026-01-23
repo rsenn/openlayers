@@ -1,14 +1,14 @@
+import TileLayer from '../../../../src/ol/layer/Tile.js';
+import Map from '../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../src/ol/proj.js';
+import { transformExtent } from '../../../../src/ol/proj.js';
+import XYZ from '../../../../src/ol/source/XYZ.js';
+import View from '../../../../src/ol/View.js';
 /**
  * Tile layers get clipped to their extent.
  */
-
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
-import TileLayer from '../../../../src/ol/layer/Tile.js';
-import {fromLonLat, transformExtent} from '../../../../src/ol/proj.js';
-import XYZ from '../../../../src/ol/source/XYZ.js';
-
 const center = fromLonLat([7, 50]);
+
 const extent = transformExtent([2, 47, 10, 53], 'EPSG:4326', 'EPSG:3857');
 
 new Map({

@@ -1,3 +1,5 @@
+import { squaredDistance } from '../../math.js';
+import { squaredSegmentDistance } from '../../math.js';
 /**
  * @module ol/geom/flat/simplify
  */
@@ -26,9 +28,6 @@
 // CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
-
-import {squaredDistance, squaredSegmentDistance} from '../../math.js';
-
 /**
  * @param {Array<number>} flatCoordinates Flat coordinates.
  * @param {number} offset Offset.

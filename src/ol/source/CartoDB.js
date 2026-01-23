@@ -1,9 +1,7 @@
+import XYZ from './XYZ.js';
 /**
  * @module ol/source/CartoDB
  */
-
-import XYZ from './XYZ.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("./Source.js").AttributionLike} [attributions] Attributions.

@@ -1,11 +1,12 @@
+import { extend } from '../array.js';
+import { makeArrayPusher } from '../xml.js';
+import { makeStructureNS } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import GML2 from './GML2.js';
+import XMLFeature from './XMLFeature.js';
 /**
  * @module ol/format/WMSGetFeatureInfo
  */
-import {extend} from '../array.js';
-import {makeArrayPusher, makeStructureNS, pushParseAndPop} from '../xml.js';
-import GML2 from './GML2.js';
-import XMLFeature from './XMLFeature.js';
-
 /**
  * @typedef {Object} Options
  * @property {Array<string>} [layers] If set, only features of the given layers will be returned by the format when read.

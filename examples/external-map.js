@@ -1,12 +1,11 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import Control from '../src/ol/control/Control.js';
+import { defaults as defaultControls } from '../src/ol/control/defaults.js';
 import FullScreen from '../src/ol/control/FullScreen.js';
-import {defaults as defaultControls} from '../src/ol/control/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {fromLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
 import OSM from '../src/ol/source/OSM.js';
-
+import View from '../src/ol/View.js';
 class UnusableMask extends Control {
   constructor() {
     super({

@@ -1,10 +1,10 @@
+import { createCanvasContext2D } from './dom.js';
+import { releaseCanvas } from './dom.js';
+import Tile from './Tile.js';
+import { getUid } from './util.js';
 /**
  * @module ol/VectorRenderTile
  */
-import Tile from './Tile.js';
-import {createCanvasContext2D, releaseCanvas} from './dom.js';
-import {getUid} from './util.js';
-
 /**
  * @typedef {Object} ReplayState
  * @property {boolean} dirty Dirty.

@@ -1,7 +1,7 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/WebGLTile.js';
+import Map from '../src/ol/Map.js';
 import ImageTile from '../src/ol/source/ImageTile.js';
+import View from '../src/ol/View.js';
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
 const attributions =

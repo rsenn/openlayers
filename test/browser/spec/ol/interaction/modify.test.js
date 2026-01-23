@@ -1,32 +1,30 @@
-import {spy as sinonSpy} from 'sinon';
 import Collection from '../../../../../src/ol/Collection.js';
+import { click } from '../../../../../src/ol/events/condition.js';
+import { doubleClick } from '../../../../../src/ol/events/condition.js';
+import { never } from '../../../../../src/ol/events/condition.js';
 import Feature from '../../../../../src/ol/Feature.js';
-import Map from '../../../../../src/ol/Map.js';
-import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
-import View from '../../../../../src/ol/View.js';
-import {
-  click,
-  doubleClick,
-  never,
-} from '../../../../../src/ol/events/condition.js';
 import Circle from '../../../../../src/ol/geom/Circle.js';
 import GeometryCollection from '../../../../../src/ol/geom/GeometryCollection.js';
 import LineString from '../../../../../src/ol/geom/LineString.js';
 import MultiPoint from '../../../../../src/ol/geom/MultiPoint.js';
 import Point from '../../../../../src/ol/geom/Point.js';
-import Polygon, {fromExtent} from '../../../../../src/ol/geom/Polygon.js';
-import Modify, {ModifyEvent} from '../../../../../src/ol/interaction/Modify.js';
+import { fromExtent } from '../../../../../src/ol/geom/Polygon.js';
+import Polygon from '../../../../../src/ol/geom/Polygon.js';
+import { ModifyEvent } from '../../../../../src/ol/interaction/Modify.js';
+import Modify from '../../../../../src/ol/interaction/Modify.js';
 import Snap from '../../../../../src/ol/interaction/Snap.js';
 import VectorLayer from '../../../../../src/ol/layer/Vector.js';
-import {
-  clearUserProjection,
-  setUserProjection,
-  useGeographic,
-} from '../../../../../src/ol/proj.js';
+import Map from '../../../../../src/ol/Map.js';
+import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
+import { clearUserProjection } from '../../../../../src/ol/proj.js';
+import { setUserProjection } from '../../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../../src/ol/proj.js';
 import VectorSource from '../../../../../src/ol/source/Vector.js';
 import CircleStyle from '../../../../../src/ol/style/Circle.js';
 import Fill from '../../../../../src/ol/style/Fill.js';
 import Style from '../../../../../src/ol/style/Style.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.interaction.Modify', function () {
   let target, map, layer, source, features;

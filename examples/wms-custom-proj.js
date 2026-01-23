@@ -1,16 +1,13 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
+import { defaults as defaultControls } from '../src/ol/control/defaults.js';
 import ScaleLine from '../src/ol/control/ScaleLine.js';
-import {defaults as defaultControls} from '../src/ol/control/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
+import { addCoordinateTransforms } from '../src/ol/proj.js';
+import { addProjection } from '../src/ol/proj.js';
+import { transform } from '../src/ol/proj.js';
 import Projection from '../src/ol/proj/Projection.js';
-import {
-  addCoordinateTransforms,
-  addProjection,
-  transform,
-} from '../src/ol/proj.js';
 import TileWMS from '../src/ol/source/TileWMS.js';
-
+import View from '../src/ol/View.js';
 // By default OpenLayers does not know about the EPSG:21781 (Swiss) projection.
 // So we create a projection instance for EPSG:21781 and pass it to
 // ol/proj~addProjection to make it available to the library for lookup by its
@@ -47,6 +44,7 @@ addCoordinateTransforms(
 );
 
 const extent = [420000, 30000, 900000, 350000];
+
 const layers = [
   new TileLayer({
     extent: extent,

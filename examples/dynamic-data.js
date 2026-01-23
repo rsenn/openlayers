@@ -1,14 +1,14 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import MultiPoint from '../src/ol/geom/MultiPoint.js';
 import Point from '../src/ol/geom/Point.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {getVectorContext} from '../src/ol/render.js';
+import Map from '../src/ol/Map.js';
+import { getVectorContext } from '../src/ol/render.js';
 import OSM from '../src/ol/source/OSM.js';
 import CircleStyle from '../src/ol/style/Circle.js';
 import Fill from '../src/ol/style/Fill.js';
 import Stroke from '../src/ol/style/Stroke.js';
 import Style from '../src/ol/style/Style.js';
+import View from '../src/ol/View.js';
 
 const tileLayer = new TileLayer({
   source: new OSM(),

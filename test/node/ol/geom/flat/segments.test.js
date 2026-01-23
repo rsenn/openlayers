@@ -1,9 +1,7 @@
-import {spy as sinonSpy} from 'sinon';
-import {
-  forEach as forEachSegment,
-  getIntersectionPoint,
-} from '../../../../../src/ol/geom/flat/segments.js';
+import { forEach as forEachSegment } from '../../../../../src/ol/geom/flat/segments.js';
+import { getIntersectionPoint } from '../../../../../src/ol/geom/flat/segments.js';
 import expect from '../../../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/geom/flat/segments.js', function () {
   describe('forEach', function () {

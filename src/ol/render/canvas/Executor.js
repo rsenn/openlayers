@@ -1,29 +1,26 @@
+import { equals } from '../../array.js';
+import { createEmpty } from '../../extent.js';
+import { createOrUpdate } from '../../extent.js';
+import { intersects } from '../../extent.js';
+import { lineStringLength } from '../../geom/flat/length.js';
+import { drawTextOnPath } from '../../geom/flat/textpath.js';
+import { transform2D } from '../../geom/flat/transform.js';
+import { apply as applyTransform } from '../../transform.js';
+import { compose as composeTransform } from '../../transform.js';
+import { create as createTransform } from '../../transform.js';
+import { setFromArray as transformSetFromArray } from '../../transform.js';
+import { defaultPadding } from '../canvas.js';
+import { defaultTextAlign } from '../canvas.js';
+import { defaultTextBaseline } from '../canvas.js';
+import { drawImageOrLabel } from '../canvas.js';
+import { getTextDimensions } from '../canvas.js';
+import { measureAndCacheTextWidth } from '../canvas.js';
+import ZIndexContext from '../canvas/ZIndexContext.js';
+import CanvasInstruction from './Instruction.js';
+import { TEXT_ALIGN } from './TextBuilder.js';
 /**
  * @module ol/render/canvas/Executor
  */
-import {equals} from '../../array.js';
-import {createEmpty, createOrUpdate, intersects} from '../../extent.js';
-import {lineStringLength} from '../../geom/flat/length.js';
-import {drawTextOnPath} from '../../geom/flat/textpath.js';
-import {transform2D} from '../../geom/flat/transform.js';
-import {
-  apply as applyTransform,
-  compose as composeTransform,
-  create as createTransform,
-  setFromArray as transformSetFromArray,
-} from '../../transform.js';
-import ZIndexContext from '../canvas/ZIndexContext.js';
-import {
-  defaultPadding,
-  defaultTextAlign,
-  defaultTextBaseline,
-  drawImageOrLabel,
-  getTextDimensions,
-  measureAndCacheTextWidth,
-} from '../canvas.js';
-import CanvasInstruction from './Instruction.js';
-import {TEXT_ALIGN} from './TextBuilder.js';
-
 /**
  * @typedef {import('../../structs/RBush.js').Entry<import('../../Feature.js').FeatureLike>} DeclutterEntry
  */

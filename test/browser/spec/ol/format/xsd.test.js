@@ -1,9 +1,8 @@
-import {
-  readDateTime,
-  writeCDATASection,
-  writeStringTextNode,
-} from '../../../../../src/ol/format/xsd.js';
-import {getDocument, parse} from '../../../../../src/ol/xml.js';
+import { readDateTime } from '../../../../../src/ol/format/xsd.js';
+import { writeCDATASection } from '../../../../../src/ol/format/xsd.js';
+import { writeStringTextNode } from '../../../../../src/ol/format/xsd.js';
+import { getDocument } from '../../../../../src/ol/xml.js';
+import { parse } from '../../../../../src/ol/xml.js';
 
 describe('ol/format/xsd', function () {
   describe('readDateTime', function () {

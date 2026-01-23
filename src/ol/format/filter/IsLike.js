@@ -1,8 +1,7 @@
+import Comparison from './Comparison.js';
 /**
  * @module ol/format/filter/IsLike
  */
-import Comparison from './Comparison.js';
-
 /**
  * @classdesc
  * Represents a `<PropertyIsLike>` comparison operator.

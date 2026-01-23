@@ -1,8 +1,7 @@
+import { toRadians } from './math.js';
 /**
  * @module ol/rotationconstraint
  */
-import {toRadians} from './math.js';
-
 /**
  * @typedef {function((number|undefined), boolean=): (number|undefined)} Type
  */

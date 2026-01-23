@@ -1,10 +1,10 @@
 import ImageTile from '../../../../src/ol/ImageTile.js';
+import { defaultImageLoadFunction } from '../../../../src/ol/source/Image.js';
+import LRUCache from '../../../../src/ol/structs/LRUCache.js';
+import { DROP } from '../../../../src/ol/structs/PriorityQueue.js';
 import Tile from '../../../../src/ol/Tile.js';
 import TileQueue from '../../../../src/ol/TileQueue.js';
 import TileState from '../../../../src/ol/TileState.js';
-import {defaultImageLoadFunction} from '../../../../src/ol/source/Image.js';
-import LRUCache from '../../../../src/ol/structs/LRUCache.js';
-import {DROP} from '../../../../src/ol/structs/PriorityQueue.js';
 
 describe('ol.TileQueue', function () {
   function addRandomPriorityTiles(tq, num) {

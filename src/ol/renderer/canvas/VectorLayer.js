@@ -1,47 +1,39 @@
+import { equals } from '../../array.js';
+import { wrapX as wrapCoordinateX } from '../../coordinate.js';
+import { createCanvasContext2D } from '../../dom.js';
+import { releaseCanvas } from '../../dom.js';
+import { buffer } from '../../extent.js';
+import { containsExtent } from '../../extent.js';
+import { createEmpty } from '../../extent.js';
+import { getHeight } from '../../extent.js';
+import { getWidth } from '../../extent.js';
+import { intersects as intersectsExtent } from '../../extent.js';
+import { wrapX as wrapExtentX } from '../../extent.js';
+import { fromUserExtent } from '../../proj.js';
+import { getTransformFromProjections } from '../../proj.js';
+import { getUserProjection } from '../../proj.js';
+import { toUserExtent } from '../../proj.js';
+import { toUserResolution } from '../../proj.js';
+import CanvasBuilderGroup from '../../render/canvas/BuilderGroup.js';
+import { ALL } from '../../render/canvas/ExecutorGroup.js';
+import { DECLUTTER } from '../../render/canvas/ExecutorGroup.js';
+import { NON_DECLUTTER } from '../../render/canvas/ExecutorGroup.js';
+import ExecutorGroup from '../../render/canvas/ExecutorGroup.js';
+import { createHitDetectionImageData } from '../../render/canvas/hitdetect.js';
+import { HIT_DETECT_RESOLUTION } from '../../render/canvas/hitdetect.js';
+import { hitDetect } from '../../render/canvas/hitdetect.js';
+import RenderEventType from '../../render/EventType.js';
+import { getUid } from '../../util.js';
+import ViewHint from '../../ViewHint.js';
+import { defaultOrder as defaultRenderOrder } from '../vector.js';
+import { getSquaredTolerance as getSquaredRenderTolerance } from '../vector.js';
+import { getTolerance as getRenderTolerance } from '../vector.js';
+import { renderFeature } from '../vector.js';
+import { canvasPool } from './Layer.js';
+import CanvasLayerRenderer from './Layer.js';
 /**
  * @module ol/renderer/canvas/VectorLayer
  */
-import ViewHint from '../../ViewHint.js';
-import {equals} from '../../array.js';
-import {wrapX as wrapCoordinateX} from '../../coordinate.js';
-import {createCanvasContext2D, releaseCanvas} from '../../dom.js';
-import {
-  buffer,
-  containsExtent,
-  createEmpty,
-  getHeight,
-  getWidth,
-  intersects as intersectsExtent,
-  wrapX as wrapExtentX,
-} from '../../extent.js';
-import {
-  fromUserExtent,
-  getTransformFromProjections,
-  getUserProjection,
-  toUserExtent,
-  toUserResolution,
-} from '../../proj.js';
-import RenderEventType from '../../render/EventType.js';
-import CanvasBuilderGroup from '../../render/canvas/BuilderGroup.js';
-import ExecutorGroup, {
-  ALL,
-  DECLUTTER,
-  NON_DECLUTTER,
-} from '../../render/canvas/ExecutorGroup.js';
-import {
-  HIT_DETECT_RESOLUTION,
-  createHitDetectionImageData,
-  hitDetect,
-} from '../../render/canvas/hitdetect.js';
-import {getUid} from '../../util.js';
-import {
-  defaultOrder as defaultRenderOrder,
-  getSquaredTolerance as getSquaredRenderTolerance,
-  getTolerance as getRenderTolerance,
-  renderFeature,
-} from '../vector.js';
-import CanvasLayerRenderer, {canvasPool} from './Layer.js';
-
 /**
  * @classdesc
  * Canvas renderer for vector layers.

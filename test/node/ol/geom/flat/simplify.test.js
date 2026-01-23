@@ -1,9 +1,7 @@
-import {
-  douglasPeucker,
-  quantize,
-  radialDistance,
-  simplifyLineString,
-} from '../../../../../src/ol/geom/flat/simplify.js';
+import { douglasPeucker } from '../../../../../src/ol/geom/flat/simplify.js';
+import { quantize } from '../../../../../src/ol/geom/flat/simplify.js';
+import { radialDistance } from '../../../../../src/ol/geom/flat/simplify.js';
+import { simplifyLineString } from '../../../../../src/ol/geom/flat/simplify.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/simplify.js', function () {

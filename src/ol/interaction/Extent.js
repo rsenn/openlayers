@@ -1,25 +1,24 @@
+import { closestOnSegment } from '../coordinate.js';
+import { distance as coordinateDistance } from '../coordinate.js';
+import { squaredDistance as squaredCoordinateDistance } from '../coordinate.js';
+import { squaredDistanceToSegment } from '../coordinate.js';
+import { always } from '../events/condition.js';
+import Event from '../events/Event.js';
+import { boundingExtent } from '../extent.js';
+import { containsCoordinate } from '../extent.js';
+import { getArea } from '../extent.js';
+import Feature from '../Feature.js';
+import Point from '../geom/Point.js';
+import { fromExtent as polygonFromExtent } from '../geom/Polygon.js';
+import VectorLayer from '../layer/Vector.js';
+import MapBrowserEventType from '../MapBrowserEventType.js';
+import { toUserExtent } from '../proj.js';
+import VectorSource from '../source/Vector.js';
+import { createEditingStyle } from '../style/Style.js';
+import PointerInteraction from './Pointer.js';
 /**
  * @module ol/interaction/Extent
  */
-import Feature from '../Feature.js';
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import {
-  closestOnSegment,
-  distance as coordinateDistance,
-  squaredDistance as squaredCoordinateDistance,
-  squaredDistanceToSegment,
-} from '../coordinate.js';
-import Event from '../events/Event.js';
-import {always} from '../events/condition.js';
-import {boundingExtent, containsCoordinate, getArea} from '../extent.js';
-import Point from '../geom/Point.js';
-import {fromExtent as polygonFromExtent} from '../geom/Polygon.js';
-import VectorLayer from '../layer/Vector.js';
-import {toUserExtent} from '../proj.js';
-import VectorSource from '../source/Vector.js';
-import {createEditingStyle} from '../style/Style.js';
-import PointerInteraction from './Pointer.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("../events/condition.js").Condition} [condition] A function that

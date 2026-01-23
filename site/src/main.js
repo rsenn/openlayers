@@ -1,7 +1,7 @@
-import {apply} from 'ol-mapbox-style';
+import FullScreen from '../../src/ol/control/FullScreen.js';
 import Map from '../../src/ol/Map.js';
 import View from '../../src/ol/View.js';
-import FullScreen from '../../src/ol/control/FullScreen.js';
+import { apply } from 'ol-mapbox-style';
 
 const locations = [
   {

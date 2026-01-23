@@ -1,9 +1,7 @@
+import { getUid } from '../util.js';
 /**
  * @module ol/webgl/PostProcessingPass
  */
-
-import {getUid} from '../util.js';
-
 const DEFAULT_VERTEX_SHADER = `
   precision mediump float;
 

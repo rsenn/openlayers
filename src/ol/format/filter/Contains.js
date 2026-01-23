@@ -1,8 +1,7 @@
+import Spatial from './Spatial.js';
 /**
  * @module ol/format/filter/Contains
  */
-import Spatial from './Spatial.js';
-
 /**
  * @classdesc
  * Represents a `<Contains>` operator to test whether a geometry-valued property

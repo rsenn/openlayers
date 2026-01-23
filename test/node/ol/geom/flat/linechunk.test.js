@@ -1,4 +1,4 @@
-import {lineChunk} from '../../../../../src/ol/geom/flat/linechunk.js';
+import { lineChunk } from '../../../../../src/ol/geom/flat/linechunk.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/linechunk.js', function () {

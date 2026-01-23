@@ -1,38 +1,34 @@
-import proj4 from 'proj4';
-import View from '../../../src/ol/View.js';
+import { addCommon } from '../../../src/ol/proj.js';
+import { addCoordinateTransforms } from '../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../src/ol/proj.js';
+import { clearUserProjection } from '../../../src/ol/proj.js';
+import { disableCoordinateWarning } from '../../../src/ol/proj.js';
+import { equivalent } from '../../../src/ol/proj.js';
+import { fromLonLat } from '../../../src/ol/proj.js';
+import { fromUserCoordinate } from '../../../src/ol/proj.js';
+import { fromUserExtent } from '../../../src/ol/proj.js';
+import { fromUserResolution } from '../../../src/ol/proj.js';
+import { get as getProjection } from '../../../src/ol/proj.js';
+import { getPointResolution } from '../../../src/ol/proj.js';
+import { getTransform } from '../../../src/ol/proj.js';
+import { getTransformFromProjections } from '../../../src/ol/proj.js';
+import { getUserProjection } from '../../../src/ol/proj.js';
+import { setUserProjection } from '../../../src/ol/proj.js';
+import { toLonLat } from '../../../src/ol/proj.js';
+import { toUserCoordinate } from '../../../src/ol/proj.js';
+import { toUserExtent } from '../../../src/ol/proj.js';
+import { toUserResolution } from '../../../src/ol/proj.js';
+import { transform } from '../../../src/ol/proj.js';
+import { transformExtent } from '../../../src/ol/proj.js';
+import { useGeographic } from '../../../src/ol/proj.js';
+import { HALF_SIZE } from '../../../src/ol/proj/epsg3857.js';
+import { METERS_PER_UNIT as metersPerDegree } from '../../../src/ol/proj/epsg4326.js';
+import { register } from '../../../src/ol/proj/proj4.js';
 import Projection from '../../../src/ol/proj/Projection.js';
-import {METERS_PER_UNIT} from '../../../src/ol/proj/Units.js';
-import {HALF_SIZE} from '../../../src/ol/proj/epsg3857.js';
-import {METERS_PER_UNIT as metersPerDegree} from '../../../src/ol/proj/epsg4326.js';
-import {register} from '../../../src/ol/proj/proj4.js';
-
-import {
-  addCommon,
-  addCoordinateTransforms,
-  clearAllProjections,
-  clearUserProjection,
-  disableCoordinateWarning,
-  equivalent,
-  fromLonLat,
-  fromUserCoordinate,
-  fromUserExtent,
-  fromUserResolution,
-  get as getProjection,
-  getPointResolution,
-  getTransform,
-  getTransformFromProjections,
-  getUserProjection,
-  setUserProjection,
-  toLonLat,
-  toUserCoordinate,
-  toUserExtent,
-  toUserResolution,
-  transform,
-  transformExtent,
-  useGeographic,
-} from '../../../src/ol/proj.js';
-
+import { METERS_PER_UNIT } from '../../../src/ol/proj/Units.js';
+import View from '../../../src/ol/View.js';
 import expect from '../expect.js';
+import proj4 from 'proj4';
 
 describe('ol/proj.js', function () {
   afterEach(function () {

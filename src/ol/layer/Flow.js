@@ -1,18 +1,19 @@
+import { ColorType } from '../expr/expression.js';
+import { getStringNumberEquivalent } from '../expr/gpu.js';
+import { newCompilationContext } from '../expr/gpu.js';
+import { uniformNameForVariable } from '../expr/gpu.js';
+import { expressionToGlsl } from '../render/webgl/compileUtil.js';
+import { A } from '../renderer/webgl/FlowLayer.js';
+import { U } from '../renderer/webgl/FlowLayer.js';
+import { V } from '../renderer/webgl/FlowLayer.js';
+import FlowLayerRenderer from '../renderer/webgl/FlowLayer.js';
+import { Attributes as BA } from '../renderer/webgl/TileLayer.js';
+import { Uniforms as BU } from '../renderer/webgl/TileLayer.js';
+import BaseTileLayer from './BaseTile.js';
+import LayerProperty from './Property.js';
 /**
  * @module ol/layer/Flow
  */
-import {ColorType} from '../expr/expression.js';
-import {
-  getStringNumberEquivalent,
-  newCompilationContext,
-  uniformNameForVariable,
-} from '../expr/gpu.js';
-import {expressionToGlsl} from '../render/webgl/compileUtil.js';
-import FlowLayerRenderer, {A, U, V} from '../renderer/webgl/FlowLayer.js';
-import {Attributes as BA, Uniforms as BU} from '../renderer/webgl/TileLayer.js';
-import BaseTileLayer from './BaseTile.js';
-import LayerProperty from './Property.js';
-
 /**
  * @typedef {import("../source/DataTile.js").default} SourceType
  */

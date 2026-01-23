@@ -1,7 +1,8 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import OSM, {ATTRIBUTION} from '../src/ol/source/OSM.js';
+import Map from '../src/ol/Map.js';
+import { ATTRIBUTION } from '../src/ol/source/OSM.js';
+import OSM from '../src/ol/source/OSM.js';
+import View from '../src/ol/View.js';
 
 const openCycleMapLayer = new TileLayer({
   source: new OSM({

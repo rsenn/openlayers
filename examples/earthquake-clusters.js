@@ -1,11 +1,13 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {createEmpty, extend, getHeight, getWidth} from '../src/ol/extent.js';
+import { createEmpty } from '../src/ol/extent.js';
+import { extend } from '../src/ol/extent.js';
+import { getHeight } from '../src/ol/extent.js';
+import { getWidth } from '../src/ol/extent.js';
 import KML from '../src/ol/format/KML.js';
+import { defaults as defaultInteractions } from '../src/ol/interaction/defaults.js';
 import Select from '../src/ol/interaction/Select.js';
-import {defaults as defaultInteractions} from '../src/ol/interaction/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import Cluster from '../src/ol/source/Cluster.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
 import VectorSource from '../src/ol/source/Vector.js';
@@ -15,6 +17,7 @@ import RegularShape from '../src/ol/style/RegularShape.js';
 import Stroke from '../src/ol/style/Stroke.js';
 import Style from '../src/ol/style/Style.js';
 import Text from '../src/ol/style/Text.js';
+import View from '../src/ol/View.js';
 
 const earthquakeFill = new Fill({
   color: 'rgba(255, 153, 0, 0.8)',

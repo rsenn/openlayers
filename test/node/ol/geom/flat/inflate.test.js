@@ -1,7 +1,5 @@
-import {
-  inflateCoordinates,
-  inflateCoordinatesArray,
-} from '../../../../../src/ol/geom/flat/inflate.js';
+import { inflateCoordinates } from '../../../../../src/ol/geom/flat/inflate.js';
+import { inflateCoordinatesArray } from '../../../../../src/ol/geom/flat/inflate.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/inflate.js', function () {

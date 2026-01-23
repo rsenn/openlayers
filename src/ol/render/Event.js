@@ -1,9 +1,7 @@
+import Event from '../events/Event.js';
 /**
  * @module ol/render/Event
  */
-
-import Event from '../events/Event.js';
-
 class RenderEvent extends Event {
   /**
    * @param {import("./EventType.js").default} type Type.

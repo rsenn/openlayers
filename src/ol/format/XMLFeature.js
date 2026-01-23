@@ -1,11 +1,12 @@
+import { extend } from '../array.js';
+import FeatureFormat from '../format/Feature.js';
+import { abstract } from '../util.js';
+import { getXMLSerializer } from '../xml.js';
+import { isDocument } from '../xml.js';
+import { parse } from '../xml.js';
 /**
  * @module ol/format/XMLFeature
  */
-import {extend} from '../array.js';
-import FeatureFormat from '../format/Feature.js';
-import {abstract} from '../util.js';
-import {getXMLSerializer, isDocument, parse} from '../xml.js';
-
 /**
  * @classdesc
  * Abstract base class; normally only used for creating subclasses and not

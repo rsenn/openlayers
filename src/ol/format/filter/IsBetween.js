@@ -1,8 +1,7 @@
+import Comparison from './Comparison.js';
 /**
  * @module ol/format/filter/IsBetween
  */
-import Comparison from './Comparison.js';
-
 /**
  * @classdesc
  * Represents a `<PropertyIsBetween>` comparison operator.

@@ -1,26 +1,23 @@
-/**
- * @module ol/source/VectorTile
- */
-
+import { assert } from '../asserts.js';
+import EventType from '../events/EventType.js';
+import { buffer as bufferExtent } from '../extent.js';
+import { getIntersection } from '../extent.js';
+import { intersects } from '../extent.js';
+import { loadFeaturesXhr } from '../featureloader.js';
+import { isEmpty } from '../obj.js';
+import { equivalent } from '../proj.js';
+import { toSize } from '../size.js';
+import { createXYZ } from '../tilegrid.js';
+import { extentFromProjection } from '../tilegrid.js';
+import { DEFAULT_MAX_ZOOM } from '../tilegrid/common.js';
+import TileGrid from '../tilegrid/TileGrid.js';
 import TileState from '../TileState.js';
 import VectorRenderTile from '../VectorRenderTile.js';
 import Tile from '../VectorTile.js';
-import {assert} from '../asserts.js';
-import EventType from '../events/EventType.js';
-import {
-  buffer as bufferExtent,
-  getIntersection,
-  intersects,
-} from '../extent.js';
-import {loadFeaturesXhr} from '../featureloader.js';
-import {isEmpty} from '../obj.js';
-import {equivalent} from '../proj.js';
-import {toSize} from '../size.js';
-import TileGrid from '../tilegrid/TileGrid.js';
-import {DEFAULT_MAX_ZOOM} from '../tilegrid/common.js';
-import {createXYZ, extentFromProjection} from '../tilegrid.js';
 import UrlTile from './UrlTile.js';
-
+/**
+ * @module ol/source/VectorTile
+ */
 /**
  * @template {import("../Feature.js").FeatureLike} [FeatureType=import("../render/Feature.js").default]
  * @typedef {Object} Options

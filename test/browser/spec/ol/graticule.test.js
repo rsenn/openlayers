@@ -1,7 +1,8 @@
 import Feature from '../../../../src/ol/Feature.js';
-import Map from '../../../../src/ol/Map.js';
 import Graticule from '../../../../src/ol/layer/Graticule.js';
-import {fromLonLat, get as getProjection} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../src/ol/proj.js';
 import Stroke from '../../../../src/ol/style/Stroke.js';
 import Text from '../../../../src/ol/style/Text.js';
 

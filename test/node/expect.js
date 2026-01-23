@@ -1,5 +1,4 @@
 import expect from 'expect.js';
-
 /**
  * Assert value is within some tolerance of a number.
  * @param {number} n Number.

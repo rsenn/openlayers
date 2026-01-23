@@ -1,5 +1,4 @@
-import {lerp} from '../../math.js';
-
+import { lerp } from '../../math.js';
 /**
  * Creates chunks of equal length from a linestring
  * @param {number} chunkLength Length of each chunk.

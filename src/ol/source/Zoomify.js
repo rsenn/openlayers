@@ -1,18 +1,16 @@
+import { createCanvasContext2D } from '../dom.js';
+import { getCenter } from '../extent.js';
+import ImageTile from '../ImageTile.js';
+import { toSize } from '../size.js';
+import { DEFAULT_TILE_SIZE } from '../tilegrid/common.js';
+import TileGrid from '../tilegrid/TileGrid.js';
+import TileState from '../TileState.js';
+import { createFromTileUrlFunctions } from '../tileurlfunction.js';
+import { expandUrl } from '../uri.js';
+import TileImage from './TileImage.js';
 /**
  * @module ol/source/Zoomify
  */
-
-import ImageTile from '../ImageTile.js';
-import TileState from '../TileState.js';
-import {createCanvasContext2D} from '../dom.js';
-import {getCenter} from '../extent.js';
-import {toSize} from '../size.js';
-import TileGrid from '../tilegrid/TileGrid.js';
-import {DEFAULT_TILE_SIZE} from '../tilegrid/common.js';
-import {createFromTileUrlFunctions} from '../tileurlfunction.js';
-import {expandUrl} from '../uri.js';
-import TileImage from './TileImage.js';
-
 /**
  * @typedef {'default' | 'truncated'} TierSizeCalculation
  */

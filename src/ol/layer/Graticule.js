@@ -1,40 +1,36 @@
-/**
- * @module ol/layer/Graticule
- */
 import Collection from '../Collection.js';
+import { degreesToStringHDMS } from '../coordinate.js';
+import { applyTransform } from '../extent.js';
+import { approximatelyEquals } from '../extent.js';
+import { containsCoordinate } from '../extent.js';
+import { containsExtent } from '../extent.js';
+import { equals } from '../extent.js';
+import { getCenter } from '../extent.js';
+import { getIntersection } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { intersects } from '../extent.js';
+import { isEmpty } from '../extent.js';
+import { wrapX as wrapExtentX } from '../extent.js';
 import Feature from '../Feature.js';
-import {degreesToStringHDMS} from '../coordinate.js';
-import {
-  applyTransform,
-  approximatelyEquals,
-  containsCoordinate,
-  containsExtent,
-  equals,
-  getCenter,
-  getIntersection,
-  getWidth,
-  intersects,
-  isEmpty,
-  wrapX as wrapExtentX,
-} from '../extent.js';
+import { meridian } from '../geom/flat/geodesic.js';
+import { parallel } from '../geom/flat/geodesic.js';
 import LineString from '../geom/LineString.js';
 import Point from '../geom/Point.js';
-import {meridian, parallel} from '../geom/flat/geodesic.js';
-import {clamp} from '../math.js';
-import {
-  equivalent as equivalentProjection,
-  get as getProjection,
-  getTransform,
-} from '../proj.js';
+import { clamp } from '../math.js';
+import { equivalent as equivalentProjection } from '../proj.js';
+import { get as getProjection } from '../proj.js';
+import { getTransform } from '../proj.js';
+import { getVectorContext } from '../render.js';
 import EventType from '../render/EventType.js';
-import {getVectorContext} from '../render.js';
 import VectorSource from '../source/Vector.js';
 import Fill from '../style/Fill.js';
 import Stroke from '../style/Stroke.js';
 import Style from '../style/Style.js';
 import Text from '../style/Text.js';
 import VectorLayer from './Vector.js';
-
+/**
+ * @module ol/layer/Graticule
+ */
 /**
  * @type {Stroke}
  * @private

@@ -1,6 +1,6 @@
-import {get as getProjection} from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
 import UrlTile from '../../../../../src/ol/source/UrlTile.js';
-import {createXYZ} from '../../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../../src/ol/tilegrid.js';
 
 describe('ol/source/UrlTile', function () {
   describe('#setUrl()', function () {

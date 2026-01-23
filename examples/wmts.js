@@ -1,11 +1,12 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getTopLeft, getWidth} from '../src/ol/extent.js';
+import { getTopLeft } from '../src/ol/extent.js';
+import { getWidth } from '../src/ol/extent.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {get as getProjection} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { get as getProjection } from '../src/ol/proj.js';
 import OSM from '../src/ol/source/OSM.js';
 import WMTS from '../src/ol/source/WMTS.js';
 import WMTSTileGrid from '../src/ol/tilegrid/WMTS.js';
+import View from '../src/ol/View.js';
 
 const projection = getProjection('EPSG:3857');
 const projectionExtent = projection.getExtent();

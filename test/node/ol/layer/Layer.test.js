@@ -2,7 +2,6 @@ import BaseEvent from '../../../../src/ol/events/Event.js';
 import Layer from '../../../../src/ol/layer/Layer.js';
 import Source from '../../../../src/ol/source/Source.js';
 import expect from '../../expect.js';
-
 function delay(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);

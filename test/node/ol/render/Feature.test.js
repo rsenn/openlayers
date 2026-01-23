@@ -4,10 +4,9 @@ import MultiPoint from '../../../../src/ol/geom/MultiPoint.js';
 import MultiPolygon from '../../../../src/ol/geom/MultiPolygon.js';
 import Point from '../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../src/ol/geom/Polygon.js';
-import RenderFeature, {
-  toFeature,
-  toGeometry,
-} from '../../../../src/ol/render/Feature.js';
+import { toFeature } from '../../../../src/ol/render/Feature.js';
+import { toGeometry } from '../../../../src/ol/render/Feature.js';
+import RenderFeature from '../../../../src/ol/render/Feature.js';
 import expect from '../../expect.js';
 
 describe('ol/render/Feature', function () {

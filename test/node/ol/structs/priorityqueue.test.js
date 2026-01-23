@@ -1,4 +1,5 @@
-import PriorityQueue, {DROP} from '../../../../src/ol/structs/PriorityQueue.js';
+import { DROP } from '../../../../src/ol/structs/PriorityQueue.js';
+import PriorityQueue from '../../../../src/ol/structs/PriorityQueue.js';
 import expect from '../../expect.js';
 
 describe('ol/structs/PriorityQueue.js', function () {

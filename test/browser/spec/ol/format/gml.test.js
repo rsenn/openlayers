@@ -2,15 +2,16 @@ import Feature from '../../../../../src/ol/Feature.js';
 import GML from '../../../../../src/ol/format/GML.js';
 import GML2 from '../../../../../src/ol/format/GML2.js';
 import GML32 from '../../../../../src/ol/format/GML32.js';
-import LineString from '../../../../../src/ol/geom/LineString.js';
 import LinearRing from '../../../../../src/ol/geom/LinearRing.js';
+import LineString from '../../../../../src/ol/geom/LineString.js';
 import MultiLineString from '../../../../../src/ol/geom/MultiLineString.js';
 import MultiPoint from '../../../../../src/ol/geom/MultiPoint.js';
 import MultiPolygon from '../../../../../src/ol/geom/MultiPolygon.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
-import {transform} from '../../../../../src/ol/proj.js';
-import {createElementNS, parse} from '../../../../../src/ol/xml.js';
+import { transform } from '../../../../../src/ol/proj.js';
+import { createElementNS } from '../../../../../src/ol/xml.js';
+import { parse } from '../../../../../src/ol/xml.js';
 
 const readGeometry = function (format, text, opt_options) {
   const doc = parse(text);

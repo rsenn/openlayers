@@ -1,10 +1,11 @@
+import { platformModifierKey } from '../events/condition.js';
+import { targetNotEditable } from '../events/condition.js';
+import EventType from '../events/EventType.js';
+import { zoomByDelta } from './Interaction.js';
+import Interaction from './Interaction.js';
 /**
  * @module ol/interaction/KeyboardZoom
  */
-import EventType from '../events/EventType.js';
-import {platformModifierKey, targetNotEditable} from '../events/condition.js';
-import Interaction, {zoomByDelta} from './Interaction.js';
-
 /**
  * @typedef {Object} Options
  * @property {number} [duration=100] Animation duration in milliseconds.

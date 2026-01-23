@@ -1,9 +1,9 @@
-import {spy as sinonSpy} from 'sinon';
+import Event from '../../../../../src/ol/events/Event.js';
+import { MAC } from '../../../../../src/ol/has.js';
 import Map from '../../../../../src/ol/Map.js';
 import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
 import View from '../../../../../src/ol/View.js';
-import Event from '../../../../../src/ol/events/Event.js';
-import {MAC} from '../../../../../src/ol/has.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.interaction.KeyboardZoom', function () {
   let map;

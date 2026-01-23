@@ -1,10 +1,9 @@
+import { createXYZ } from '../tilegrid.js';
+import { extentFromProjection } from '../tilegrid.js';
+import TileImage from './TileImage.js';
 /**
  * @module ol/source/XYZ
  */
-
-import {createXYZ, extentFromProjection} from '../tilegrid.js';
-import TileImage from './TileImage.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("./Source.js").AttributionLike} [attributions] Attributions.

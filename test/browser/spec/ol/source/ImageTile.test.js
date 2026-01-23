@@ -1,6 +1,7 @@
-import TileState from '../../../../../src/ol/TileState.js';
 import ImageTile from '../../../../../src/ol/source/ImageTile.js';
-import {pickUrl, renderXYZTemplate} from '../../../../../src/ol/uri.js';
+import TileState from '../../../../../src/ol/TileState.js';
+import { pickUrl } from '../../../../../src/ol/uri.js';
+import { renderXYZTemplate } from '../../../../../src/ol/uri.js';
 
 const emptyUrl =
   'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=';

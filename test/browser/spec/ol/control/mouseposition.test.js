@@ -1,12 +1,10 @@
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import MousePosition from '../../../../../src/ol/control/MousePosition.js';
+import Map from '../../../../../src/ol/Map.js';
 import EventType from '../../../../../src/ol/pointer/EventType.js';
-import {
-  clearUserProjection,
-  fromLonLat,
-  useGeographic,
-} from '../../../../../src/ol/proj.js';
+import { clearUserProjection } from '../../../../../src/ol/proj.js';
+import { fromLonLat } from '../../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../../src/ol/proj.js';
+import View from '../../../../../src/ol/View.js';
 
 describe('ol/control/MousePosition', function () {
   describe('constructor', function () {

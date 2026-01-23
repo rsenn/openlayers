@@ -1,19 +1,15 @@
-import {spy as sinonSpy} from 'sinon';
+import { UNDEFINED_PROP_VALUE } from '../../../../../../src/ol/expr/gpu.js';
 import Feature from '../../../../../../src/ol/Feature.js';
-import {UNDEFINED_PROP_VALUE} from '../../../../../../src/ol/expr/gpu.js';
 import LineString from '../../../../../../src/ol/geom/LineString.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../../src/ol/geom/Polygon.js';
 import MixedGeometryBatch from '../../../../../../src/ol/render/webgl/MixedGeometryBatch.js';
-import {
-  generateLineStringRenderInstructions,
-  generatePointRenderInstructions,
-  generatePolygonRenderInstructions,
-} from '../../../../../../src/ol/render/webgl/renderinstructions.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../../../../../../src/ol/transform.js';
+import { generateLineStringRenderInstructions } from '../../../../../../src/ol/render/webgl/renderinstructions.js';
+import { generatePointRenderInstructions } from '../../../../../../src/ol/render/webgl/renderinstructions.js';
+import { generatePolygonRenderInstructions } from '../../../../../../src/ol/render/webgl/renderinstructions.js';
+import { compose as composeTransform } from '../../../../../../src/ol/transform.js';
+import { create as createTransform } from '../../../../../../src/ol/transform.js';
+import { spy as sinonSpy } from 'sinon';
 
 const SAMPLE_FRAMESTATE = {
   viewState: {

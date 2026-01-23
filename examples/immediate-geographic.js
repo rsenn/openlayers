@@ -1,15 +1,14 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {upAndDown} from '../src/ol/easing.js';
+import { upAndDown } from '../src/ol/easing.js';
 import Point from '../src/ol/geom/Point.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {useGeographic} from '../src/ol/proj.js';
-import {getVectorContext} from '../src/ol/render.js';
+import Map from '../src/ol/Map.js';
+import { useGeographic } from '../src/ol/proj.js';
+import { getVectorContext } from '../src/ol/render.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
 import Circle from '../src/ol/style/Circle.js';
 import Fill from '../src/ol/style/Fill.js';
 import Style from '../src/ol/style/Style.js';
-
+import View from '../src/ol/View.js';
 useGeographic();
 
 const layer = new TileLayer({
@@ -37,6 +36,7 @@ const style = new Style({
 });
 
 const n = 1000;
+
 const geometries = new Array(n);
 
 for (let i = 0; i < n; ++i) {

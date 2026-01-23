@@ -1,13 +1,9 @@
-import {
-  writeLineSegmentToBuffers,
-  writePointFeatureToBuffers,
-  writePolygonTrianglesToBuffers,
-} from '../../../../../../src/ol/render/webgl/bufferUtil.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-  makeInverse as makeInverseTransform,
-} from '../../../../../../src/ol/transform.js';
+import { writeLineSegmentToBuffers } from '../../../../../../src/ol/render/webgl/bufferUtil.js';
+import { writePointFeatureToBuffers } from '../../../../../../src/ol/render/webgl/bufferUtil.js';
+import { writePolygonTrianglesToBuffers } from '../../../../../../src/ol/render/webgl/bufferUtil.js';
+import { compose as composeTransform } from '../../../../../../src/ol/transform.js';
+import { create as createTransform } from '../../../../../../src/ol/transform.js';
+import { makeInverse as makeInverseTransform } from '../../../../../../src/ol/transform.js';
 
 describe('webgl buffer generation utils', function () {
   describe('writePointFeatureToBuffers', function () {

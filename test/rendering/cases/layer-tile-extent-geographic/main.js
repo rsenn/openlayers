@@ -1,16 +1,15 @@
+import TileLayer from '../../../../src/ol/layer/Tile.js';
+import Map from '../../../../src/ol/Map.js';
+import { useGeographic } from '../../../../src/ol/proj.js';
+import XYZ from '../../../../src/ol/source/XYZ.js';
+import View from '../../../../src/ol/View.js';
 /**
  * Tile layers get clipped to their extent.
  */
-
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
-import TileLayer from '../../../../src/ol/layer/Tile.js';
-import {useGeographic} from '../../../../src/ol/proj.js';
-import XYZ from '../../../../src/ol/source/XYZ.js';
-
 useGeographic();
 
 const center = [7, 50];
+
 const extent = [2, 47, 10, 53];
 
 new Map({

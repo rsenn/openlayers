@@ -1,10 +1,8 @@
-import {
-  fromString,
-  isStringColor,
-  lchaToRgba,
-  rgbaToLcha,
-} from '../../../../src/ol/color.js';
-import {toFixed} from '../../../../src/ol/math.js';
+import { fromString } from '../../../../src/ol/color.js';
+import { isStringColor } from '../../../../src/ol/color.js';
+import { lchaToRgba } from '../../../../src/ol/color.js';
+import { rgbaToLcha } from '../../../../src/ol/color.js';
+import { toFixed } from '../../../../src/ol/math.js';
 
 describe('ol/color', () => {
   describe('fromString()', () => {

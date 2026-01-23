@@ -1,15 +1,15 @@
+import { assert } from '../asserts.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import EventType from '../events/EventType.js';
+import { intersects } from '../extent.js';
+import RenderEventType from '../render/EventType.js';
+import View from '../View.js';
+import BaseLayer from './Base.js';
+import LayerProperty from './Property.js';
 /**
  * @module ol/layer/Layer
  */
-import View from '../View.js';
-import {assert} from '../asserts.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {intersects} from '../extent.js';
-import RenderEventType from '../render/EventType.js';
-import BaseLayer from './Base.js';
-import LayerProperty from './Property.js';
-
 /**
  * @typedef {function(import("../Map.js").FrameState):HTMLElement} RenderFunction
  */

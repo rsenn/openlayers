@@ -1,9 +1,9 @@
+import { mouseOnly } from '../events/condition.js';
+import { shiftKeyOnly } from '../events/condition.js';
+import PointerInteraction from './Pointer.js';
 /**
  * @module ol/interaction/DragRotateAndZoom
  */
-import {mouseOnly, shiftKeyOnly} from '../events/condition.js';
-import PointerInteraction from './Pointer.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("../events/condition.js").Condition} [condition] A function that

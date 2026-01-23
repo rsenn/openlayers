@@ -1,5 +1,6 @@
-import {get as getProjection, transform} from '../../../../../src/ol/proj.js';
-import {calculateSourceResolution} from '../../../../../src/ol/reproj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { transform } from '../../../../../src/ol/proj.js';
+import { calculateSourceResolution } from '../../../../../src/ol/reproj.js';
 
 describe('ol.reproj', function () {
   describe('#calculateSourceResolution', function () {

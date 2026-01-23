@@ -1,11 +1,9 @@
+import { FALSE } from '../functions.js';
+import { centroid as centroidFromPointers } from './Pointer.js';
+import PointerInteraction from './Pointer.js';
 /**
  * @module ol/interaction/PinchZoom
  */
-import {FALSE} from '../functions.js';
-import PointerInteraction, {
-  centroid as centroidFromPointers,
-} from './Pointer.js';
-
 /**
  * @typedef {Object} Options
  * @property {number} [duration=400] Animation duration in milliseconds.

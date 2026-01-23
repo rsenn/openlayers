@@ -1,19 +1,15 @@
-import proj4 from 'proj4';
+import { addCommon } from '../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../src/ol/proj.js';
+import { transform } from '../../../../src/ol/proj.js';
+import { fromEPSGCode } from '../../../../src/ol/proj/proj4.js';
+import { getEPSGLookup } from '../../../../src/ol/proj/proj4.js';
+import { isRegistered } from '../../../../src/ol/proj/proj4.js';
+import { register } from '../../../../src/ol/proj/proj4.js';
+import { setEPSGLookup } from '../../../../src/ol/proj/proj4.js';
+import { unregister } from '../../../../src/ol/proj/proj4.js';
 import Projection from '../../../../src/ol/proj/Projection.js';
-import {
-  fromEPSGCode,
-  getEPSGLookup,
-  isRegistered,
-  register,
-  setEPSGLookup,
-  unregister,
-} from '../../../../src/ol/proj/proj4.js';
-import {
-  addCommon,
-  clearAllProjections,
-  transform,
-} from '../../../../src/ol/proj.js';
 import expect from '../../expect.js';
+import proj4 from 'proj4';
 
 const epsgDefinitions = {
   32721: '+proj=utm +zone=21 +south +datum=WGS84 +units=m +no_defs +type=crs',

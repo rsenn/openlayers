@@ -1,25 +1,21 @@
+import { assert } from '../asserts.js';
+import Disposable from '../Disposable.js';
+import { clear } from '../obj.js';
+import { compose as composeTransform } from '../transform.js';
+import { create as createTransform } from '../transform.js';
+import { getUid } from '../util.js';
+import { create } from '../vec/mat4.js';
+import { fromTransform } from '../vec/mat4.js';
+import { FLOAT } from '../webgl.js';
+import { getContext } from '../webgl.js';
+import { UNSIGNED_BYTE } from '../webgl.js';
+import { UNSIGNED_INT } from '../webgl.js';
+import { UNSIGNED_SHORT } from '../webgl.js';
+import ContextEventType from '../webgl/ContextEventType.js';
+import WebGLPostProcessingPass from './PostProcessingPass.js';
 /**
  * @module ol/webgl/Helper
  */
-import Disposable from '../Disposable.js';
-import {assert} from '../asserts.js';
-import {clear} from '../obj.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../transform.js';
-import {getUid} from '../util.js';
-import {create, fromTransform} from '../vec/mat4.js';
-import ContextEventType from '../webgl/ContextEventType.js';
-import {
-  FLOAT,
-  UNSIGNED_BYTE,
-  UNSIGNED_INT,
-  UNSIGNED_SHORT,
-  getContext,
-} from '../webgl.js';
-import WebGLPostProcessingPass from './PostProcessingPass.js';
-
 /**
  * @typedef {Object} BufferCacheEntry
  * @property {import("./Buffer.js").default} buffer Buffer.

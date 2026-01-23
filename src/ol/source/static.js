@@ -1,10 +1,9 @@
+import { getHeight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { decode } from '../Image.js';
 /**
  * @module ol/source/static
  */
-
-import {decode} from '../Image.js';
-import {getHeight, getWidth} from '../extent.js';
-
 /**
  * @typedef {Object} LoaderOptions
  * @property {null|string} [crossOrigin] The `crossOrigin` attribute for loaded images.  Note that

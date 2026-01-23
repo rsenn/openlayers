@@ -1,16 +1,14 @@
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import EventType from '../events/EventType.js';
+import { closestSquaredDistanceXY } from '../extent.js';
+import { createOrUpdateEmpty } from '../extent.js';
+import { extend } from '../extent.js';
+import { getCenter } from '../extent.js';
+import Geometry from './Geometry.js';
 /**
  * @module ol/geom/GeometryCollection
  */
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {
-  closestSquaredDistanceXY,
-  createOrUpdateEmpty,
-  extend,
-  getCenter,
-} from '../extent.js';
-import Geometry from './Geometry.js';
-
 /**
  * @classdesc
  * An array of {@link module:ol/geom/Geometry~Geometry} objects.

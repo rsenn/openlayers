@@ -1,13 +1,13 @@
 import Feature from '../src/ol/Feature.js';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import LineString from '../src/ol/geom/LineString.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
 import VectorSource from '../src/ol/source/Vector.js';
 import Stroke from '../src/ol/style/Stroke.js';
 import Style from '../src/ol/style/Style.js';
+import View from '../src/ol/View.js';
 
 const raster = new TileLayer({
   source: new OSM(),

@@ -1,10 +1,9 @@
-import {PMTiles} from 'pmtiles';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/WebGLTile.js';
-import {useGeographic} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { useGeographic } from '../src/ol/proj.js';
 import DataTile from '../src/ol/source/DataTile.js';
-
+import View from '../src/ol/View.js';
+import { PMTiles } from 'pmtiles';
 useGeographic();
 
 const tiles = new PMTiles(
@@ -50,9 +49,13 @@ function elevation(xOffset, yOffset) {
 // Generates a shaded relief image given elevation data.  Uses a 3x3
 // neighborhood for determining slope and aspect.
 const dp = ['*', 2, ['resolution']];
+
 const z0x = ['*', ['var', 'vert'], elevation(-1, 0)];
+
 const z1x = ['*', ['var', 'vert'], elevation(1, 0)];
+
 const dzdx = ['/', ['-', z1x, z0x], dp];
+
 const z0y = ['*', ['var', 'vert'], elevation(0, -1)];
 const z1y = ['*', ['var', 'vert'], elevation(0, 1)];
 const dzdy = ['/', ['-', z1y, z0y], dp];

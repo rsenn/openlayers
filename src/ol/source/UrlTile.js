@@ -1,13 +1,13 @@
+import TileState from '../TileState.js';
+import { createFromTemplates } from '../tileurlfunction.js';
+import { expandUrl } from '../uri.js';
+import { getUid } from '../util.js';
+import { TileSourceEvent } from './Tile.js';
+import TileSource from './Tile.js';
+import TileEventType from './TileEventType.js';
 /**
  * @module ol/source/UrlTile
  */
-import TileState from '../TileState.js';
-import {createFromTemplates} from '../tileurlfunction.js';
-import {expandUrl} from '../uri.js';
-import {getUid} from '../util.js';
-import TileSource, {TileSourceEvent} from './Tile.js';
-import TileEventType from './TileEventType.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("./Source.js").AttributionLike} [attributions] Attributions.

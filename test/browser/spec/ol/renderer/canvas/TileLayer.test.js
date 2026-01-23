@@ -1,11 +1,11 @@
-import {spy as sinonSpy} from 'sinon';
-import Map from '../../../../../../src/ol/Map.js';
-import View from '../../../../../../src/ol/View.js';
 import TileLayer from '../../../../../../src/ol/layer/Tile.js';
-import {fromLonLat} from '../../../../../../src/ol/proj.js';
+import Map from '../../../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../../../src/ol/proj.js';
 import ImageTile from '../../../../../../src/ol/source/ImageTile.js';
 import TileDebug from '../../../../../../src/ol/source/TileDebug.js';
 import XYZ from '../../../../../../src/ol/source/XYZ.js';
+import View from '../../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/renderer/canvas/TileLayer', function () {
   describe('#renderFrame', function () {

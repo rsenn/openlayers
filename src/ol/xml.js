@@ -1,8 +1,7 @@
+import { extend } from './array.js';
 /**
  * @module ol/xml
  */
-import {extend} from './array.js';
-
 /**
  * When using {@link module:ol/xml.makeChildAppender} or
  * {@link module:ol/xml.makeSimpleNodeFactory}, the top `objectStack` item needs

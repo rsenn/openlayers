@@ -1,11 +1,13 @@
+import { all } from '../events/condition.js';
+import { always } from '../events/condition.js';
+import { focusWithTabindex } from '../events/condition.js';
+import EventType from '../events/EventType.js';
+import { clamp } from '../math.js';
+import { zoomByDelta } from './Interaction.js';
+import Interaction from './Interaction.js';
 /**
  * @module ol/interaction/MouseWheelZoom
  */
-import EventType from '../events/EventType.js';
-import {all, always, focusWithTabindex} from '../events/condition.js';
-import {clamp} from '../math.js';
-import Interaction, {zoomByDelta} from './Interaction.js';
-
 /**
  * @typedef {'trackpad' | 'wheel'} Mode
  */

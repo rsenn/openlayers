@@ -1,10 +1,9 @@
-import DataTile, {
-  asArrayLike,
-  asImageLike,
-  toArray,
-} from '../../../../src/ol/DataTile.js';
+import { asArrayLike } from '../../../../src/ol/DataTile.js';
+import { asImageLike } from '../../../../src/ol/DataTile.js';
+import { toArray } from '../../../../src/ol/DataTile.js';
+import DataTile from '../../../../src/ol/DataTile.js';
+import { listenOnce } from '../../../../src/ol/events.js';
 import TileState from '../../../../src/ol/TileState.js';
-import {listenOnce} from '../../../../src/ol/events.js';
 
 describe('ol/DataTile', function () {
   /**

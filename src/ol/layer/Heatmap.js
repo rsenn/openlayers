@@ -1,20 +1,18 @@
+import { createCanvasContext2D } from '../dom.js';
+import { BooleanType } from '../expr/expression.js';
+import { NumberType } from '../expr/expression.js';
+import { newCompilationContext } from '../expr/gpu.js';
+import { clamp } from '../math.js';
+import { applyContextToBuilder } from '../render/webgl/compileUtil.js';
+import { expressionToGlsl } from '../render/webgl/compileUtil.js';
+import { generateAttributesFromContext } from '../render/webgl/compileUtil.js';
+import { generateUniformsFromContext } from '../render/webgl/compileUtil.js';
+import { ShaderBuilder } from '../render/webgl/ShaderBuilder.js';
+import WebGLVectorLayerRenderer from '../renderer/webgl/VectorLayer.js';
+import BaseVector from './BaseVector.js';
 /**
  * @module ol/layer/Heatmap
  */
-import {createCanvasContext2D} from '../dom.js';
-import {BooleanType, NumberType} from '../expr/expression.js';
-import {newCompilationContext} from '../expr/gpu.js';
-import {clamp} from '../math.js';
-import {ShaderBuilder} from '../render/webgl/ShaderBuilder.js';
-import {
-  applyContextToBuilder,
-  expressionToGlsl,
-  generateAttributesFromContext,
-  generateUniformsFromContext,
-} from '../render/webgl/compileUtil.js';
-import WebGLVectorLayerRenderer from '../renderer/webgl/VectorLayer.js';
-import BaseVector from './BaseVector.js';
-
 /**
  * @typedef {import("../style/flat.js").NumberExpression|string|function(import("../Feature.js").default):number} WeightExpression
  */

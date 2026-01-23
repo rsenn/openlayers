@@ -1,4 +1,4 @@
-import {linearRingContainsXY} from '../../../../../src/ol/geom/flat/contains.js';
+import { linearRingContainsXY } from '../../../../../src/ol/geom/flat/contains.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/contains.js', function () {

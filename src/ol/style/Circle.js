@@ -1,9 +1,7 @@
+import RegularShape from './RegularShape.js';
 /**
  * @module ol/style/Circle
  */
-
-import RegularShape from './RegularShape.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("./Fill.js").default} [fill] Fill style.

@@ -1,11 +1,11 @@
+import { CLASS_CONTROL } from '../css.js';
+import { CLASS_UNSELECTABLE } from '../css.js';
+import { easeOut } from '../easing.js';
+import EventType from '../events/EventType.js';
+import Control from './Control.js';
 /**
  * @module ol/control/Zoom
  */
-import {CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
-import {easeOut} from '../easing.js';
-import EventType from '../events/EventType.js';
-import Control from './Control.js';
-
 /**
  * @typedef {Object} Options
  * @property {number} [duration=250] Animation duration in milliseconds.

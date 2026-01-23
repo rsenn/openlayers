@@ -1,9 +1,8 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {transformExtent} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { transformExtent } from '../src/ol/proj.js';
 import TileJSON from '../src/ol/source/TileJSON.js';
-
+import View from '../src/ol/View.js';
 function transform(extent) {
   return transformExtent(extent, 'EPSG:4326', 'EPSG:3857');
 }

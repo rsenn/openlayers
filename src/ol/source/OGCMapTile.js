@@ -1,10 +1,9 @@
+import { error as logError } from '../console.js';
+import { getTileSetInfo } from './ogcTileUtil.js';
+import TileImage from './TileImage.js';
 /**
  * @module ol/source/OGCMapTile
  */
-import {error as logError} from '../console.js';
-import TileImage from './TileImage.js';
-import {getTileSetInfo} from './ogcTileUtil.js';
-
 /**
  * @typedef {Object} Options
  * @property {string} url URL to the OGC Map Tileset endpoint.

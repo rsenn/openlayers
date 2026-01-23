@@ -1,15 +1,11 @@
-import {
-  buildExpression,
-  newEvaluationContext,
-} from '../../../../src/ol/expr/cpu.js';
-import {
-  BooleanType,
-  ColorType,
-  NumberArrayType,
-  NumberType,
-  StringType,
-  newParsingContext,
-} from '../../../../src/ol/expr/expression.js';
+import { buildExpression } from '../../../../src/ol/expr/cpu.js';
+import { newEvaluationContext } from '../../../../src/ol/expr/cpu.js';
+import { BooleanType } from '../../../../src/ol/expr/expression.js';
+import { ColorType } from '../../../../src/ol/expr/expression.js';
+import { newParsingContext } from '../../../../src/ol/expr/expression.js';
+import { NumberArrayType } from '../../../../src/ol/expr/expression.js';
+import { NumberType } from '../../../../src/ol/expr/expression.js';
+import { StringType } from '../../../../src/ol/expr/expression.js';
 import expect from '../../expect.js';
 
 describe('ol/expr/cpu.js', () => {

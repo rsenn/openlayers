@@ -1,16 +1,17 @@
+import { getForViewAndSize } from '../extent.js';
+import { getHeight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { decode } from '../Image.js';
+import { floor } from '../math.js';
+import { round } from '../math.js';
+import { get as getProjection } from '../proj.js';
+import { compareVersions } from '../string.js';
+import { appendParams } from '../uri.js';
+import { DECIMALS } from './common.js';
+import { getRequestExtent } from './Image.js';
 /**
  * @module ol/source/wms
  */
-
-import {decode} from '../Image.js';
-import {getForViewAndSize, getHeight, getWidth} from '../extent.js';
-import {floor, round} from '../math.js';
-import {get as getProjection} from '../proj.js';
-import {compareVersions} from '../string.js';
-import {appendParams} from '../uri.js';
-import {getRequestExtent} from './Image.js';
-import {DECIMALS} from './common.js';
-
 /**
  * Default WMS version.
  * @type {string}

@@ -1,10 +1,8 @@
-import {spy as sinonSpy} from 'sinon';
-import {
-  getJSON,
-  jsonp as requestJSONP,
-  resolveUrl,
-} from '../../../../src/ol/net.js';
-import {getUid} from '../../../../src/ol/util.js';
+import { getJSON } from '../../../../src/ol/net.js';
+import { jsonp as requestJSONP } from '../../../../src/ol/net.js';
+import { resolveUrl } from '../../../../src/ol/net.js';
+import { getUid } from '../../../../src/ol/util.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/net', function () {
   describe('getJSON()', function () {

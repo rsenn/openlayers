@@ -1,7 +1,8 @@
-import proj4 from 'proj4';
 import WMSGetFeatureInfo from '../../../../../src/ol/format/WMSGetFeatureInfo.js';
-import {register} from '../../../../../src/ol/proj/proj4.js';
-import {addCommon, clearAllProjections} from '../../../../../src/ol/proj.js';
+import { addCommon } from '../../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../../src/ol/proj.js';
+import { register } from '../../../../../src/ol/proj/proj4.js';
+import proj4 from 'proj4';
 
 describe('ol.format.WMSGetFeatureInfo', function () {
   describe('#getLayers', function () {

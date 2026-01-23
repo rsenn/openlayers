@@ -1,10 +1,14 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import MousePosition from '../src/ol/control/MousePosition.js';
-import {toStringHDMS} from '../src/ol/coordinate.js';
-import {Image as ImageLayer, WebGLTile as TileLayer} from '../src/ol/layer.js';
-import {fromLonLat, toLonLat} from '../src/ol/proj.js';
-import {DataTile, OSM, Raster as RasterSource} from '../src/ol/source.js';
+import { toStringHDMS } from '../src/ol/coordinate.js';
+import { Image as ImageLayer } from '../src/ol/layer.js';
+import { WebGLTile as TileLayer } from '../src/ol/layer.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
+import { toLonLat } from '../src/ol/proj.js';
+import { DataTile } from '../src/ol/source.js';
+import { OSM } from '../src/ol/source.js';
+import { Raster as RasterSource } from '../src/ol/source.js';
+import View from '../src/ol/View.js';
 
 const attribution =
   '<a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md" target="_blank">Data sources and attribution</a>';

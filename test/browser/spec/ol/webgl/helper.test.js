@@ -1,16 +1,16 @@
-import {spy as sinonSpy, stub as sinonStub} from 'sinon';
-import {
-  create as createTransform,
-  rotate as rotateTransform,
-  scale as scaleTransform,
-  translate as translateTransform,
-} from '../../../../../src/ol/transform.js';
-import {getUid} from '../../../../../src/ol/util.js';
+import { create as createTransform } from '../../../../../src/ol/transform.js';
+import { rotate as rotateTransform } from '../../../../../src/ol/transform.js';
+import { scale as scaleTransform } from '../../../../../src/ol/transform.js';
+import { translate as translateTransform } from '../../../../../src/ol/transform.js';
+import { getUid } from '../../../../../src/ol/util.js';
+import { ARRAY_BUFFER } from '../../../../../src/ol/webgl.js';
+import { FLOAT } from '../../../../../src/ol/webgl.js';
+import { STATIC_DRAW } from '../../../../../src/ol/webgl.js';
 import WebGLArrayBuffer from '../../../../../src/ol/webgl/Buffer.js';
-import WebGLHelper, {
-  DefaultUniform,
-} from '../../../../../src/ol/webgl/Helper.js';
-import {ARRAY_BUFFER, FLOAT, STATIC_DRAW} from '../../../../../src/ol/webgl.js';
+import { DefaultUniform } from '../../../../../src/ol/webgl/Helper.js';
+import WebGLHelper from '../../../../../src/ol/webgl/Helper.js';
+import { spy as sinonSpy } from 'sinon';
+import { stub as sinonStub } from 'sinon';
 
 const VERTEX_SHADER = `
   precision mediump float;

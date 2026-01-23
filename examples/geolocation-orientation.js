@@ -1,12 +1,11 @@
 import Geolocation from '../src/ol/Geolocation.js';
-import Map from '../src/ol/Map.js';
-import Overlay from '../src/ol/Overlay.js';
-import View from '../src/ol/View.js';
 import LineString from '../src/ol/geom/LineString.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {fromLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import Overlay from '../src/ol/Overlay.js';
+import { fromLonLat } from '../src/ol/proj.js';
 import OSM from '../src/ol/source/OSM.js';
-
+import View from '../src/ol/View.js';
 // creating the view
 const view = new View({
   center: fromLonLat([5.8713, 45.6452]),
@@ -26,6 +25,7 @@ const map = new Map({
 
 // Geolocation marker
 const markerEl = document.getElementById('geolocation_marker');
+
 const marker = new Overlay({
   positioning: 'center-center',
   element: markerEl,
@@ -168,6 +168,7 @@ geolocateBtn.addEventListener(
 
 // simulate device move
 let simulationData;
+
 const client = new XMLHttpRequest();
 client.open('GET', 'data/geolocation-orientation.json');
 

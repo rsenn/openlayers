@@ -1,9 +1,8 @@
-import Map from 'ol/Map.js';
-import View from 'ol/View.js';
 import TileLayer from 'ol/layer/Tile.js';
-import {useGeographic} from 'ol/proj.js';
+import Map from 'ol/Map.js';
+import { useGeographic } from 'ol/proj.js';
 import ImageTile from 'ol/source/ImageTile.js';
-
+import View from 'ol/View.js';
 useGeographic();
 
 const someTilesetId = [

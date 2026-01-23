@@ -1,16 +1,12 @@
+import { containsExtent } from '../extent.js';
+import { getHeight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { scaleFromCenter } from '../extent.js';
+import ImageCanvas from '../ImageCanvas.js';
+import ImageSource from './Image.js';
 /**
  * @module ol/source/ImageCanvas
  */
-
-import ImageCanvas from '../ImageCanvas.js';
-import {
-  containsExtent,
-  getHeight,
-  getWidth,
-  scaleFromCenter,
-} from '../extent.js';
-import ImageSource from './Image.js';
-
 /**
  * A function returning the canvas element (`{HTMLCanvasElement}`)
  * used by the source as an image. The arguments passed to the function are:

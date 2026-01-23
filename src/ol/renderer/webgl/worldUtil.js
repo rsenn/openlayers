@@ -1,5 +1,4 @@
-import {getWidth} from '../../extent.js';
-
+import { getWidth } from '../../extent.js';
 /**
  * Compute world params
  * @param {import("../../Map.js").FrameState} frameState Frame state.

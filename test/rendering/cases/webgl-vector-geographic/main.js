@@ -1,14 +1,14 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import GeoJSON from '../../../../src/ol/format/GeoJSON.js';
 import Polygon from '../../../../src/ol/geom/Polygon.js';
 import WebGLVectorLayer from '../../../../src/ol/layer/WebGLVector.js';
-import {useGeographic} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { useGeographic } from '../../../../src/ol/proj.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
-
+import View from '../../../../src/ol/View.js';
 useGeographic();
 
 const format = new GeoJSON();
+
 const features = format.readFeatures({
   type: 'FeatureCollection',
   features: [

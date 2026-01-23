@@ -1,12 +1,13 @@
+import { rotate as rotateCoordinate } from '../coordinate.js';
+import { noModifierKeys } from '../events/condition.js';
+import { targetNotEditable } from '../events/condition.js';
+import EventType from '../events/EventType.js';
+import Key from '../events/Key.js';
+import { pan } from './Interaction.js';
+import Interaction from './Interaction.js';
 /**
  * @module ol/interaction/KeyboardPan
  */
-import {rotate as rotateCoordinate} from '../coordinate.js';
-import EventType from '../events/EventType.js';
-import Key from '../events/Key.js';
-import {noModifierKeys, targetNotEditable} from '../events/condition.js';
-import Interaction, {pan} from './Interaction.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("../events/condition.js").Condition} [condition] A function that

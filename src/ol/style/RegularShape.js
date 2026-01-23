@@ -1,23 +1,19 @@
+import { asArray } from '../color.js';
+import { asColorLike } from '../colorlike.js';
+import { createCanvasContext2D } from '../dom.js';
+import ImageState from '../ImageState.js';
+import { defaultFillStyle } from '../render/canvas.js';
+import { defaultLineCap } from '../render/canvas.js';
+import { defaultLineJoin } from '../render/canvas.js';
+import { defaultLineWidth } from '../render/canvas.js';
+import { defaultMiterLimit } from '../render/canvas.js';
+import { defaultStrokeStyle } from '../render/canvas.js';
+import IconImage from './IconImage.js';
+import { shared as iconImageCache } from './IconImageCache.js';
+import ImageStyle from './Image.js';
 /**
  * @module ol/style/RegularShape
  */
-
-import ImageState from '../ImageState.js';
-import {asArray} from '../color.js';
-import {asColorLike} from '../colorlike.js';
-import {createCanvasContext2D} from '../dom.js';
-import {
-  defaultFillStyle,
-  defaultLineCap,
-  defaultLineJoin,
-  defaultLineWidth,
-  defaultMiterLimit,
-  defaultStrokeStyle,
-} from '../render/canvas.js';
-import IconImage from './IconImage.js';
-import {shared as iconImageCache} from './IconImageCache.js';
-import ImageStyle from './Image.js';
-
 /**
  * Specify radius for regular polygons, or both radius and radius2 for stars.
  * @typedef {Object} Options

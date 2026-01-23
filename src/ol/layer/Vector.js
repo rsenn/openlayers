@@ -1,9 +1,8 @@
+import CanvasVectorLayerRenderer from '../renderer/canvas/VectorLayer.js';
+import BaseVectorLayer from './BaseVector.js';
 /**
  * @module ol/layer/Vector
  */
-import CanvasVectorLayerRenderer from '../renderer/canvas/VectorLayer.js';
-import BaseVectorLayer from './BaseVector.js';
-
 /**
  * @template {import("../source/Vector.js").default<FeatureType>} [VectorSourceType=import("../source/Vector.js").default<*>]
  * @template {import('../Feature.js').FeatureLike} [FeatureType=import("./BaseVector.js").ExtractedFeatureType<VectorSourceType>]

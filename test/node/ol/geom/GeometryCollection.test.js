@@ -1,10 +1,10 @@
-import {spy as sinonSpy} from 'sinon';
 import Geometry from '../../../../src/ol/geom/Geometry.js';
 import GeometryCollection from '../../../../src/ol/geom/GeometryCollection.js';
 import LineString from '../../../../src/ol/geom/LineString.js';
 import Point from '../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../src/ol/geom/Polygon.js';
 import expect from '../../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/geom/GeometryCollection.js', function () {
   const outer = [

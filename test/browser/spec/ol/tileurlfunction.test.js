@@ -1,10 +1,8 @@
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
 import TileGrid from '../../../../src/ol/tilegrid/TileGrid.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
-import {
-  createFromTemplate,
-  createFromTemplates,
-  createFromTileUrlFunctions,
-} from '../../../../src/ol/tileurlfunction.js';
+import { createFromTemplate } from '../../../../src/ol/tileurlfunction.js';
+import { createFromTemplates } from '../../../../src/ol/tileurlfunction.js';
+import { createFromTileUrlFunctions } from '../../../../src/ol/tileurlfunction.js';
 
 describe('ol.TileUrlFunction', function () {
   describe('createFromTemplate', function () {

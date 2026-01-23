@@ -1,17 +1,13 @@
+import RBush from '../../../../rbush.js';
+import { flatStylesToStyleFunction } from '../render/canvas/style.js';
+import { rulesToStyleFunction } from '../render/canvas/style.js';
+import { createDefaultStyle } from '../style/Style.js';
+import { toFunction as toStyleFunction } from '../style/Style.js';
+import Style from '../style/Style.js';
+import Layer from './Layer.js';
 /**
  * @module ol/layer/BaseVector
  */
-import RBush from '../../../../rbush.js';
-import {
-  flatStylesToStyleFunction,
-  rulesToStyleFunction,
-} from '../render/canvas/style.js';
-import Style, {
-  createDefaultStyle,
-  toFunction as toStyleFunction,
-} from '../style/Style.js';
-import Layer from './Layer.js';
-
 /***
  * @template T
  * @typedef {T extends import("../source/Vector.js").default<infer U extends import("../Feature.js").FeatureLike> ? U : never} ExtractedFeatureType

@@ -1,16 +1,16 @@
-import Map from '../../../../src/ol/Map.js';
-import View, {
-  createCenterConstraint,
-  createResolutionConstraint,
-  createRotationConstraint,
-  isNoopAnimation,
-} from '../../../../src/ol/View.js';
-import ViewHint from '../../../../src/ol/ViewHint.js';
-import {createEmpty} from '../../../../src/ol/extent.js';
+import { createEmpty } from '../../../../src/ol/extent.js';
 import Circle from '../../../../src/ol/geom/Circle.js';
 import LineString from '../../../../src/ol/geom/LineString.js';
 import Point from '../../../../src/ol/geom/Point.js';
-import {clearUserProjection, useGeographic} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { clearUserProjection } from '../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../src/ol/proj.js';
+import { createCenterConstraint } from '../../../../src/ol/View.js';
+import { createResolutionConstraint } from '../../../../src/ol/View.js';
+import { createRotationConstraint } from '../../../../src/ol/View.js';
+import { isNoopAnimation } from '../../../../src/ol/View.js';
+import View from '../../../../src/ol/View.js';
+import ViewHint from '../../../../src/ol/ViewHint.js';
 
 describe('ol/View', function () {
   describe('constructor (defaults)', function () {

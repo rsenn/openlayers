@@ -1,8 +1,8 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ImageLayer from '../src/ol/layer/Image.js';
+import Map from '../src/ol/Map.js';
 import ImageSource from '../src/ol/source/Image.js';
-import {createLoader} from '../src/ol/source/wms.js';
+import { createLoader } from '../src/ol/source/wms.js';
+import View from '../src/ol/View.js';
 
 const layer = new ImageLayer({
   source: new ImageSource({

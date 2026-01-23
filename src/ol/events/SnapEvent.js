@@ -1,8 +1,7 @@
+import Event from './Event.js';
 /**
  * @module ol/events/SnapEvent
  */
-import Event from './Event.js';
-
 /**
  * @enum {string}
  */

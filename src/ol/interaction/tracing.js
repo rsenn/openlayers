@@ -1,18 +1,16 @@
+import { distance } from '../coordinate.js';
+import { GeometryCollection } from '../geom.js';
+import { LineString } from '../geom.js';
+import { MultiLineString } from '../geom.js';
+import { MultiPolygon } from '../geom.js';
+import { Polygon } from '../geom.js';
+import { clamp } from '../math.js';
+import { squaredDistance } from '../math.js';
+import { toFixed } from '../math.js';
 /**
  * Coordinate type when drawing lines.
  * @typedef {Array<import("../coordinate.js").Coordinate>} LineCoordType
  */
-
-import {distance} from '../coordinate.js';
-import {
-  GeometryCollection,
-  LineString,
-  MultiLineString,
-  MultiPolygon,
-  Polygon,
-} from '../geom.js';
-import {clamp, squaredDistance, toFixed} from '../math.js';
-
 /**
  * @param {LineCoordType} coordinates The ring coordinates.
  * @param {number} index The index.  May be wrapped.

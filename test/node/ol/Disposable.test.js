@@ -1,6 +1,6 @@
-import {spy as sinonSpy} from 'sinon';
 import Disposable from '../../../src/ol/Disposable.js';
 import expect from '../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/Disposable.js', function () {
   describe('constructor', function () {

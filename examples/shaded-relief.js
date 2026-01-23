@@ -1,11 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ImageLayer from '../src/ol/layer/Image.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import ImageTile from '../src/ol/source/ImageTile.js';
 import OSM from '../src/ol/source/OSM.js';
 import Raster from '../src/ol/source/Raster.js';
-
+import View from '../src/ol/View.js';
 /**
  * Generates a shaded relief image given elevation data.  Uses a 3x3
  * neighborhood for determining slope and aspect.
@@ -160,6 +159,7 @@ const map = new Map({
 });
 
 const controlIds = ['vert', 'sunEl', 'sunAz'];
+
 const controls = {};
 controlIds.forEach(function (id) {
   const control = document.getElementById(id);

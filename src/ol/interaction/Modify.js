@@ -1,54 +1,43 @@
-/**
- * @module ol/interaction/Modify
- */
+import { equals } from '../array.js';
 import Collection from '../Collection.js';
 import CollectionEventType from '../CollectionEventType.js';
-import Feature from '../Feature.js';
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import {equals} from '../array.js';
-import {
-  closestOnSegment,
-  distance as coordinateDistance,
-  equals as coordinatesEqual,
-  squaredDistance as squaredCoordinateDistance,
-  squaredDistanceToSegment,
-} from '../coordinate.js';
+import { closestOnSegment } from '../coordinate.js';
+import { distance as coordinateDistance } from '../coordinate.js';
+import { equals as coordinatesEqual } from '../coordinate.js';
+import { squaredDistance as squaredCoordinateDistance } from '../coordinate.js';
+import { squaredDistanceToSegment } from '../coordinate.js';
+import { altKeyOnly } from '../events/condition.js';
+import { always } from '../events/condition.js';
+import { never } from '../events/condition.js';
+import { primaryAction } from '../events/condition.js';
+import { singleClick } from '../events/condition.js';
 import Event from '../events/Event.js';
 import EventType from '../events/EventType.js';
-import {
-  altKeyOnly,
-  always,
-  never,
-  primaryAction,
-  singleClick,
-} from '../events/condition.js';
-import {
-  boundingExtent,
-  buffer as bufferExtent,
-  createOrUpdateFromCoordinate as createExtent,
-} from '../extent.js';
+import { boundingExtent } from '../extent.js';
+import { buffer as bufferExtent } from '../extent.js';
+import { createOrUpdateFromCoordinate as createExtent } from '../extent.js';
+import Feature from '../Feature.js';
 import Point from '../geom/Point.js';
-import {fromCircle} from '../geom/Polygon.js';
+import { fromCircle } from '../geom/Polygon.js';
 import VectorLayer from '../layer/Vector.js';
-import {
-  fromUserCoordinate,
-  fromUserExtent,
-  getUserProjection,
-  toUserCoordinate,
-  toUserExtent,
-} from '../proj.js';
+import MapBrowserEventType from '../MapBrowserEventType.js';
+import { fromUserCoordinate } from '../proj.js';
+import { fromUserExtent } from '../proj.js';
+import { getUserProjection } from '../proj.js';
+import { toUserCoordinate } from '../proj.js';
+import { toUserExtent } from '../proj.js';
 import VectorSource from '../source/Vector.js';
 import VectorEventType from '../source/VectorEventType.js';
 import RBush from '../structs/RBush.js';
-import {createEditingStyle} from '../style/Style.js';
-import {getUid} from '../util.js';
+import { createEditingStyle } from '../style/Style.js';
+import { getUid } from '../util.js';
 import PointerInteraction from './Pointer.js';
-import {
-  getCoordinate,
-  getTraceTargetUpdate,
-  getTraceTargets,
-} from './tracing.js';
-
+import { getCoordinate } from './tracing.js';
+import { getTraceTargets } from './tracing.js';
+import { getTraceTargetUpdate } from './tracing.js';
+/**
+ * @module ol/interaction/Modify
+ */
 /**
  * The segment index assigned to a circle's center when
  * breaking up a circle into ModifySegmentDataType segments.
@@ -64,6 +53,7 @@ const CIRCLE_CENTER_INDEX = 0;
 const CIRCLE_CIRCUMFERENCE_INDEX = 1;
 
 const tempExtent = [0, 0, 0, 0];
+
 const tempSegment = [];
 
 /**

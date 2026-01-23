@@ -1,7 +1,7 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import TileLayer from '../../../../src/ol/layer/Tile.js';
+import Map from '../../../../src/ol/Map.js';
 import Zoomify from '../../../../src/ol/source/Zoomify.js';
+import View from '../../../../src/ol/View.js';
 
 const layer = new TileLayer({
   source: new Zoomify({

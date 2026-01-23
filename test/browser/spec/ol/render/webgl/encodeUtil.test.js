@@ -1,8 +1,6 @@
-import {unpackColor} from '../../../../../../src/ol/render/webgl/compileUtil.js';
-import {
-  colorDecodeId,
-  colorEncodeIdAndPack,
-} from '../../../../../../src/ol/render/webgl/encodeUtil.js';
+import { unpackColor } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { colorDecodeId } from '../../../../../../src/ol/render/webgl/encodeUtil.js';
+import { colorEncodeIdAndPack } from '../../../../../../src/ol/render/webgl/encodeUtil.js';
 
 describe('webgl encode utils', function () {
   describe('colorEncodeIdAndPack and colorDecodeId', function () {

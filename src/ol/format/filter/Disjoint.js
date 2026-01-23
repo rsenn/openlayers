@@ -1,8 +1,7 @@
+import Spatial from './Spatial.js';
 /**
  * @module ol/format/filter/Disjoint
  */
-import Spatial from './Spatial.js';
-
 /**
  * @classdesc
  * Represents a `<Disjoint>` operator to test whether a geometry-valued property

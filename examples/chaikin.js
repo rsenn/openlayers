@@ -1,12 +1,11 @@
-import smooth from 'chaikin-smooth';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import Draw from '../src/ol/interaction/Draw.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
 import VectorSource from '../src/ol/source/Vector.js';
-
+import View from '../src/ol/View.js';
+import smooth from 'chaikin-smooth';
 function makeSmooth(path, numIterations) {
   numIterations = Math.min(Math.max(numIterations, 1), 10);
   while (numIterations > 0) {
@@ -36,6 +35,7 @@ const map = new Map({
 });
 
 const shallSmoothen = document.getElementById('shall-smoothen');
+
 const numIterations = document.getElementById('iterations');
 
 const draw = new Draw({

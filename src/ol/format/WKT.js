@@ -1,6 +1,3 @@
-/**
- * @module ol/format/WKT
- */
 import Feature from '../Feature.js';
 import GeometryCollection from '../geom/GeometryCollection.js';
 import LineString from '../geom/LineString.js';
@@ -9,9 +6,11 @@ import MultiPoint from '../geom/MultiPoint.js';
 import MultiPolygon from '../geom/MultiPolygon.js';
 import Point from '../geom/Point.js';
 import Polygon from '../geom/Polygon.js';
-import {transformGeometryWithOptions} from './Feature.js';
+import { transformGeometryWithOptions } from './Feature.js';
 import TextFeature from './TextFeature.js';
-
+/**
+ * @module ol/format/WKT
+ */
 /**
  * Geometry constructors
  * @enum {function (new:import("../geom/Geometry.js").default, Array, import("../geom/Geometry.js").GeometryLayout)}

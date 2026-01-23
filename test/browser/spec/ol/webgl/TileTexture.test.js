@@ -1,11 +1,11 @@
 import DataTile from '../../../../../src/ol/DataTile.js';
+import { createCanvasContext2D } from '../../../../../src/ol/dom.js';
 import ImageTile from '../../../../../src/ol/ImageTile.js';
-import TileState from '../../../../../src/ol/TileState.js';
-import {createCanvasContext2D} from '../../../../../src/ol/dom.js';
 import WebGLTileLayer from '../../../../../src/ol/layer/WebGLTile.js';
-import {EXTENT as EPSG3857_EXTENT} from '../../../../../src/ol/proj/epsg3857.js';
-import {get as getProjection} from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { EXTENT as EPSG3857_EXTENT } from '../../../../../src/ol/proj/epsg3857.js';
 import DataTileSource from '../../../../../src/ol/source/DataTile.js';
+import TileState from '../../../../../src/ol/TileState.js';
 import WebGLArrayBuffer from '../../../../../src/ol/webgl/Buffer.js';
 import TileTexture from '../../../../../src/ol/webgl/TileTexture.js';
 

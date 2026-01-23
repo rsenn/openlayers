@@ -1,8 +1,8 @@
-import {spy as sinonSpy} from 'sinon';
-import {isEmpty} from '../../../../src/ol/extent.js';
+import { isEmpty } from '../../../../src/ol/extent.js';
 import MultiPoint from '../../../../src/ol/geom/MultiPoint.js';
 import Point from '../../../../src/ol/geom/Point.js';
 import expect from '../../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/geom/MultiPoint.js', function () {
   it('cannot be constructed with a null geometry', function () {

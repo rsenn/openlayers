@@ -1,9 +1,8 @@
-import {spy as sinonSpy} from 'sinon';
-import Event, {
-  preventDefault,
-  stopPropagation,
-} from '../../../../src/ol/events/Event.js';
+import { preventDefault } from '../../../../src/ol/events/Event.js';
+import { stopPropagation } from '../../../../src/ol/events/Event.js';
+import Event from '../../../../src/ol/events/Event.js';
 import expect from '../../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/events/Event.js', function () {
   describe('constructor', function () {

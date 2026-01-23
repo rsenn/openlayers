@@ -1,16 +1,19 @@
+import { getBottomLeft } from '../extent.js';
+import { getTopRight } from '../extent.js';
+import { toLonLat } from '../proj.js';
+import { createXYZ } from '../tilegrid.js';
+import { extentFromProjection } from '../tilegrid.js';
+import ViewHint from '../ViewHint.js';
+import TileImage from './TileImage.js';
 /**
  * @module ol/source/Google
  */
-
-import ViewHint from '../ViewHint.js';
-import {getBottomLeft, getTopRight} from '../extent.js';
-import {toLonLat} from '../proj.js';
-import {createXYZ, extentFromProjection} from '../tilegrid.js';
-import TileImage from './TileImage.js';
-
 const createSessionUrl = 'https://tile.googleapis.com/v1/createSession';
+
 const tileUrl = 'https://tile.googleapis.com/v1/2dtiles';
+
 const attributionUrl = 'https://tile.googleapis.com/tile/v1/viewport';
+
 const maxZoom = 22;
 
 /**

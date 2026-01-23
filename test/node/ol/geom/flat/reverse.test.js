@@ -1,4 +1,4 @@
-import {coordinates as reverseCoordinates} from '../../../../../src/ol/geom/flat/reverse.js';
+import { coordinates as reverseCoordinates } from '../../../../../src/ol/geom/flat/reverse.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/reverse.js', function () {

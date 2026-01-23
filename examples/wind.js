@@ -1,14 +1,16 @@
-import colormap from 'colormap';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
-import {DEVICE_PIXEL_RATIO} from '../src/ol/has.js';
+import { DEVICE_PIXEL_RATIO } from '../src/ol/has.js';
 import Flow from '../src/ol/layer/Flow.js';
 import WebGLVectorLayer from '../src/ol/layer/WebGLVector.js';
-import {get as getProjection, transform} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { get as getProjection } from '../src/ol/proj.js';
+import { transform } from '../src/ol/proj.js';
 import DataTileSource from '../src/ol/source/DataTile.js';
 import VectorSource from '../src/ol/source/Vector.js';
-import {createXYZ, wrapX} from '../src/ol/tilegrid.js';
+import { createXYZ } from '../src/ol/tilegrid.js';
+import { wrapX } from '../src/ol/tilegrid.js';
+import View from '../src/ol/View.js';
+import colormap from 'colormap';
 
 const windData = new Promise((resolve, reject) => {
   const image = new Image();

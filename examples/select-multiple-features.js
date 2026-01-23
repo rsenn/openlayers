@@ -1,11 +1,11 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {always} from '../src/ol/events/condition.js';
+import { always } from '../src/ol/events/condition.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
 import Select from '../src/ol/interaction/Select.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
-import {fromLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
 import VectorSource from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
 
 const select = new Select({
   toggleCondition: always,

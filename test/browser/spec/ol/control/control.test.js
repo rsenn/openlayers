@@ -1,5 +1,5 @@
-import Map from '../../../../../src/ol/Map.js';
 import Control from '../../../../../src/ol/control/Control.js';
+import Map from '../../../../../src/ol/Map.js';
 
 describe('ol.control.Control', function () {
   let map, control;

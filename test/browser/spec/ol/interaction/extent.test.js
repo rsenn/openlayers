@@ -1,9 +1,9 @@
-import {spy as sinonSpy} from 'sinon';
+import { never } from '../../../../../src/ol/events/condition.js';
+import ExtentInteraction from '../../../../../src/ol/interaction/Extent.js';
 import Map from '../../../../../src/ol/Map.js';
 import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
 import View from '../../../../../src/ol/View.js';
-import {never} from '../../../../../src/ol/events/condition.js';
-import ExtentInteraction from '../../../../../src/ol/interaction/Extent.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.interaction.Extent', function () {
   let map, interaction;

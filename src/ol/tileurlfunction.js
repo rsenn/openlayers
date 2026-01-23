@@ -1,10 +1,9 @@
+import { modulo } from './math.js';
+import { hash as tileCoordHash } from './tilecoord.js';
+import { renderXYZTemplate } from './uri.js';
 /**
  * @module ol/tileurlfunction
  */
-import {modulo} from './math.js';
-import {hash as tileCoordHash} from './tilecoord.js';
-import {renderXYZTemplate} from './uri.js';
-
 /**
  * @param {string} template Template.
  * @param {import("./tilegrid/TileGrid.js").default|null} tileGrid Tile grid.

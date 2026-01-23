@@ -1,9 +1,9 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
+import { defaults as defaultControls } from '../src/ol/control/defaults.js';
 import ScaleLine from '../src/ol/control/ScaleLine.js';
-import {defaults as defaultControls} from '../src/ol/control/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
+import View from '../src/ol/View.js';
 
 const scaleBarOptionsContainer = document.getElementById('scaleBarOptions');
 const unitsSelect = document.getElementById('units');
@@ -61,6 +61,7 @@ function onInvertColorsChange() {
   );
 }
 unitsSelect.addEventListener('change', onChangeUnit);
+
 typeSelect.addEventListener('change', reconfigureScaleLine);
 stepsRange.addEventListener('input', reconfigureScaleLine);
 scaleTextCheckbox.addEventListener('change', reconfigureScaleLine);

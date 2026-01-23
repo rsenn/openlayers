@@ -1,16 +1,16 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import GPX from '../src/ol/format/GPX.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
+import GPX from '../src/ol/format/GPX.js';
 import IGC from '../src/ol/format/IGC.js';
 import KML from '../src/ol/format/KML.js';
 import TopoJSON from '../src/ol/format/TopoJSON.js';
+import { defaults as defaultInteractions } from '../src/ol/interaction/defaults.js';
 import DragAndDrop from '../src/ol/interaction/DragAndDrop.js';
-import {defaults as defaultInteractions} from '../src/ol/interaction/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorImageLayer from '../src/ol/layer/VectorImage.js';
+import Map from '../src/ol/Map.js';
 import ImageTile from '../src/ol/source/ImageTile.js';
 import VectorSource from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
 
 const dragAndDropInteraction = new DragAndDrop({
   formatConstructors: [GPX, GeoJSON, IGC, KML, TopoJSON],

@@ -1,7 +1,7 @@
-import {spy as sinonSpy} from 'sinon';
+import { listen } from '../../../src/ol/events.js';
 import BaseObject from '../../../src/ol/Object.js';
-import {listen} from '../../../src/ol/events.js';
 import expect from '../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/Object.js', function () {
   let o;

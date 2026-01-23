@@ -1,10 +1,9 @@
 import ImageState from '../../../../../src/ol/ImageState.js';
 import Icon from '../../../../../src/ol/style/Icon.js';
-import IconImage, {
-  get as getIconImage,
-} from '../../../../../src/ol/style/IconImage.js';
-import {shared as iconImageCache} from '../../../../../src/ol/style/IconImageCache.js';
-import {getUid} from '../../../../../src/ol/util.js';
+import { get as getIconImage } from '../../../../../src/ol/style/IconImage.js';
+import IconImage from '../../../../../src/ol/style/IconImage.js';
+import { shared as iconImageCache } from '../../../../../src/ol/style/IconImageCache.js';
+import { getUid } from '../../../../../src/ol/util.js';
 
 describe('ol.style.Icon', function () {
   const size = [36, 48];

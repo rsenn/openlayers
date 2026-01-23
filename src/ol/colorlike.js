@@ -1,12 +1,11 @@
+import { toString } from './color.js';
+import { createCanvasContext2D } from './dom.js';
+import ImageState from './ImageState.js';
+import { get as getIconImage } from './style/IconImage.js';
+import { shared as iconCache } from './style/IconImageCache.js';
 /**
  * @module ol/colorlike
  */
-import ImageState from './ImageState.js';
-import {toString} from './color.js';
-import {createCanvasContext2D} from './dom.js';
-import {get as getIconImage} from './style/IconImage.js';
-import {shared as iconCache} from './style/IconImageCache.js';
-
 /**
  * @typedef {Object} PatternDescriptor
  * @property {string} src Pattern image URL

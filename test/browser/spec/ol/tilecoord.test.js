@@ -1,9 +1,7 @@
-import {
-  fromKey,
-  getKey,
-  hash,
-  withinExtentAndZ,
-} from '../../../../src/ol/tilecoord.js';
+import { fromKey } from '../../../../src/ol/tilecoord.js';
+import { getKey } from '../../../../src/ol/tilecoord.js';
+import { hash } from '../../../../src/ol/tilecoord.js';
+import { withinExtentAndZ } from '../../../../src/ol/tilecoord.js';
 import TileGrid from '../../../../src/ol/tilegrid/TileGrid.js';
 
 describe('ol.TileCoord', function () {

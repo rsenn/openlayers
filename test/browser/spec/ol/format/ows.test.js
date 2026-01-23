@@ -1,5 +1,5 @@
 import OWS from '../../../../../src/ol/format/OWS.js';
-import {parse} from '../../../../../src/ol/xml.js';
+import { parse } from '../../../../../src/ol/xml.js';
 
 describe('ol.format.OWS 1.1', function () {
   const parser = new OWS();

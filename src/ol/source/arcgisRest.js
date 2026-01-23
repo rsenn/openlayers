@@ -1,15 +1,14 @@
+import { getHeight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { decode } from '../Image.js';
+import { round } from '../math.js';
+import { get as getProjection } from '../proj.js';
+import { appendParams } from '../uri.js';
+import { DECIMALS } from './common.js';
+import { getRequestExtent } from './Image.js';
 /**
  * @module ol/source/arcgisRest
  */
-
-import {decode} from '../Image.js';
-import {getHeight, getWidth} from '../extent.js';
-import {round} from '../math.js';
-import {get as getProjection} from '../proj.js';
-import {appendParams} from '../uri.js';
-import {getRequestExtent} from './Image.js';
-import {DECIMALS} from './common.js';
-
 /**
  * @param {string} baseUrl Base URL for the ArcGIS Rest service.
  * @param {import("../extent.js").Extent} extent Extent.

@@ -1,26 +1,23 @@
+import { linearFindNearest } from '../array.js';
+import Event from '../events/Event.js';
+import EventType from '../events/EventType.js';
+import { containsExtent } from '../extent.js';
+import { equals } from '../extent.js';
+import { getCenter } from '../extent.js';
+import { getForViewAndSize } from '../extent.js';
+import { getHeight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import ImageWrapper from '../Image.js';
+import ImageState from '../ImageState.js';
+import { ceil } from '../math.js';
+import { equivalent } from '../proj.js';
+import ReprojImage from '../reproj/Image.js';
+import { fromResolutionLike } from '../resolution.js';
+import { DECIMALS } from './common.js';
+import Source from './Source.js';
 /**
  * @module ol/source/Image
  */
-import ImageWrapper from '../Image.js';
-import ImageState from '../ImageState.js';
-import {linearFindNearest} from '../array.js';
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import {
-  containsExtent,
-  equals,
-  getCenter,
-  getForViewAndSize,
-  getHeight,
-  getWidth,
-} from '../extent.js';
-import {ceil} from '../math.js';
-import {equivalent} from '../proj.js';
-import ReprojImage from '../reproj/Image.js';
-import {fromResolutionLike} from '../resolution.js';
-import Source from './Source.js';
-import {DECIMALS} from './common.js';
-
 /**
  * @enum {string}
  */

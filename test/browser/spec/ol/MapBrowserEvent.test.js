@@ -1,9 +1,9 @@
+import Event from '../../../../src/ol/events/Event.js';
 import Map from '../../../../src/ol/Map.js';
 import MapBrowserEvent from '../../../../src/ol/MapBrowserEvent.js';
+import { clearUserProjection } from '../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../src/ol/proj.js';
 import View from '../../../../src/ol/View.js';
-import Event from '../../../../src/ol/events/Event.js';
-import {clearUserProjection, useGeographic} from '../../../../src/ol/proj.js';
-
 function createMap() {
   const size = 256;
   const target = document.createElement('div');

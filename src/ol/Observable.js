@@ -1,10 +1,11 @@
+import { listen } from './events.js';
+import { listenOnce } from './events.js';
+import { unlistenByKey } from './events.js';
+import EventType from './events/EventType.js';
+import EventTarget from './events/Target.js';
 /**
  * @module ol/Observable
  */
-import EventType from './events/EventType.js';
-import EventTarget from './events/Target.js';
-import {listen, listenOnce, unlistenByKey} from './events.js';
-
 /***
  * @template {string} Type
  * @template {Event|import("./events/Event.js").default} EventClass

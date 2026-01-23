@@ -1,10 +1,8 @@
+import Disposable from '../Disposable.js';
+import Polygon from '../geom/Polygon.js';
 /**
  * @module ol/render/Box
  */
-
-import Disposable from '../Disposable.js';
-import Polygon from '../geom/Polygon.js';
-
 class RenderBox extends Disposable {
   /**
    * @param {string} className CSS class name.

@@ -1,12 +1,12 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import Layer from '../src/ol/layer/WebGLTile.js';
-import {useGeographic} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { useGeographic } from '../src/ol/proj.js';
 import Source from '../src/ol/source/ImageTile.js';
-
+import View from '../src/ol/View.js';
 useGeographic();
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
+
 const attributions =
   '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> ' +
   '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';

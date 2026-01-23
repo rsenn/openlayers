@@ -1,10 +1,10 @@
+import { CLASS_UNSELECTABLE } from '../css.js';
+import { getPointResolution } from '../proj.js';
+import { METERS_PER_UNIT } from '../proj.js';
+import Control from './Control.js';
 /**
  * @module ol/control/ScaleLine
  */
-import {CLASS_UNSELECTABLE} from '../css.js';
-import {METERS_PER_UNIT, getPointResolution} from '../proj.js';
-import Control from './Control.js';
-
 /**
  * @type {string}
  */

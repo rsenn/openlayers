@@ -1,8 +1,7 @@
+import Layer from './Layer.js';
 /**
  * @module ol/layer/BaseImage
  */
-import Layer from './Layer.js';
-
 /**
  * @template {import("../source/Image.js").default} ImageSourceType
  * @typedef {Object} Options

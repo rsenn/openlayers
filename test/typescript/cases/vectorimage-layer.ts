@@ -1,9 +1,9 @@
-import Feature, {FeatureLike} from '../../../build/ol/Feature.js';
+import { FeatureLike } from '../../../build/ol/Feature.js';
+import Feature from '../../../build/ol/Feature.js';
+import { LineString } from '../../../build/ol/geom.js';
 import Point from '../../../build/ol/geom/Point.js';
-import {LineString} from '../../../build/ol/geom.js';
-import VectorImageLayer, {
-  Options as VectorImageLayerOptions,
-} from '../../../build/ol/layer/VectorImage.js';
+import { Options as VectorImageLayerOptions } from '../../../build/ol/layer/VectorImage.js';
+import VectorImageLayer from '../../../build/ol/layer/VectorImage.js';
 import VectorSource from '../../../build/ol/source/Vector.js';
 
 const options: VectorImageLayerOptions<VectorSource<Feature<Point>>> = {
@@ -11,6 +11,7 @@ const options: VectorImageLayerOptions<VectorSource<Feature<Point>>> = {
     features: [new Feature(new Point([0, 0]))],
   }),
 };
+
 export const layer1 = new VectorImageLayer(options);
 
 export const layer2: VectorImageLayer<VectorSource<Feature<Point>>> =

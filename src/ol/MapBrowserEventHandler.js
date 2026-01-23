@@ -1,15 +1,14 @@
+import { listen } from './events.js';
+import { unlistenByKey } from './events.js';
+import EventType from './events/EventType.js';
+import Target from './events/Target.js';
+import { PASSIVE_EVENT_LISTENERS } from './has.js';
+import MapBrowserEvent from './MapBrowserEvent.js';
+import MapBrowserEventType from './MapBrowserEventType.js';
+import PointerEventType from './pointer/EventType.js';
 /**
  * @module ol/MapBrowserEventHandler
  */
-
-import MapBrowserEvent from './MapBrowserEvent.js';
-import MapBrowserEventType from './MapBrowserEventType.js';
-import EventType from './events/EventType.js';
-import Target from './events/Target.js';
-import {listen, unlistenByKey} from './events.js';
-import {PASSIVE_EVENT_LISTENERS} from './has.js';
-import PointerEventType from './pointer/EventType.js';
-
 class MapBrowserEventHandler extends Target {
   /**
    * @param {import("./Map.js").default} map The map with the viewport to listen to events on.

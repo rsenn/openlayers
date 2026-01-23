@@ -1,16 +1,13 @@
+import { makeObjectPropertyPusher } from '../xml.js';
+import { makeObjectPropertySetter } from '../xml.js';
+import { makeStructureNS } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import { readHref } from './xlink.js';
+import XML from './XML.js';
+import { readString } from './xsd.js';
 /**
  * @module ol/format/OWS
  */
-import {
-  makeObjectPropertyPusher,
-  makeObjectPropertySetter,
-  makeStructureNS,
-  pushParseAndPop,
-} from '../xml.js';
-import XML from './XML.js';
-import {readHref} from './xlink.js';
-import {readString} from './xsd.js';
-
 /**
  * @const
  * @type {Array<null|string>}

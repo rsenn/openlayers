@@ -1,14 +1,14 @@
-import Map from '../../../../../../src/ol/Map.js';
-import TileQueue from '../../../../../../src/ol/TileQueue.js';
-import View from '../../../../../../src/ol/View.js';
-import {createCanvasContext2D} from '../../../../../../src/ol/dom.js';
-import {VOID} from '../../../../../../src/ol/functions.js';
+import { createCanvasContext2D } from '../../../../../../src/ol/dom.js';
+import { VOID } from '../../../../../../src/ol/functions.js';
 import WebGLTileLayer from '../../../../../../src/ol/layer/WebGLTile.js';
-import {get} from '../../../../../../src/ol/proj.js';
-import {newTileRepresentationLookup} from '../../../../../../src/ol/renderer/webgl/TileLayerBase.js';
+import Map from '../../../../../../src/ol/Map.js';
+import { get } from '../../../../../../src/ol/proj.js';
+import { newTileRepresentationLookup } from '../../../../../../src/ol/renderer/webgl/TileLayerBase.js';
 import DataTile from '../../../../../../src/ol/source/DataTile.js';
-import {create} from '../../../../../../src/ol/transform.js';
-import {getUid} from '../../../../../../src/ol/util.js';
+import TileQueue from '../../../../../../src/ol/TileQueue.js';
+import { create } from '../../../../../../src/ol/transform.js';
+import { getUid } from '../../../../../../src/ol/util.js';
+import View from '../../../../../../src/ol/View.js';
 import TileTexture from '../../../../../../src/ol/webgl/TileTexture.js';
 
 describe('ol/renderer/webgl/TileLayer', function () {

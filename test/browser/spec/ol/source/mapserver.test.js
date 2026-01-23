@@ -1,5 +1,5 @@
 import ImageSource from '../../../../../src/ol/source/Image.js';
-import {createLoader} from '../../../../../src/ol/source/mapserver.js';
+import { createLoader } from '../../../../../src/ol/source/mapserver.js';
 
 describe('ol/source/mapserver', function () {
   it('uses params', function (done) {

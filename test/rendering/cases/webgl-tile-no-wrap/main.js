@@ -1,8 +1,7 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import TileLayer from '../../../../src/ol/layer/WebGLTile.js';
+import Map from '../../../../src/ol/Map.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
-
+import View from '../../../../src/ol/View.js';
 document.getElementById('map').style.background = 'green';
 
 new Map({

@@ -1,13 +1,15 @@
+import { CLASS_CONTROL } from '../css.js';
+import { CLASS_UNSELECTABLE } from '../css.js';
+import { CLASS_UNSUPPORTED } from '../css.js';
+import { replaceNode } from '../dom.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import EventType from '../events/EventType.js';
+import MapProperty from '../MapProperty.js';
+import Control from './Control.js';
 /**
  * @module ol/control/FullScreen
  */
-import MapProperty from '../MapProperty.js';
-import {CLASS_CONTROL, CLASS_UNSELECTABLE, CLASS_UNSUPPORTED} from '../css.js';
-import {replaceNode} from '../dom.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import Control from './Control.js';
-
 const events = ['fullscreenchange', 'webkitfullscreenchange'];
 
 /**

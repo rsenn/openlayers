@@ -1,11 +1,11 @@
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import { VOID } from '../functions.js';
+import MapEventType from '../MapEventType.js';
+import BaseObject from '../Object.js';
 /**
  * @module ol/control/Control
  */
-import MapEventType from '../MapEventType.js';
-import BaseObject from '../Object.js';
-import {listen, unlistenByKey} from '../events.js';
-import {VOID} from '../functions.js';
-
 /**
  * @typedef {Object} Options
  * @property {HTMLElement} [element] The element is the control's

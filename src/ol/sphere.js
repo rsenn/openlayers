@@ -1,8 +1,8 @@
+import { toDegrees } from './math.js';
+import { toRadians } from './math.js';
 /**
  * @module ol/sphere
  */
-import {toDegrees, toRadians} from './math.js';
-
 /**
  * Object literal with options for the {@link getLength} or {@link getArea}
  * functions.

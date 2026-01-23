@@ -1,10 +1,10 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import KML from '../../../../src/ol/format/KML.js';
 import HeatmapLayer from '../../../../src/ol/layer/Heatmap.js';
 import TileLayer from '../../../../src/ol/layer/Tile.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
+import View from '../../../../src/ol/View.js';
 
 const vector = new HeatmapLayer({
   source: new VectorSource({

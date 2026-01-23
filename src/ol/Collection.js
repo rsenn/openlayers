@@ -1,10 +1,9 @@
+import CollectionEventType from './CollectionEventType.js';
+import Event from './events/Event.js';
+import BaseObject from './Object.js';
 /**
  * @module ol/Collection
  */
-import CollectionEventType from './CollectionEventType.js';
-import BaseObject from './Object.js';
-import Event from './events/Event.js';
-
 /**
  * @enum {string}
  * @private

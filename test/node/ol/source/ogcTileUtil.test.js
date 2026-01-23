@@ -1,20 +1,18 @@
 import events from 'events';
-import path from 'path';
-import {fileURLToPath} from 'url';
 import fse from 'fs-extra';
-import {setLevel as setLogLevel} from '../../../../src/ol/console.js';
-import {overrideXHR, restoreXHR} from '../../../../src/ol/net.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { setLevel as setLogLevel } from '../../../../src/ol/console.js';
+import { overrideXHR } from '../../../../src/ol/net.js';
+import { restoreXHR } from '../../../../src/ol/net.js';
+import { get as getProjection } from '../../../../src/ol/proj.js';
 import Projection from '../../../../src/ol/proj/Projection.js';
-import {get as getProjection} from '../../../../src/ol/proj.js';
-import {
-  appendCollectionsQueryParam,
-  getMapTileUrlTemplate,
-  getTileSetInfo,
-  getVectorTileUrlTemplate,
-} from '../../../../src/ol/source/ogcTileUtil.js';
+import { appendCollectionsQueryParam } from '../../../../src/ol/source/ogcTileUtil.js';
+import { getMapTileUrlTemplate } from '../../../../src/ol/source/ogcTileUtil.js';
+import { getTileSetInfo } from '../../../../src/ol/source/ogcTileUtil.js';
+import { getVectorTileUrlTemplate } from '../../../../src/ol/source/ogcTileUtil.js';
 import TileGrid from '../../../../src/ol/tilegrid/TileGrid.js';
 import expect from '../../expect.js';
-
 function getDataDir() {
   const modulePath = fileURLToPath(import.meta.url);
   return path.join(path.dirname(modulePath), 'data');

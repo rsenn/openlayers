@@ -1,21 +1,18 @@
+import { ColorType } from '../expr/expression.js';
+import { NumberType } from '../expr/expression.js';
+import { getStringNumberEquivalent } from '../expr/gpu.js';
+import { newCompilationContext } from '../expr/gpu.js';
+import { PALETTE_TEXTURE_ARRAY } from '../expr/gpu.js';
+import { uniformNameForVariable } from '../expr/gpu.js';
+import LayerProperty from '../layer/Property.js';
+import { expressionToGlsl } from '../render/webgl/compileUtil.js';
+import { Attributes } from '../renderer/webgl/TileLayer.js';
+import { Uniforms } from '../renderer/webgl/TileLayer.js';
+import WebGLTileLayerRenderer from '../renderer/webgl/TileLayer.js';
+import BaseTileLayer from './BaseTile.js';
 /**
  * @module ol/layer/WebGLTile
  */
-import {ColorType, NumberType} from '../expr/expression.js';
-import {
-  PALETTE_TEXTURE_ARRAY,
-  getStringNumberEquivalent,
-  newCompilationContext,
-  uniformNameForVariable,
-} from '../expr/gpu.js';
-import LayerProperty from '../layer/Property.js';
-import {expressionToGlsl} from '../render/webgl/compileUtil.js';
-import WebGLTileLayerRenderer, {
-  Attributes,
-  Uniforms,
-} from '../renderer/webgl/TileLayer.js';
-import BaseTileLayer from './BaseTile.js';
-
 /**
  * @typedef {import("../source/DataTile.js").default<import("../DataTile.js").default|import("../ImageTile.js").default>} SourceType
  */

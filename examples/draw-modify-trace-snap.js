@@ -1,13 +1,13 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
 import Draw from '../src/ol/interaction/Draw.js';
 import Modify from '../src/ol/interaction/Modify.js';
 import Snap from '../src/ol/interaction/Snap.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import ImageTile from '../src/ol/source/ImageTile.js';
 import VectorSource from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
 
 const raster = new TileLayer({
   source: new ImageTile({

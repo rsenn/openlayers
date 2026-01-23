@@ -1,11 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
 import TileLayer from '../src/ol/layer/WebGLTile.js';
 import WebGLVectorLayer from '../src/ol/layer/WebGLVector.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
 import VectorSource from '../src/ol/source/Vector.js';
-
+import View from '../src/ol/View.js';
 /** @type {import('../src/ol/style/flat.js').FlatStyleLike} */
 const style = [
   {
@@ -53,6 +52,7 @@ const map = new Map({
 });
 
 let highlightedId = -1;
+
 const displayFeatureInfo = function (pixel) {
   const feature = map.forEachFeatureAtPixel(pixel, function (feature) {
     return feature;

@@ -1,28 +1,26 @@
+import { descending } from '../../array.js';
+import { getIntersection } from '../../extent.js';
+import { getRotatedViewport } from '../../extent.js';
+import { isEmpty } from '../../extent.js';
+import { fromUserExtent } from '../../proj.js';
+import { toSize } from '../../size.js';
+import LRUCache from '../../structs/LRUCache.js';
+import { createOrUpdate as createTileCoord } from '../../tilecoord.js';
+import { getKey as getTileCoordKey } from '../../tilecoord.js';
+import TileRange from '../../TileRange.js';
+import TileState from '../../TileState.js';
+import { create as createTransform } from '../../transform.js';
+import { reset as resetTransform } from '../../transform.js';
+import { rotate as rotateTransform } from '../../transform.js';
+import { scale as scaleTransform } from '../../transform.js';
+import { translate as translateTransform } from '../../transform.js';
+import { abstract } from '../../util.js';
+import { getUid } from '../../util.js';
+import { create as createMat4 } from '../../vec/mat4.js';
+import WebGLLayerRenderer from './Layer.js';
 /**
  * @module ol/renderer/webgl/TileLayerBase
  */
-import TileRange from '../../TileRange.js';
-import TileState from '../../TileState.js';
-import {descending} from '../../array.js';
-import {getIntersection, getRotatedViewport, isEmpty} from '../../extent.js';
-import {fromUserExtent} from '../../proj.js';
-import {toSize} from '../../size.js';
-import LRUCache from '../../structs/LRUCache.js';
-import {
-  createOrUpdate as createTileCoord,
-  getKey as getTileCoordKey,
-} from '../../tilecoord.js';
-import {
-  create as createTransform,
-  reset as resetTransform,
-  rotate as rotateTransform,
-  scale as scaleTransform,
-  translate as translateTransform,
-} from '../../transform.js';
-import {abstract, getUid} from '../../util.js';
-import {create as createMat4} from '../../vec/mat4.js';
-import WebGLLayerRenderer from './Layer.js';
-
 export const Uniforms = {
   TILE_TRANSFORM: 'u_tileTransform',
   TRANSITION_ALPHA: 'u_transitionAlpha',

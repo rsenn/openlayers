@@ -1,16 +1,16 @@
 import Feature from '../../../../src/ol/Feature.js';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import Point from '../../../../src/ol/geom/Point.js';
 import TileLayer from '../../../../src/ol/layer/Tile.js';
 import WebGLVectorLayer from '../../../../src/ol/layer/WebGLVector.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
-
+import View from '../../../../src/ol/View.js';
 // generate an icon
 const canvas = document.createElement('canvas');
 canvas.width = 20;
 canvas.height = 20;
+
 const context = canvas.getContext('2d');
 context.beginPath();
 context.arc(10, 10, 10, 0, 2 * Math.PI, false);
@@ -21,11 +21,13 @@ const iconSimple = {
   'icon-src': '/data/me0.svg',
   'icon-displacement': [-40, 0],
 };
+
 const dataDriven = {
   'icon-src': canvas.toDataURL('png'),
   'icon-color': ['get', 'color'],
   'icon-displacement': [40, 0],
 };
+
 const scaledRotated = {
   'icon-src': '/data/fish.png',
   'icon-scale': [2, 1],

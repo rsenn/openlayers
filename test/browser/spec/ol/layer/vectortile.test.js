@@ -1,19 +1,20 @@
 import Feature from '../../../../../src/ol/Feature.js';
-import ImageState from '../../../../../src/ol/ImageState.js';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import GeoJSON from '../../../../../src/ol/format/GeoJSON.js';
 import Point from '../../../../../src/ol/geom/Point.js';
-import {fromExtent} from '../../../../../src/ol/geom/Polygon.js';
+import { fromExtent } from '../../../../../src/ol/geom/Polygon.js';
+import ImageState from '../../../../../src/ol/ImageState.js';
 import VectorTileLayer from '../../../../../src/ol/layer/VectorTile.js';
-import {isEmpty} from '../../../../../src/ol/obj.js';
-import {fromLonLat, get as getProjection} from '../../../../../src/ol/proj.js';
+import Map from '../../../../../src/ol/Map.js';
+import { isEmpty } from '../../../../../src/ol/obj.js';
+import { fromLonLat } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
 import VectorTileSource from '../../../../../src/ol/source/VectorTile.js';
 import Icon from '../../../../../src/ol/style/Icon.js';
 import Style from '../../../../../src/ol/style/Style.js';
-import {createXYZ} from '../../../../../src/ol/tilegrid.js';
-import {create as createTransform} from '../../../../../src/ol/transform.js';
-import {getUid} from '../../../../../src/ol/util.js';
+import { createXYZ } from '../../../../../src/ol/tilegrid.js';
+import { create as createTransform } from '../../../../../src/ol/transform.js';
+import { getUid } from '../../../../../src/ol/util.js';
+import View from '../../../../../src/ol/View.js';
 
 describe('ol.layer.VectorTile', function () {
   describe('constructor (defaults)', function () {

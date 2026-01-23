@@ -1,8 +1,7 @@
+import Comparison from './Comparison.js';
 /**
  * @module ol/format/filter/During
  */
-import Comparison from './Comparison.js';
-
 /**
  * @classdesc
  * Represents a `<During>` comparison operator.

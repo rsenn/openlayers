@@ -1,9 +1,8 @@
+import { assert } from '../../asserts.js';
+import Filter from './Filter.js';
 /**
  * @module ol/format/filter/LogicalNary
  */
-import {assert} from '../../asserts.js';
-import Filter from './Filter.js';
-
 /**
  * @classdesc
  * Abstract class; normally only used for creating subclasses and not instantiated in apps.

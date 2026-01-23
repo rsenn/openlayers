@@ -1,7 +1,7 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import OGCMapTile from '../src/ol/source/OGCMapTile.js';
+import View from '../src/ol/View.js';
 
 const map = new Map({
   target: 'map',

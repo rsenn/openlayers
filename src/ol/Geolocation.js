@@ -1,16 +1,13 @@
+import BaseEvent from './events/Event.js';
+import { circular as circularPolygon } from './geom/Polygon.js';
+import { toRadians } from './math.js';
+import BaseObject from './Object.js';
+import { get as getProjection } from './proj.js';
+import { getTransformFromProjections } from './proj.js';
+import { identityTransform } from './proj.js';
 /**
  * @module ol/Geolocation
  */
-import BaseObject from './Object.js';
-import BaseEvent from './events/Event.js';
-import {circular as circularPolygon} from './geom/Polygon.js';
-import {toRadians} from './math.js';
-import {
-  get as getProjection,
-  getTransformFromProjections,
-  identityTransform,
-} from './proj.js';
-
 /**
  * @enum {string}
  */

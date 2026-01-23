@@ -1,22 +1,20 @@
-import {spy as sinonSpy} from 'sinon';
 import Collection from '../../../../../src/ol/Collection.js';
+import { listen } from '../../../../../src/ol/events.js';
 import Feature from '../../../../../src/ol/Feature.js';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
-import {listen} from '../../../../../src/ol/events.js';
 import GeoJSON from '../../../../../src/ol/format/GeoJSON.js';
 import LineString from '../../../../../src/ol/geom/LineString.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import VectorLayer from '../../../../../src/ol/layer/Vector.js';
-import {bbox as bboxStrategy} from '../../../../../src/ol/loadingstrategy.js';
-import {
-  fromLonLat,
-  get as getProjection,
-  transformExtent,
-} from '../../../../../src/ol/proj.js';
+import { bbox as bboxStrategy } from '../../../../../src/ol/loadingstrategy.js';
+import Map from '../../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { transformExtent } from '../../../../../src/ol/proj.js';
 import RenderFeature from '../../../../../src/ol/render/Feature.js';
 import VectorSource from '../../../../../src/ol/source/Vector.js';
-import {getUid} from '../../../../../src/ol/util.js';
+import { getUid } from '../../../../../src/ol/util.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/source/Vector', function () {
   let pointFeature;

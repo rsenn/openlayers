@@ -1,8 +1,7 @@
+import { linearRing as linearRingArea } from './area.js';
 /**
  * @module ol/geom/flat/topology
  */
-import {linearRing as linearRingArea} from './area.js';
-
 /**
  * Check if the linestring is a boundary.
  * @param {Array<number>} flatCoordinates Flat coordinates.

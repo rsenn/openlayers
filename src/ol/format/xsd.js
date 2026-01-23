@@ -1,9 +1,9 @@
+import { padNumber } from '../string.js';
+import { getAllTextContent } from '../xml.js';
+import { getDocument } from '../xml.js';
 /**
  * @module ol/format/xsd
  */
-import {padNumber} from '../string.js';
-import {getAllTextContent, getDocument} from '../xml.js';
-
 /**
  * @param {Node} node Node.
  * @return {boolean|undefined} Boolean.
@@ -143,7 +143,9 @@ export function writeNonNegativeIntegerTextNode(node, nonNegativeInteger) {
 }
 
 const whiteSpaceStart = /^\s/;
+
 const whiteSpaceEnd = /\s$/;
+
 const cdataCharacters = /(\n|\t|\r|<|&| {2})/;
 
 /**

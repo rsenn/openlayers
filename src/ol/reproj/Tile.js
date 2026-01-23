@@ -1,22 +1,22 @@
+import { releaseCanvas } from '../dom.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import EventType from '../events/EventType.js';
+import { getArea } from '../extent.js';
+import { getIntersection } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { wrapAndSliceX } from '../extent.js';
+import { clamp } from '../math.js';
+import { calculateSourceExtentResolution } from '../reproj.js';
+import { canvasPool } from '../reproj.js';
+import { render as renderReprojected } from '../reproj.js';
+import Tile from '../Tile.js';
+import TileState from '../TileState.js';
+import { ERROR_THRESHOLD } from './common.js';
+import Triangulation from './Triangulation.js';
 /**
  * @module ol/reproj/Tile
  */
-
-import Tile from '../Tile.js';
-import TileState from '../TileState.js';
-import {releaseCanvas} from '../dom.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {getArea, getIntersection, getWidth, wrapAndSliceX} from '../extent.js';
-import {clamp} from '../math.js';
-import {
-  calculateSourceExtentResolution,
-  canvasPool,
-  render as renderReprojected,
-} from '../reproj.js';
-import Triangulation from './Triangulation.js';
-import {ERROR_THRESHOLD} from './common.js';
-
 /**
  * @typedef {function(number, number, number, number) : (import("../ImageTile.js").default)} FunctionType
  */

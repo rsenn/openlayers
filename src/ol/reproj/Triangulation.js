@@ -1,26 +1,21 @@
+import { boundingExtent } from '../extent.js';
+import { createEmpty } from '../extent.js';
+import { extendCoordinate } from '../extent.js';
+import { getArea } from '../extent.js';
+import { getBottomLeft } from '../extent.js';
+import { getBottomRight } from '../extent.js';
+import { getTopLeft } from '../extent.js';
+import { getTopRight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { intersects } from '../extent.js';
+import { modulo } from '../math.js';
+import { createTransformFromCoordinateTransform } from '../proj.js';
+import { getTransform } from '../proj.js';
+import { transform } from '../proj.js';
+import { apply as applyMatrix } from '../transform.js';
 /**
  * @module ol/reproj/Triangulation
  */
-import {
-  boundingExtent,
-  createEmpty,
-  extendCoordinate,
-  getArea,
-  getBottomLeft,
-  getBottomRight,
-  getTopLeft,
-  getTopRight,
-  getWidth,
-  intersects,
-} from '../extent.js';
-import {modulo} from '../math.js';
-import {
-  createTransformFromCoordinateTransform,
-  getTransform,
-  transform,
-} from '../proj.js';
-import {apply as applyMatrix} from '../transform.js';
-
 /**
  * Single triangle; consists of 3 source points and 3 target points.
  * @typedef {Object} Triangle

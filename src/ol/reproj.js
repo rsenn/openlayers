@@ -1,20 +1,19 @@
+import { createCanvasContext2D } from './dom.js';
+import { releaseCanvas } from './dom.js';
+import { containsCoordinate } from './extent.js';
+import { createEmpty } from './extent.js';
+import { extend } from './extent.js';
+import { forEachCorner } from './extent.js';
+import { getCenter } from './extent.js';
+import { getHeight } from './extent.js';
+import { getTopLeft } from './extent.js';
+import { getWidth } from './extent.js';
+import { solveLinearSystem } from './math.js';
+import { getPointResolution } from './proj.js';
+import { transform } from './proj.js';
 /**
  * @module ol/reproj
  */
-import {createCanvasContext2D, releaseCanvas} from './dom.js';
-import {
-  containsCoordinate,
-  createEmpty,
-  extend,
-  forEachCorner,
-  getCenter,
-  getHeight,
-  getTopLeft,
-  getWidth,
-} from './extent.js';
-import {solveLinearSystem} from './math.js';
-import {getPointResolution, transform} from './proj.js';
-
 let brokenDiagonalRendering_;
 
 /**

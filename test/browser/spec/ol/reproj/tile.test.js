@@ -1,14 +1,12 @@
-import proj4 from 'proj4';
+import { listen } from '../../../../../src/ol/events.js';
 import ImageTile from '../../../../../src/ol/ImageTile.js';
-import {listen} from '../../../../../src/ol/events.js';
-import {register} from '../../../../../src/ol/proj/proj4.js';
-import {
-  addCommon,
-  clearAllProjections,
-  get as getProjection,
-} from '../../../../../src/ol/proj.js';
+import { addCommon } from '../../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { register } from '../../../../../src/ol/proj/proj4.js';
 import ReprojTile from '../../../../../src/ol/reproj/Tile.js';
-import {createForProjection} from '../../../../../src/ol/tilegrid.js';
+import { createForProjection } from '../../../../../src/ol/tilegrid.js';
+import proj4 from 'proj4';
 
 describe('ol.reproj.Tile', function () {
   beforeEach(function () {

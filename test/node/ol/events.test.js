@@ -1,7 +1,9 @@
-import {spy as sinonSpy} from 'sinon';
+import { listen } from '../../../src/ol/events.js';
+import { listenOnce } from '../../../src/ol/events.js';
+import { unlistenByKey } from '../../../src/ol/events.js';
 import EventTarget from '../../../src/ol/events/Target.js';
-import {listen, listenOnce, unlistenByKey} from '../../../src/ol/events.js';
 import expect from '../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/events.js', function () {
   let add, target;

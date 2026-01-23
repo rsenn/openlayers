@@ -1,12 +1,10 @@
-/**
- * @module ol/style/Style
- */
-
-import {assert} from '../asserts.js';
+import { assert } from '../asserts.js';
 import CircleStyle from './Circle.js';
 import Fill from './Fill.js';
 import Stroke from './Stroke.js';
-
+/**
+ * @module ol/style/Style
+ */
 /**
  * Defines how symbols and text are decluttered on layers ith `declutter` set to `true`
  * **declutter**: Overlapping symbols and text are decluttered.

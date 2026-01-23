@@ -1,21 +1,23 @@
-/**
- * @module ol/source/Raster
- */
 import Disposable from '../Disposable.js';
-import ImageCanvas from '../ImageCanvas.js';
-import TileQueue from '../TileQueue.js';
-import {createCanvasContext2D} from '../dom.js';
+import { createCanvasContext2D } from '../dom.js';
 import Event from '../events/Event.js';
 import EventType from '../events/EventType.js';
-import {equals, getCenter, getHeight, getWidth} from '../extent.js';
+import { equals } from '../extent.js';
+import { getCenter } from '../extent.js';
+import { getHeight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import ImageCanvas from '../ImageCanvas.js';
 import ImageLayer from '../layer/Image.js';
 import TileLayer from '../layer/Tile.js';
-import {create as createTransform} from '../transform.js';
-import {getUid} from '../util.js';
+import TileQueue from '../TileQueue.js';
+import { create as createTransform } from '../transform.js';
+import { getUid } from '../util.js';
 import ImageSource from './Image.js';
 import Source from './Source.js';
 import TileSource from './Tile.js';
-
+/**
+ * @module ol/source/Raster
+ */
 /**
  * @typedef {Object} MinionData
  * @property {Array<ArrayBuffer>} buffers Array of buffers.

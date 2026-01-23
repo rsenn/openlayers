@@ -1,12 +1,12 @@
+import { CLASS_CONTROL } from '../css.js';
+import { CLASS_UNSELECTABLE } from '../css.js';
+import EventType from '../events/EventType.js';
+import { fromExtent as polygonFromExtent } from '../geom/Polygon.js';
+import { fromUserExtent } from '../proj.js';
+import Control from './Control.js';
 /**
  * @module ol/control/ZoomToExtent
  */
-import {CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
-import EventType from '../events/EventType.js';
-import {fromExtent as polygonFromExtent} from '../geom/Polygon.js';
-import {fromUserExtent} from '../proj.js';
-import Control from './Control.js';
-
 /**
  * @typedef {Object} Options
  * @property {string} [className='ol-zoom-extent'] Class name.

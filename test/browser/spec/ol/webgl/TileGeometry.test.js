@@ -1,16 +1,16 @@
-import {spy as sinonSpy, stub as sinonStub} from 'sinon';
 import Feature from '../../../../../src/ol/Feature.js';
-import TileState from '../../../../../src/ol/TileState.js';
-import VectorRenderTile from '../../../../../src/ol/VectorRenderTile.js';
-import VectorTile from '../../../../../src/ol/VectorTile.js';
-import {VOID} from '../../../../../src/ol/functions.js';
+import { VOID } from '../../../../../src/ol/functions.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
 import MixedGeometryBatch from '../../../../../src/ol/render/webgl/MixedGeometryBatch.js';
-import {createXYZ} from '../../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../../src/ol/tilegrid.js';
+import TileState from '../../../../../src/ol/TileState.js';
+import VectorRenderTile from '../../../../../src/ol/VectorRenderTile.js';
+import VectorTile from '../../../../../src/ol/VectorTile.js';
 import WebGLHelper from '../../../../../src/ol/webgl/Helper.js';
 import TileGeometry from '../../../../../src/ol/webgl/TileGeometry.js';
-
+import { spy as sinonSpy } from 'sinon';
+import { stub as sinonStub } from 'sinon';
 class MockRenderer {
   generateBuffers = sinonStub().callsFake(
     () => new Promise((resolve) => (this.endGenerate_ = resolve)),

@@ -1,12 +1,12 @@
 import Feature from '../src/ol/Feature.js';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import Circle from '../src/ol/geom/Circle.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
 import VectorSource from '../src/ol/source/Vector.js';
 import Style from '../src/ol/style/Style.js';
+import View from '../src/ol/View.js';
 
 const circleFeature = new Feature({
   geometry: new Circle([12127398.797692968, 4063894.123105166], 50),

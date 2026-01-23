@@ -1,11 +1,11 @@
+import { containsXY } from '../extent.js';
+import { createOrUpdateFromCoordinate } from '../extent.js';
+import { squaredDistance as squaredDx } from '../math.js';
+import { deflateCoordinate } from './flat/deflate.js';
+import SimpleGeometry from './SimpleGeometry.js';
 /**
  * @module ol/geom/Point
  */
-import {containsXY, createOrUpdateFromCoordinate} from '../extent.js';
-import {squaredDistance as squaredDx} from '../math.js';
-import SimpleGeometry from './SimpleGeometry.js';
-import {deflateCoordinate} from './flat/deflate.js';
-
 /**
  * @classdesc
  * Point geometry.

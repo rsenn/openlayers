@@ -1,38 +1,34 @@
+import { assert } from '../../asserts.js';
+import { listen } from '../../events.js';
+import { unlistenByKey } from '../../events.js';
+import { buffer } from '../../extent.js';
+import { createEmpty } from '../../extent.js';
+import { equals } from '../../extent.js';
+import BaseVector from '../../layer/BaseVector.js';
+import { getTransformFromProjections } from '../../proj.js';
+import { getUserProjection } from '../../proj.js';
+import { toUserExtent } from '../../proj.js';
+import { toUserResolution } from '../../proj.js';
+import { colorDecodeId } from '../../render/webgl/encodeUtil.js';
+import MixedGeometryBatch from '../../render/webgl/MixedGeometryBatch.js';
+import VectorStyleRenderer from '../../render/webgl/VectorStyleRenderer.js';
+import VectorEventType from '../../source/VectorEventType.js';
+import { apply as applyTransform } from '../../transform.js';
+import { create as createTransform } from '../../transform.js';
+import { makeInverse as makeInverseTransform } from '../../transform.js';
+import { multiply as multiplyTransform } from '../../transform.js';
+import { setFromArray as setFromTransform } from '../../transform.js';
+import { translate as translateTransform } from '../../transform.js';
+import { create as createMat4 } from '../../vec/mat4.js';
+import { fromTransform as mat4FromTransform } from '../../vec/mat4.js';
+import ViewHint from '../../ViewHint.js';
+import { DefaultUniform } from '../../webgl/Helper.js';
+import WebGLRenderTarget from '../../webgl/RenderTarget.js';
+import WebGLLayerRenderer from './Layer.js';
+import { getWorldParameters } from './worldUtil.js';
 /**
  * @module ol/renderer/webgl/VectorLayer
  */
-import ViewHint from '../../ViewHint.js';
-import {assert} from '../../asserts.js';
-import {listen, unlistenByKey} from '../../events.js';
-import {buffer, createEmpty, equals} from '../../extent.js';
-import BaseVector from '../../layer/BaseVector.js';
-import {
-  getTransformFromProjections,
-  getUserProjection,
-  toUserExtent,
-  toUserResolution,
-} from '../../proj.js';
-import MixedGeometryBatch from '../../render/webgl/MixedGeometryBatch.js';
-import VectorStyleRenderer from '../../render/webgl/VectorStyleRenderer.js';
-import {colorDecodeId} from '../../render/webgl/encodeUtil.js';
-import VectorEventType from '../../source/VectorEventType.js';
-import {
-  apply as applyTransform,
-  create as createTransform,
-  makeInverse as makeInverseTransform,
-  multiply as multiplyTransform,
-  setFromArray as setFromTransform,
-  translate as translateTransform,
-} from '../../transform.js';
-import {
-  create as createMat4,
-  fromTransform as mat4FromTransform,
-} from '../../vec/mat4.js';
-import {DefaultUniform} from '../../webgl/Helper.js';
-import WebGLRenderTarget from '../../webgl/RenderTarget.js';
-import WebGLLayerRenderer from './Layer.js';
-import {getWorldParameters} from './worldUtil.js';
-
 export const Uniforms = {
   ...DefaultUniform,
   RENDER_EXTENT: 'u_renderExtent', // intersection of layer, source, and view extent

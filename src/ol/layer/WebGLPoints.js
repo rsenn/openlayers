@@ -1,10 +1,9 @@
+import { parseLiteralStyle } from '../render/webgl/style.js';
+import WebGLPointsLayerRenderer from '../renderer/webgl/PointsLayer.js';
+import Layer from './Layer.js';
 /**
  * @module ol/layer/WebGLPoints
  */
-import {parseLiteralStyle} from '../render/webgl/style.js';
-import WebGLPointsLayerRenderer from '../renderer/webgl/PointsLayer.js';
-import Layer from './Layer.js';
-
 /**
  * @template {import("../source/Vector.js").default<import('../Feature').FeatureLike>} VectorSourceType
  * @typedef {Object} Options

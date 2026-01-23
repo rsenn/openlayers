@@ -1,9 +1,8 @@
+import Layer from './Layer.js';
+import TileProperty from './TileProperty.js';
 /**
  * @module ol/layer/BaseTile
  */
-import Layer from './Layer.js';
-import TileProperty from './TileProperty.js';
-
 /***
  * @template Return
  * @typedef {import("../Observable").OnSignature<import("../Observable").EventTypes, import("../events/Event.js").default, Return> &

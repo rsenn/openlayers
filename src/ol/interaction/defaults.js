@@ -1,6 +1,3 @@
-/**
- * @module ol/interaction/defaults
- */
 import Collection from '../Collection.js';
 import Kinetic from '../Kinetic.js';
 import DoubleClickZoom from './DoubleClickZoom.js';
@@ -12,7 +9,9 @@ import KeyboardZoom from './KeyboardZoom.js';
 import MouseWheelZoom from './MouseWheelZoom.js';
 import PinchRotate from './PinchRotate.js';
 import PinchZoom from './PinchZoom.js';
-
+/**
+ * @module ol/interaction/defaults
+ */
 /**
  * @typedef {Object} DefaultsOptions
  * @property {boolean} [altShiftDragRotate=true] Whether Alt-Shift-drag rotate is

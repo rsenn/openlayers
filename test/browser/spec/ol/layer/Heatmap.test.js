@@ -1,12 +1,12 @@
-import {spy as sinonSpy} from 'sinon';
 import Feature from '../../../../../src/ol/Feature.js';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import LineString from '../../../../../src/ol/geom/LineString.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import HeatmapLayer from '../../../../../src/ol/layer/Heatmap.js';
+import Map from '../../../../../src/ol/Map.js';
 import * as ol_renderer_webgl_vectorlayer from '../../../../../src/ol/renderer/webgl/VectorLayer.js';
 import VectorSource from '../../../../../src/ol/source/Vector.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/layer/Heatmap', function () {
   /** @type {HTMLDivElement} */

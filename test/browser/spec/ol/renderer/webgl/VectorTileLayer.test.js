@@ -1,27 +1,26 @@
-import {spy as sinonSpy} from 'sinon';
+import { VOID } from '../../../../../../src/ol/functions.js';
+import Polygon from '../../../../../../src/ol/geom/Polygon.js';
+import VectorTileLayer from '../../../../../../src/ol/layer/VectorTile.js';
 import Map from '../../../../../../src/ol/Map.js';
+import Projection from '../../../../../../src/ol/proj/Projection.js';
+import RenderFeature from '../../../../../../src/ol/render/Feature.js';
+import { ShaderBuilder } from '../../../../../../src/ol/render/webgl/ShaderBuilder.js';
+import VectorStyleRenderer from '../../../../../../src/ol/render/webgl/VectorStyleRenderer.js';
+import { Attributes } from '../../../../../../src/ol/renderer/webgl/VectorTileLayer.js';
+import { Uniforms } from '../../../../../../src/ol/renderer/webgl/VectorTileLayer.js';
+import WebGLVectorTileLayerRenderer from '../../../../../../src/ol/renderer/webgl/VectorTileLayer.js';
+import VectorTileSource from '../../../../../../src/ol/source/VectorTile.js';
+import { createXYZ } from '../../../../../../src/ol/tilegrid.js';
 import TileQueue from '../../../../../../src/ol/TileQueue.js';
 import TileState from '../../../../../../src/ol/TileState.js';
+import { create } from '../../../../../../src/ol/transform.js';
 import VectorRenderTile from '../../../../../../src/ol/VectorRenderTile.js';
 import VectorTile from '../../../../../../src/ol/VectorTile.js';
 import View from '../../../../../../src/ol/View.js';
-import {VOID} from '../../../../../../src/ol/functions.js';
-import Polygon from '../../../../../../src/ol/geom/Polygon.js';
-import VectorTileLayer from '../../../../../../src/ol/layer/VectorTile.js';
-import Projection from '../../../../../../src/ol/proj/Projection.js';
-import RenderFeature from '../../../../../../src/ol/render/Feature.js';
-import {ShaderBuilder} from '../../../../../../src/ol/render/webgl/ShaderBuilder.js';
-import VectorStyleRenderer from '../../../../../../src/ol/render/webgl/VectorStyleRenderer.js';
-import WebGLVectorTileLayerRenderer, {
-  Attributes,
-  Uniforms,
-} from '../../../../../../src/ol/renderer/webgl/VectorTileLayer.js';
-import VectorTileSource from '../../../../../../src/ol/source/VectorTile.js';
-import {createXYZ} from '../../../../../../src/ol/tilegrid.js';
-import {create} from '../../../../../../src/ol/transform.js';
 import WebGLHelper from '../../../../../../src/ol/webgl/Helper.js';
 import WebGLRenderTarget from '../../../../../../src/ol/webgl/RenderTarget.js';
 import TileGeometry from '../../../../../../src/ol/webgl/TileGeometry.js';
+import { spy as sinonSpy } from 'sinon';
 
 const SAMPLE_STYLE = {
   'fill-color': ['get', 'color'],

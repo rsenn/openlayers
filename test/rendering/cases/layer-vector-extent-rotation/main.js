@@ -1,10 +1,9 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import GeoJSON from '../../../../src/ol/format/GeoJSON.js';
 import VectorLayer from '../../../../src/ol/layer/Vector.js';
-import {transformExtent} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { transformExtent } from '../../../../src/ol/proj.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
-
+import View from '../../../../src/ol/View.js';
 new Map({
   target: 'map',
   view: new View({

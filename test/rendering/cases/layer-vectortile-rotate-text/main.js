@@ -1,13 +1,12 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import MVT from '../../../../src/ol/format/MVT.js';
 import VectorTileLayer from '../../../../src/ol/layer/VectorTile.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorTileSource from '../../../../src/ol/source/VectorTile.js';
 import Stroke from '../../../../src/ol/style/Stroke.js';
 import Style from '../../../../src/ol/style/Style.js';
 import Text from '../../../../src/ol/style/Text.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
-
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
+import View from '../../../../src/ol/View.js';
 new Map({
   layers: [
     new VectorTileLayer({

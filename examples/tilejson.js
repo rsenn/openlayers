@@ -1,7 +1,7 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import TileJSON from '../src/ol/source/TileJSON.js';
+import View from '../src/ol/View.js';
 
 const map = new Map({
   layers: [

@@ -1,24 +1,20 @@
-import proj4 from 'proj4';
-import {spy as sinonSpy} from 'sinon';
+import { listen } from '../../../../../src/ol/events.js';
 import ImageTile from '../../../../../src/ol/ImageTile.js';
-import TileState from '../../../../../src/ol/TileState.js';
-import {listen} from '../../../../../src/ol/events.js';
+import { addCommon } from '../../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { WORLD_EXTENT } from '../../../../../src/ol/proj/epsg3857.js';
+import { register } from '../../../../../src/ol/proj/proj4.js';
 import Projection from '../../../../../src/ol/proj/Projection.js';
-import {WORLD_EXTENT} from '../../../../../src/ol/proj/epsg3857.js';
-import {register} from '../../../../../src/ol/proj/proj4.js';
-import {
-  addCommon,
-  clearAllProjections,
-  get as getProjection,
-} from '../../../../../src/ol/proj.js';
 import ReprojTile from '../../../../../src/ol/reproj/Tile.js';
 import TileImage from '../../../../../src/ol/source/TileImage.js';
-import {
-  createForProjection,
-  createXYZ,
-} from '../../../../../src/ol/tilegrid.js';
-import {createFromTemplate} from '../../../../../src/ol/tileurlfunction.js';
-import {getUid} from '../../../../../src/ol/util.js';
+import { createForProjection } from '../../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../../src/ol/tilegrid.js';
+import TileState from '../../../../../src/ol/TileState.js';
+import { createFromTemplate } from '../../../../../src/ol/tileurlfunction.js';
+import { getUid } from '../../../../../src/ol/util.js';
+import proj4 from 'proj4';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/source/TileImage', function () {
   function createSource(opt_proj, opt_tileGrid, opt_transition) {

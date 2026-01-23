@@ -1,3 +1,25 @@
+import { warn } from './console.js';
+import { equals } from './coordinate.js';
+import { getWorldsAway } from './coordinate.js';
+import { applyTransform } from './extent.js';
+import { getWidth } from './extent.js';
+import { clamp } from './math.js';
+import { modulo } from './math.js';
+import { fromEPSG4326 } from './proj/epsg3857.js';
+import { PROJECTIONS as EPSG3857_PROJECTIONS } from './proj/epsg3857.js';
+import { toEPSG4326 } from './proj/epsg3857.js';
+import { PROJECTIONS as EPSG4326_PROJECTIONS } from './proj/epsg4326.js';
+import Projection from './proj/Projection.js';
+import { add as addProj } from './proj/projections.js';
+import { clear as clearProj } from './proj/projections.js';
+import { get as getProj } from './proj/projections.js';
+import { add as addTransformFunc } from './proj/transforms.js';
+import { clear as clearTransformFuncs } from './proj/transforms.js';
+import { get as getTransformFunc } from './proj/transforms.js';
+import { METERS_PER_UNIT } from './proj/Units.js';
+import { makeProjection as makeUTMProjection } from './proj/utm.js';
+import { makeTransforms as makeUTMTransforms } from './proj/utm.js';
+import { getDistance } from './sphere.js';
 /**
  * @module ol/proj
  */
@@ -53,34 +75,6 @@
  * {@link module:ol/proj.addProjection}. See examples/wms-no-proj for an example of
  * this.
  */
-import {warn} from './console.js';
-import {equals, getWorldsAway} from './coordinate.js';
-import {applyTransform, getWidth} from './extent.js';
-import {clamp, modulo} from './math.js';
-import Projection from './proj/Projection.js';
-import {METERS_PER_UNIT} from './proj/Units.js';
-import {
-  PROJECTIONS as EPSG3857_PROJECTIONS,
-  fromEPSG4326,
-  toEPSG4326,
-} from './proj/epsg3857.js';
-import {PROJECTIONS as EPSG4326_PROJECTIONS} from './proj/epsg4326.js';
-import {
-  add as addProj,
-  clear as clearProj,
-  get as getProj,
-} from './proj/projections.js';
-import {
-  add as addTransformFunc,
-  clear as clearTransformFuncs,
-  get as getTransformFunc,
-} from './proj/transforms.js';
-import {
-  makeProjection as makeUTMProjection,
-  makeTransforms as makeUTMTransforms,
-} from './proj/utm.js';
-import {getDistance} from './sphere.js';
-
 /**
  * A projection as {@link module:ol/proj/Projection~Projection}, SRS identifier
  * string or undefined.

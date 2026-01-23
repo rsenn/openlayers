@@ -1,6 +1,3 @@
-/**
- * @module ol/format/WKB
- */
 import Feature from '../Feature.js';
 import GeometryCollection from '../geom/GeometryCollection.js';
 import LineString from '../geom/LineString.js';
@@ -10,10 +7,12 @@ import MultiPolygon from '../geom/MultiPolygon.js';
 import Point from '../geom/Point.js';
 import Polygon from '../geom/Polygon.js';
 import SimpleGeometry from '../geom/SimpleGeometry.js';
-import {get as getProjection} from '../proj.js';
-
-import FeatureFormat, {transformGeometryWithOptions} from './Feature.js';
-
+import { get as getProjection } from '../proj.js';
+import { transformGeometryWithOptions } from './Feature.js';
+import FeatureFormat from './Feature.js';
+/**
+ * @module ol/format/WKB
+ */
 // WKB spec: https://www.ogc.org/standards/sfa
 // EWKB spec: https://raw.githubusercontent.com/postgis/postgis/2.1.0/doc/ZMSgeoms.txt
 

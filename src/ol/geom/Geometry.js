@@ -1,22 +1,18 @@
+import { createEmpty } from '../extent.js';
+import { createOrUpdateEmpty } from '../extent.js';
+import { getHeight } from '../extent.js';
+import { returnOrUpdate } from '../extent.js';
+import { memoizeOne } from '../functions.js';
+import BaseObject from '../Object.js';
+import { get as getProjection } from '../proj.js';
+import { getTransform } from '../proj.js';
+import { compose as composeTransform } from '../transform.js';
+import { create as createTransform } from '../transform.js';
+import { abstract } from '../util.js';
+import { transform2D } from './flat/transform.js';
 /**
  * @module ol/geom/Geometry
  */
-import BaseObject from '../Object.js';
-import {
-  createEmpty,
-  createOrUpdateEmpty,
-  getHeight,
-  returnOrUpdate,
-} from '../extent.js';
-import {memoizeOne} from '../functions.js';
-import {get as getProjection, getTransform} from '../proj.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../transform.js';
-import {abstract} from '../util.js';
-import {transform2D} from './flat/transform.js';
-
 /**
  * @typedef {'XY' | 'XYZ' | 'XYM' | 'XYZM'} GeometryLayout
  * The coordinate layout for geometries, indicating whether a 3rd or 4th z ('Z')

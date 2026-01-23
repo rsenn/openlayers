@@ -1,4 +1,4 @@
-import {getUid} from '../../../src/ol/util.js';
+import { getUid } from '../../../src/ol/util.js';
 import expect from '../expect.js';
 
 describe('ol/util.js', () => {

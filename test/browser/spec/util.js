@@ -1,4 +1,4 @@
-import {checkedFonts} from '../../../src/ol/render/canvas.js';
+import { checkedFonts } from '../../../src/ol/render/canvas.js';
 
 export function overrideRAF() {
   const raf = window.requestAnimationFrame;

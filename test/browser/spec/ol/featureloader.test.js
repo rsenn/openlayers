@@ -1,7 +1,7 @@
-import {spy as sinonSpy} from 'sinon';
-import {xhr} from '../../../../src/ol/featureloader.js';
+import { xhr } from '../../../../src/ol/featureloader.js';
 import GeoJSON from '../../../../src/ol/format/GeoJSON.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.featureloader', function () {
   describe('ol.featureloader.xhr', function () {

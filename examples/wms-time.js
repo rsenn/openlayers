@@ -1,10 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getCenter} from '../src/ol/extent.js';
+import { getCenter } from '../src/ol/extent.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {transformExtent} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { transformExtent } from '../src/ol/proj.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
 import TileWMS from '../src/ol/source/TileWMS.js';
+import View from '../src/ol/View.js';
 
 const interval = 3 * 60 * 60 * 1000;
 const step = 15 * 60 * 1000;

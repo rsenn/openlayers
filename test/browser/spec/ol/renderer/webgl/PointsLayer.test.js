@@ -1,26 +1,24 @@
-import {spy as sinonSpy} from 'sinon';
+import { createCanvasContext2D } from '../../../../../../src/ol/dom.js';
 import Feature from '../../../../../../src/ol/Feature.js';
-import Map from '../../../../../../src/ol/Map.js';
-import View from '../../../../../../src/ol/View.js';
-import ViewHint from '../../../../../../src/ol/ViewHint.js';
-import {createCanvasContext2D} from '../../../../../../src/ol/dom.js';
 import GeoJSON from '../../../../../../src/ol/format/GeoJSON.js';
 import LineString from '../../../../../../src/ol/geom/LineString.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
 import TileLayer from '../../../../../../src/ol/layer/Tile.js';
 import VectorLayer from '../../../../../../src/ol/layer/Vector.js';
 import WebGLPointsLayer from '../../../../../../src/ol/layer/WebGLPoints.js';
-import {get as getProjection} from '../../../../../../src/ol/proj.js';
-import {ShaderBuilder} from '../../../../../../src/ol/render/webgl/ShaderBuilder.js';
-import {WebGLWorkerMessageType} from '../../../../../../src/ol/render/webgl/constants.js';
+import Map from '../../../../../../src/ol/Map.js';
+import { get as getProjection } from '../../../../../../src/ol/proj.js';
+import { WebGLWorkerMessageType } from '../../../../../../src/ol/render/webgl/constants.js';
+import { ShaderBuilder } from '../../../../../../src/ol/render/webgl/ShaderBuilder.js';
 import WebGLPointsLayerRenderer from '../../../../../../src/ol/renderer/webgl/PointsLayer.js';
 import OSM from '../../../../../../src/ol/source/OSM.js';
 import VectorSource from '../../../../../../src/ol/source/Vector.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../../../../../../src/ol/transform.js';
-import {getUid} from '../../../../../../src/ol/util.js';
+import { compose as composeTransform } from '../../../../../../src/ol/transform.js';
+import { create as createTransform } from '../../../../../../src/ol/transform.js';
+import { getUid } from '../../../../../../src/ol/util.js';
+import View from '../../../../../../src/ol/View.js';
+import ViewHint from '../../../../../../src/ol/ViewHint.js';
+import { spy as sinonSpy } from 'sinon';
 
 const baseFrameState = {
   viewHints: [],

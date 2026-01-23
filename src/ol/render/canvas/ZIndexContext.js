@@ -1,9 +1,7 @@
+import { getSharedCanvasContext2D } from '../../dom.js';
 /**
  * @module ol/render/canvas/ZIndexContext
  */
-
-import {getSharedCanvasContext2D} from '../../dom.js';
-
 /** @typedef {CanvasRenderingContext2D & {globalAlpha: any}} ZIndexContextProxy */
 
 /**

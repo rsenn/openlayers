@@ -1,13 +1,15 @@
+import { decode } from '../Image.js';
+import { get as getProjection } from '../proj.js';
+import { transform } from '../proj.js';
+import { calculateSourceResolution } from '../reproj.js';
+import { defaultImageLoadFunction } from './Image.js';
+import ImageSource from './Image.js';
+import { createLoader } from './wms.js';
+import { getFeatureInfoUrl } from './wms.js';
+import { getLegendUrl } from './wms.js';
 /**
  * @module ol/source/ImageWMS
  */
-
-import {decode} from '../Image.js';
-import {get as getProjection, transform} from '../proj.js';
-import {calculateSourceResolution} from '../reproj.js';
-import ImageSource, {defaultImageLoadFunction} from './Image.js';
-import {createLoader, getFeatureInfoUrl, getLegendUrl} from './wms.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("./Source.js").AttributionLike} [attributions] Attributions.

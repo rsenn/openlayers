@@ -1,4 +1,4 @@
-import {getPixelIndexArray} from '../../../../../../src/ol/render/canvas/ExecutorGroup.js';
+import { getPixelIndexArray } from '../../../../../../src/ol/render/canvas/ExecutorGroup.js';
 
 describe('ol.render.canvas.ExecutorGroup', function () {
   describe('#getPixelIndexArray', function () {

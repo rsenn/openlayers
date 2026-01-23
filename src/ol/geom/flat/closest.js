@@ -1,8 +1,8 @@
+import { lerp } from '../../math.js';
+import { squaredDistance as squaredDx } from '../../math.js';
 /**
  * @module ol/geom/flat/closest
  */
-import {lerp, squaredDistance as squaredDx} from '../../math.js';
-
 /**
  * Returns the point on the 2D line segment flatCoordinates[offset1] to
  * flatCoordinates[offset2] that is closest to the point (x, y).  Extra

@@ -1,9 +1,9 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getCenter} from '../src/ol/extent.js';
+import { getCenter } from '../src/ol/extent.js';
 import ImageLayer from '../src/ol/layer/Image.js';
+import Map from '../src/ol/Map.js';
 import ImageSource from '../src/ol/source/Image.js';
-import {createLoader} from '../src/ol/source/mapserver.js';
+import { createLoader } from '../src/ol/source/mapserver.js';
+import View from '../src/ol/View.js';
 
 const mapserverUrl = 'https://demo.mapserver.org/cgi-bin/mapserv?';
 const bounds = [388039, 5234969, 500964, 5295764];

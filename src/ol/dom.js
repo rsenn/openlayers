@@ -1,5 +1,4 @@
-import {WORKER_OFFSCREEN_CANVAS} from './has.js';
-
+import { WORKER_OFFSCREEN_CANVAS } from './has.js';
 /**
  * @module ol/dom
  */

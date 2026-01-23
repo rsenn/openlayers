@@ -1,13 +1,9 @@
+import { equivalent as equivalentProjections } from '../proj.js';
+import { get as getProjection } from '../proj.js';
+import DataTileSource from './DataTile.js';
 /**
  * @module ol/source/SentinelHub
  */
-
-import {
-  equivalent as equivalentProjections,
-  get as getProjection,
-} from '../proj.js';
-import DataTileSource from './DataTile.js';
-
 const defaultProcessUrl = 'https://services.sentinel-hub.com/api/v1/process';
 
 const defaultTokenUrl =
@@ -21,6 +17,7 @@ const defaultEvalscriptVersion = '3';
 const defaultTileSize = [512, 512];
 
 const maxRetries = 10;
+
 const baseDelay = 500;
 
 /**

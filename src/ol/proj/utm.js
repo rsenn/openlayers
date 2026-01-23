@@ -1,3 +1,7 @@
+import { toDegrees } from '../math.js';
+import { toRadians } from '../math.js';
+import { wrap } from '../math.js';
+import Projection from './Projection.js';
 /**
  * @module ol/proj/utm
  */
@@ -11,10 +15,6 @@
  * zone, and the accuracy of the transform decreases toward the zone
  * edges.
  */
-
-import {toDegrees, toRadians, wrap} from '../math.js';
-import Projection from './Projection.js';
-
 /**
  * @typedef {Object} UTMZone
  * @property {number} number The zone number (1 - 60).
@@ -24,11 +24,15 @@ import Projection from './Projection.js';
 const K0 = 0.9996;
 
 const E = 0.00669438;
+
 const E2 = E * E;
+
 const E3 = E2 * E;
+
 const E_P2 = E / (1 - E);
 
 const SQRT_E = Math.sqrt(1 - E);
+
 const _E = (1 - SQRT_E) / (1 + SQRT_E);
 const _E2 = _E * _E;
 const _E3 = _E2 * _E;

@@ -1,11 +1,10 @@
-/**
- * @module ol/control/defaults
- */
 import Collection from '../Collection.js';
 import Attribution from './Attribution.js';
 import Rotate from './Rotate.js';
 import Zoom from './Zoom.js';
-
+/**
+ * @module ol/control/defaults
+ */
 /**
  * @typedef {Object} DefaultsOptions
  * @property {boolean} [attribution=true] Include

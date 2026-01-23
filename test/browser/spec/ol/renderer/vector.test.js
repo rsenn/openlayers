@@ -1,6 +1,5 @@
-import {spy as sinonSpy, stub as sinonStub} from 'sinon';
 import Feature from '../../../../../src/ol/Feature.js';
-import {VOID} from '../../../../../src/ol/functions.js';
+import { VOID } from '../../../../../src/ol/functions.js';
 import LineString from '../../../../../src/ol/geom/LineString.js';
 import MultiLineString from '../../../../../src/ol/geom/MultiLineString.js';
 import MultiPoint from '../../../../../src/ol/geom/MultiPoint.js';
@@ -8,11 +7,13 @@ import MultiPolygon from '../../../../../src/ol/geom/MultiPolygon.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
 import CanvasBuilderGroup from '../../../../../src/ol/render/canvas/BuilderGroup.js';
-import {renderFeature} from '../../../../../src/ol/renderer/vector.js';
+import { renderFeature } from '../../../../../src/ol/renderer/vector.js';
 import Fill from '../../../../../src/ol/style/Fill.js';
 import Icon from '../../../../../src/ol/style/Icon.js';
 import Stroke from '../../../../../src/ol/style/Stroke.js';
 import Style from '../../../../../src/ol/style/Style.js';
+import { spy as sinonSpy } from 'sinon';
+import { stub as sinonStub } from 'sinon';
 
 describe('ol/renderer/vector', function () {
   describe('#renderFeature', function () {

@@ -1,22 +1,23 @@
-#! /usr/bin/env node
-import fs from 'fs';
-import path, {dirname} from 'path';
-import {fileURLToPath} from 'url';
-import esMain from 'es-main';
 import express from 'express';
 import fse from 'fs-extra';
-import {globby} from 'globby';
-import {LogLevel} from 'loglevelnext';
+import fs from 'fs';
+import { dirname } from 'path';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import config from './webpack.config.js';
+import esMain from 'es-main';
+import { globby } from 'globby';
+import { LogLevel } from 'loglevelnext';
 import pixelmatch from 'pixelmatch';
 import png from 'pngjs';
 import puppeteer from 'puppeteer';
 import serveStatic from 'serve-static';
-import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
+import webpack from 'webpack';
 import yargs from 'yargs';
-import {hideBin} from 'yargs/helpers'; //eslint-disable-line import/no-unresolved
-import config from './webpack.config.js';
-
+import { hideBin } from 'yargs/helpers';
+#! /usr/bin/env node
+ //eslint-disable-line import/no-unresolved
 const baseDir = dirname(fileURLToPath(import.meta.url));
 
 const compiler = webpack(Object.assign({mode: 'development'}, config));

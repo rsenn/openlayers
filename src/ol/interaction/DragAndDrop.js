@@ -1,15 +1,15 @@
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import Event from '../events/Event.js';
+import EventType from '../events/EventType.js';
+import { TRUE } from '../functions.js';
+import { get as getProjection } from '../proj.js';
+import { getUserProjection } from '../proj.js';
+import Interaction from './Interaction.js';
 /**
  * @module ol/interaction/DragAndDrop
  */
 // FIXME should handle all geo-referenced data, not just vector data
-
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {TRUE} from '../functions.js';
-import {get as getProjection, getUserProjection} from '../proj.js';
-import Interaction from './Interaction.js';
-
 /**
  * @typedef {Object} Options
  * @property {Array<typeof import("../format/Feature.js").default|import("../format/Feature.js").default>} [formatConstructors] Format constructors

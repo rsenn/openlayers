@@ -1,22 +1,21 @@
+import DataTile from '../DataTile.js';
+import EventType from '../events/EventType.js';
+import { toPromise } from '../functions.js';
+import { equivalent } from '../proj.js';
+import { get as getProjection } from '../proj.js';
+import ReprojDataTile from '../reproj/DataTile.js';
+import { toSize } from '../size.js';
+import { createXYZ } from '../tilegrid.js';
+import { extentFromProjection } from '../tilegrid.js';
+import { getForProjection as getTileGridForProjection } from '../tilegrid.js';
+import TileState from '../TileState.js';
+import { getUid } from '../util.js';
+import { TileSourceEvent } from './Tile.js';
+import TileSource from './Tile.js';
+import TileEventType from './TileEventType.js';
 /**
  * @module ol/source/DataTile
  */
-import DataTile from '../DataTile.js';
-import TileState from '../TileState.js';
-import EventType from '../events/EventType.js';
-import {toPromise} from '../functions.js';
-import {equivalent, get as getProjection} from '../proj.js';
-import ReprojDataTile from '../reproj/DataTile.js';
-import {toSize} from '../size.js';
-import {
-  createXYZ,
-  extentFromProjection,
-  getForProjection as getTileGridForProjection,
-} from '../tilegrid.js';
-import {getUid} from '../util.js';
-import TileSource, {TileSourceEvent} from './Tile.js';
-import TileEventType from './TileEventType.js';
-
 /**
  * @typedef {'anonymous'|'use-credentials'} CrossOriginAttribute
  */

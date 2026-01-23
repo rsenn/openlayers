@@ -1,8 +1,7 @@
+import ComparisonBinary from './ComparisonBinary.js';
 /**
  * @module ol/format/filter/EqualTo
  */
-import ComparisonBinary from './ComparisonBinary.js';
-
 /**
  * @classdesc
  * Represents a `<PropertyIsEqualTo>` comparison operator.

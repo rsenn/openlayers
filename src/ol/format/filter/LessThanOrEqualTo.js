@@ -1,8 +1,7 @@
+import ComparisonBinary from './ComparisonBinary.js';
 /**
  * @module ol/format/filter/LessThanOrEqualTo
  */
-import ComparisonBinary from './ComparisonBinary.js';
-
 /**
  * @classdesc
  * Represents a `<PropertyIsLessThanOrEqualTo>` comparison operator.

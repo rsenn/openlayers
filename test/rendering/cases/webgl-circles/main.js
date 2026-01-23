@@ -1,11 +1,11 @@
 import Feature from '../../../../src/ol/Feature.js';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import Point from '../../../../src/ol/geom/Point.js';
 import TileLayer from '../../../../src/ol/layer/Tile.js';
 import WebGLVectorLayer from '../../../../src/ol/layer/WebGLVector.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
+import View from '../../../../src/ol/View.js';
 
 const blueCircle = {
   'circle-radius': 20,

@@ -1,9 +1,9 @@
+import { abstract } from '../util.js';
+import { isDocument } from '../xml.js';
+import { parse } from '../xml.js';
 /**
  * @module ol/format/XML
  */
-import {abstract} from '../util.js';
-import {isDocument, parse} from '../xml.js';
-
 /**
  * @classdesc
  * Generic format for reading non-feature XML data

@@ -1,19 +1,14 @@
-import {spy as sinonSpy} from 'sinon';
+import { getCenter } from '../../../../../../src/ol/extent.js';
 import Feature from '../../../../../../src/ol/Feature.js';
-import Map from '../../../../../../src/ol/Map.js';
-import TileState from '../../../../../../src/ol/TileState.js';
-import VectorRenderTile from '../../../../../../src/ol/VectorRenderTile.js';
-import VectorTile from '../../../../../../src/ol/VectorTile.js';
-import View from '../../../../../../src/ol/View.js';
-import {getCenter} from '../../../../../../src/ol/extent.js';
 import MVT from '../../../../../../src/ol/format/MVT.js';
-import {VOID} from '../../../../../../src/ol/functions.js';
+import { VOID } from '../../../../../../src/ol/functions.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
 import TileLayer from '../../../../../../src/ol/layer/Tile.js';
 import VectorTileLayer from '../../../../../../src/ol/layer/VectorTile.js';
-import {get as getProjection} from '../../../../../../src/ol/proj.js';
+import Map from '../../../../../../src/ol/Map.js';
+import { get as getProjection } from '../../../../../../src/ol/proj.js';
+import { checkedFonts } from '../../../../../../src/ol/render/canvas.js';
 import RenderFeature from '../../../../../../src/ol/render/Feature.js';
-import {checkedFonts} from '../../../../../../src/ol/render/canvas.js';
 import CanvasVectorTileLayerRenderer from '../../../../../../src/ol/renderer/canvas/VectorTileLayer.js';
 import VectorTileSource from '../../../../../../src/ol/source/VectorTile.js';
 import XYZ from '../../../../../../src/ol/source/XYZ.js';
@@ -21,10 +16,15 @@ import Circle from '../../../../../../src/ol/style/Circle.js';
 import Fill from '../../../../../../src/ol/style/Fill.js';
 import Style from '../../../../../../src/ol/style/Style.js';
 import Text from '../../../../../../src/ol/style/Text.js';
-import {createXYZ} from '../../../../../../src/ol/tilegrid.js';
-import {create} from '../../../../../../src/ol/transform.js';
-import {getUid} from '../../../../../../src/ol/util.js';
-import {createFontStyle} from '../../../util.js';
+import { createXYZ } from '../../../../../../src/ol/tilegrid.js';
+import TileState from '../../../../../../src/ol/TileState.js';
+import { create } from '../../../../../../src/ol/transform.js';
+import { getUid } from '../../../../../../src/ol/util.js';
+import VectorRenderTile from '../../../../../../src/ol/VectorRenderTile.js';
+import VectorTile from '../../../../../../src/ol/VectorTile.js';
+import View from '../../../../../../src/ol/View.js';
+import { createFontStyle } from '../../../util.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/renderer/canvas/VectorTileLayer', function () {
   describe('constructor', function () {

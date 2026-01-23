@@ -1,4 +1,5 @@
-import {compareVersions, padNumber} from '../../../../src/ol/string.js';
+import { compareVersions } from '../../../../src/ol/string.js';
+import { padNumber } from '../../../../src/ol/string.js';
 
 describe('ol.string', function () {
   describe('ol.string.padNumber', function () {

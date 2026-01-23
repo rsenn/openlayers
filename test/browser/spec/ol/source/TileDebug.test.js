@@ -1,6 +1,6 @@
 import GeoTIFFSource from '../../../../../src/ol/source/GeoTIFF.js';
 import TileDebug from '../../../../../src/ol/source/TileDebug.js';
-import {createXYZ} from '../../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../../src/ol/tilegrid.js';
 
 describe('ol/source/TileDebug', function () {
   it('applies default options', function () {

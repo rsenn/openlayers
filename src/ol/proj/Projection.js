@@ -1,8 +1,7 @@
+import { METERS_PER_UNIT } from './Units.js';
 /**
  * @module ol/proj/Projection
  */
-import {METERS_PER_UNIT} from './Units.js';
-
 /**
  * The function is called with a `number` view resolution and a
  * {@link module:ol/coordinate~Coordinate} as arguments, and returns the `number` resolution

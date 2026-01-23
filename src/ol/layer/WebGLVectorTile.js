@@ -1,9 +1,8 @@
+import WebGLVectorTileLayerRenderer from '../renderer/webgl/VectorTileLayer.js';
+import BaseTileLayer from './BaseTile.js';
 /**
  * @module ol/layer/WebGLVectorTile
  */
-import WebGLVectorTileLayerRenderer from '../renderer/webgl/VectorTileLayer.js';
-import BaseTileLayer from './BaseTile.js';
-
 /***
  * @template T
  * @typedef {T extends import("../source/Vector.js").default<infer U extends import("../Feature.js").FeatureLike> ? U : never} ExtractedFeatureType

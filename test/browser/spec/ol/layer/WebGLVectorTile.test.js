@@ -1,10 +1,10 @@
-import {spy as sinonSpy} from 'sinon';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import WebGLVectorTileLayer from '../../../../../src/ol/layer/WebGLVectorTile.js';
-import {getRenderPixel} from '../../../../../src/ol/render.js';
+import Map from '../../../../../src/ol/Map.js';
+import { getRenderPixel } from '../../../../../src/ol/render.js';
 import WebGLVectorTileLayerRenderer from '../../../../../src/ol/renderer/webgl/VectorTileLayer.js';
 import VectorTileSource from '../../../../../src/ol/source/VectorTile.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/layer/WebGLVectorTile', function () {
   /** @type {WebGLVectorTileLayer} */

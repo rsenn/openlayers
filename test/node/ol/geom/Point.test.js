@@ -1,12 +1,11 @@
-import proj4 from 'proj4';
-import {spy as sinonSpy} from 'sinon';
 import Point from '../../../../src/ol/geom/Point.js';
-import {register, unregister} from '../../../../src/ol/proj/proj4.js';
-import {
-  get as getProjection,
-  getTransformFromProjections,
-} from '../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../src/ol/proj.js';
+import { getTransformFromProjections } from '../../../../src/ol/proj.js';
+import { register } from '../../../../src/ol/proj/proj4.js';
+import { unregister } from '../../../../src/ol/proj/proj4.js';
 import expect from '../../expect.js';
+import proj4 from 'proj4';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/geom/Point.js', function () {
   it('cannot be constructed with a null geometry', function () {

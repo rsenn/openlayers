@@ -1,8 +1,7 @@
+import Projection from './Projection.js';
 /**
  * @module ol/proj/epsg4326
  */
-import Projection from './Projection.js';
-
 /**
  * Semi-major radius of the WGS84 ellipsoid.
  *

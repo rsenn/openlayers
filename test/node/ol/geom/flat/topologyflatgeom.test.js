@@ -1,4 +1,4 @@
-import {lineStringIsClosed} from '../../../../../src/ol/geom/flat/topology.js';
+import { lineStringIsClosed } from '../../../../../src/ol/geom/flat/topology.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/topology.js', function () {

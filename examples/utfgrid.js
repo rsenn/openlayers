@@ -1,9 +1,9 @@
+import TileLayer from '../src/ol/layer/Tile.js';
 import Map from '../src/ol/Map.js';
 import Overlay from '../src/ol/Overlay.js';
-import View from '../src/ol/View.js';
-import TileLayer from '../src/ol/layer/Tile.js';
 import TileJSON from '../src/ol/source/TileJSON.js';
 import UTFGrid from '../src/ol/source/UTFGrid.js';
+import View from '../src/ol/View.js';
 
 const key =
   'pk.eyJ1IjoiYWhvY2V2YXIiLCJhIjoiY2t0cGdwMHVnMGdlbzMxbDhwazBic2xrNSJ9.WbcTL9uj8JPAsnT9mgb7oQ';

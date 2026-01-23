@@ -1,23 +1,17 @@
+import Feature from '../Feature.js';
+import { deflateCoordinatesArray } from '../geom/flat/deflate.js';
+import { deflateMultiCoordinatesArray } from '../geom/flat/deflate.js';
+import { getLayoutForStride } from '../geom/SimpleGeometry.js';
+import { isEmpty } from '../obj.js';
+import { get as getProjection } from '../proj.js';
+import RenderFeature from '../render/Feature.js';
+import { createGeometry } from './Feature.js';
+import { createRenderFeature } from './Feature.js';
+import { transformGeometryWithOptions } from './Feature.js';
+import JSONFeature from './JSONFeature.js';
 /**
  * @module ol/format/GeoJSON
  */
-
-import Feature from '../Feature.js';
-import {getLayoutForStride} from '../geom/SimpleGeometry.js';
-import {
-  deflateCoordinatesArray,
-  deflateMultiCoordinatesArray,
-} from '../geom/flat/deflate.js';
-import {isEmpty} from '../obj.js';
-import {get as getProjection} from '../proj.js';
-import RenderFeature from '../render/Feature.js';
-import {
-  createGeometry,
-  createRenderFeature,
-  transformGeometryWithOptions,
-} from './Feature.js';
-import JSONFeature from './JSONFeature.js';
-
 /**
  * @typedef {import("geojson").GeoJSON} GeoJSONObject
  * @typedef {import("geojson").Feature} GeoJSONFeature

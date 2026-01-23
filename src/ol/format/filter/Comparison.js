@@ -1,8 +1,7 @@
+import Filter from './Filter.js';
 /**
  * @module ol/format/filter/Comparison
  */
-import Filter from './Filter.js';
-
 /**
  * @classdesc
  * Abstract class; normally only used for creating subclasses and not instantiated in apps.

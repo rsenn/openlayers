@@ -1,5 +1,5 @@
 import WMTSCapabilities from '../../../../../src/ol/format/WMTSCapabilities.js';
-import {createFromCapabilitiesMatrixSet} from '../../../../../src/ol/tilegrid/WMTS.js';
+import { createFromCapabilitiesMatrixSet } from '../../../../../src/ol/tilegrid/WMTS.js';
 
 describe('ol.tilegrid.WMTS', function () {
   describe('when creating tileGrid from capabilities', function () {

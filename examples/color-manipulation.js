@@ -1,17 +1,20 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ImageLayer from '../src/ol/layer/Image.js';
+import Map from '../src/ol/Map.js';
 import RasterSource from '../src/ol/source/Raster.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
-
+import View from '../src/ol/View.js';
 /**
  * Color manipulation functions below are adapted from
  * https://github.com/d3/d3-color.
  */
 const Xn = 0.95047;
+
 const Yn = 1;
+
 const Zn = 1.08883;
+
 const t0 = 4 / 29;
+
 const t1 = 6 / 29;
 const t2 = 3 * t1 * t1;
 const t3 = t1 * t1 * t1;

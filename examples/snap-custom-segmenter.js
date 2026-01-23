@@ -1,10 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import Draw from '../src/ol/interaction/Draw.js';
 import Modify from '../src/ol/interaction/Modify.js';
 import Snap from '../src/ol/interaction/Snap.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import VectorSource from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
 
 const vector = new VectorLayer({
   background: '#333',

@@ -1,9 +1,9 @@
+import { getLatestRelease } from './get-latest-release.js';
 import esMain from 'es-main';
 import semver from 'semver';
 import yargs from 'yargs';
-import {hideBin} from 'yargs/helpers'; //eslint-disable-line import/no-unresolved
-import {getLatestRelease} from './get-latest-release.js';
-
+import { hideBin } from 'yargs/helpers';
+//eslint-disable-line import/no-unresolved
 /**
  * @typedef {Object} Options
  * @property {string} tag The tag.

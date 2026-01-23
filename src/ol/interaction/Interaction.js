@@ -1,10 +1,10 @@
+import { easeOut } from '../easing.js';
+import { linear } from '../easing.js';
+import BaseObject from '../Object.js';
+import InteractionProperty from './Property.js';
 /**
  * @module ol/interaction/Interaction
  */
-import BaseObject from '../Object.js';
-import {easeOut, linear} from '../easing.js';
-import InteractionProperty from './Property.js';
-
 /***
  * @template Return
  * @typedef {import("../Observable").OnSignature<import("../Observable").EventTypes, import("../events/Event.js").default, Return> &

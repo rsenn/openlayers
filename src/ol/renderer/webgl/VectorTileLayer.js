@@ -1,31 +1,25 @@
+import EventType from '../../events/EventType.js';
+import { getIntersection } from '../../extent.js';
+import { ShaderBuilder } from '../../render/webgl/ShaderBuilder.js';
+import { convertStyleToShaders } from '../../render/webgl/VectorStyleRenderer.js';
+import VectorStyleRenderer from '../../render/webgl/VectorStyleRenderer.js';
+import { create as createTransform } from '../../transform.js';
+import { makeInverse as makeInverseTransform } from '../../transform.js';
+import { multiply as multiplyTransform } from '../../transform.js';
+import { setFromArray as setFromTransform } from '../../transform.js';
+import { create as createMat4 } from '../../vec/mat4.js';
+import { fromTransform as mat4FromTransform } from '../../vec/mat4.js';
+import { ELEMENT_ARRAY_BUFFER } from '../../webgl.js';
+import { STATIC_DRAW } from '../../webgl.js';
+import WebGLArrayBuffer from '../../webgl/Buffer.js';
+import { AttributeType } from '../../webgl/Helper.js';
+import WebGLRenderTarget from '../../webgl/RenderTarget.js';
+import TileGeometry from '../../webgl/TileGeometry.js';
+import { Uniforms as BaseUniforms } from './TileLayerBase.js';
+import WebGLBaseTileLayerRenderer from './TileLayerBase.js';
 /**
  * @module ol/renderer/webgl/VectorTileLayer
  */
-import EventType from '../../events/EventType.js';
-import {getIntersection} from '../../extent.js';
-import {ShaderBuilder} from '../../render/webgl/ShaderBuilder.js';
-import VectorStyleRenderer, {
-  convertStyleToShaders,
-} from '../../render/webgl/VectorStyleRenderer.js';
-import {
-  create as createTransform,
-  makeInverse as makeInverseTransform,
-  multiply as multiplyTransform,
-  setFromArray as setFromTransform,
-} from '../../transform.js';
-import {
-  create as createMat4,
-  fromTransform as mat4FromTransform,
-} from '../../vec/mat4.js';
-import WebGLArrayBuffer from '../../webgl/Buffer.js';
-import {AttributeType} from '../../webgl/Helper.js';
-import WebGLRenderTarget from '../../webgl/RenderTarget.js';
-import TileGeometry from '../../webgl/TileGeometry.js';
-import {ELEMENT_ARRAY_BUFFER, STATIC_DRAW} from '../../webgl.js';
-import WebGLBaseTileLayerRenderer, {
-  Uniforms as BaseUniforms,
-} from './TileLayerBase.js';
-
 export const Uniforms = {
   ...BaseUniforms,
   TILE_MASK_TEXTURE: 'u_depthMask',

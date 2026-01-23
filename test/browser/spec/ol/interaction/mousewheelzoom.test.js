@@ -1,9 +1,10 @@
-import {spy as sinonSpy, useFakeTimers} from 'sinon';
+import Event from '../../../../../src/ol/events/Event.js';
+import MouseWheelZoom from '../../../../../src/ol/interaction/MouseWheelZoom.js';
 import Map from '../../../../../src/ol/Map.js';
 import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
 import View from '../../../../../src/ol/View.js';
-import Event from '../../../../../src/ol/events/Event.js';
-import MouseWheelZoom from '../../../../../src/ol/interaction/MouseWheelZoom.js';
+import { spy as sinonSpy } from 'sinon';
+import { useFakeTimers } from 'sinon';
 
 describe('ol.interaction.MouseWheelZoom', function () {
   /** @type {Map} */

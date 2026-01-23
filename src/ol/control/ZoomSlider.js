@@ -1,16 +1,16 @@
+import { CLASS_CONTROL } from '../css.js';
+import { CLASS_UNSELECTABLE } from '../css.js';
+import { easeOut } from '../easing.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import { stopPropagation } from '../events/Event.js';
+import EventType from '../events/EventType.js';
+import { clamp } from '../math.js';
+import PointerEventType from '../pointer/EventType.js';
+import Control from './Control.js';
 /**
  * @module ol/control/ZoomSlider
  */
-
-import {CLASS_CONTROL, CLASS_UNSELECTABLE} from '../css.js';
-import {easeOut} from '../easing.js';
-import {stopPropagation} from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {clamp} from '../math.js';
-import PointerEventType from '../pointer/EventType.js';
-import Control from './Control.js';
-
 /**
  * The enum for available directions.
  *

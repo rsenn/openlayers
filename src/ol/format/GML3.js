@@ -1,35 +1,32 @@
-/**
- * @module ol/format/GML3
- */
-import {extend} from '../array.js';
-import {createOrUpdate} from '../extent.js';
+import { extend } from '../array.js';
+import { createOrUpdate } from '../extent.js';
 import LineString from '../geom/LineString.js';
 import MultiLineString from '../geom/MultiLineString.js';
 import MultiPolygon from '../geom/MultiPolygon.js';
 import Polygon from '../geom/Polygon.js';
-import {get as getProjection} from '../proj.js';
-import {
-  OBJECT_PROPERTY_NODE_FACTORY,
-  XML_SCHEMA_INSTANCE_URI,
-  createElementNS,
-  getAllTextContent,
-  makeArrayExtender,
-  makeArrayPusher,
-  makeChildAppender,
-  makeReplacer,
-  makeSimpleNodeFactory,
-  parseNode,
-  pushParseAndPop,
-  pushSerializeAndPop,
-} from '../xml.js';
-import {
-  transformExtentWithOptions,
-  transformGeometryWithOptions,
-} from './Feature.js';
+import { get as getProjection } from '../proj.js';
+import { createElementNS } from '../xml.js';
+import { getAllTextContent } from '../xml.js';
+import { makeArrayExtender } from '../xml.js';
+import { makeArrayPusher } from '../xml.js';
+import { makeChildAppender } from '../xml.js';
+import { makeReplacer } from '../xml.js';
+import { makeSimpleNodeFactory } from '../xml.js';
+import { OBJECT_PROPERTY_NODE_FACTORY } from '../xml.js';
+import { parseNode } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import { pushSerializeAndPop } from '../xml.js';
+import { XML_SCHEMA_INSTANCE_URI } from '../xml.js';
+import { transformExtentWithOptions } from './Feature.js';
+import { transformGeometryWithOptions } from './Feature.js';
 import GML2 from './GML2.js';
-import GMLBase, {GMLNS} from './GMLBase.js';
-import {readNonNegativeIntegerString, writeStringTextNode} from './xsd.js';
-
+import { GMLNS } from './GMLBase.js';
+import GMLBase from './GMLBase.js';
+import { readNonNegativeIntegerString } from './xsd.js';
+import { writeStringTextNode } from './xsd.js';
+/**
+ * @module ol/format/GML3
+ */
 /**
  * @const
  * @type {string}

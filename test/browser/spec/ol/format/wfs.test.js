@@ -1,42 +1,39 @@
-import proj4 from 'proj4';
 import Feature from '../../../../../src/ol/Feature.js';
+import { and as andFilter } from '../../../../../src/ol/format/filter.js';
+import { bbox as bboxFilter } from '../../../../../src/ol/format/filter.js';
+import { between as betweenFilter } from '../../../../../src/ol/format/filter.js';
+import { contains as containsFilter } from '../../../../../src/ol/format/filter.js';
+import { disjoint as disjointFilter } from '../../../../../src/ol/format/filter.js';
+import { during as duringFilter } from '../../../../../src/ol/format/filter.js';
+import { dwithin as dwithinFilter } from '../../../../../src/ol/format/filter.js';
+import { equalTo as equalToFilter } from '../../../../../src/ol/format/filter.js';
+import { greaterThan as greaterThanFilter } from '../../../../../src/ol/format/filter.js';
+import { greaterThanOrEqualTo as greaterThanOrEqualToFilter } from '../../../../../src/ol/format/filter.js';
+import { intersects as intersectsFilter } from '../../../../../src/ol/format/filter.js';
+import { isNull as isNullFilter } from '../../../../../src/ol/format/filter.js';
+import { lessThan as lessThanFilter } from '../../../../../src/ol/format/filter.js';
+import { lessThanOrEqualTo as lessThanOrEqualToFilter } from '../../../../../src/ol/format/filter.js';
+import { like as likeFilter } from '../../../../../src/ol/format/filter.js';
+import { not as notFilter } from '../../../../../src/ol/format/filter.js';
+import { or as orFilter } from '../../../../../src/ol/format/filter.js';
+import { resourceId as resourceIdFilter } from '../../../../../src/ol/format/filter.js';
+import { within as withinFilter } from '../../../../../src/ol/format/filter.js';
 import GML2 from '../../../../../src/ol/format/GML2.js';
 import GML3 from '../../../../../src/ol/format/GML3.js';
 import GML32 from '../../../../../src/ol/format/GML32.js';
-import WFS, {writeFilter} from '../../../../../src/ol/format/WFS.js';
-import {
-  and as andFilter,
-  bbox as bboxFilter,
-  between as betweenFilter,
-  contains as containsFilter,
-  disjoint as disjointFilter,
-  during as duringFilter,
-  dwithin as dwithinFilter,
-  equalTo as equalToFilter,
-  greaterThan as greaterThanFilter,
-  greaterThanOrEqualTo as greaterThanOrEqualToFilter,
-  intersects as intersectsFilter,
-  isNull as isNullFilter,
-  lessThan as lessThanFilter,
-  lessThanOrEqualTo as lessThanOrEqualToFilter,
-  like as likeFilter,
-  not as notFilter,
-  or as orFilter,
-  resourceId as resourceIdFilter,
-  within as withinFilter,
-} from '../../../../../src/ol/format/filter.js';
+import { writeFilter } from '../../../../../src/ol/format/WFS.js';
+import WFS from '../../../../../src/ol/format/WFS.js';
 import LineString from '../../../../../src/ol/geom/LineString.js';
 import MultiLineString from '../../../../../src/ol/geom/MultiLineString.js';
 import MultiPoint from '../../../../../src/ol/geom/MultiPoint.js';
 import MultiPolygon from '../../../../../src/ol/geom/MultiPolygon.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
-import {register} from '../../../../../src/ol/proj/proj4.js';
-import {
-  addCommon,
-  clearAllProjections,
-  transform,
-} from '../../../../../src/ol/proj.js';
-import {parse} from '../../../../../src/ol/xml.js';
+import { addCommon } from '../../../../../src/ol/proj.js';
+import { clearAllProjections } from '../../../../../src/ol/proj.js';
+import { transform } from '../../../../../src/ol/proj.js';
+import { register } from '../../../../../src/ol/proj/proj4.js';
+import { parse } from '../../../../../src/ol/xml.js';
+import proj4 from 'proj4';
 
 describe('ol.format.WFS', function () {
   describe('featureType', function () {

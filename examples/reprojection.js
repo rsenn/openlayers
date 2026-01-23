@@ -1,18 +1,20 @@
-import proj4 from 'proj4';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getCenter, getWidth} from '../src/ol/extent.js';
+import { getCenter } from '../src/ol/extent.js';
+import { getWidth } from '../src/ol/extent.js';
 import WMTSCapabilities from '../src/ol/format/WMTSCapabilities.js';
 import TileLayer from '../src/ol/layer/WebGLTile.js';
-import {register} from '../src/ol/proj/proj4.js';
-import {get as getProjection, transformExtent} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { get as getProjection } from '../src/ol/proj.js';
+import { transformExtent } from '../src/ol/proj.js';
+import { register } from '../src/ol/proj/proj4.js';
 import OSM from '../src/ol/source/OSM.js';
 import TileImage from '../src/ol/source/TileImage.js';
 import TileWMS from '../src/ol/source/TileWMS.js';
-import WMTS, {optionsFromCapabilities} from '../src/ol/source/WMTS.js';
+import { optionsFromCapabilities } from '../src/ol/source/WMTS.js';
+import WMTS from '../src/ol/source/WMTS.js';
+import { createXYZ } from '../src/ol/tilegrid.js';
 import TileGrid from '../src/ol/tilegrid/TileGrid.js';
-import {createXYZ} from '../src/ol/tilegrid.js';
-
+import View from '../src/ol/View.js';
+import proj4 from 'proj4';
 proj4.defs(
   'EPSG:27700',
   '+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 ' +
@@ -119,6 +121,7 @@ layers['wms21781'] = new TileLayer({
 const parser = new WMTSCapabilities();
 
 layers['wmts3413'] = new TileLayer();
+
 const urlA =
   'https://map1.vis.earthdata.nasa.gov/wmts-arctic/' +
   'wmts.cgi?SERVICE=WMTS&request=GetCapabilities';
@@ -139,6 +142,7 @@ fetch(urlA)
   });
 
 layers['bng'] = new TileLayer();
+
 const urlB =
   'https://tiles.arcgis.com/tiles/qHLhLQrcvEnxjtPr/arcgis/rest/services/OS_Open_Raster/MapServer/WMTS';
 fetch(urlB)
@@ -160,6 +164,7 @@ fetch(urlB)
   });
 
 const startResolution = getWidth(getProjection('EPSG:3857').getExtent()) / 256;
+
 const resolutions = new Array(22);
 for (let i = 0, ii = resolutions.length; i < ii; ++i) {
   resolutions[i] = startResolution / Math.pow(2, i);
@@ -191,6 +196,7 @@ const map = new Map({
 });
 
 const baseLayerSelect = document.getElementById('base-layer');
+
 const overlayLayerSelect = document.getElementById('overlay-layer');
 const viewProjSelect = document.getElementById('view-projection');
 const renderEdgesCheckbox = document.getElementById('render-edges');

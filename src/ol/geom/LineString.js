@@ -1,18 +1,19 @@
+import { extend } from '../array.js';
+import { closestSquaredDistanceXY } from '../extent.js';
+import { assignClosestPoint } from './flat/closest.js';
+import { maxSquaredDelta } from './flat/closest.js';
+import { deflateCoordinates } from './flat/deflate.js';
+import { inflateCoordinates } from './flat/inflate.js';
+import { interpolatePoint } from './flat/interpolate.js';
+import { lineStringCoordinateAtM } from './flat/interpolate.js';
+import { intersectsLineString } from './flat/intersectsextent.js';
+import { lineStringLength } from './flat/length.js';
+import { forEach as forEachSegment } from './flat/segments.js';
+import { douglasPeucker } from './flat/simplify.js';
+import SimpleGeometry from './SimpleGeometry.js';
 /**
  * @module ol/geom/LineString
  */
-import {extend} from '../array.js';
-import {closestSquaredDistanceXY} from '../extent.js';
-import SimpleGeometry from './SimpleGeometry.js';
-import {assignClosestPoint, maxSquaredDelta} from './flat/closest.js';
-import {deflateCoordinates} from './flat/deflate.js';
-import {inflateCoordinates} from './flat/inflate.js';
-import {interpolatePoint, lineStringCoordinateAtM} from './flat/interpolate.js';
-import {intersectsLineString} from './flat/intersectsextent.js';
-import {lineStringLength} from './flat/length.js';
-import {forEach as forEachSegment} from './flat/segments.js';
-import {douglasPeucker} from './flat/simplify.js';
-
 /**
  * @classdesc
  * Linestring geometry.

@@ -1,5 +1,5 @@
 import Fill from '../../../../../src/ol/style/Fill.js';
-import {getUid} from '../../../../../src/ol/util.js';
+import { getUid } from '../../../../../src/ol/util.js';
 
 describe('ol.style.Fill', function () {
   describe('#clone', function () {

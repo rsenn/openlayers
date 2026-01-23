@@ -1,16 +1,13 @@
-/**
- * @module ol/renderer/webgl/Layer
- */
 import LayerProperty from '../../layer/Property.js';
 import RenderEvent from '../../render/Event.js';
 import RenderEventType from '../../render/EventType.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../../transform.js';
+import { compose as composeTransform } from '../../transform.js';
+import { create as createTransform } from '../../transform.js';
 import WebGLHelper from '../../webgl/Helper.js';
 import LayerRenderer from '../Layer.js';
-
+/**
+ * @module ol/renderer/webgl/Layer
+ */
 /**
  * @typedef {Object} PostProcessesOptions
  * @property {number} [scaleRatio] Scale ratio; if < 1, the post process will render to a texture smaller than

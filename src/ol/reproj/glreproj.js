@@ -1,17 +1,15 @@
+import { createEmpty } from '../extent.js';
+import { extend } from '../extent.js';
+import { getHeight } from '../extent.js';
+import { getTopLeft } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { WORKER_OFFSCREEN_CANVAS } from '../has.js';
+import * as mat4 from '../vec/mat4.js';
+import { Canvas as WebGLCanvas } from '../webgl/Canvas.js';
+import { createProgram } from '../webgl/Canvas.js';
 /**
  * @module ol/reproj/glreproj
  */
-import {
-  createEmpty,
-  extend,
-  getHeight,
-  getTopLeft,
-  getWidth,
-} from '../extent.js';
-import {WORKER_OFFSCREEN_CANVAS} from '../has.js';
-import * as mat4 from '../vec/mat4.js';
-import {Canvas as WebGLCanvas, createProgram} from '../webgl/Canvas.js';
-
 const EDGE_VERTEX_SHADER = `
   attribute vec4 a_position;
 
@@ -21,6 +19,7 @@ const EDGE_VERTEX_SHADER = `
      gl_Position = u_matrix * a_position;
   }
 `;
+
 const EDGE_FRAGMENT_SHADER = `
   precision mediump float;
 
@@ -43,6 +42,7 @@ const TRIANGLE_VERTEX_SHADER = `
      v_texcoord = a_texcoord;
   }
 `;
+
 const TRIANGLE_FRAGMENT_SHADER = `
   precision mediump float;
 

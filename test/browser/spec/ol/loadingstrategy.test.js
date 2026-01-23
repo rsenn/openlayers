@@ -1,14 +1,12 @@
-import {approximatelyEquals} from '../../../../src/ol/extent.js';
-import {tile} from '../../../../src/ol/loadingstrategy.js';
-import {
-  clearUserProjection,
-  get,
-  toUserExtent,
-  toUserResolution,
-  transformExtent,
-  useGeographic,
-} from '../../../../src/ol/proj.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
+import { approximatelyEquals } from '../../../../src/ol/extent.js';
+import { tile } from '../../../../src/ol/loadingstrategy.js';
+import { clearUserProjection } from '../../../../src/ol/proj.js';
+import { get } from '../../../../src/ol/proj.js';
+import { toUserExtent } from '../../../../src/ol/proj.js';
+import { toUserResolution } from '../../../../src/ol/proj.js';
+import { transformExtent } from '../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../src/ol/proj.js';
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
 
 describe('ol/loadingstrategy', function () {
   describe('tile', function () {

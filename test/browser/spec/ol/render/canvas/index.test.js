@@ -1,5 +1,5 @@
-import {spy as sinonSpy} from 'sinon';
 import * as render from '../../../../../../src/ol/render/canvas.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.render.canvas', function () {
   const font = document.createElement('link');

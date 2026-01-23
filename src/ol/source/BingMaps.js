@@ -1,14 +1,15 @@
+import { applyTransform } from '../extent.js';
+import { intersects } from '../extent.js';
+import { get as getProjection } from '../proj.js';
+import { getTransformFromProjections } from '../proj.js';
+import { createOrUpdate } from '../tilecoord.js';
+import { createXYZ } from '../tilegrid.js';
+import { extentFromProjection } from '../tilegrid.js';
+import { createFromTileUrlFunctions } from '../tileurlfunction.js';
+import TileImage from './TileImage.js';
 /**
  * @module ol/source/BingMaps
  */
-
-import {applyTransform, intersects} from '../extent.js';
-import {get as getProjection, getTransformFromProjections} from '../proj.js';
-import {createOrUpdate} from '../tilecoord.js';
-import {createXYZ, extentFromProjection} from '../tilegrid.js';
-import {createFromTileUrlFunctions} from '../tileurlfunction.js';
-import TileImage from './TileImage.js';
-
 /**
  * @param {import('../tilecoord.js').TileCoord} tileCoord Tile coord.
  * @return {string} Quad key.

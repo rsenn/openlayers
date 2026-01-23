@@ -1,7 +1,7 @@
-import {spy as sinonSpy} from 'sinon';
 import Fill from '../../../../../src/ol/style/Fill.js';
 import RegularShape from '../../../../../src/ol/style/RegularShape.js';
 import Stroke from '../../../../../src/ol/style/Stroke.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/style/RegularShape', function () {
   describe('#constructor', function () {

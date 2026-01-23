@@ -1,3 +1,12 @@
+import { applyTransform } from '../extent.js';
+import { intersects } from '../extent.js';
+import { jsonp as requestJSONP } from '../net.js';
+import { get as getProjection } from '../proj.js';
+import { getTransformFromProjections } from '../proj.js';
+import { createXYZ } from '../tilegrid.js';
+import { extentFromProjection } from '../tilegrid.js';
+import { createFromTemplates } from '../tileurlfunction.js';
+import TileImage from './TileImage.js';
 /**
  * @module ol/source/TileJSON
  */
@@ -6,14 +15,6 @@
 /**
  * See https://mapbox.com/developers/api/.
  */
-
-import {applyTransform, intersects} from '../extent.js';
-import {jsonp as requestJSONP} from '../net.js';
-import {get as getProjection, getTransformFromProjections} from '../proj.js';
-import {createXYZ, extentFromProjection} from '../tilegrid.js';
-import {createFromTemplates} from '../tileurlfunction.js';
-import TileImage from './TileImage.js';
-
 /**
  * @typedef {Object} Config
  * @property {string} [name] The name.

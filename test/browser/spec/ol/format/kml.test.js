@@ -1,38 +1,35 @@
 import Feature from '../../../../../src/ol/Feature.js';
-import ImageState from '../../../../../src/ol/ImageState.js';
 import GeoJSON from '../../../../../src/ol/format/GeoJSON.js';
-import KML, {
-  getDefaultFillStyle,
-  getDefaultImageStyle,
-  getDefaultStrokeStyle,
-  getDefaultStyle,
-  getDefaultStyleArray,
-  getDefaultTextStyle,
-  readFlatCoordinates,
-} from '../../../../../src/ol/format/KML.js';
+import { getDefaultFillStyle } from '../../../../../src/ol/format/KML.js';
+import { getDefaultImageStyle } from '../../../../../src/ol/format/KML.js';
+import { getDefaultStrokeStyle } from '../../../../../src/ol/format/KML.js';
+import { getDefaultStyle } from '../../../../../src/ol/format/KML.js';
+import { getDefaultStyleArray } from '../../../../../src/ol/format/KML.js';
+import { getDefaultTextStyle } from '../../../../../src/ol/format/KML.js';
+import { readFlatCoordinates } from '../../../../../src/ol/format/KML.js';
+import KML from '../../../../../src/ol/format/KML.js';
 import GeometryCollection from '../../../../../src/ol/geom/GeometryCollection.js';
-import LineString from '../../../../../src/ol/geom/LineString.js';
 import LinearRing from '../../../../../src/ol/geom/LinearRing.js';
+import LineString from '../../../../../src/ol/geom/LineString.js';
 import MultiLineString from '../../../../../src/ol/geom/MultiLineString.js';
 import MultiPoint from '../../../../../src/ol/geom/MultiPoint.js';
 import MultiPolygon from '../../../../../src/ol/geom/MultiPolygon.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
+import ImageState from '../../../../../src/ol/ImageState.js';
+import { addCoordinateTransforms } from '../../../../../src/ol/proj.js';
+import { addProjection } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { transform } from '../../../../../src/ol/proj.js';
 import Projection from '../../../../../src/ol/proj/Projection.js';
-import {remove as removeTransform} from '../../../../../src/ol/proj/transforms.js';
-import {
-  addCoordinateTransforms,
-  addProjection,
-  get as getProjection,
-  transform,
-} from '../../../../../src/ol/proj.js';
+import { remove as removeTransform } from '../../../../../src/ol/proj/transforms.js';
 import CircleStyle from '../../../../../src/ol/style/Circle.js';
 import Fill from '../../../../../src/ol/style/Fill.js';
 import Icon from '../../../../../src/ol/style/Icon.js';
 import Stroke from '../../../../../src/ol/style/Stroke.js';
 import Style from '../../../../../src/ol/style/Style.js';
 import Text from '../../../../../src/ol/style/Text.js';
-import {parse} from '../../../../../src/ol/xml.js';
+import { parse } from '../../../../../src/ol/xml.js';
 
 describe('ol.format.KML', function () {
   let format;

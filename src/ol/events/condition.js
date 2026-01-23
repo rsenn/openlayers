@@ -1,10 +1,11 @@
+import { FALSE } from '../functions.js';
+import { TRUE } from '../functions.js';
+import { MAC } from '../has.js';
+import { WEBKIT } from '../has.js';
+import MapBrowserEventType from '../MapBrowserEventType.js';
 /**
  * @module ol/events/condition
  */
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import {FALSE, TRUE} from '../functions.js';
-import {MAC, WEBKIT} from '../has.js';
-
 /**
  * A function that takes a {@link module:ol/MapBrowserEvent~MapBrowserEvent} and returns a
  * `{boolean}`. If the condition is met, true should be returned.

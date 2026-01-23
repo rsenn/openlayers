@@ -1,32 +1,29 @@
+import { ascending } from '../../array.js';
+import { asImageLike } from '../../DataTile.js';
+import DataTile from '../../DataTile.js';
+import { containsCoordinate } from '../../extent.js';
+import { createEmpty } from '../../extent.js';
+import { equals } from '../../extent.js';
+import { getIntersection } from '../../extent.js';
+import { getRotatedViewport } from '../../extent.js';
+import { getTopLeft } from '../../extent.js';
+import { intersects } from '../../extent.js';
+import ImageTile from '../../ImageTile.js';
+import { fromUserExtent } from '../../proj.js';
+import ReprojTile from '../../reproj/Tile.js';
+import { toSize } from '../../size.js';
+import LRUCache from '../../structs/LRUCache.js';
+import { createOrUpdate as createTileCoord } from '../../tilecoord.js';
+import { getKeyZXY } from '../../tilecoord.js';
+import TileRange from '../../TileRange.js';
+import TileState from '../../TileState.js';
+import { apply as applyTransform } from '../../transform.js';
+import { compose as composeTransform } from '../../transform.js';
+import { getUid } from '../../util.js';
+import CanvasLayerRenderer from './Layer.js';
 /**
  * @module ol/renderer/canvas/TileLayer
  */
-import DataTile, {asImageLike} from '../../DataTile.js';
-import ImageTile from '../../ImageTile.js';
-import TileRange from '../../TileRange.js';
-import TileState from '../../TileState.js';
-import {ascending} from '../../array.js';
-import {
-  containsCoordinate,
-  createEmpty,
-  equals,
-  getIntersection,
-  getRotatedViewport,
-  getTopLeft,
-  intersects,
-} from '../../extent.js';
-import {fromUserExtent} from '../../proj.js';
-import ReprojTile from '../../reproj/Tile.js';
-import {toSize} from '../../size.js';
-import LRUCache from '../../structs/LRUCache.js';
-import {createOrUpdate as createTileCoord, getKeyZXY} from '../../tilecoord.js';
-import {
-  apply as applyTransform,
-  compose as composeTransform,
-} from '../../transform.js';
-import {getUid} from '../../util.js';
-import CanvasLayerRenderer from './Layer.js';
-
 /**
  * @param {import("../../source/Tile.js").default} source The tile source.
  * @param {string} sourceKey The source key.

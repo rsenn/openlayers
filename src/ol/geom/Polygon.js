@@ -1,23 +1,26 @@
-/**
- * @module ol/geom/Polygon
- */
-import {extend} from '../array.js';
-import {closestSquaredDistanceXY, getCenter, isEmpty} from '../extent.js';
-import {modulo} from '../math.js';
-import {offset as sphereOffset} from '../sphere.js';
+import { extend } from '../array.js';
+import { closestSquaredDistanceXY } from '../extent.js';
+import { getCenter } from '../extent.js';
+import { isEmpty } from '../extent.js';
+import { modulo } from '../math.js';
+import { offset as sphereOffset } from '../sphere.js';
+import { linearRings as linearRingsArea } from './flat/area.js';
+import { arrayMaxSquaredDelta } from './flat/closest.js';
+import { assignClosestArrayPoint } from './flat/closest.js';
+import { linearRingsContainsXY } from './flat/contains.js';
+import { deflateCoordinatesArray } from './flat/deflate.js';
+import { inflateCoordinatesArray } from './flat/inflate.js';
+import { getInteriorPointOfArray } from './flat/interiorpoint.js';
+import { intersectsLinearRingArray } from './flat/intersectsextent.js';
+import { linearRingsAreOriented } from './flat/orient.js';
+import { orientLinearRings } from './flat/orient.js';
+import { quantizeArray } from './flat/simplify.js';
 import LinearRing from './LinearRing.js';
 import Point from './Point.js';
 import SimpleGeometry from './SimpleGeometry.js';
-import {linearRings as linearRingsArea} from './flat/area.js';
-import {arrayMaxSquaredDelta, assignClosestArrayPoint} from './flat/closest.js';
-import {linearRingsContainsXY} from './flat/contains.js';
-import {deflateCoordinatesArray} from './flat/deflate.js';
-import {inflateCoordinatesArray} from './flat/inflate.js';
-import {getInteriorPointOfArray} from './flat/interiorpoint.js';
-import {intersectsLinearRingArray} from './flat/intersectsextent.js';
-import {linearRingsAreOriented, orientLinearRings} from './flat/orient.js';
-import {quantizeArray} from './flat/simplify.js';
-
+/**
+ * @module ol/geom/Polygon
+ */
 /**
  * @classdesc
  * Polygon geometry.

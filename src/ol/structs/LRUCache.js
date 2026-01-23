@@ -1,10 +1,8 @@
+import { assert } from '../asserts.js';
+import Disposable from '../Disposable.js';
 /**
  * @module ol/structs/LRUCache
  */
-
-import Disposable from '../Disposable.js';
-import {assert} from '../asserts.js';
-
 /**
  * @typedef {Object} Entry
  * @property {string} key_ Key.

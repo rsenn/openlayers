@@ -1,13 +1,13 @@
-import {apply} from 'ol-mapbox-style';
+import { getCenter } from '../src/ol/extent.js';
 import Feature from '../src/ol/Feature.js';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getCenter} from '../src/ol/extent.js';
 import Point from '../src/ol/geom/Point.js';
-import {fromExtent} from '../src/ol/geom/Polygon.js';
+import { fromExtent } from '../src/ol/geom/Polygon.js';
 import LayerGroup from '../src/ol/layer/Group.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import VectorSource from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
+import { apply } from 'ol-mapbox-style';
 
 const square = [-12e6, 3.5e6, -10e6, 5.5e6];
 const overlay = new VectorLayer({

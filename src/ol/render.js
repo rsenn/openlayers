@@ -1,17 +1,15 @@
+import { DEVICE_PIXEL_RATIO } from './has.js';
+import { getTransformFromProjections } from './proj.js';
+import { getUserProjection } from './proj.js';
+import CanvasImmediateRenderer from './render/canvas/Immediate.js';
+import { getSquaredTolerance } from './renderer/vector.js';
+import { apply as applyTransform } from './transform.js';
+import { create as createTransform } from './transform.js';
+import { multiply as multiplyTransform } from './transform.js';
+import { scale as scaleTransform } from './transform.js';
 /**
  * @module ol/render
  */
-import {DEVICE_PIXEL_RATIO} from './has.js';
-import {getTransformFromProjections, getUserProjection} from './proj.js';
-import CanvasImmediateRenderer from './render/canvas/Immediate.js';
-import {getSquaredTolerance} from './renderer/vector.js';
-import {
-  apply as applyTransform,
-  create as createTransform,
-  multiply as multiplyTransform,
-  scale as scaleTransform,
-} from './transform.js';
-
 /**
  * @typedef {Object} State
  * @property {CanvasRenderingContext2D} context Canvas context that the layer is being rendered to.

@@ -1,5 +1,7 @@
 import Projection from '../../../../../src/ol/proj/Projection.js';
-import {add, get, remove} from '../../../../../src/ol/proj/transforms.js';
+import { add } from '../../../../../src/ol/proj/transforms.js';
+import { get } from '../../../../../src/ol/proj/transforms.js';
+import { remove } from '../../../../../src/ol/proj/transforms.js';
 
 describe('ol/proj/transforms.js', function () {
   const extent = [180, -90, 180, 90];

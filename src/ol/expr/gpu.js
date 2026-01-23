@@ -1,24 +1,21 @@
+import { asArray } from '../color.js';
+import { Uniforms } from '../renderer/webgl/TileLayer.js';
+import { toSize } from '../size.js';
+import PaletteTexture from '../webgl/PaletteTexture.js';
+import { BooleanType } from './expression.js';
+import { CallExpression } from './expression.js';
+import { ColorType } from './expression.js';
+import { isType } from './expression.js';
+import { NumberArrayType } from './expression.js';
+import { NumberType } from './expression.js';
+import { Ops } from './expression.js';
+import { parse } from './expression.js';
+import { SizeType } from './expression.js';
+import { StringType } from './expression.js';
+import { typeName } from './expression.js';
 /**
  * @module ol/expr/gpu
  */
-import {asArray} from '../color.js';
-import {Uniforms} from '../renderer/webgl/TileLayer.js';
-import {toSize} from '../size.js';
-import PaletteTexture from '../webgl/PaletteTexture.js';
-import {
-  BooleanType,
-  CallExpression,
-  ColorType,
-  NumberArrayType,
-  NumberType,
-  Ops,
-  SizeType,
-  StringType,
-  isType,
-  parse,
-  typeName,
-} from './expression.js';
-
 /**
  * @param {string} operator Operator
  * @param {CompilationContext} context Compilation context
@@ -165,6 +162,7 @@ const GET_BAND_VALUE_FUNC = 'getBandValue';
 export const PALETTE_TEXTURE_ARRAY = 'u_paletteTextures';
 
 export const FEATURE_ID_PROPERTY_NAME = 'featureId';
+
 export const GEOMETRY_TYPE_PROPERTY_NAME = 'geometryType';
 
 /**

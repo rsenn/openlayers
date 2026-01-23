@@ -1,9 +1,8 @@
+import CanvasImageLayerRenderer from '../renderer/canvas/ImageLayer.js';
+import BaseImageLayer from './BaseImage.js';
 /**
  * @module ol/layer/Image
  */
-import CanvasImageLayerRenderer from '../renderer/canvas/ImageLayer.js';
-import BaseImageLayer from './BaseImage.js';
-
 /**
  * @classdesc
  * Server-rendered images that are available for arbitrary extents and

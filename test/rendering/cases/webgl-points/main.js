@@ -1,11 +1,11 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import KML from '../../../../src/ol/format/KML.js';
 import TileLayer from '../../../../src/ol/layer/Tile.js';
 import WebGLVectorLayer from '../../../../src/ol/layer/WebGLVector.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
-import {createDefaultStyle} from '../../../../src/ol/style/flat.js';
+import { createDefaultStyle } from '../../../../src/ol/style/flat.js';
+import View from '../../../../src/ol/View.js';
 
 const vector = new WebGLVectorLayer({
   source: new VectorSource({

@@ -1,16 +1,15 @@
+import Event from '../events/Event.js';
+import { scale as scaleSize } from '../size.js';
+import { toSize } from '../size.js';
+import { withinExtentAndZ } from '../tilecoord.js';
+import { getForProjection as getTileGridForProjection } from '../tilegrid.js';
+import { wrapX } from '../tilegrid.js';
+import { abstract } from '../util.js';
+import { getUid } from '../util.js';
+import Source from './Source.js';
 /**
  * @module ol/source/Tile
  */
-import Event from '../events/Event.js';
-import {scale as scaleSize, toSize} from '../size.js';
-import {withinExtentAndZ} from '../tilecoord.js';
-import {
-  getForProjection as getTileGridForProjection,
-  wrapX,
-} from '../tilegrid.js';
-import {abstract, getUid} from '../util.js';
-import Source from './Source.js';
-
 /***
  * @template Return
  * @typedef {import("../Observable").OnSignature<import("../Observable").EventTypes, import("../events/Event.js").default, Return> &

@@ -1,10 +1,9 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import MVT from '../../../../src/ol/format/MVT.js';
 import WebGLVectorTileLayer from '../../../../src/ol/layer/WebGLVectorTile.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorTileSource from '../../../../src/ol/source/VectorTile.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
-
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
+import View from '../../../../src/ol/View.js';
 // create patterns
 const canvasFill = document.createElement('canvas');
 canvasFill.width = 16;
@@ -18,6 +17,7 @@ context.fillStyle = 'rgb(255, 213, 0)';
 context.fillRect(8, 8, 8, 8);
 context.fillStyle = 'rgba(255,255,255,0.62)';
 context.fillRect(0, 8, 8, 8);
+
 const canvasStroke = document.createElement('canvas');
 canvasStroke.width = 8;
 canvasStroke.height = 2;

@@ -1,11 +1,10 @@
-import geojsonvt from 'geojson-vt';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
 import VectorTileLayer from '../src/ol/layer/VectorTile.js';
+import Map from '../src/ol/Map.js';
 import Projection from '../src/ol/proj/Projection.js';
 import VectorTileSource from '../src/ol/source/VectorTile.js';
-
+import View from '../src/ol/View.js';
+import geojsonvt from 'geojson-vt';
 // Converts geojson-vt data to GeoJSON
 const replacer = function (key, value) {
   if (!value || !value.geometry) {

@@ -1,18 +1,20 @@
+import { isSorted } from '../array.js';
+import { linearFindNearest } from '../array.js';
+import { assert } from '../asserts.js';
+import { createOrUpdate } from '../extent.js';
+import { getTopLeft } from '../extent.js';
+import { intersectsLinearRing } from '../geom/flat/intersectsextent.js';
+import { ceil } from '../math.js';
+import { clamp } from '../math.js';
+import { floor } from '../math.js';
+import { toSize } from '../size.js';
+import { createOrUpdate as createOrUpdateTileCoord } from '../tilecoord.js';
+import { createOrUpdate as createOrUpdateTileRange } from '../TileRange.js';
+import TileRange from '../TileRange.js';
+import { DEFAULT_TILE_SIZE } from './common.js';
 /**
  * @module ol/tilegrid/TileGrid
  */
-import TileRange, {
-  createOrUpdate as createOrUpdateTileRange,
-} from '../TileRange.js';
-import {isSorted, linearFindNearest} from '../array.js';
-import {assert} from '../asserts.js';
-import {createOrUpdate, getTopLeft} from '../extent.js';
-import {intersectsLinearRing} from '../geom/flat/intersectsextent.js';
-import {ceil, clamp, floor} from '../math.js';
-import {toSize} from '../size.js';
-import {createOrUpdate as createOrUpdateTileCoord} from '../tilecoord.js';
-import {DEFAULT_TILE_SIZE} from './common.js';
-
 /**
  * @private
  * @type {import("../tilecoord.js").TileCoord}

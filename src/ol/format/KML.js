@@ -1,10 +1,6 @@
-/**
- * @module ol/format/KML
- */
+import { extend } from '../array.js';
+import { asArray } from '../color.js';
 import Feature from '../Feature.js';
-import ImageState from '../ImageState.js';
-import {extend} from '../array.js';
-import {asArray} from '../color.js';
 import GeometryCollection from '../geom/GeometryCollection.js';
 import LineString from '../geom/LineString.js';
 import MultiLineString from '../geom/MultiLineString.js';
@@ -12,43 +8,42 @@ import MultiPoint from '../geom/MultiPoint.js';
 import MultiPolygon from '../geom/MultiPolygon.js';
 import Point from '../geom/Point.js';
 import Polygon from '../geom/Polygon.js';
-import {toRadians} from '../math.js';
-import {get as getProjection} from '../proj.js';
+import ImageState from '../ImageState.js';
+import { toRadians } from '../math.js';
+import { get as getProjection } from '../proj.js';
 import Fill from '../style/Fill.js';
 import Icon from '../style/Icon.js';
 import Stroke from '../style/Stroke.js';
 import Style from '../style/Style.js';
 import Text from '../style/Text.js';
-import {
-  OBJECT_PROPERTY_NODE_FACTORY,
-  XML_SCHEMA_INSTANCE_URI,
-  createElementNS,
-  getAllTextContent,
-  isDocument,
-  makeArrayExtender,
-  makeArrayPusher,
-  makeChildAppender,
-  makeObjectPropertySetter,
-  makeReplacer,
-  makeSequence,
-  makeSimpleNodeFactory,
-  makeStructureNS,
-  parse,
-  parseNode,
-  pushParseAndPop,
-  pushSerializeAndPop,
-} from '../xml.js';
-import {transformGeometryWithOptions} from './Feature.js';
+import { createElementNS } from '../xml.js';
+import { getAllTextContent } from '../xml.js';
+import { isDocument } from '../xml.js';
+import { makeArrayExtender } from '../xml.js';
+import { makeArrayPusher } from '../xml.js';
+import { makeChildAppender } from '../xml.js';
+import { makeObjectPropertySetter } from '../xml.js';
+import { makeReplacer } from '../xml.js';
+import { makeSequence } from '../xml.js';
+import { makeSimpleNodeFactory } from '../xml.js';
+import { makeStructureNS } from '../xml.js';
+import { OBJECT_PROPERTY_NODE_FACTORY } from '../xml.js';
+import { parse } from '../xml.js';
+import { parseNode } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import { pushSerializeAndPop } from '../xml.js';
+import { XML_SCHEMA_INSTANCE_URI } from '../xml.js';
+import { transformGeometryWithOptions } from './Feature.js';
 import XMLFeature from './XMLFeature.js';
-import {
-  readBoolean,
-  readDecimal,
-  readString,
-  writeBooleanTextNode,
-  writeDecimalTextNode,
-  writeStringTextNode,
-} from './xsd.js';
-
+import { readBoolean } from './xsd.js';
+import { readDecimal } from './xsd.js';
+import { readString } from './xsd.js';
+import { writeBooleanTextNode } from './xsd.js';
+import { writeDecimalTextNode } from './xsd.js';
+import { writeStringTextNode } from './xsd.js';
+/**
+ * @module ol/format/KML
+ */
 /**
  * @typedef {Object} Vec2
  * @property {number} x X coordinate.

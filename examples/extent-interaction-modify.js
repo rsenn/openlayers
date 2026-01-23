@@ -1,10 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {never} from '../src/ol/events/condition.js';
+import { never } from '../src/ol/events/condition.js';
 import ExtentInteraction from '../src/ol/interaction/Extent.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {transformExtent} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { transformExtent } from '../src/ol/proj.js';
 import OSM from '../src/ol/source/OSM.js';
+import View from '../src/ol/View.js';
 
 const map = new Map({
   layers: [

@@ -1,33 +1,28 @@
+import { error as logError } from '../console.js';
+import { applyTransform } from '../extent.js';
+import { getCenter } from '../extent.js';
+import { getIntersection } from '../extent.js';
+import { clamp } from '../math.js';
+import { createTransformFromCoordinateTransform } from '../proj.js';
+import { get as getCachedProjection } from '../proj.js';
+import { Projection } from '../proj.js';
+import { toUserCoordinate } from '../proj.js';
+import { toUserExtent } from '../proj.js';
+import { fromCode as unitsFromCode } from '../proj/Units.js';
+import TileGrid from '../tilegrid/TileGrid.js';
+import { apply as applyMatrix } from '../transform.js';
+import { create as createMatrix } from '../transform.js';
+import { makeInverse } from '../transform.js';
+import { multiply as multiplyTransform } from '../transform.js';
+import DataTile from './DataTile.js';
+import { fromBlob as tiffFromBlob } from 'geotiff';
+import { fromUrl as tiffFromUrl } from 'geotiff';
+import { fromUrls as tiffFromUrls } from 'geotiff';
+import { globals as geotiffGlobals } from 'geotiff';
+import { Pool } from 'geotiff';
 /**
  * @module ol/source/GeoTIFF
  */
-import {
-  Pool,
-  fromBlob as tiffFromBlob,
-  fromUrl as tiffFromUrl,
-  fromUrls as tiffFromUrls,
-  globals as geotiffGlobals,
-} from 'geotiff';
-import {error as logError} from '../console.js';
-import {applyTransform, getCenter, getIntersection} from '../extent.js';
-import {clamp} from '../math.js';
-import {fromCode as unitsFromCode} from '../proj/Units.js';
-import {
-  Projection,
-  createTransformFromCoordinateTransform,
-  get as getCachedProjection,
-  toUserCoordinate,
-  toUserExtent,
-} from '../proj.js';
-import TileGrid from '../tilegrid/TileGrid.js';
-import {
-  apply as applyMatrix,
-  create as createMatrix,
-  makeInverse,
-  multiply as multiplyTransform,
-} from '../transform.js';
-import DataTile from './DataTile.js';
-
 /**
  * Determine if an image type is a mask.
  * See https://www.awaresystems.be/imaging/tiff/tifftags/newsubfiletype.html
@@ -114,6 +109,7 @@ function readRGB(preference, image) {
  */
 
 const STATISTICS_MAXIMUM = 'STATISTICS_MAXIMUM';
+
 const STATISTICS_MINIMUM = 'STATISTICS_MINIMUM';
 
 const defaultTileSize = 256;

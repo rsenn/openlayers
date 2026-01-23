@@ -1,9 +1,9 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
+import { defaults as defaultControls } from '../src/ol/control/defaults.js';
 import ScaleLine from '../src/ol/control/ScaleLine.js';
-import {defaults as defaultControls} from '../src/ol/control/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import TileWMS from '../src/ol/source/TileWMS.js';
+import View from '../src/ol/View.js';
 
 const layers = [
   new TileLayer({

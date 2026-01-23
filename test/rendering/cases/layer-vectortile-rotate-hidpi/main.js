@@ -1,9 +1,9 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import MVT from '../../../../src/ol/format/MVT.js';
 import VectorTileLayer from '../../../../src/ol/layer/VectorTile.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorTileSource from '../../../../src/ol/source/VectorTile.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
+import View from '../../../../src/ol/View.js';
 
 const map = new Map({
   pixelRatio: 2,

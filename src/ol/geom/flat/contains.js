@@ -1,8 +1,7 @@
+import { forEachCorner } from '../../extent.js';
 /**
  * @module ol/geom/flat/contains
  */
-import {forEachCorner} from '../../extent.js';
-
 /**
  * @param {Array<number>} flatCoordinates Flat coordinates.
  * @param {number} offset Offset.

@@ -1,11 +1,11 @@
-import {spy as sinonSpy} from 'sinon';
 import ImageWrapper from '../../../../../src/ol/Image.js';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import Layer from '../../../../../src/ol/layer/Layer.js';
 import TileLayer from '../../../../../src/ol/layer/Tile.js';
+import Map from '../../../../../src/ol/Map.js';
 import LayerRenderer from '../../../../../src/ol/renderer/Layer.js';
 import XYZ from '../../../../../src/ol/source/XYZ.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/renderer/Layer', function () {
   let layer, renderer;

@@ -1,21 +1,19 @@
-import {
-  AnyType,
-  BooleanType,
-  CallExpression,
-  ColorType,
-  LiteralExpression,
-  NoneType,
-  NumberArrayType,
-  NumberType,
-  SizeType,
-  StringType,
-  computeGeometryType,
-  includesType,
-  isType,
-  newParsingContext,
-  parse,
-  typeName,
-} from '../../../../src/ol/expr/expression.js';
+import { AnyType } from '../../../../src/ol/expr/expression.js';
+import { BooleanType } from '../../../../src/ol/expr/expression.js';
+import { CallExpression } from '../../../../src/ol/expr/expression.js';
+import { ColorType } from '../../../../src/ol/expr/expression.js';
+import { computeGeometryType } from '../../../../src/ol/expr/expression.js';
+import { includesType } from '../../../../src/ol/expr/expression.js';
+import { isType } from '../../../../src/ol/expr/expression.js';
+import { LiteralExpression } from '../../../../src/ol/expr/expression.js';
+import { newParsingContext } from '../../../../src/ol/expr/expression.js';
+import { NoneType } from '../../../../src/ol/expr/expression.js';
+import { NumberArrayType } from '../../../../src/ol/expr/expression.js';
+import { NumberType } from '../../../../src/ol/expr/expression.js';
+import { parse } from '../../../../src/ol/expr/expression.js';
+import { SizeType } from '../../../../src/ol/expr/expression.js';
+import { StringType } from '../../../../src/ol/expr/expression.js';
+import { typeName } from '../../../../src/ol/expr/expression.js';
 import Circle from '../../../../src/ol/geom/Circle.js';
 import GeometryCollection from '../../../../src/ol/geom/GeometryCollection.js';
 import MultiLineString from '../../../../src/ol/geom/MultiLineString.js';

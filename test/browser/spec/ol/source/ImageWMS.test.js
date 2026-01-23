@@ -1,15 +1,14 @@
-import {spy as sinonSpy} from 'sinon';
+import { getForViewAndSize } from '../../../../../src/ol/extent.js';
+import { getHeight } from '../../../../../src/ol/extent.js';
+import { getWidth } from '../../../../../src/ol/extent.js';
 import ImageState from '../../../../../src/ol/ImageState.js';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
-import {
-  getForViewAndSize,
-  getHeight,
-  getWidth,
-} from '../../../../../src/ol/extent.js';
 import Image from '../../../../../src/ol/layer/Image.js';
-import {fromLonLat, get as getProjection} from '../../../../../src/ol/proj.js';
+import Map from '../../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../../src/ol/proj.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
 import ImageWMS from '../../../../../src/ol/source/ImageWMS.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/source/ImageWMS', function () {
   let extent, pixelRatio, options, optionsReproj, resolution, projection;

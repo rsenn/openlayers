@@ -1,11 +1,11 @@
+import RBush_ from '../../../../rbush.js';
+import { createOrUpdate } from '../extent.js';
+import { equals } from '../extent.js';
+import { isEmpty } from '../obj.js';
+import { getUid } from '../util.js';
 /**
  * @module ol/structs/RBush
  */
-import RBush_ from '../../../../rbush.js';
-import {createOrUpdate, equals} from '../extent.js';
-import {isEmpty} from '../obj.js';
-import {getUid} from '../util.js';
-
 /**
  * @typedef {import("rbush").BBox & {value: T}} Entry
  * @template T

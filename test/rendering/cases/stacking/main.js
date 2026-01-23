@@ -1,14 +1,12 @@
+import Control from '../../../../src/ol/control/Control.js';
+import Layer from '../../../../src/ol/layer/Layer.js';
+import Map from '../../../../src/ol/Map.js';
+import View from '../../../../src/ol/View.js';
 /**
  * Demonstrate stacking with z-index.  Layers and controls
  * can be ordered with z-index, but controls always appear
  * above layers.
  */
-
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
-import Control from '../../../../src/ol/control/Control.js';
-import Layer from '../../../../src/ol/layer/Layer.js';
-
 class Element extends Layer {
   constructor(options, style) {
     super(options);
@@ -31,6 +29,7 @@ class Element extends Layer {
 
 // elements for stacked controls
 const element1 = document.createElement('div');
+
 const style1 = element1.style;
 style1.position = 'absolute';
 style1.background = 'blue';
@@ -39,6 +38,7 @@ style1.height = '50%';
 style1.zIndex = '1';
 
 const element2 = document.createElement('div');
+
 const style2 = element2.style;
 style2.position = 'absolute';
 style2.background = 'orange';

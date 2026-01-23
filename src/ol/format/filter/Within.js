@@ -1,8 +1,7 @@
+import Spatial from './Spatial.js';
 /**
  * @module ol/format/filter/Within
  */
-import Spatial from './Spatial.js';
-
 /**
  * @classdesc
  * Represents a `<Within>` operator to test whether a geometry-valued property

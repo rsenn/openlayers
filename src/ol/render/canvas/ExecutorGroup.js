@@ -1,18 +1,17 @@
+import { ascending } from '../../array.js';
+import { descending } from '../../array.js';
+import { createCanvasContext2D } from '../../dom.js';
+import { buffer } from '../../extent.js';
+import { createEmpty } from '../../extent.js';
+import { extendCoordinate } from '../../extent.js';
+import { transform2D } from '../../geom/flat/transform.js';
+import { isEmpty } from '../../obj.js';
+import { compose as composeTransform } from '../../transform.js';
+import { create as createTransform } from '../../transform.js';
+import Executor from './Executor.js';
 /**
  * @module ol/render/canvas/ExecutorGroup
  */
-
-import {ascending, descending} from '../../array.js';
-import {createCanvasContext2D} from '../../dom.js';
-import {buffer, createEmpty, extendCoordinate} from '../../extent.js';
-import {transform2D} from '../../geom/flat/transform.js';
-import {isEmpty} from '../../obj.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../../transform.js';
-import Executor from './Executor.js';
-
 /**
  * @const
  * @type {Array<import("../canvas.js").BuilderType>}

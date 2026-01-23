@@ -1,13 +1,12 @@
-import proj4 from 'proj4';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import GeoJSON from '../src/ol/format/GeoJSON.js';
 import Graticule from '../src/ol/layer/Graticule.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
+import { register } from '../src/ol/proj/proj4.js';
 import Projection from '../src/ol/proj/Projection.js';
-import {register} from '../src/ol/proj/proj4.js';
 import VectorSource from '../src/ol/source/Vector.js';
-
+import View from '../src/ol/View.js';
+import proj4 from 'proj4';
 proj4.defs(
   'ESRI:53009',
   '+proj=moll +lon_0=0 +x_0=0 +y_0=0 +a=6371000 ' +

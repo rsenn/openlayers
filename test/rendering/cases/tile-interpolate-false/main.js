@@ -1,8 +1,8 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import TileLayer from '../../../../src/ol/layer/Tile.js';
+import Map from '../../../../src/ol/Map.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
+import View from '../../../../src/ol/View.js';
 
 const tileGrid = createXYZ();
 const extent = tileGrid.getTileCoordExtent([5, 5, 12]);

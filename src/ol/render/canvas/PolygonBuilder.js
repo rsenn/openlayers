@@ -1,20 +1,16 @@
+import { snap } from '../../geom/flat/simplify.js';
+import { defaultFillStyle } from '../canvas.js';
+import { defaultLineDash } from '../canvas.js';
+import { defaultLineDashOffset } from '../canvas.js';
+import CanvasBuilder from './Builder.js';
+import { beginPathInstruction } from './Instruction.js';
+import { closePathInstruction } from './Instruction.js';
+import { fillInstruction } from './Instruction.js';
+import { strokeInstruction } from './Instruction.js';
+import CanvasInstruction from './Instruction.js';
 /**
  * @module ol/render/canvas/PolygonBuilder
  */
-import {snap} from '../../geom/flat/simplify.js';
-import {
-  defaultFillStyle,
-  defaultLineDash,
-  defaultLineDashOffset,
-} from '../canvas.js';
-import CanvasBuilder from './Builder.js';
-import CanvasInstruction, {
-  beginPathInstruction,
-  closePathInstruction,
-  fillInstruction,
-  strokeInstruction,
-} from './Instruction.js';
-
 class CanvasPolygonBuilder extends CanvasBuilder {
   /**
    * @param {number} tolerance Tolerance.

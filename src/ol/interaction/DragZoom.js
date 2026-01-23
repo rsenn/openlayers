@@ -1,10 +1,9 @@
+import { easeOut } from '../easing.js';
+import { shiftKeyOnly } from '../events/condition.js';
+import DragBox from './DragBox.js';
 /**
  * @module ol/interaction/DragZoom
  */
-import {easeOut} from '../easing.js';
-import {shiftKeyOnly} from '../events/condition.js';
-import DragBox from './DragBox.js';
-
 /**
  * @typedef {Object} Options
  * @property {string} [className='ol-dragzoom'] CSS class name for styling the

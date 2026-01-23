@@ -1,23 +1,21 @@
-import {spy as sinonSpy} from 'sinon';
+import { buffer as bufferExtent } from '../../../../../../src/ol/extent.js';
+import { getCenter } from '../../../../../../src/ol/extent.js';
+import { getWidth } from '../../../../../../src/ol/extent.js';
 import Feature from '../../../../../../src/ol/Feature.js';
-import Map from '../../../../../../src/ol/Map.js';
-import View from '../../../../../../src/ol/View.js';
-import {
-  buffer as bufferExtent,
-  getCenter,
-  getWidth,
-} from '../../../../../../src/ol/extent.js';
 import GeoJSON from '../../../../../../src/ol/format/GeoJSON.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
 import VectorLayer from '../../../../../../src/ol/layer/Vector.js';
-import {bbox as bboxStrategy} from '../../../../../../src/ol/loadingstrategy.js';
-import {get as getProjection} from '../../../../../../src/ol/proj.js';
-import {checkedFonts} from '../../../../../../src/ol/render/canvas.js';
+import { bbox as bboxStrategy } from '../../../../../../src/ol/loadingstrategy.js';
+import Map from '../../../../../../src/ol/Map.js';
+import { get as getProjection } from '../../../../../../src/ol/proj.js';
+import { checkedFonts } from '../../../../../../src/ol/render/canvas.js';
 import CanvasVectorLayerRenderer from '../../../../../../src/ol/renderer/canvas/VectorLayer.js';
 import VectorSource from '../../../../../../src/ol/source/Vector.js';
 import Style from '../../../../../../src/ol/style/Style.js';
 import Text from '../../../../../../src/ol/style/Text.js';
-import {createFontStyle} from '../../../util.js';
+import View from '../../../../../../src/ol/View.js';
+import { createFontStyle } from '../../../util.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/renderer/canvas/VectorLayer', function () {
   describe('constructor', function () {

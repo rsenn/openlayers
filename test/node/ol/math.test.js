@@ -1,16 +1,14 @@
-import {
-  ceil,
-  clamp,
-  floor,
-  lerp,
-  modulo,
-  round,
-  solveLinearSystem,
-  toDegrees,
-  toFixed,
-  toRadians,
-  wrap,
-} from '../../../src/ol/math.js';
+import { ceil } from '../../../src/ol/math.js';
+import { clamp } from '../../../src/ol/math.js';
+import { floor } from '../../../src/ol/math.js';
+import { lerp } from '../../../src/ol/math.js';
+import { modulo } from '../../../src/ol/math.js';
+import { round } from '../../../src/ol/math.js';
+import { solveLinearSystem } from '../../../src/ol/math.js';
+import { toDegrees } from '../../../src/ol/math.js';
+import { toFixed } from '../../../src/ol/math.js';
+import { toRadians } from '../../../src/ol/math.js';
+import { wrap } from '../../../src/ol/math.js';
 import expect from '../expect.js';
 
 describe('ol/math.js', () => {

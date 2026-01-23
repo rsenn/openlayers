@@ -1,9 +1,10 @@
-import {spawn} from 'child_process';
-import path, {dirname} from 'path';
-import {fileURLToPath} from 'url';
-import esMain from 'es-main';
+import { spawn } from 'child_process';
 import fse from 'fs-extra';
-import {walk} from 'walk';
+import { dirname } from 'path';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import esMain from 'es-main';
+import { walk } from 'walk';
 
 const isWindows = process.platform.startsWith('win');
 const baseDir = dirname(fileURLToPath(import.meta.url));

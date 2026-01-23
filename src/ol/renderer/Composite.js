@@ -1,17 +1,17 @@
+import { CLASS_UNSELECTABLE } from '../css.js';
+import { replaceChildren } from '../dom.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import BaseVectorLayer from '../layer/BaseVector.js';
+import { inView } from '../layer/Layer.js';
+import ObjectEventType from '../ObjectEventType.js';
+import { checkedFonts } from '../render/canvas.js';
+import RenderEvent from '../render/Event.js';
+import RenderEventType from '../render/EventType.js';
+import MapRenderer from './Map.js';
 /**
  * @module ol/renderer/Composite
  */
-import ObjectEventType from '../ObjectEventType.js';
-import {CLASS_UNSELECTABLE} from '../css.js';
-import {replaceChildren} from '../dom.js';
-import {listen, unlistenByKey} from '../events.js';
-import BaseVectorLayer from '../layer/BaseVector.js';
-import {inView} from '../layer/Layer.js';
-import RenderEvent from '../render/Event.js';
-import RenderEventType from '../render/EventType.js';
-import {checkedFonts} from '../render/canvas.js';
-import MapRenderer from './Map.js';
-
 /**
  * @classdesc
  * Canvas map renderer.

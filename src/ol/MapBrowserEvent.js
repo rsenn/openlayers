@@ -1,8 +1,7 @@
+import MapEvent from './MapEvent.js';
 /**
  * @module ol/MapBrowserEvent
  */
-import MapEvent from './MapEvent.js';
-
 /**
  * @classdesc
  * Events emitted as map browser events are instances of this type.

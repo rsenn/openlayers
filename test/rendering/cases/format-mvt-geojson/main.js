@@ -1,11 +1,11 @@
 import Feature from '../../../../src/ol/Feature.js';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import GeoJSON from '../../../../src/ol/format/GeoJSON.js';
 import MVT from '../../../../src/ol/format/MVT.js';
 import VectorTileLayer from '../../../../src/ol/layer/VectorTile.js';
-import {fromLonLat} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { fromLonLat } from '../../../../src/ol/proj.js';
 import VectorTileSource from '../../../../src/ol/source/VectorTile.js';
+import View from '../../../../src/ol/View.js';
 
 const center = fromLonLat([0.26, 24.08]);
 

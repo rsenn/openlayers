@@ -1,8 +1,8 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import IIIFInfo from '../src/ol/format/IIIFInfo.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import IIIF from '../src/ol/source/IIIF.js';
+import View from '../src/ol/View.js';
 
 const layer = new TileLayer(),
   map = new Map({

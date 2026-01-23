@@ -1,9 +1,9 @@
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import TileLayer from '../../../../../src/ol/layer/Tile.js';
+import Map from '../../../../../src/ol/Map.js';
 import OSM from '../../../../../src/ol/source/OSM.js';
 import TileWMS from '../../../../../src/ol/source/TileWMS.js';
 import XYZ from '../../../../../src/ol/source/XYZ.js';
+import View from '../../../../../src/ol/View.js';
 
 describe('ol/layer/Tile', function () {
   describe('constructor (defaults)', function () {

@@ -1,15 +1,12 @@
-import {spy as sinonSpy} from 'sinon';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import EventTarget from '../../../../../src/ol/events/Target.js';
-import {FALSE} from '../../../../../src/ol/functions.js';
-import Interaction, {
-  zoomByDelta,
-} from '../../../../../src/ol/interaction/Interaction.js';
-import {
-  clearUserProjection,
-  useGeographic,
-} from '../../../../../src/ol/proj.js';
+import { FALSE } from '../../../../../src/ol/functions.js';
+import { zoomByDelta } from '../../../../../src/ol/interaction/Interaction.js';
+import Interaction from '../../../../../src/ol/interaction/Interaction.js';
+import Map from '../../../../../src/ol/Map.js';
+import { clearUserProjection } from '../../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../../src/ol/proj.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.interaction.Interaction', function () {
   describe('constructor', function () {

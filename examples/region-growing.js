@@ -1,11 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ImageLayer from '../src/ol/layer/Image.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {fromLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
 import ImageTile from '../src/ol/source/ImageTile.js';
 import RasterSource from '../src/ol/source/Raster.js';
-
+import View from '../src/ol/View.js';
 function growRegion(inputs, data) {
   const image = inputs[0];
   let seed = data.pixel;
@@ -77,6 +76,7 @@ function next4Edges(edge) {
 }
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
+
 const attributions =
   '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> ' +
   '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';

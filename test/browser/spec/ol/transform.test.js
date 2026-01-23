@@ -1,20 +1,18 @@
-import {
-  apply,
-  compose,
-  create,
-  equivalent,
-  invert,
-  makeInverse,
-  makeScale,
-  multiply,
-  reset,
-  rotate,
-  scale,
-  set,
-  setFromArray,
-  toString,
-  translate,
-} from '../../../../src/ol/transform.js';
+import { apply } from '../../../../src/ol/transform.js';
+import { compose } from '../../../../src/ol/transform.js';
+import { create } from '../../../../src/ol/transform.js';
+import { equivalent } from '../../../../src/ol/transform.js';
+import { invert } from '../../../../src/ol/transform.js';
+import { makeInverse } from '../../../../src/ol/transform.js';
+import { makeScale } from '../../../../src/ol/transform.js';
+import { multiply } from '../../../../src/ol/transform.js';
+import { reset } from '../../../../src/ol/transform.js';
+import { rotate } from '../../../../src/ol/transform.js';
+import { scale } from '../../../../src/ol/transform.js';
+import { set } from '../../../../src/ol/transform.js';
+import { setFromArray } from '../../../../src/ol/transform.js';
+import { toString } from '../../../../src/ol/transform.js';
+import { translate } from '../../../../src/ol/transform.js';
 
 describe('ol.transform', function () {
   function assertRoughlyEqual(t1, t2) {

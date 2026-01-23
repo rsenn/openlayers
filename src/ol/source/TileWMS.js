@@ -1,17 +1,19 @@
+import { buffer } from '../extent.js';
+import { createEmpty } from '../extent.js';
+import { modulo } from '../math.js';
+import { get as getProjection } from '../proj.js';
+import { transform } from '../proj.js';
+import { calculateSourceResolution } from '../reproj.js';
+import { compareVersions } from '../string.js';
+import { hash as tileCoordHash } from '../tilecoord.js';
+import { appendParams } from '../uri.js';
+import TileImage from './TileImage.js';
+import { DEFAULT_VERSION } from './wms.js';
+import { getImageSrc } from './wms.js';
+import { getRequestParams } from './wms.js';
 /**
  * @module ol/source/TileWMS
  */
-
-import {buffer, createEmpty} from '../extent.js';
-import {modulo} from '../math.js';
-import {get as getProjection, transform} from '../proj.js';
-import {calculateSourceResolution} from '../reproj.js';
-import {compareVersions} from '../string.js';
-import {hash as tileCoordHash} from '../tilecoord.js';
-import {appendParams} from '../uri.js';
-import TileImage from './TileImage.js';
-import {DEFAULT_VERSION, getImageSrc, getRequestParams} from './wms.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("./Source.js").AttributionLike} [attributions] Attributions.

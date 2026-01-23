@@ -1,8 +1,9 @@
-import {dirname, join} from 'path';
-import process from 'process';
-import {fileURLToPath} from 'url';
-import esMain from 'es-main';
 import fse from 'fs-extra';
+import { dirname } from 'path';
+import { join } from 'path';
+import { fileURLToPath } from 'url';
+import esMain from 'es-main';
+import process from 'process';
 import semver from 'semver';
 
 const baseDir = dirname(fileURLToPath(import.meta.url));

@@ -1,15 +1,14 @@
 import Feature from '../src/ol/Feature.js';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import Point from '../src/ol/geom/Point.js';
 import Select from '../src/ol/interaction/Select.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
 import VectorSource from '../src/ol/source/Vector.js';
 import Icon from '../src/ol/style/Icon.js';
 import Style from '../src/ol/style/Style.js';
-
+import View from '../src/ol/View.js';
 function createStyle(src, img) {
   return new Style({
     image: new Icon({
@@ -44,6 +43,7 @@ const map = new Map({
 });
 
 const selectStyle = {};
+
 const select = new Select({
   style: function (feature) {
     const image = feature.get('style').getImage().getImage();

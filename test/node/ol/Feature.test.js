@@ -1,9 +1,10 @@
-import {spy as sinonSpy} from 'sinon';
-import Feature, {createStyleFunction} from '../../../src/ol/Feature.js';
+import { createStyleFunction } from '../../../src/ol/Feature.js';
+import Feature from '../../../src/ol/Feature.js';
 import Point from '../../../src/ol/geom/Point.js';
-import {isEmpty} from '../../../src/ol/obj.js';
+import { isEmpty } from '../../../src/ol/obj.js';
 import Style from '../../../src/ol/style/Style.js';
 import expect from '../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/Feature.js', function () {
   describe('constructor', function () {

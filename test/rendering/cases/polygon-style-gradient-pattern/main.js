@@ -1,16 +1,17 @@
 import Feature from '../../../../src/ol/Feature.js';
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import Polygon from '../../../../src/ol/geom/Polygon.js';
 import VectorLayer from '../../../../src/ol/layer/Vector.js';
+import Map from '../../../../src/ol/Map.js';
 import VectorSource from '../../../../src/ol/source/Vector.js';
 import Fill from '../../../../src/ol/style/Fill.js';
 import Stroke from '../../../../src/ol/style/Stroke.js';
 import Style from '../../../../src/ol/style/Style.js';
-
+import View from '../../../../src/ol/View.js';
 // create gradient
 const canvas = document.createElement('canvas');
+
 const context = canvas.getContext('2d');
+
 const gradient = context.createLinearGradient(0, 0, 30, 0);
 gradient.addColorStop(0, 'red');
 gradient.addColorStop(1 / 6, 'orange');
@@ -31,6 +32,7 @@ context.fillStyle = 'rgb(55, 0, 170)';
 context.beginPath();
 context.arc(5, 5, 2, 0, 2 * Math.PI);
 context.fill();
+
 const pattern = context.createPattern(canvas, 'repeat');
 
 const vectorSource = new VectorSource();

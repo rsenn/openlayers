@@ -1,4 +1,5 @@
-import {clear, isEmpty} from '../../../src/ol/obj.js';
+import { clear } from '../../../src/ol/obj.js';
+import { isEmpty } from '../../../src/ol/obj.js';
 import expect from '../expect.js';
 
 describe('ol/obj.js', () => {

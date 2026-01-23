@@ -1,22 +1,18 @@
-import {
-  AnyType,
-  BooleanType,
-  ColorType,
-  NumberArrayType,
-  NumberType,
-  SizeType,
-  StringType,
-  newParsingContext,
-} from '../../../../src/ol/expr/expression.js';
-import {
-  arrayToGlsl,
-  buildExpression,
-  colorToGlsl,
-  getStringNumberEquivalent,
-  newCompilationContext,
-  numberToGlsl,
-  stringToGlsl,
-} from '../../../../src/ol/expr/gpu.js';
+import { AnyType } from '../../../../src/ol/expr/expression.js';
+import { BooleanType } from '../../../../src/ol/expr/expression.js';
+import { ColorType } from '../../../../src/ol/expr/expression.js';
+import { newParsingContext } from '../../../../src/ol/expr/expression.js';
+import { NumberArrayType } from '../../../../src/ol/expr/expression.js';
+import { NumberType } from '../../../../src/ol/expr/expression.js';
+import { SizeType } from '../../../../src/ol/expr/expression.js';
+import { StringType } from '../../../../src/ol/expr/expression.js';
+import { arrayToGlsl } from '../../../../src/ol/expr/gpu.js';
+import { buildExpression } from '../../../../src/ol/expr/gpu.js';
+import { colorToGlsl } from '../../../../src/ol/expr/gpu.js';
+import { getStringNumberEquivalent } from '../../../../src/ol/expr/gpu.js';
+import { newCompilationContext } from '../../../../src/ol/expr/gpu.js';
+import { numberToGlsl } from '../../../../src/ol/expr/gpu.js';
+import { stringToGlsl } from '../../../../src/ol/expr/gpu.js';
 import expect from '../../expect.js';
 
 describe('ol/expr/gpu.js', () => {

@@ -1,8 +1,7 @@
+import Event from './events/Event.js';
 /**
  * @module ol/MapEvent
  */
-import Event from './events/Event.js';
-
 /**
  * @classdesc
  * Events emitted as map events are instances of this type.

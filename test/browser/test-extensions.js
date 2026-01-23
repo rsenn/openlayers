@@ -1,8 +1,7 @@
+import { setLevel as setLogLevel } from '../../src/ol/console.js';
+import { defaults as defaultInteractions } from '../../src/ol/interaction/defaults.js';
 import Map from '../../src/ol/Map.js';
 import View from '../../src/ol/View.js';
-import {setLevel as setLogLevel} from '../../src/ol/console.js';
-import {defaults as defaultInteractions} from '../../src/ol/interaction/defaults.js';
-
 setLogLevel('error');
 
 (function (global) {

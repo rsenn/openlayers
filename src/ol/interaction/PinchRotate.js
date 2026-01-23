@@ -1,12 +1,10 @@
+import { FALSE } from '../functions.js';
+import { disable } from '../rotationconstraint.js';
+import { centroid as centroidFromPointers } from './Pointer.js';
+import PointerInteraction from './Pointer.js';
 /**
  * @module ol/interaction/PinchRotate
  */
-import {FALSE} from '../functions.js';
-import {disable} from '../rotationconstraint.js';
-import PointerInteraction, {
-  centroid as centroidFromPointers,
-} from './Pointer.js';
-
 /**
  * @typedef {Object} Options
  * @property {number} [duration=250] The duration of the animation in

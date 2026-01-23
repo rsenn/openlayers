@@ -1,9 +1,8 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import LayerGroup from '../../../../src/ol/layer/Group.js';
 import TileLayer from '../../../../src/ol/layer/Tile.js';
+import Map from '../../../../src/ol/Map.js';
 import XYZ from '../../../../src/ol/source/XYZ.js';
-
+import View from '../../../../src/ol/View.js';
 new Map({
   target: 'map',
   view: new View({

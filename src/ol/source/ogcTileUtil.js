@@ -1,13 +1,12 @@
+import { error as logError } from '../console.js';
+import { getIntersection as intersectExtents } from '../extent.js';
+import { getJSON } from '../net.js';
+import { resolveUrl } from '../net.js';
+import { get as getProjection } from '../proj.js';
+import TileGrid from '../tilegrid/TileGrid.js';
 /**
  * @module ol/source/ogcTileUtil
  */
-
-import {error as logError} from '../console.js';
-import {getIntersection as intersectExtents} from '../extent.js';
-import {getJSON, resolveUrl} from '../net.js';
-import {get as getProjection} from '../proj.js';
-import TileGrid from '../tilegrid/TileGrid.js';
-
 /**
  * See https://ogcapi.ogc.org/tiles/.
  */

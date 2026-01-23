@@ -1,12 +1,13 @@
+import { colorToGlsl } from '../../expr/gpu.js';
+import { numberToGlsl } from '../../expr/gpu.js';
+import { stringToGlsl } from '../../expr/gpu.js';
+import { createDefaultStyle } from '../../style/flat.js';
+import { LINESTRING_ANGLE_COSINE_CUTOFF } from './bufferUtil.js';
+import { UNPACK_COLOR_FN } from './compileUtil.js';
 /**
  * Class for generating shaders from literal style objects
  * @module ol/render/webgl/ShaderBuilder
  */
-import {colorToGlsl, numberToGlsl, stringToGlsl} from '../../expr/gpu.js';
-import {createDefaultStyle} from '../../style/flat.js';
-import {LINESTRING_ANGLE_COSINE_CUTOFF} from './bufferUtil.js';
-import {UNPACK_COLOR_FN} from './compileUtil.js';
-
 export const COMMON_HEADER = `#ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
@@ -27,6 +28,7 @@ uniform float u_depth;
 uniform mediump int u_hitDetection;
 
 const float PI = 3.141592653589793238;
+
 const float TWO_PI = 2.0 * PI;
 float currentLineMetric = 0.; // an actual value will be used in the stroke shaders
 

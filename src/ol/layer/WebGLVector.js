@@ -1,9 +1,8 @@
+import WebGLVectorLayerRenderer from '../renderer/webgl/VectorLayer.js';
+import Layer from './Layer.js';
 /**
  * @module ol/layer/WebGLVector
  */
-import WebGLVectorLayerRenderer from '../renderer/webgl/VectorLayer.js';
-import Layer from './Layer.js';
-
 /***
  * @template T
  * @typedef {T extends import("../source/Vector.js").default<infer U extends import("../Feature.js").FeatureLike> ? U : never} ExtractedFeatureType

@@ -1,5 +1,4 @@
 import WMSGetFeatureInfo from '../src/ol/format/WMSGetFeatureInfo.js';
-
 fetch('data/wmsgetfeatureinfo/osm-restaurant-hotel.xml')
   .then(function (response) {
     return response.text();

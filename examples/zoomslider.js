@@ -1,9 +1,8 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ZoomSlider from '../src/ol/control/ZoomSlider.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
-
+import View from '../src/ol/View.js';
 /**
  * Helper method for map-creation.
  *
@@ -29,5 +28,7 @@ function createMap(divId) {
 }
 
 const map1 = createMap('map1');
+
 const map2 = createMap('map2');
+
 const map3 = createMap('map3');

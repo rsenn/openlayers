@@ -1,24 +1,19 @@
+import { containsCoordinate } from '../../extent.js';
+import { containsExtent } from '../../extent.js';
+import { getHeight } from '../../extent.js';
+import { getIntersection } from '../../extent.js';
+import { getWidth } from '../../extent.js';
+import { intersects as intersectsExtent } from '../../extent.js';
+import { isEmpty } from '../../extent.js';
+import ImageState from '../../ImageState.js';
+import { fromUserExtent } from '../../proj.js';
+import { apply as applyTransform } from '../../transform.js';
+import { compose as composeTransform } from '../../transform.js';
+import ViewHint from '../../ViewHint.js';
+import CanvasLayerRenderer from './Layer.js';
 /**
  * @module ol/renderer/canvas/ImageLayer
  */
-import ImageState from '../../ImageState.js';
-import ViewHint from '../../ViewHint.js';
-import {
-  containsCoordinate,
-  containsExtent,
-  getHeight,
-  getIntersection,
-  getWidth,
-  intersects as intersectsExtent,
-  isEmpty,
-} from '../../extent.js';
-import {fromUserExtent} from '../../proj.js';
-import {
-  apply as applyTransform,
-  compose as composeTransform,
-} from '../../transform.js';
-import CanvasLayerRenderer from './Layer.js';
-
 /**
  * @classdesc
  * Canvas renderer for image layers.

@@ -1,6 +1,6 @@
-import TileState from '../../../../../src/ol/TileState.js';
-import {get} from '../../../../../src/ol/proj.js';
+import { get } from '../../../../../src/ol/proj.js';
 import GeoTIFFSource from '../../../../../src/ol/source/GeoTIFF.js';
+import TileState from '../../../../../src/ol/TileState.js';
 
 describe('ol/source/GeoTIFF', function () {
   describe('constructor', function () {

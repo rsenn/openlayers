@@ -1,12 +1,12 @@
+import { fontWeights } from '../css.js';
+import { getFontParameters } from '../css.js';
+import { createCanvasContext2D } from '../dom.js';
+import { WORKER_OFFSCREEN_CANVAS } from '../has.js';
+import { clear } from '../obj.js';
+import BaseObject from '../Object.js';
 /**
  * @module ol/render/canvas
  */
-import BaseObject from '../Object.js';
-import {fontWeights, getFontParameters} from '../css.js';
-import {createCanvasContext2D} from '../dom.js';
-import {WORKER_OFFSCREEN_CANVAS} from '../has.js';
-import {clear} from '../obj.js';
-
 /**
  * @typedef {'Circle' | 'Image' | 'LineString' | 'Polygon' | 'Text' | 'Default'} BuilderType
  */

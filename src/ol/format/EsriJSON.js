@@ -1,22 +1,21 @@
-/**
- * @module ol/format/EsriJSON
- */
+import { containsExtent } from '../extent.js';
 import Feature from '../Feature.js';
-import {containsExtent} from '../extent.js';
-import LineString from '../geom/LineString.js';
+import { deflateCoordinates } from '../geom/flat/deflate.js';
+import { linearRingIsClockwise } from '../geom/flat/orient.js';
 import LinearRing from '../geom/LinearRing.js';
+import LineString from '../geom/LineString.js';
 import MultiLineString from '../geom/MultiLineString.js';
 import MultiPoint from '../geom/MultiPoint.js';
 import MultiPolygon from '../geom/MultiPolygon.js';
 import Point from '../geom/Point.js';
 import Polygon from '../geom/Polygon.js';
-import {deflateCoordinates} from '../geom/flat/deflate.js';
-import {linearRingIsClockwise} from '../geom/flat/orient.js';
-import {isEmpty} from '../obj.js';
-import {get as getProjection} from '../proj.js';
-import {transformGeometryWithOptions} from './Feature.js';
+import { isEmpty } from '../obj.js';
+import { get as getProjection } from '../proj.js';
+import { transformGeometryWithOptions } from './Feature.js';
 import JSONFeature from './JSONFeature.js';
-
+/**
+ * @module ol/format/EsriJSON
+ */
 /**
  * @typedef {import("arcgis-rest-api").Feature} EsriJSONFeature
  * @typedef {import("arcgis-rest-api").FeatureSet} EsriJSONFeatureSet

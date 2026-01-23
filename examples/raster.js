@@ -1,16 +1,18 @@
-import 'd3-transition';
-import {max} from 'd3-array';
-import {scaleLinear} from 'd3-scale';
-import {select} from 'd3-selection';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import ImageLayer from '../src/ol/layer/Image.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import ImageTile from '../src/ol/source/ImageTile.js';
 import RasterSource from '../src/ol/source/Raster.js';
+import View from '../src/ol/View.js';
+import { max } from 'd3-array';
+import { scaleLinear } from 'd3-scale';
+import { select } from 'd3-selection';
+import 'd3-transition';
 
 const minVgi = 0;
+
 const maxVgi = 0.5;
+
 const bins = 10;
 
 /**
@@ -50,6 +52,7 @@ function summarize(value, counts) {
  */
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
+
 const attributions =
   '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> ' +
   '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';

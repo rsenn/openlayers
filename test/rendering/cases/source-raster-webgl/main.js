@@ -1,9 +1,9 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import ImageLayer from '../../../../src/ol/layer/Image.js';
 import TileLayer from '../../../../src/ol/layer/WebGLTile.js';
+import Map from '../../../../src/ol/Map.js';
 import DataTile from '../../../../src/ol/source/DataTile.js';
 import RasterSource from '../../../../src/ol/source/Raster.js';
+import View from '../../../../src/ol/View.js';
 
 const size = 256;
 

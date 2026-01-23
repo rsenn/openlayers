@@ -1,15 +1,12 @@
+import { assert } from '../asserts.js';
+import { ARRAY_BUFFER } from '../webgl.js';
+import { DYNAMIC_DRAW } from '../webgl.js';
+import { ELEMENT_ARRAY_BUFFER } from '../webgl.js';
+import { STATIC_DRAW } from '../webgl.js';
+import { STREAM_DRAW } from '../webgl.js';
 /**
  * @module ol/webgl/Buffer
  */
-import {assert} from '../asserts.js';
-import {
-  ARRAY_BUFFER,
-  DYNAMIC_DRAW,
-  ELEMENT_ARRAY_BUFFER,
-  STATIC_DRAW,
-  STREAM_DRAW,
-} from '../webgl.js';
-
 /**
  * Used to describe the intended usage for the data: `STATIC_DRAW`, `STREAM_DRAW`
  * or `DYNAMIC_DRAW`.

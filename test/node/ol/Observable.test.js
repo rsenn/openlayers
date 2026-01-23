@@ -1,7 +1,8 @@
-import {spy as sinonSpy} from 'sinon';
-import Observable, {unByKey} from '../../../src/ol/Observable.js';
 import EventTarget from '../../../src/ol/events/Target.js';
+import { unByKey } from '../../../src/ol/Observable.js';
+import Observable from '../../../src/ol/Observable.js';
 import expect from '../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/Observable.js', function () {
   describe('constructor', function () {

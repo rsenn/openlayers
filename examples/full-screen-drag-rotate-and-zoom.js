@@ -1,11 +1,11 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
+import { defaults as defaultControls } from '../src/ol/control/defaults.js';
 import FullScreen from '../src/ol/control/FullScreen.js';
-import {defaults as defaultControls} from '../src/ol/control/defaults.js';
+import { defaults as defaultInteractions } from '../src/ol/interaction/defaults.js';
 import DragRotateAndZoom from '../src/ol/interaction/DragRotateAndZoom.js';
-import {defaults as defaultInteractions} from '../src/ol/interaction/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import ImageTile from '../src/ol/source/ImageTile.js';
+import View from '../src/ol/View.js';
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
 const attributions =

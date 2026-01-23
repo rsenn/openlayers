@@ -1,12 +1,11 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import ImageLayer from '../../../../src/ol/layer/Image.js';
-import {
-  get as getProjection,
-  transform,
-  transformExtent,
-} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { get as getProjection } from '../../../../src/ol/proj.js';
+import { transform } from '../../../../src/ol/proj.js';
+import { transformExtent } from '../../../../src/ol/proj.js';
 import Static from '../../../../src/ol/source/ImageStatic.js';
+import View from '../../../../src/ol/View.js';
+
 const center = transform([-122.416667, 37.783333], 'EPSG:4326', 'EPSG:3857');
 
 new Map({

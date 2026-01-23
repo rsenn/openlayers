@@ -1,8 +1,8 @@
+import { createEmpty } from '../../extent.js';
+import { createOrUpdateFromFlatCoordinates } from '../../extent.js';
 /**
  * @module ol/geom/flat/center
  */
-import {createEmpty, createOrUpdateFromFlatCoordinates} from '../../extent.js';
-
 /**
  * @param {Array<number>} flatCoordinates Flat coordinates.
  * @param {number} offset Offset.

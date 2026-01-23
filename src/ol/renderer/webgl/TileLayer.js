@@ -1,25 +1,22 @@
+import { boundingExtent } from '../../extent.js';
+import { containsCoordinate } from '../../extent.js';
+import { getIntersection } from '../../extent.js';
+import { fromUserExtent } from '../../proj.js';
+import { toSize } from '../../size.js';
+import TileState from '../../TileState.js';
+import { apply as applyTransform } from '../../transform.js';
+import { fromTransform as mat4FromTransform } from '../../vec/mat4.js';
+import { ELEMENT_ARRAY_BUFFER } from '../../webgl.js';
+import { STATIC_DRAW } from '../../webgl.js';
+import WebGLArrayBuffer from '../../webgl/Buffer.js';
+import { AttributeType } from '../../webgl/Helper.js';
+import TileTexture from '../../webgl/TileTexture.js';
+import { getCacheKey } from './TileLayerBase.js';
+import { Uniforms as BaseUniforms } from './TileLayerBase.js';
+import WebGLBaseTileLayerRenderer from './TileLayerBase.js';
 /**
  * @module ol/renderer/webgl/TileLayer
  */
-import TileState from '../../TileState.js';
-import {
-  boundingExtent,
-  containsCoordinate,
-  getIntersection,
-} from '../../extent.js';
-import {fromUserExtent} from '../../proj.js';
-import {toSize} from '../../size.js';
-import {apply as applyTransform} from '../../transform.js';
-import {fromTransform as mat4FromTransform} from '../../vec/mat4.js';
-import WebGLArrayBuffer from '../../webgl/Buffer.js';
-import {AttributeType} from '../../webgl/Helper.js';
-import TileTexture from '../../webgl/TileTexture.js';
-import {ELEMENT_ARRAY_BUFFER, STATIC_DRAW} from '../../webgl.js';
-import WebGLBaseTileLayerRenderer, {
-  Uniforms as BaseUniforms,
-  getCacheKey,
-} from './TileLayerBase.js';
-
 export const Uniforms = {
   ...BaseUniforms,
   TILE_TEXTURE_ARRAY: 'u_tileTextures',

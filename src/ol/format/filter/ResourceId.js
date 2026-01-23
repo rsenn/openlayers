@@ -1,8 +1,7 @@
+import Filter from './Filter.js';
 /**
  * @module ol/format/filter/ResourceId
  */
-import Filter from './Filter.js';
-
 /**
  * @classdesc
  *

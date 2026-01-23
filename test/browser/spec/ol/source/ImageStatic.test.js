@@ -1,11 +1,9 @@
-import {spy as sinonSpy} from 'sinon';
-import {
-  getBottomLeft,
-  getHeight,
-  getWidth,
-} from '../../../../../src/ol/extent.js';
-import {get as getProjection} from '../../../../../src/ol/proj.js';
+import { getBottomLeft } from '../../../../../src/ol/extent.js';
+import { getHeight } from '../../../../../src/ol/extent.js';
+import { getWidth } from '../../../../../src/ol/extent.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
 import Static from '../../../../../src/ol/source/ImageStatic.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/source/ImageStatic', function () {
   let extent, pixelRatio, projection, resolution;

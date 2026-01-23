@@ -1,9 +1,8 @@
+import { assert } from '../asserts.js';
+import { clear } from '../obj.js';
 /**
  * @module ol/structs/PriorityQueue
  */
-import {assert} from '../asserts.js';
-import {clear} from '../obj.js';
-
 /**
  * @type {number}
  */

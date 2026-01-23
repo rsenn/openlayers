@@ -1,22 +1,16 @@
+import { rotate as rotateCoordinate } from '../coordinate.js';
+import { scale as scaleCoordinate } from '../coordinate.js';
+import { easeOut } from '../easing.js';
+import { all } from '../events/condition.js';
+import { focusWithTabindex } from '../events/condition.js';
+import { noModifierKeys } from '../events/condition.js';
+import { primaryAction } from '../events/condition.js';
+import { FALSE } from '../functions.js';
+import { centroid as centroidFromPointers } from './Pointer.js';
+import PointerInteraction from './Pointer.js';
 /**
  * @module ol/interaction/DragPan
  */
-import {
-  rotate as rotateCoordinate,
-  scale as scaleCoordinate,
-} from '../coordinate.js';
-import {easeOut} from '../easing.js';
-import {
-  all,
-  focusWithTabindex,
-  noModifierKeys,
-  primaryAction,
-} from '../events/condition.js';
-import {FALSE} from '../functions.js';
-import PointerInteraction, {
-  centroid as centroidFromPointers,
-} from './Pointer.js';
-
 /**
  * @typedef {Object} Options
  * @property {import("../events/condition.js").Condition} [condition] A function that takes a {@link module:ol/MapBrowserEvent~MapBrowserEvent} and returns a boolean

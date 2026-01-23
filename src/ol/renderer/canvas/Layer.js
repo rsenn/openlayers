@@ -1,30 +1,25 @@
+import { equals } from '../../array.js';
+import { asArray } from '../../color.js';
+import { createCanvasContext2D } from '../../dom.js';
+import { getBottomLeft } from '../../extent.js';
+import { getBottomRight } from '../../extent.js';
+import { getHeight } from '../../extent.js';
+import { getTopLeft } from '../../extent.js';
+import { getTopRight } from '../../extent.js';
+import { getWidth } from '../../extent.js';
+import ZIndexContext from '../../render/canvas/ZIndexContext.js';
+import RenderEvent from '../../render/Event.js';
+import RenderEventType from '../../render/EventType.js';
+import { apply as applyTransform } from '../../transform.js';
+import { compose as composeTransform } from '../../transform.js';
+import { create as createTransform } from '../../transform.js';
+import { equivalent } from '../../transform.js';
+import { makeInverse } from '../../transform.js';
+import { toString as toTransformString } from '../../transform.js';
+import LayerRenderer from '../Layer.js';
 /**
  * @module ol/renderer/canvas/Layer
  */
-import {equals} from '../../array.js';
-import {asArray} from '../../color.js';
-import {createCanvasContext2D} from '../../dom.js';
-import {
-  getBottomLeft,
-  getBottomRight,
-  getHeight,
-  getTopLeft,
-  getTopRight,
-  getWidth,
-} from '../../extent.js';
-import RenderEvent from '../../render/Event.js';
-import RenderEventType from '../../render/EventType.js';
-import ZIndexContext from '../../render/canvas/ZIndexContext.js';
-import {
-  apply as applyTransform,
-  compose as composeTransform,
-  create as createTransform,
-  equivalent,
-  makeInverse,
-  toString as toTransformString,
-} from '../../transform.js';
-import LayerRenderer from '../Layer.js';
-
 /**
  * @type {Array<HTMLCanvasElement>}
  */

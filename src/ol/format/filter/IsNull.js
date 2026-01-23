@@ -1,8 +1,7 @@
+import Comparison from './Comparison.js';
 /**
  * @module ol/format/filter/IsNull
  */
-import Comparison from './Comparison.js';
-
 /**
  * @classdesc
  * Represents a `<PropertyIsNull>` comparison operator.

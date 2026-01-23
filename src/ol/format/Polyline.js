@@ -1,14 +1,13 @@
+import Feature from '../Feature.js';
+import { flipXY } from '../geom/flat/flip.js';
+import LineString from '../geom/LineString.js';
+import { getStrideForLayout } from '../geom/SimpleGeometry.js';
+import { get as getProjection } from '../proj.js';
+import { transformGeometryWithOptions } from './Feature.js';
+import TextFeature from './TextFeature.js';
 /**
  * @module ol/format/Polyline
  */
-import Feature from '../Feature.js';
-import LineString from '../geom/LineString.js';
-import {getStrideForLayout} from '../geom/SimpleGeometry.js';
-import {flipXY} from '../geom/flat/flip.js';
-import {get as getProjection} from '../proj.js';
-import {transformGeometryWithOptions} from './Feature.js';
-import TextFeature from './TextFeature.js';
-
 /**
  * @typedef {Object} Options
  * @property {number} [factor=1e5] The factor by which the coordinates values will be scaled.

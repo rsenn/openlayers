@@ -1,11 +1,11 @@
-import {javascript} from '@codemirror/lang-javascript';
-import {EditorView, basicSetup} from 'codemirror';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/WebGLTile.js';
-import {useGeographic} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { useGeographic } from '../src/ol/proj.js';
 import SentinelHub from '../src/ol/source/SentinelHub.js';
-
+import View from '../src/ol/View.js';
+import { javascript } from '@codemirror/lang-javascript';
+import { basicSetup } from 'codemirror';
+import { EditorView } from 'codemirror';
 useGeographic();
 
 const source = new SentinelHub({

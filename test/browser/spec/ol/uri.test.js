@@ -1,4 +1,5 @@
-import {appendParams, expandUrl} from '../../../../src/ol/uri.js';
+import { appendParams } from '../../../../src/ol/uri.js';
+import { expandUrl } from '../../../../src/ol/uri.js';
 
 describe('ol/uri.js', () => {
   describe('expandUrl', function () {

@@ -1,13 +1,12 @@
+import { defaultLineDash } from '../canvas.js';
+import { defaultLineDashOffset } from '../canvas.js';
+import CanvasBuilder from './Builder.js';
+import { beginPathInstruction } from './Instruction.js';
+import { strokeInstruction } from './Instruction.js';
+import CanvasInstruction from './Instruction.js';
 /**
  * @module ol/render/canvas/LineStringBuilder
  */
-import {defaultLineDash, defaultLineDashOffset} from '../canvas.js';
-import CanvasBuilder from './Builder.js';
-import CanvasInstruction, {
-  beginPathInstruction,
-  strokeInstruction,
-} from './Instruction.js';
-
 class CanvasLineStringBuilder extends CanvasBuilder {
   /**
    * @param {number} tolerance Tolerance.

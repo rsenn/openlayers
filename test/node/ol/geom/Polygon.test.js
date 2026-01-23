@@ -1,14 +1,11 @@
-import {
-  boundingExtent,
-  createEmpty,
-  isEmpty,
-} from '../../../../src/ol/extent.js';
+import { boundingExtent } from '../../../../src/ol/extent.js';
+import { createEmpty } from '../../../../src/ol/extent.js';
+import { isEmpty } from '../../../../src/ol/extent.js';
 import Circle from '../../../../src/ol/geom/Circle.js';
 import LinearRing from '../../../../src/ol/geom/LinearRing.js';
-import Polygon, {
-  fromCircle,
-  fromExtent,
-} from '../../../../src/ol/geom/Polygon.js';
+import { fromCircle } from '../../../../src/ol/geom/Polygon.js';
+import { fromExtent } from '../../../../src/ol/geom/Polygon.js';
+import Polygon from '../../../../src/ol/geom/Polygon.js';
 import expect from '../../expect.js';
 
 describe('ol/geom/Polygon.js', function () {

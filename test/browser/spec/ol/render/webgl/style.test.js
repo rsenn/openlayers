@@ -1,16 +1,12 @@
+import { asArray } from '../../../../../../src/ol/color.js';
+import { stringToGlsl } from '../../../../../../src/ol/expr/gpu.js';
+import { uniformNameForVariable } from '../../../../../../src/ol/expr/gpu.js';
 import Feature from '../../../../../../src/ol/Feature.js';
-import {asArray} from '../../../../../../src/ol/color.js';
-import {
-  stringToGlsl,
-  uniformNameForVariable,
-} from '../../../../../../src/ol/expr/gpu.js';
 import MultiPolygon from '../../../../../../src/ol/geom/MultiPolygon.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
-import {packColor} from '../../../../../../src/ol/render/webgl/compileUtil.js';
-import {
-  computeHash,
-  parseLiteralStyle,
-} from '../../../../../../src/ol/render/webgl/style.js';
+import { packColor } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { computeHash } from '../../../../../../src/ol/render/webgl/style.js';
+import { parseLiteralStyle } from '../../../../../../src/ol/render/webgl/style.js';
 
 describe('ol/render/webgl/style', () => {
   describe('parseLiteralStyle', () => {

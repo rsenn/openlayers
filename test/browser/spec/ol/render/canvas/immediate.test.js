@@ -1,4 +1,3 @@
-import {spy as sinonSpy} from 'sinon';
 import Circle from '../../../../../../src/ol/geom/Circle.js';
 import GeometryCollection from '../../../../../../src/ol/geom/GeometryCollection.js';
 import LineString from '../../../../../../src/ol/geom/LineString.js';
@@ -7,13 +6,14 @@ import MultiPoint from '../../../../../../src/ol/geom/MultiPoint.js';
 import MultiPolygon from '../../../../../../src/ol/geom/MultiPolygon.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../../src/ol/geom/Polygon.js';
-import VectorContext from '../../../../../../src/ol/render/VectorContext.js';
 import CanvasImmediateRenderer from '../../../../../../src/ol/render/canvas/Immediate.js';
+import VectorContext from '../../../../../../src/ol/render/VectorContext.js';
 import CircleStyle from '../../../../../../src/ol/style/Circle.js';
 import Fill from '../../../../../../src/ol/style/Fill.js';
 import Stroke from '../../../../../../src/ol/style/Stroke.js';
 import Style from '../../../../../../src/ol/style/Style.js';
 import Text from '../../../../../../src/ol/style/Text.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.render.canvas.Immediate', function () {
   function getMockContext() {

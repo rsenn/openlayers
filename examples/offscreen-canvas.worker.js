@@ -1,12 +1,11 @@
-import {stylefunction} from 'ol-mapbox-style';
-import TileQueue, {
-  getTilePriority as tilePriorityFunction,
-} from '../src/ol/TileQueue.js';
 import MVT from '../src/ol/format/MVT.js';
-import {inView} from '../src/ol/layer/Layer.js';
+import { inView } from '../src/ol/layer/Layer.js';
 import VectorTileLayer from '../src/ol/layer/VectorTile.js';
-import {get} from '../src/ol/proj.js';
+import { get } from '../src/ol/proj.js';
 import VectorTileSource from '../src/ol/source/VectorTile.js';
+import { getTilePriority as tilePriorityFunction } from '../src/ol/TileQueue.js';
+import TileQueue from '../src/ol/TileQueue.js';
+import { stylefunction } from 'ol-mapbox-style';
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
 

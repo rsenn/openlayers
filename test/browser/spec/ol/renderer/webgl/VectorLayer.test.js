@@ -1,24 +1,23 @@
-import {spy as sinonSpy} from 'sinon';
 import Feature from '../../../../../../src/ol/Feature.js';
-import Map from '../../../../../../src/ol/Map.js';
-import View from '../../../../../../src/ol/View.js';
 import LineString from '../../../../../../src/ol/geom/LineString.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../../src/ol/geom/Polygon.js';
 import VectorLayer from '../../../../../../src/ol/layer/Vector.js';
+import Map from '../../../../../../src/ol/Map.js';
+import { get as getProjection } from '../../../../../../src/ol/proj.js';
 import Projection from '../../../../../../src/ol/proj/Projection.js';
-import {get as getProjection} from '../../../../../../src/ol/proj.js';
-import {ShaderBuilder} from '../../../../../../src/ol/render/webgl/ShaderBuilder.js';
-import VectorStyleRenderer, * as ol_render_webgl_vectorstylerenderer from '../../../../../../src/ol/render/webgl/VectorStyleRenderer.js';
+import { ShaderBuilder } from '../../../../../../src/ol/render/webgl/ShaderBuilder.js';
+import * as ol_render_webgl_vectorstylerenderer from '../../../../../../src/ol/render/webgl/VectorStyleRenderer.js';
+import VectorStyleRenderer from '../../../../../../src/ol/render/webgl/VectorStyleRenderer.js';
 import WebGLVectorLayerRenderer from '../../../../../../src/ol/renderer/webgl/VectorLayer.js';
 import VectorSource from '../../../../../../src/ol/source/Vector.js';
 import VectorEventType from '../../../../../../src/ol/source/VectorEventType.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../../../../../../src/ol/transform.js';
-import {getUid} from '../../../../../../src/ol/util.js';
+import { compose as composeTransform } from '../../../../../../src/ol/transform.js';
+import { create as createTransform } from '../../../../../../src/ol/transform.js';
+import { getUid } from '../../../../../../src/ol/util.js';
+import View from '../../../../../../src/ol/View.js';
 import WebGLHelper from '../../../../../../src/ol/webgl/Helper.js';
+import { spy as sinonSpy } from 'sinon';
 
 const SAMPLE_STYLE = {
   'fill-color': ['get', 'color'],

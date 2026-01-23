@@ -1,4 +1,4 @@
-import {asColorLike} from '../../../../src/ol/colorlike.js';
+import { asColorLike } from '../../../../src/ol/colorlike.js';
 import Fill from '../../../../src/ol/style/Fill.js';
 
 describe('ol/colorlike', () => {

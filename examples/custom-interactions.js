@@ -1,16 +1,15 @@
 import Feature from '../src/ol/Feature.js';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import LineString from '../src/ol/geom/LineString.js';
 import Point from '../src/ol/geom/Point.js';
 import Polygon from '../src/ol/geom/Polygon.js';
+import { defaults as defaultInteractions } from '../src/ol/interaction/defaults.js';
 import PointerInteraction from '../src/ol/interaction/Pointer.js';
-import {defaults as defaultInteractions} from '../src/ol/interaction/defaults.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import OGCMapTile from '../src/ol/source/OGCMapTile.js';
 import VectorSource from '../src/ol/source/Vector.js';
-
+import View from '../src/ol/View.js';
 class Drag extends PointerInteraction {
   constructor() {
     super({

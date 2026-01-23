@@ -1,11 +1,11 @@
-import TileState from '../../../../src/ol/TileState.js';
+import { listen } from '../../../../src/ol/events.js';
+import { unlistenByKey } from '../../../../src/ol/events.js';
 import EventType from '../../../../src/ol/events/EventType.js';
-import {listen, unlistenByKey} from '../../../../src/ol/events.js';
 import GeoJSON from '../../../../src/ol/format/GeoJSON.js';
-import VectorTileSource, {
-  defaultLoadFunction,
-} from '../../../../src/ol/source/VectorTile.js';
+import { defaultLoadFunction } from '../../../../src/ol/source/VectorTile.js';
+import VectorTileSource from '../../../../src/ol/source/VectorTile.js';
 import TileGrid from '../../../../src/ol/tilegrid/TileGrid.js';
+import TileState from '../../../../src/ol/TileState.js';
 
 describe('ol.VectorRenderTile', function () {
   it('triggers "change" when previously failed source tiles are loaded', function (done) {

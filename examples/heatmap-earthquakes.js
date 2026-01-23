@@ -1,10 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import KML from '../src/ol/format/KML.js';
 import HeatmapLayer from '../src/ol/layer/Heatmap.js';
 import TileLayer from '../src/ol/layer/Tile.js';
+import Map from '../src/ol/Map.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
 import VectorSource from '../src/ol/source/Vector.js';
+import View from '../src/ol/View.js';
 
 const blur = document.getElementById('blur');
 const radius = document.getElementById('radius');

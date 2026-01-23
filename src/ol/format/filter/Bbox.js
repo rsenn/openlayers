@@ -1,8 +1,7 @@
+import Filter from './Filter.js';
 /**
  * @module ol/format/filter/Bbox
  */
-import Filter from './Filter.js';
-
 /**
  * @classdesc
  * Represents a `<BBOX>` operator to test whether a geometry-valued property

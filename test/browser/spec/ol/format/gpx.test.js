@@ -4,8 +4,9 @@ import LineString from '../../../../../src/ol/geom/LineString.js';
 import MultiLineString from '../../../../../src/ol/geom/MultiLineString.js';
 import Point from '../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../src/ol/geom/Polygon.js';
-import {get as getProjection, transform} from '../../../../../src/ol/proj.js';
-import {parse} from '../../../../../src/ol/xml.js';
+import { get as getProjection } from '../../../../../src/ol/proj.js';
+import { transform } from '../../../../../src/ol/proj.js';
+import { parse } from '../../../../../src/ol/xml.js';
 
 describe('ol.format.GPX', function () {
   let format;

@@ -1,16 +1,14 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import ImageLayer from '../../../../src/ol/layer/Image.js';
-import {
-  get as getProjection,
-  transformExtent,
-  useGeographic,
-} from '../../../../src/ol/proj.js';
+import Map from '../../../../src/ol/Map.js';
+import { get as getProjection } from '../../../../src/ol/proj.js';
+import { transformExtent } from '../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../src/ol/proj.js';
 import Static from '../../../../src/ol/source/ImageStatic.js';
-
+import View from '../../../../src/ol/View.js';
 useGeographic();
 
 const center = [-122.416667, 37.783333];
+
 const extent = [-123.1, 37.1, -122.1, 37.9];
 
 new Map({

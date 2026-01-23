@@ -1,11 +1,10 @@
+import { clamp } from '../../math.js';
+import { apply as applyTransform } from '../../transform.js';
+import earcut from 'earcut';
 /**
  * Utilities for filling WebGL buffers
  * @module ol/render/webgl/bufferUtil
  */
-import earcut from 'earcut';
-import {clamp} from '../../math.js';
-import {apply as applyTransform} from '../../transform.js';
-
 export const LINESTRING_ANGLE_COSINE_CUTOFF = 0.985;
 
 /** @type {Array<number>} */

@@ -1,26 +1,21 @@
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import EventType from '../events/EventType.js';
+import { getCenter } from '../extent.js';
+import { getHeight } from '../extent.js';
+import { getIntersection } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { isEmpty } from '../extent.js';
+import ImageWrapper from '../Image.js';
+import ImageState from '../ImageState.js';
+import { calculateSourceResolution } from '../reproj.js';
+import { render as renderReprojected } from '../reproj.js';
+import { fromResolutionLike } from '../resolution.js';
+import { ERROR_THRESHOLD } from './common.js';
+import Triangulation from './Triangulation.js';
 /**
  * @module ol/reproj/Image
  */
-
-import ImageWrapper from '../Image.js';
-import ImageState from '../ImageState.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {
-  getCenter,
-  getHeight,
-  getIntersection,
-  getWidth,
-  isEmpty,
-} from '../extent.js';
-import {
-  calculateSourceResolution,
-  render as renderReprojected,
-} from '../reproj.js';
-import {fromResolutionLike} from '../resolution.js';
-import Triangulation from './Triangulation.js';
-import {ERROR_THRESHOLD} from './common.js';
-
 /**
  * @typedef {function(import("../extent.js").Extent, number, number) : import("../Image.js").default} FunctionType
  */

@@ -1,10 +1,9 @@
-import NumpyLoader from '@planet/ol-numpytiles';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import TileLayer from '../src/ol/layer/WebGLTile.js';
-import {fromLonLat} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
 import DataTileSource from '../src/ol/source/DataTile.js';
-
+import View from '../src/ol/View.js';
+import NumpyLoader from '@planet/ol-numpytiles';
 // 16-bit COG
 // Which will be served as NumpyTiles.
 const COG =
@@ -48,6 +47,7 @@ const interpolateBand = (bandIdx) => [
 ];
 
 const initialMin = 3000;
+
 const initialMax = 18000;
 
 const numpyLayer = new TileLayer({
@@ -80,8 +80,11 @@ const map = new Map({
 });
 
 const inputMin = document.getElementById('input-min');
+
 const inputMax = document.getElementById('input-max');
+
 const outputMin = document.getElementById('output-min');
+
 const outputMax = document.getElementById('output-max');
 
 inputMin.addEventListener('input', (evt) => {

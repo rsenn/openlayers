@@ -1,11 +1,10 @@
-/**
- * @module ol/layer/VectorTile
- */
-import {assert} from '../asserts.js';
+import { assert } from '../asserts.js';
 import CanvasVectorTileLayerRenderer from '../renderer/canvas/VectorTileLayer.js';
 import BaseVectorLayer from './BaseVector.js';
 import TileProperty from './TileProperty.js';
-
+/**
+ * @module ol/layer/VectorTile
+ */
 /***
  * @template Return
  * @typedef {import("../Observable").OnSignature<import("../Observable").EventTypes, import("../events/Event.js").default, Return> &

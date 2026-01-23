@@ -1,5 +1,4 @@
 import * as mat4 from '../vec/mat4.js';
-
 /**
  * @module ol/webgl/Canvas
  */

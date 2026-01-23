@@ -1,10 +1,8 @@
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
 import ZoomToExtent from '../../../../../src/ol/control/ZoomToExtent.js';
-import {
-  clearUserProjection,
-  useGeographic,
-} from '../../../../../src/ol/proj.js';
+import Map from '../../../../../src/ol/Map.js';
+import { clearUserProjection } from '../../../../../src/ol/proj.js';
+import { useGeographic } from '../../../../../src/ol/proj.js';
+import View from '../../../../../src/ol/View.js';
 
 describe('ol.control.ZoomToExtent', function () {
   describe('constructor', function () {

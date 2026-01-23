@@ -1,8 +1,7 @@
+import { clamp } from './math.js';
 /**
  * @module ol/centerconstraint
  */
-import {clamp} from './math.js';
-
 /**
  * @typedef {function((import("./coordinate.js").Coordinate|undefined), number, import("./size.js").Size, boolean=, Array<number>=): (import("./coordinate.js").Coordinate|undefined)} Type
  */

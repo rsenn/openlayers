@@ -1,14 +1,13 @@
-import proj4 from 'proj4';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
+import { defaults as defaultControls } from '../src/ol/control/defaults.js';
 import ScaleLine from '../src/ol/control/ScaleLine.js';
-import {defaults as defaultControls} from '../src/ol/control/defaults.js';
 import ImageLayer from '../src/ol/layer/Image.js';
+import Map from '../src/ol/Map.js';
+import { fromLonLat } from '../src/ol/proj.js';
+import { register } from '../src/ol/proj/proj4.js';
 import Projection from '../src/ol/proj/Projection.js';
-import {register} from '../src/ol/proj/proj4.js';
-import {fromLonLat} from '../src/ol/proj.js';
 import ImageWMS from '../src/ol/source/ImageWMS.js';
-
+import View from '../src/ol/View.js';
+import proj4 from 'proj4';
 // Transparent Proj4js support:
 //
 // EPSG:21781 is known to Proj4js because its definition is registered by
@@ -36,6 +35,7 @@ const projection = new Projection({
 });
 
 const extent = [420000, 30000, 900000, 350000];
+
 const layers = [
   new ImageLayer({
     extent: extent,

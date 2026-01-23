@@ -1,27 +1,21 @@
-import {stub as sinonStub} from 'sinon';
+import { BooleanType } from '../../../../../../src/ol/expr/expression.js';
+import { ColorType } from '../../../../../../src/ol/expr/expression.js';
+import { NumberArrayType } from '../../../../../../src/ol/expr/expression.js';
+import { NumberType } from '../../../../../../src/ol/expr/expression.js';
+import { SizeType } from '../../../../../../src/ol/expr/expression.js';
+import { StringType } from '../../../../../../src/ol/expr/expression.js';
+import { newCompilationContext } from '../../../../../../src/ol/expr/gpu.js';
+import { stringToGlsl } from '../../../../../../src/ol/expr/gpu.js';
 import Feature from '../../../../../../src/ol/Feature.js';
-import {
-  BooleanType,
-  ColorType,
-  NumberArrayType,
-  NumberType,
-  SizeType,
-  StringType,
-} from '../../../../../../src/ol/expr/expression.js';
-import {
-  newCompilationContext,
-  stringToGlsl,
-} from '../../../../../../src/ol/expr/gpu.js';
-import {
-  applyContextToBuilder,
-  expressionToGlsl,
-  generateAttributesFromContext,
-  generateUniformsFromContext,
-  getGlslSizeFromType,
-  getGlslTypeFromType,
-  packColor,
-  unpackColor,
-} from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { applyContextToBuilder } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { expressionToGlsl } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { generateAttributesFromContext } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { generateUniformsFromContext } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { getGlslSizeFromType } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { getGlslTypeFromType } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { packColor } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { unpackColor } from '../../../../../../src/ol/render/webgl/compileUtil.js';
+import { stub as sinonStub } from 'sinon';
 
 describe('ol/render/webgl/compileUtil', () => {
   describe('packColor and unpackColor', () => {

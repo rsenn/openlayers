@@ -1,12 +1,11 @@
+import { getHeight } from '../extent.js';
+import { getWidth } from '../extent.js';
+import { decode } from '../Image.js';
+import { appendParams } from '../uri.js';
+import { getRequestExtent } from './Image.js';
 /**
  * @module ol/source/mapserver
  */
-
-import {decode} from '../Image.js';
-import {getHeight, getWidth} from '../extent.js';
-import {appendParams} from '../uri.js';
-import {getRequestExtent} from './Image.js';
-
 /**
  * @typedef {Object} LoaderOptions
  * @property {string} url The MapServer url.

@@ -1,25 +1,20 @@
+import { compareVersions } from '../string.js';
+import { makeArrayPusher } from '../xml.js';
+import { makeObjectPropertyPusher } from '../xml.js';
+import { makeObjectPropertySetter } from '../xml.js';
+import { makeStructureNS } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import { readHref } from './xlink.js';
+import XML from './XML.js';
+import { readBooleanString } from './xsd.js';
+import { readDecimal } from './xsd.js';
+import { readDecimalString } from './xsd.js';
+import { readNonNegativeIntegerString } from './xsd.js';
+import { readPositiveInteger } from './xsd.js';
+import { readString } from './xsd.js';
 /**
  * @module ol/format/WMSCapabilities
  */
-import {compareVersions} from '../string.js';
-import {
-  makeArrayPusher,
-  makeObjectPropertyPusher,
-  makeObjectPropertySetter,
-  makeStructureNS,
-  pushParseAndPop,
-} from '../xml.js';
-import XML from './XML.js';
-import {readHref} from './xlink.js';
-import {
-  readBooleanString,
-  readDecimal,
-  readDecimalString,
-  readNonNegativeIntegerString,
-  readPositiveInteger,
-  readString,
-} from './xsd.js';
-
 /**
  * @const
  * @type {Array<null|string>}

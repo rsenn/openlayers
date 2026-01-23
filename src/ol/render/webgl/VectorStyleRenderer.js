@@ -1,24 +1,21 @@
+import { create as createTransform } from '../../transform.js';
+import { makeInverse as makeInverseTransform } from '../../transform.js';
+import { ARRAY_BUFFER } from '../../webgl.js';
+import { DYNAMIC_DRAW } from '../../webgl.js';
+import { ELEMENT_ARRAY_BUFFER } from '../../webgl.js';
+import WebGLArrayBuffer from '../../webgl/Buffer.js';
+import { AttributeType } from '../../webgl/Helper.js';
+import { create as createWebGLWorker } from '../../worker/webgl.js';
+import { WebGLWorkerMessageType } from './constants.js';
+import { colorEncodeIdAndPack } from './encodeUtil.js';
+import { generateLineStringRenderInstructions } from './renderinstructions.js';
+import { generatePointRenderInstructions } from './renderinstructions.js';
+import { generatePolygonRenderInstructions } from './renderinstructions.js';
+import { getCustomAttributesSize } from './renderinstructions.js';
+import { parseLiteralStyle } from './style.js';
 /**
  * @module ol/render/webgl/VectorStyleRenderer
  */
-import {
-  create as createTransform,
-  makeInverse as makeInverseTransform,
-} from '../../transform.js';
-import WebGLArrayBuffer from '../../webgl/Buffer.js';
-import {AttributeType} from '../../webgl/Helper.js';
-import {ARRAY_BUFFER, DYNAMIC_DRAW, ELEMENT_ARRAY_BUFFER} from '../../webgl.js';
-import {create as createWebGLWorker} from '../../worker/webgl.js';
-import {WebGLWorkerMessageType} from './constants.js';
-import {colorEncodeIdAndPack} from './encodeUtil.js';
-import {
-  generateLineStringRenderInstructions,
-  generatePointRenderInstructions,
-  generatePolygonRenderInstructions,
-  getCustomAttributesSize,
-} from './renderinstructions.js';
-import {parseLiteralStyle} from './style.js';
-
 const tmpColor = [];
 /** @type {Worker|undefined} */
 let WEBGL_WORKER;

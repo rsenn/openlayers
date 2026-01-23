@@ -1,9 +1,10 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
 import WMTSCapabilities from '../src/ol/format/WMTSCapabilities.js';
-import {DEVICE_PIXEL_RATIO} from '../src/ol/has.js';
+import { DEVICE_PIXEL_RATIO } from '../src/ol/has.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import WMTS, {optionsFromCapabilities} from '../src/ol/source/WMTS.js';
+import Map from '../src/ol/Map.js';
+import { optionsFromCapabilities } from '../src/ol/source/WMTS.js';
+import WMTS from '../src/ol/source/WMTS.js';
+import View from '../src/ol/View.js';
 
 const capabilitiesUrl =
   'https://mapsneu.wien.gv.at/basemapneu/1.0.0/WMTSCapabilities.xml';

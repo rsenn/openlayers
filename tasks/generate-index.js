@@ -1,9 +1,9 @@
-import path, {dirname} from 'path';
-import {fileURLToPath} from 'url';
-import esMain from 'es-main';
 import fse from 'fs-extra';
+import { dirname } from 'path';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import generateInfo from './generate-info.js';
-
+import esMain from 'es-main';
 /**
  * Read the symbols from info file.
  * @return {Promise<Array>} Resolves with an array of symbol objects.

@@ -1,21 +1,15 @@
+import { asArray } from '../../color.js';
+import { ColorType } from '../../expr/expression.js';
+import { newParsingContext } from '../../expr/expression.js';
+import { NumberArrayType } from '../../expr/expression.js';
+import { SizeType } from '../../expr/expression.js';
+import { buildExpression } from '../../expr/gpu.js';
+import { getStringNumberEquivalent } from '../../expr/gpu.js';
+import { uniformNameForVariable } from '../../expr/gpu.js';
 /**
  * Utilities for compiling expressions and turning them into WebGL concepts
  * @module ol/render/webgl/compileUtil
  */
-
-import {asArray} from '../../color.js';
-import {
-  ColorType,
-  NumberArrayType,
-  SizeType,
-  newParsingContext,
-} from '../../expr/expression.js';
-import {
-  buildExpression,
-  getStringNumberEquivalent,
-  uniformNameForVariable,
-} from '../../expr/gpu.js';
-
 /**
  * Recursively parses a style expression and outputs a GLSL-compatible string. Takes in a compilation context that
  * will be read and modified during the parsing operation.

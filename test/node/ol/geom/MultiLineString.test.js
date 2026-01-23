@@ -1,4 +1,4 @@
-import {isEmpty} from '../../../../src/ol/extent.js';
+import { isEmpty } from '../../../../src/ol/extent.js';
 import LineString from '../../../../src/ol/geom/LineString.js';
 import MultiLineString from '../../../../src/ol/geom/MultiLineString.js';
 import expect from '../../expect.js';

@@ -1,18 +1,19 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getBottomLeft, getTopRight} from '../src/ol/extent.js';
+import { getBottomLeft } from '../src/ol/extent.js';
+import { getTopRight } from '../src/ol/extent.js';
 import KML from '../src/ol/format/KML.js';
 import Polygon from '../src/ol/geom/Polygon.js';
-import {DEVICE_PIXEL_RATIO} from '../src/ol/has.js';
+import { DEVICE_PIXEL_RATIO } from '../src/ol/has.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
-import {toContext} from '../src/ol/render.js';
+import Map from '../src/ol/Map.js';
+import { toContext } from '../src/ol/render.js';
 import StadiaMaps from '../src/ol/source/StadiaMaps.js';
 import VectorSource from '../src/ol/source/Vector.js';
 import Fill from '../src/ol/style/Fill.js';
 import Icon from '../src/ol/style/Icon.js';
 import Stroke from '../src/ol/style/Stroke.js';
 import Style from '../src/ol/style/Style.js';
+import View from '../src/ol/View.js';
 
 const getSymbolOutline = (function () {
   const path = [

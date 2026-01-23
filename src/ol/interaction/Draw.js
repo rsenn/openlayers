@@ -1,50 +1,45 @@
-/**
- * @module ol/interaction/Draw
- */
-import Feature from '../Feature.js';
-import MapBrowserEvent from '../MapBrowserEvent.js';
-import MapBrowserEventType from '../MapBrowserEventType.js';
-import {
-  distance,
-  squaredDistance as squaredCoordinateDistance,
-} from '../coordinate.js';
+import { distance } from '../coordinate.js';
+import { squaredDistance as squaredCoordinateDistance } from '../coordinate.js';
+import { always } from '../events/condition.js';
+import { never } from '../events/condition.js';
+import { noModifierKeys } from '../events/condition.js';
+import { shiftKeyOnly } from '../events/condition.js';
 import Event from '../events/Event.js';
 import EventType from '../events/EventType.js';
-import {
-  always,
-  never,
-  noModifierKeys,
-  shiftKeyOnly,
-} from '../events/condition.js';
-import {
-  boundingExtent,
-  getBottomLeft,
-  getBottomRight,
-  getTopLeft,
-  getTopRight,
-} from '../extent.js';
-import {FALSE, TRUE} from '../functions.js';
+import { boundingExtent } from '../extent.js';
+import { getBottomLeft } from '../extent.js';
+import { getBottomRight } from '../extent.js';
+import { getTopLeft } from '../extent.js';
+import { getTopRight } from '../extent.js';
+import Feature from '../Feature.js';
+import { FALSE } from '../functions.js';
+import { TRUE } from '../functions.js';
 import Circle from '../geom/Circle.js';
 import LineString from '../geom/LineString.js';
 import MultiLineString from '../geom/MultiLineString.js';
 import MultiPoint from '../geom/MultiPoint.js';
 import MultiPolygon from '../geom/MultiPolygon.js';
 import Point from '../geom/Point.js';
-import Polygon, {fromCircle, makeRegular} from '../geom/Polygon.js';
-import {getStrideForLayout} from '../geom/SimpleGeometry.js';
+import { fromCircle } from '../geom/Polygon.js';
+import { makeRegular } from '../geom/Polygon.js';
+import Polygon from '../geom/Polygon.js';
+import { getStrideForLayout } from '../geom/SimpleGeometry.js';
 import VectorLayer from '../layer/Vector.js';
-import {fromUserCoordinate, getUserProjection} from '../proj.js';
+import MapBrowserEvent from '../MapBrowserEvent.js';
+import MapBrowserEventType from '../MapBrowserEventType.js';
+import { fromUserCoordinate } from '../proj.js';
+import { getUserProjection } from '../proj.js';
 import VectorSource from '../source/Vector.js';
-import {createEditingStyle} from '../style/Style.js';
+import { createEditingStyle } from '../style/Style.js';
 import PointerInteraction from './Pointer.js';
 import InteractionProperty from './Property.js';
-import {
-  getCoordinate,
-  getTraceTargetUpdate,
-  getTraceTargets,
-  interpolateCoordinate,
-} from './tracing.js';
-
+import { getCoordinate } from './tracing.js';
+import { getTraceTargets } from './tracing.js';
+import { getTraceTargetUpdate } from './tracing.js';
+import { interpolateCoordinate } from './tracing.js';
+/**
+ * @module ol/interaction/Draw
+ */
 /**
  * @typedef {Object} Options
  * @property {import("../geom/Geometry.js").Type} type Geometry type of

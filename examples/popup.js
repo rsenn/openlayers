@@ -1,16 +1,17 @@
+import { toStringHDMS } from '../src/ol/coordinate.js';
+import TileLayer from '../src/ol/layer/Tile.js';
 import Map from '../src/ol/Map.js';
 import Overlay from '../src/ol/Overlay.js';
-import View from '../src/ol/View.js';
-import {toStringHDMS} from '../src/ol/coordinate.js';
-import TileLayer from '../src/ol/layer/Tile.js';
-import {toLonLat} from '../src/ol/proj.js';
+import { toLonLat } from '../src/ol/proj.js';
 import ImageTile from '../src/ol/source/ImageTile.js';
-
+import View from '../src/ol/View.js';
 /**
  * Elements that make up the popup.
  */
 const container = document.getElementById('popup');
+
 const content = document.getElementById('popup-content');
+
 const closer = document.getElementById('popup-closer');
 
 /**
@@ -36,6 +37,7 @@ closer.onclick = function () {
 };
 
 const key = 'get_your_own_D6rA4zTHduk6KOKTXzGB';
+
 const attributions =
   '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> ' +
   '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';

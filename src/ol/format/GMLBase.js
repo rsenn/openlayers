@@ -1,34 +1,29 @@
+import { extend } from '../array.js';
+import Feature from '../Feature.js';
+import Geometry from '../geom/Geometry.js';
+import LinearRing from '../geom/LinearRing.js';
+import LineString from '../geom/LineString.js';
+import MultiLineString from '../geom/MultiLineString.js';
+import MultiPoint from '../geom/MultiPoint.js';
+import MultiPolygon from '../geom/MultiPolygon.js';
+import Point from '../geom/Point.js';
+import Polygon from '../geom/Polygon.js';
+import { get as getProjection } from '../proj.js';
+import { getAllTextContent } from '../xml.js';
+import { getAttributeNS } from '../xml.js';
+import { makeArrayPusher } from '../xml.js';
+import { makeReplacer } from '../xml.js';
+import { parseNode } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import { transformExtentWithOptions } from './Feature.js';
+import { transformGeometryWithOptions } from './Feature.js';
+import XMLFeature from './XMLFeature.js';
 /**
  * @module ol/format/GMLBase
  */
 // FIXME Envelopes should not be treated as geometries! readEnvelope_ is part
 // of GEOMETRY_PARSERS_ and methods using GEOMETRY_PARSERS_ do not expect
 // envelopes/extents, only geometries!
-import Feature from '../Feature.js';
-import {extend} from '../array.js';
-import Geometry from '../geom/Geometry.js';
-import LineString from '../geom/LineString.js';
-import LinearRing from '../geom/LinearRing.js';
-import MultiLineString from '../geom/MultiLineString.js';
-import MultiPoint from '../geom/MultiPoint.js';
-import MultiPolygon from '../geom/MultiPolygon.js';
-import Point from '../geom/Point.js';
-import Polygon from '../geom/Polygon.js';
-import {get as getProjection} from '../proj.js';
-import {
-  getAllTextContent,
-  getAttributeNS,
-  makeArrayPusher,
-  makeReplacer,
-  parseNode,
-  pushParseAndPop,
-} from '../xml.js';
-import {
-  transformExtentWithOptions,
-  transformGeometryWithOptions,
-} from './Feature.js';
-import XMLFeature from './XMLFeature.js';
-
 /**
  * @const
  * @type {string}

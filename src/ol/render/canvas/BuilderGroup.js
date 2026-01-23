@@ -1,13 +1,11 @@
-/**
- * @module ol/render/canvas/BuilderGroup
- */
-
 import Builder from './Builder.js';
 import ImageBuilder from './ImageBuilder.js';
 import LineStringBuilder from './LineStringBuilder.js';
 import PolygonBuilder from './PolygonBuilder.js';
 import TextBuilder from './TextBuilder.js';
-
+/**
+ * @module ol/render/canvas/BuilderGroup
+ */
 /**
  * @type {Object<import("../canvas.js").BuilderType, typeof Builder>}
  */

@@ -1,9 +1,7 @@
+import XYZ from './XYZ.js';
 /**
  * @module ol/source/OSM
  */
-
-import XYZ from './XYZ.js';
-
 /**
  * The attribution containing a link to the OpenStreetMap Copyright and License
  * page.

@@ -1,28 +1,22 @@
-import {spy as sinonSpy} from 'sinon';
+import { stringToGlsl } from '../../../../../../src/ol/expr/gpu.js';
 import Feature from '../../../../../../src/ol/Feature.js';
-import {stringToGlsl} from '../../../../../../src/ol/expr/gpu.js';
 import LineString from '../../../../../../src/ol/geom/LineString.js';
 import Point from '../../../../../../src/ol/geom/Point.js';
 import Polygon from '../../../../../../src/ol/geom/Polygon.js';
 import MixedGeometryBatch from '../../../../../../src/ol/render/webgl/MixedGeometryBatch.js';
-import {ShaderBuilder} from '../../../../../../src/ol/render/webgl/ShaderBuilder.js';
-import VectorStyleRenderer, {
-  convertStyleToShaders,
-} from '../../../../../../src/ol/render/webgl/VectorStyleRenderer.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-  makeInverse as makeInverseTransform,
-} from '../../../../../../src/ol/transform.js';
+import { ShaderBuilder } from '../../../../../../src/ol/render/webgl/ShaderBuilder.js';
+import { convertStyleToShaders } from '../../../../../../src/ol/render/webgl/VectorStyleRenderer.js';
+import VectorStyleRenderer from '../../../../../../src/ol/render/webgl/VectorStyleRenderer.js';
+import { compose as composeTransform } from '../../../../../../src/ol/transform.js';
+import { create as createTransform } from '../../../../../../src/ol/transform.js';
+import { makeInverse as makeInverseTransform } from '../../../../../../src/ol/transform.js';
+import { ARRAY_BUFFER } from '../../../../../../src/ol/webgl.js';
+import { DYNAMIC_DRAW } from '../../../../../../src/ol/webgl.js';
+import { ELEMENT_ARRAY_BUFFER } from '../../../../../../src/ol/webgl.js';
+import { FLOAT } from '../../../../../../src/ol/webgl.js';
 import WebGLArrayBuffer from '../../../../../../src/ol/webgl/Buffer.js';
 import WebGLHelper from '../../../../../../src/ol/webgl/Helper.js';
-import {
-  ARRAY_BUFFER,
-  DYNAMIC_DRAW,
-  ELEMENT_ARRAY_BUFFER,
-  FLOAT,
-} from '../../../../../../src/ol/webgl.js';
-
+import { spy as sinonSpy } from 'sinon';
 /**
  * @type {import('../../../../../../src/ol/render/webgl/VectorStyleRenderer.js').StyleShaders}
  */

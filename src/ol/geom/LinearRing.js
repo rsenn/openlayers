@@ -1,14 +1,14 @@
+import { closestSquaredDistanceXY } from '../extent.js';
+import { linearRing as linearRingArea } from './flat/area.js';
+import { assignClosestPoint } from './flat/closest.js';
+import { maxSquaredDelta } from './flat/closest.js';
+import { deflateCoordinates } from './flat/deflate.js';
+import { inflateCoordinates } from './flat/inflate.js';
+import { douglasPeucker } from './flat/simplify.js';
+import SimpleGeometry from './SimpleGeometry.js';
 /**
  * @module ol/geom/LinearRing
  */
-import {closestSquaredDistanceXY} from '../extent.js';
-import SimpleGeometry from './SimpleGeometry.js';
-import {linearRing as linearRingArea} from './flat/area.js';
-import {assignClosestPoint, maxSquaredDelta} from './flat/closest.js';
-import {deflateCoordinates} from './flat/deflate.js';
-import {inflateCoordinates} from './flat/inflate.js';
-import {douglasPeucker} from './flat/simplify.js';
-
 /**
  * @classdesc
  * Linear ring geometry. Only used as part of polygon; cannot be rendered

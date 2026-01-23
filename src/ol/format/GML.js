@@ -1,8 +1,7 @@
+import GML3 from './GML3.js';
 /**
  * @module ol/format/GML
  */
-import GML3 from './GML3.js';
-
 /**
  * Feature format for reading and writing data in the GML format
  * version 3.1.1.

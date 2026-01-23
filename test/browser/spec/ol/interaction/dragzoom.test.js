@@ -1,14 +1,14 @@
-import {spy as sinonSpy} from 'sinon';
-import Map from '../../../../../src/ol/Map.js';
-import View from '../../../../../src/ol/View.js';
-import {getCenter, scaleFromCenter} from '../../../../../src/ol/extent.js';
-import Polygon, {
-  fromExtent as polygonFromExtent,
-} from '../../../../../src/ol/geom/Polygon.js';
+import { getCenter } from '../../../../../src/ol/extent.js';
+import { scaleFromCenter } from '../../../../../src/ol/extent.js';
+import { fromExtent as polygonFromExtent } from '../../../../../src/ol/geom/Polygon.js';
+import Polygon from '../../../../../src/ol/geom/Polygon.js';
 import DragZoom from '../../../../../src/ol/interaction/DragZoom.js';
 import VectorLayer from '../../../../../src/ol/layer/Vector.js';
+import Map from '../../../../../src/ol/Map.js';
 import RenderBox from '../../../../../src/ol/render/Box.js';
 import VectorSource from '../../../../../src/ol/source/Vector.js';
+import View from '../../../../../src/ol/View.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.interaction.DragZoom', function () {
   /** @type {HTMLElement} */

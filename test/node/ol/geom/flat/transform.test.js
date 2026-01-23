@@ -1,6 +1,7 @@
+import { rotate } from '../../../../../src/ol/geom/flat/transform.js';
+import { translate } from '../../../../../src/ol/geom/flat/transform.js';
 import MultiPolygon from '../../../../../src/ol/geom/MultiPolygon.js';
-import {transformGeom2D} from '../../../../../src/ol/geom/SimpleGeometry.js';
-import {rotate, translate} from '../../../../../src/ol/geom/flat/transform.js';
+import { transformGeom2D } from '../../../../../src/ol/geom/SimpleGeometry.js';
 import expect from '../../../expect.js';
 
 describe('ol/geom/flat/transform.js', function () {

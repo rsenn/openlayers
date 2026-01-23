@@ -1,8 +1,8 @@
-import {spy as sinonSpy} from 'sinon';
+import Event from '../../../../../src/ol/events/Event.js';
 import Map from '../../../../../src/ol/Map.js';
 import MapBrowserEvent from '../../../../../src/ol/MapBrowserEvent.js';
 import View from '../../../../../src/ol/View.js';
-import Event from '../../../../../src/ol/events/Event.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.interaction.KeyboardPan', function () {
   let map;

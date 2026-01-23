@@ -1,34 +1,36 @@
+import { assert } from '../../asserts.js';
+import { listen } from '../../events.js';
+import { unlistenByKey } from '../../events.js';
+import { buffer } from '../../extent.js';
+import { createEmpty } from '../../extent.js';
+import { equals } from '../../extent.js';
+import BaseVector from '../../layer/BaseVector.js';
+import { fromUserCoordinate } from '../../proj.js';
+import { getUserProjection } from '../../proj.js';
+import { WebGLWorkerMessageType } from '../../render/webgl/constants.js';
+import { colorDecodeId } from '../../render/webgl/encodeUtil.js';
+import { colorEncodeIdAndPack } from '../../render/webgl/encodeUtil.js';
+import VectorEventType from '../../source/VectorEventType.js';
+import { apply as applyTransform } from '../../transform.js';
+import { create as createTransform } from '../../transform.js';
+import { makeInverse as makeInverseTransform } from '../../transform.js';
+import { multiply as multiplyTransform } from '../../transform.js';
+import { translate as translateTransform } from '../../transform.js';
+import { getUid } from '../../util.js';
+import ViewHint from '../../ViewHint.js';
+import { ARRAY_BUFFER } from '../../webgl.js';
+import { DYNAMIC_DRAW } from '../../webgl.js';
+import { ELEMENT_ARRAY_BUFFER } from '../../webgl.js';
+import WebGLArrayBuffer from '../../webgl/Buffer.js';
+import { AttributeType } from '../../webgl/Helper.js';
+import { DefaultUniform } from '../../webgl/Helper.js';
+import WebGLRenderTarget from '../../webgl/RenderTarget.js';
+import { create as createWebGLWorker } from '../../worker/webgl.js';
+import WebGLLayerRenderer from './Layer.js';
+import { getWorldParameters } from './worldUtil.js';
 /**
  * @module ol/renderer/webgl/PointsLayer
  */
-import ViewHint from '../../ViewHint.js';
-import {assert} from '../../asserts.js';
-import {listen, unlistenByKey} from '../../events.js';
-import {buffer, createEmpty, equals} from '../../extent.js';
-import BaseVector from '../../layer/BaseVector.js';
-import {fromUserCoordinate, getUserProjection} from '../../proj.js';
-import {WebGLWorkerMessageType} from '../../render/webgl/constants.js';
-import {
-  colorDecodeId,
-  colorEncodeIdAndPack,
-} from '../../render/webgl/encodeUtil.js';
-import VectorEventType from '../../source/VectorEventType.js';
-import {
-  apply as applyTransform,
-  create as createTransform,
-  makeInverse as makeInverseTransform,
-  multiply as multiplyTransform,
-  translate as translateTransform,
-} from '../../transform.js';
-import {getUid} from '../../util.js';
-import WebGLArrayBuffer from '../../webgl/Buffer.js';
-import {AttributeType, DefaultUniform} from '../../webgl/Helper.js';
-import WebGLRenderTarget from '../../webgl/RenderTarget.js';
-import {ARRAY_BUFFER, DYNAMIC_DRAW, ELEMENT_ARRAY_BUFFER} from '../../webgl.js';
-import {create as createWebGLWorker} from '../../worker/webgl.js';
-import WebGLLayerRenderer from './Layer.js';
-import {getWorldParameters} from './worldUtil.js';
-
 /** @typedef {import("../../geom/Point.js").default} Point */
 /** @typedef {import("../../Feature").default<Point>} PointFeature */
 

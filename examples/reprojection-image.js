@@ -1,14 +1,13 @@
-import proj4 from 'proj4';
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {getCenter} from '../src/ol/extent.js';
+import { getCenter } from '../src/ol/extent.js';
 import ImageLayer from '../src/ol/layer/Image.js';
 import TileLayer from '../src/ol/layer/Tile.js';
-import {register} from '../src/ol/proj/proj4.js';
-import {transform} from '../src/ol/proj.js';
+import Map from '../src/ol/Map.js';
+import { transform } from '../src/ol/proj.js';
+import { register } from '../src/ol/proj/proj4.js';
 import Static from '../src/ol/source/ImageStatic.js';
 import OSM from '../src/ol/source/OSM.js';
-
+import View from '../src/ol/View.js';
+import proj4 from 'proj4';
 proj4.defs(
   'EPSG:27700',
   '+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 ' +
@@ -19,6 +18,7 @@ proj4.defs(
 register(proj4);
 
 const imageExtent = [0, 0, 700000, 1300000];
+
 const imageLayer = new ImageLayer();
 
 const map = new Map({

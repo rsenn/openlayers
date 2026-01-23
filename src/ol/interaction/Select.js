@@ -1,19 +1,20 @@
+import { extend } from '../array.js';
+import Collection from '../Collection.js';
+import CollectionEventType from '../CollectionEventType.js';
+import { never } from '../events/condition.js';
+import { shiftKeyOnly } from '../events/condition.js';
+import { singleClick } from '../events/condition.js';
+import Event from '../events/Event.js';
+import Feature from '../Feature.js';
+import { TRUE } from '../functions.js';
+import VectorLayer from '../layer/Vector.js';
+import { clear } from '../obj.js';
+import { createEditingStyle } from '../style/Style.js';
+import { getUid } from '../util.js';
+import Interaction from './Interaction.js';
 /**
  * @module ol/interaction/Select
  */
-import Collection from '../Collection.js';
-import CollectionEventType from '../CollectionEventType.js';
-import Feature from '../Feature.js';
-import {extend} from '../array.js';
-import Event from '../events/Event.js';
-import {never, shiftKeyOnly, singleClick} from '../events/condition.js';
-import {TRUE} from '../functions.js';
-import VectorLayer from '../layer/Vector.js';
-import {clear} from '../obj.js';
-import {createEditingStyle} from '../style/Style.js';
-import {getUid} from '../util.js';
-import Interaction from './Interaction.js';
-
 /**
  * @enum {string}
  */

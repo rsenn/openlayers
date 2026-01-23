@@ -1,6 +1,6 @@
-import {spy as sinonSpy} from 'sinon';
 import WebGLHelper from '../../../../../src/ol/webgl/Helper.js';
 import WebGLRenderTarget from '../../../../../src/ol/webgl/RenderTarget.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol.webgl.RenderTarget', function () {
   let helper, testImage_4x4;

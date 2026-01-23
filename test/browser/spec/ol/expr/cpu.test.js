@@ -1,11 +1,7 @@
-import {
-  buildExpression,
-  newEvaluationContext,
-} from '../../../../../src/ol/expr/cpu.js';
-import {
-  ColorType,
-  newParsingContext,
-} from '../../../../../src/ol/expr/expression.js';
+import { buildExpression } from '../../../../../src/ol/expr/cpu.js';
+import { newEvaluationContext } from '../../../../../src/ol/expr/cpu.js';
+import { ColorType } from '../../../../../src/ol/expr/expression.js';
+import { newParsingContext } from '../../../../../src/ol/expr/expression.js';
 
 describe('ol/expr/cpu.js', () => {
   describe('buildExpression()', () => {

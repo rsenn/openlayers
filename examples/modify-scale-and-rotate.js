@@ -1,11 +1,9 @@
-import Map from '../src/ol/Map.js';
-import View from '../src/ol/View.js';
-import {
-  never,
-  platformModifierKeyOnly,
-  primaryAction,
-} from '../src/ol/events/condition.js';
-import {getCenter, getHeight, getWidth} from '../src/ol/extent.js';
+import { never } from '../src/ol/events/condition.js';
+import { platformModifierKeyOnly } from '../src/ol/events/condition.js';
+import { primaryAction } from '../src/ol/events/condition.js';
+import { getCenter } from '../src/ol/extent.js';
+import { getHeight } from '../src/ol/extent.js';
+import { getWidth } from '../src/ol/extent.js';
 import MultiPoint from '../src/ol/geom/MultiPoint.js';
 import Point from '../src/ol/geom/Point.js';
 import Draw from '../src/ol/interaction/Draw.js';
@@ -13,12 +11,14 @@ import Modify from '../src/ol/interaction/Modify.js';
 import Translate from '../src/ol/interaction/Translate.js';
 import TileLayer from '../src/ol/layer/Tile.js';
 import VectorLayer from '../src/ol/layer/Vector.js';
+import Map from '../src/ol/Map.js';
 import OSM from '../src/ol/source/OSM.js';
 import VectorSource from '../src/ol/source/Vector.js';
 import CircleStyle from '../src/ol/style/Circle.js';
 import Fill from '../src/ol/style/Fill.js';
 import Stroke from '../src/ol/style/Stroke.js';
 import Style from '../src/ol/style/Style.js';
+import View from '../src/ol/View.js';
 
 const raster = new TileLayer({
   source: new OSM(),

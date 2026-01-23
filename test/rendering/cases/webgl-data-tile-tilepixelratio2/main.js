@@ -1,8 +1,8 @@
-import Map from '../../../../src/ol/Map.js';
-import View from '../../../../src/ol/View.js';
 import TileLayer from '../../../../src/ol/layer/WebGLTile.js';
+import Map from '../../../../src/ol/Map.js';
 import DataTile from '../../../../src/ol/source/DataTile.js';
-import {createXYZ} from '../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
+import View from '../../../../src/ol/View.js';
 
 const size = 512;
 

@@ -1,6 +1,7 @@
 import Vector from '../../../../src/ol/layer/Vector.js';
 import Fill from '../../../../src/ol/style/Fill.js';
-import Style, {createDefaultStyle} from '../../../../src/ol/style/Style.js';
+import { createDefaultStyle } from '../../../../src/ol/style/Style.js';
+import Style from '../../../../src/ol/style/Style.js';
 import expect from '../../expect.js';
 
 describe('ol/layer/Vector.js', () => {

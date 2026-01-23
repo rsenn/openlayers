@@ -1,41 +1,36 @@
-/**
- * @module ol/format/GPX
- */
 import Feature from '../Feature.js';
 import LineString from '../geom/LineString.js';
 import MultiLineString from '../geom/MultiLineString.js';
 import Point from '../geom/Point.js';
-import {get as getProjection} from '../proj.js';
-import {
-  OBJECT_PROPERTY_NODE_FACTORY,
-  XML_SCHEMA_INSTANCE_URI,
-  createElementNS,
-  isDocument,
-  makeArrayPusher,
-  makeArraySerializer,
-  makeChildAppender,
-  makeObjectPropertySetter,
-  makeSequence,
-  makeSimpleNodeFactory,
-  makeStructureNS,
-  parse,
-  parseNode,
-  pushParseAndPop,
-  pushSerializeAndPop,
-} from '../xml.js';
-import {transformGeometryWithOptions} from './Feature.js';
+import { get as getProjection } from '../proj.js';
+import { createElementNS } from '../xml.js';
+import { isDocument } from '../xml.js';
+import { makeArrayPusher } from '../xml.js';
+import { makeArraySerializer } from '../xml.js';
+import { makeChildAppender } from '../xml.js';
+import { makeObjectPropertySetter } from '../xml.js';
+import { makeSequence } from '../xml.js';
+import { makeSimpleNodeFactory } from '../xml.js';
+import { makeStructureNS } from '../xml.js';
+import { OBJECT_PROPERTY_NODE_FACTORY } from '../xml.js';
+import { parse } from '../xml.js';
+import { parseNode } from '../xml.js';
+import { pushParseAndPop } from '../xml.js';
+import { pushSerializeAndPop } from '../xml.js';
+import { XML_SCHEMA_INSTANCE_URI } from '../xml.js';
+import { transformGeometryWithOptions } from './Feature.js';
 import XMLFeature from './XMLFeature.js';
-import {
-  readDateTime,
-  readDecimal,
-  readPositiveInteger,
-  readString,
-  writeDateTimeTextNode,
-  writeDecimalTextNode,
-  writeNonNegativeIntegerTextNode,
-  writeStringTextNode,
-} from './xsd.js';
-
+import { readDateTime } from './xsd.js';
+import { readDecimal } from './xsd.js';
+import { readPositiveInteger } from './xsd.js';
+import { readString } from './xsd.js';
+import { writeDateTimeTextNode } from './xsd.js';
+import { writeDecimalTextNode } from './xsd.js';
+import { writeNonNegativeIntegerTextNode } from './xsd.js';
+import { writeStringTextNode } from './xsd.js';
+/**
+ * @module ol/format/GPX
+ */
 /**
  * @const
  * @type {Array<null|string>}

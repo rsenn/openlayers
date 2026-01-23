@@ -1,26 +1,28 @@
+import { extend } from '../array.js';
+import { assert } from '../asserts.js';
+import Collection from '../Collection.js';
+import CollectionEventType from '../CollectionEventType.js';
+import { listen } from '../events.js';
+import { unlistenByKey } from '../events.js';
+import Event from '../events/Event.js';
+import EventType from '../events/EventType.js';
+import { containsExtent } from '../extent.js';
+import { equals } from '../extent.js';
+import { wrapAndSliceX } from '../extent.js';
+import { xhr } from '../featureloader.js';
+import { TRUE } from '../functions.js';
+import { VOID } from '../functions.js';
+import { all as allStrategy } from '../loadingstrategy.js';
+import { isEmpty } from '../obj.js';
+import ObjectEventType from '../ObjectEventType.js';
+import RenderFeature from '../render/Feature.js';
+import RBush from '../structs/RBush.js';
+import { getUid } from '../util.js';
+import Source from './Source.js';
+import VectorEventType from './VectorEventType.js';
 /**
  * @module ol/source/Vector
  */
-
-import Collection from '../Collection.js';
-import CollectionEventType from '../CollectionEventType.js';
-import ObjectEventType from '../ObjectEventType.js';
-import {extend} from '../array.js';
-import {assert} from '../asserts.js';
-import Event from '../events/Event.js';
-import EventType from '../events/EventType.js';
-import {listen, unlistenByKey} from '../events.js';
-import {containsExtent, equals, wrapAndSliceX} from '../extent.js';
-import {xhr} from '../featureloader.js';
-import {TRUE, VOID} from '../functions.js';
-import {all as allStrategy} from '../loadingstrategy.js';
-import {isEmpty} from '../obj.js';
-import RenderFeature from '../render/Feature.js';
-import RBush from '../structs/RBush.js';
-import {getUid} from '../util.js';
-import Source from './Source.js';
-import VectorEventType from './VectorEventType.js';
-
 /**
  * A function that takes an {@link module:ol/extent~Extent} and a resolution as arguments, and
  * returns an array of {@link module:ol/extent~Extent} with the extents to load. Usually this

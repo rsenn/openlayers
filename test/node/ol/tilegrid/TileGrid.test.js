@@ -1,22 +1,16 @@
-import TileRange from '../../../../src/ol/TileRange.js';
-import {createOrUpdate} from '../../../../src/ol/extent.js';
+import { createOrUpdate } from '../../../../src/ol/extent.js';
+import { get as getProjection } from '../../../../src/ol/proj.js';
+import { HALF_SIZE } from '../../../../src/ol/proj/epsg3857.js';
 import Projection from '../../../../src/ol/proj/Projection.js';
-import {METERS_PER_UNIT} from '../../../../src/ol/proj/Units.js';
-import {HALF_SIZE} from '../../../../src/ol/proj/epsg3857.js';
-import {get as getProjection} from '../../../../src/ol/proj.js';
+import { METERS_PER_UNIT } from '../../../../src/ol/proj/Units.js';
+import { createForExtent } from '../../../../src/ol/tilegrid.js';
+import { createForProjection } from '../../../../src/ol/tilegrid.js';
+import { createXYZ } from '../../../../src/ol/tilegrid.js';
+import { getForProjection as getTileGridForProjection } from '../../../../src/ol/tilegrid.js';
+import { DEFAULT_MAX_ZOOM } from '../../../../src/ol/tilegrid/common.js';
+import { DEFAULT_TILE_SIZE } from '../../../../src/ol/tilegrid/common.js';
 import TileGrid from '../../../../src/ol/tilegrid/TileGrid.js';
-import {
-  DEFAULT_MAX_ZOOM,
-  DEFAULT_TILE_SIZE,
-} from '../../../../src/ol/tilegrid/common.js';
-
-import {
-  createForExtent,
-  createForProjection,
-  createXYZ,
-  getForProjection as getTileGridForProjection,
-} from '../../../../src/ol/tilegrid.js';
-
+import TileRange from '../../../../src/ol/TileRange.js';
 import expect from '../../expect.js';
 
 describe('ol/tilegrid/TileGrid.js', function () {

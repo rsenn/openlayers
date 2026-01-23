@@ -1,4 +1,4 @@
-import {assert} from '../../../src/ol/asserts.js';
+import { assert } from '../../../src/ol/asserts.js';
 import expect from '../expect.js';
 
 describe('ol/asserts.js', function () {

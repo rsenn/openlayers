@@ -1,7 +1,7 @@
-import {spy as sinonSpy} from 'sinon';
-import {isEmpty} from '../../../../src/ol/extent.js';
+import { isEmpty } from '../../../../src/ol/extent.js';
 import LineString from '../../../../src/ol/geom/LineString.js';
 import expect from '../../expect.js';
+import { spy as sinonSpy } from 'sinon';
 
 describe('ol/geom/LineString.js', function () {
   it('cannot be constructed with a null geometry', function () {

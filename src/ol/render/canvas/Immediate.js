@@ -1,35 +1,29 @@
+import { equals } from '../../array.js';
+import { asColorLike } from '../../colorlike.js';
+import { intersects } from '../../extent.js';
+import { transform2D } from '../../geom/flat/transform.js';
+import { transformGeom2D } from '../../geom/SimpleGeometry.js';
+import { toFixed } from '../../math.js';
+import { compose as composeTransform } from '../../transform.js';
+import { create as createTransform } from '../../transform.js';
+import { defaultFillStyle } from '../canvas.js';
+import { defaultFont } from '../canvas.js';
+import { defaultLineCap } from '../canvas.js';
+import { defaultLineDash } from '../canvas.js';
+import { defaultLineDashOffset } from '../canvas.js';
+import { defaultLineJoin } from '../canvas.js';
+import { defaultLineWidth } from '../canvas.js';
+import { defaultMiterLimit } from '../canvas.js';
+import { defaultStrokeStyle } from '../canvas.js';
+import { defaultTextAlign } from '../canvas.js';
+import { defaultTextBaseline } from '../canvas.js';
+import VectorContext from '../VectorContext.js';
 /**
  * @module ol/render/canvas/Immediate
  */
 // FIXME test, especially polygons with holes and multipolygons
 // FIXME need to handle large thick features (where pixel size matters)
 // FIXME add offset and end to ol/geom/flat/transform~transform2D?
-
-import {equals} from '../../array.js';
-import {asColorLike} from '../../colorlike.js';
-import {intersects} from '../../extent.js';
-import {transformGeom2D} from '../../geom/SimpleGeometry.js';
-import {transform2D} from '../../geom/flat/transform.js';
-import {toFixed} from '../../math.js';
-import {
-  compose as composeTransform,
-  create as createTransform,
-} from '../../transform.js';
-import VectorContext from '../VectorContext.js';
-import {
-  defaultFillStyle,
-  defaultFont,
-  defaultLineCap,
-  defaultLineDash,
-  defaultLineDashOffset,
-  defaultLineJoin,
-  defaultLineWidth,
-  defaultMiterLimit,
-  defaultStrokeStyle,
-  defaultTextAlign,
-  defaultTextBaseline,
-} from '../canvas.js';
-
 /**
  * @classdesc
  * A concrete subclass of {@link module:ol/render/VectorContext~VectorContext} that implements

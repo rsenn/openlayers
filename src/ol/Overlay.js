@@ -1,13 +1,15 @@
+import { CLASS_SELECTABLE } from './css.js';
+import { outerHeight } from './dom.js';
+import { outerWidth } from './dom.js';
+import { removeChildren } from './dom.js';
+import { listen } from './events.js';
+import { unlistenByKey } from './events.js';
+import { containsExtent } from './extent.js';
+import MapEventType from './MapEventType.js';
+import BaseObject from './Object.js';
 /**
  * @module ol/Overlay
  */
-import MapEventType from './MapEventType.js';
-import BaseObject from './Object.js';
-import {CLASS_SELECTABLE} from './css.js';
-import {outerHeight, outerWidth, removeChildren} from './dom.js';
-import {listen, unlistenByKey} from './events.js';
-import {containsExtent} from './extent.js';
-
 /**
  * @typedef {'bottom-left' | 'bottom-center' | 'bottom-right' | 'center-left' | 'center-center' | 'center-right' | 'top-left' | 'top-center' | 'top-right'} Positioning
  * The overlay position: `'bottom-left'`, `'bottom-center'`,  `'bottom-right'`,

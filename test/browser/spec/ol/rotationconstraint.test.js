@@ -1,4 +1,4 @@
-import {createSnapToZero} from '../../../../src/ol/rotationconstraint.js';
+import { createSnapToZero } from '../../../../src/ol/rotationconstraint.js';
 
 describe('ol.rotationconstraint', function () {
   describe('SnapToZero', function () {

@@ -1,21 +1,19 @@
+import { extend } from '../array.js';
+import { closestSquaredDistanceXY } from '../extent.js';
+import { arrayMaxSquaredDelta } from './flat/closest.js';
+import { assignClosestArrayPoint } from './flat/closest.js';
+import { deflateCoordinatesArray } from './flat/deflate.js';
+import { inflateCoordinatesArray } from './flat/inflate.js';
+import { interpolatePoint } from './flat/interpolate.js';
+import { lineStringsCoordinateAtM } from './flat/interpolate.js';
+import { intersectsLineStringArray } from './flat/intersectsextent.js';
+import { lineStringLength } from './flat/length.js';
+import { douglasPeuckerArray } from './flat/simplify.js';
+import LineString from './LineString.js';
+import SimpleGeometry from './SimpleGeometry.js';
 /**
  * @module ol/geom/MultiLineString
  */
-import {extend} from '../array.js';
-import {closestSquaredDistanceXY} from '../extent.js';
-import LineString from './LineString.js';
-import SimpleGeometry from './SimpleGeometry.js';
-import {arrayMaxSquaredDelta, assignClosestArrayPoint} from './flat/closest.js';
-import {deflateCoordinatesArray} from './flat/deflate.js';
-import {inflateCoordinatesArray} from './flat/inflate.js';
-import {
-  interpolatePoint,
-  lineStringsCoordinateAtM,
-} from './flat/interpolate.js';
-import {intersectsLineStringArray} from './flat/intersectsextent.js';
-import {lineStringLength} from './flat/length.js';
-import {douglasPeuckerArray} from './flat/simplify.js';
-
 /**
  * @classdesc
  * Multi-linestring geometry.
